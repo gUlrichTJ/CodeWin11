@@ -41,11 +41,13 @@ void filesLearningInCpp() {
     }
 
     // Now we are gonna open the file
-    ifstream open_only_file_system("C:\\NetbeansProjectsWin\\CodeC++\\files\\index.py");
-    if (open_only_file_system) {
-        // We read all the file
+    ifstream openFile("C:\\NetbeansProjectsWin\\CodeC++\\files\\index.py");
+
+    // if
+    if (openFile) {
         string line;
-        while (getline(open_only_file_system, line)) {
+
+        while (getline(openFile, line)) {
             cout << line << endl;
         }
     } else {
