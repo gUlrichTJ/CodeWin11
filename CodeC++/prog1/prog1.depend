@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1687901017 source:c:\netbeansprojectswin\codec++\prog1\main.cpp
+1688039575 source:c:\netbeansprojectswin\codec++\prog1\main.cpp
 	<iostream>
 	<string>
 	<vector>
 	<fstream>
+	<ctime>
+	<cstdlib>
 

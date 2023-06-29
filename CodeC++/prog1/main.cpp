@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <ctime>
+#include <cstdlib>
 
 #define log(a) std::cout << a << std::endl;
 
@@ -55,18 +57,125 @@ void filesLearningInCpp() {
     }
 }
 
+// Function that chooses a random word
+string chooseRandomWord(vector<string> words) {
+    srand(time(0));
+
+    // The integer that will have the index of the word
+    int index = rand() % words.size();
+
+    return words[index];
+}
+
+// Function that jumbles the word
+void jumbleTheWord() {
+    srand(time(0));
+    vector<string> words = {
+    // Fruits
+    "apple", "banana", "cherry", "dragonfruit", "elderberry",
+    "fig", "grape", "honeydew", "indigo", "jackfruit",
+    "kiwi", "lemon", "mango", "nectarine", "orange",
+    "pineapple", "quince", "raspberry", "strawberry", "tangerine",
+    "ugli", "vanilla", "watermelon", "xigua", "yellow",
+    "zucchini", "almond", "blueberry", "coconut", "date",
+    "eggplant", "flamingo", "guava", "huckleberry", "iceberg",
+    "jicama", "kale", "lychee", "mulberry", "nutmeg",
+    "olive", "papaya", "quinoa", "rhubarb", "saffron",
+    "tomato", "ugli", "violet", "waffle", "xylophone",
+    "yam", "zesty", "apricot", "blackberry", "cantaloupe",
+    "durian", "elderflower", "fig", "grapefruit", "honeycrisp",
+    "indigo", "jujube", "kiwifruit", "lime", "mandarin",
+    "nectar", "olallieberry", "passionfruit", "quince", "rhubarb",
+    "strawberry", "tangelo", "ugli", "vanilla", "watercress",
+    "ximenia", "yuzu", "zinfandel",
+
+    // Colors
+    "amber", "blue", "coral", "dandelion", "emerald",
+    "fuchsia", "gold", "hazel", "indigo", "jade",
+    "kelly", "lilac", "maroon", "navy", "olive",
+    "plum", "quartz", "ruby", "sapphire", "tawny",
+    "ultramarine", "violet", "wine", "xanadu", "yellow",
+
+    // Animals
+    "alligator", "bear", "cat", "dog", "elephant",
+    "flamingo", "giraffe", "hippopotamus", "iguana", "jaguar",
+    "kangaroo", "lion", "monkey", "narwhal", "octopus",
+    "panda", "quokka", "rhinoceros", "sloth", "tiger",
+    "unicorn", "vulture", "whale", "x-ray fish", "yak",
+    "zebra",
+
+    // Random Words
+    "accordion", "balloon", "cucumber", "donut", "egg",
+    "feather", "guitar", "hamburger", "ice cream", "jigsaw",
+    "kite", "lollipop", "mushroom", "notebook", "ocean",
+    "pencil", "quilt", "rainbow", "sandwich", "teddy bear",
+    "umbrella", "violin", "waterfall", "xylophone", "yoyo",
+    "zeppelin",
+    // Continue adding more words...
+    };
+
+    string choosedWord = chooseRandomWord(words);
+
+    int j = 0, sizeW = 0, sizeW2 = 0;
+    int randomIndex = 0;
+    string newWord = "";
+
+    cout << choosedWord << endl;
+    sizeW2 = choosedWord.size();
+
+    do {
+        // We take the size of the random word
+        sizeW = choosedWord.size();
+
+
+        // we choose a random index
+        randomIndex = rand() % sizeW;
+        cout << randomIndex << endl;
+
+        // We give the random letter to the newWord
+        newWord += choosedWord[randomIndex];
+
+        // We remove the letter from the choosedWord
+        /*
+        for (int i = randomIndex; i < sizeW ; i++) {
+            choosedWord[i] = choosedWord[i+1];
+        }
+        --sizeW;
+        */
+        // We delete the letter used
+        choosedWord.erase(randomIndex, 1);
+
+        cout << newWord << endl;
+
+        j++;
+
+    } while (j <= sizeW2);
+
+    cout << newWord << endl;
+
+}
+
+void jumbleWords() {
+    // We ask the user a word
+    string word;
+
+    cout << "Enter a word : ";
+    cin >> word;
+
+    jumbleTheWord();
+
+    // We are gonna jumble the words
+    /// Je cree un string qui a plein de mots, une methode qui choisit au hasard un mot et une autre fonction
+    /// qui melange le mot. Bonne idee
+}
+
 int main()
 {
-    int a = 5;
-    int& ref = a;
-
     // We use the file
     filesLearningInCpp();
 
-    // We modify ref's value
-    ref = 19;
-    increment(a);
-    log(a);
+    jumbleWords();
+
     cout << "Hello world!" << endl;
     return 0;
 }
