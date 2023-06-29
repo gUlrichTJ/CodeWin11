@@ -127,32 +127,20 @@ void jumbleTheWord() {
         // We take the size of the random word
         sizeW = choosedWord.size();
 
-
         // we choose a random index
         randomIndex = rand() % sizeW;
-        cout << randomIndex << endl;
 
         // We give the random letter to the newWord
         newWord += choosedWord[randomIndex];
 
-        // We remove the letter from the choosedWord
-        /*
-        for (int i = randomIndex; i < sizeW ; i++) {
-            choosedWord[i] = choosedWord[i+1];
-        }
-        --sizeW;
-        */
         // We delete the letter used
         choosedWord.erase(randomIndex, 1);
-
-        cout << newWord << endl;
 
         j++;
 
     } while (j <= sizeW2);
 
-    cout << newWord << endl;
-
+    cout << newWord << "H" << endl;
 }
 
 void jumbleWords() {
