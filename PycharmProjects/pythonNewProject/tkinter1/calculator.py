@@ -6,6 +6,7 @@ root.title("Simple calculator")
 e = Entry(root, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
+
 def button_click(number):
     # e.delete(0, END)
     e.insert(0, number)
