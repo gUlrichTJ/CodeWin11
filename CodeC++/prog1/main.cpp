@@ -25,6 +25,7 @@ int secondSmalestValue() {
 }
 
 /// We learn files in C++
+/// We must work very hard
 void filesLearningInCpp() {
     // ofstream monFlux("C:\NetbeansProjectsWin\CodeC++\files\index.py");
     // We declare the name in a string
