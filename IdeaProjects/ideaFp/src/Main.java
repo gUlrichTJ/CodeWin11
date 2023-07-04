@@ -51,6 +51,7 @@ public class Main {
                 public void actionPerformed(ActionEvent actionEvent) {
                     String typedText = areaTyping.getText();
                     System.out.println(typedText);
+                    JOptionPane.showMessageDialog(panel, "You've clicked the button apply");
                 }
             });
 
@@ -82,7 +83,8 @@ public class Main {
 
         @Override
         public void windowOpened(WindowEvent windowEvent) {
-
+            JOptionPane.showInputDialog("Window opened");
+            JOptionPane.showMessageDialog(this, "Window opened");
         }
 
         @Override
