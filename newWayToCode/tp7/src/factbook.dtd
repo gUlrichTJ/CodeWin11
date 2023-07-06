@@ -1,0 +1,140 @@
+<!ELEMENT mondial ( continent*, country*, organization*, mountain*, desert*, island*, river*, sea*, lake* )>
+
+<!ELEMENT continent EMPTY>
+<!ATTLIST continent
+    id ID #REQUIRED
+    name CDATA #REQUIRED>
+
+<!ELEMENT country (name+, cityref?, city*, province*, ethnicgroups*, religions*, languages*, encompassed*, border*)>
+<!ATTLIST country
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    capital IDREF #REQUIRED
+    population CDATA #REQUIRED
+    datacode CDATA #IMPLIED
+    total_area CDATA #REQUIRED
+    population_growth CDATA #IMPLIED
+    infant_mortality CDATA #IMPLIED
+    gdp_agri CDATA #IMPLIED
+    gdp_ind CDATA #IMPLIED
+    gdp_serv CDATA #IMPLIED
+    gdp_total CDATA #IMPLIED
+    inflation CDATA #IMPLIED
+    indep_date CDATA #IMPLIED
+    government CDATA #REQUIRED
+    car_code CDATA #IMPLIED>
+
+<!ELEMENT province (cityref?, city*)>
+<!ATTLIST province
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    country IDREF #REQUIRED
+    capital IDREF #IMPLIED
+    population CDATA #REQUIRED
+    area CDATA #IMPLIED>
+
+<!ELEMENT cityref EMPTY>
+<!ATTLIST cityref
+    id IDREF #REQUIRED>
+
+<!ELEMENT city (name+, population*, located_at*)>
+<!ATTLIST city
+    id ID #REQUIRED
+    country IDREF #IMPLIED
+    province IDREFS #IMPLIED
+    longitude CDATA #IMPLIED
+    latitude CDATA #IMPLIED>
+
+<!ELEMENT population (#PCDATA)>
+<!ATTLIST population
+    year CDATA #REQUIRED>
+
+<!ELEMENT located_at EMPTY>
+<!ATTLIST located_at
+    type CDATA #REQUIRED
+    water IDREFS #REQUIRED>
+
+<!ELEMENT ethnicgroups (#PCDATA)>
+<!ATTLIST ethnicgroups
+    percentage CDATA #REQUIRED>
+
+<!ELEMENT religions (#PCDATA)>
+<!ATTLIST religions
+    percentage CDATA #REQUIRED>
+
+<!ELEMENT languages (#PCDATA)>
+<!ATTLIST languages
+    percentage CDATA #REQUIRED>
+
+<!ELEMENT encompassed EMPTY>
+<!ATTLIST encompassed
+    continent IDREF #REQUIRED
+    percentage CDATA #REQUIRED>
+
+<!ELEMENT border EMPTY>
+<!ATTLIST border
+    country IDREF #REQUIRED
+    length CDATA #REQUIRED>
+
+<!ELEMENT organization (members*)>
+<!ATTLIST organization
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    abbrev CDATA #REQUIRED
+    established CDATA #IMPLIED
+    headq CDATA #IMPLIED>
+
+<!ELEMENT members EMPTY>
+<!ATTLIST members
+    type NMTOKENS #REQUIRED
+    country IDREF #REQUIRED>
+
+<!ELEMENT mountain (located*)>
+<!ATTLIST mountain
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    longitude CDATA #IMPLIED
+    latitude CDATA #IMPLIED
+    height CDATA #IMPLIED>
+
+<!ELEMENT desert (located*)>
+<!ATTLIST desert
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    area CDATA #IMPLIED>
+
+<!ELEMENT lake (located*)>
+<!ATTLIST lake
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    area CDATA #IMPLIED>
+
+<!ELEMENT island (located*)>
+<!ATTLIST island
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    area CDATA #IMPLIED>
+
+<!ELEMENT river (located*, to+)>
+<!ATTLIST river
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    length CDATA #IMPLIED>
+
+<!ELEMENT sea (located*)>
+<!ATTLIST sea
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    depth CDATA #REQUIRED>
+
+<!ELEMENT located EMPTY>
+<!ATTLIST located
+    country IDREF #REQUIRED
+    province IDREF #REQUIRED>
+
+<!ELEMENT to EMPTY>
+<!ATTLIST to
+    type CDATA #REQUIRED
+    water IDREFS #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
