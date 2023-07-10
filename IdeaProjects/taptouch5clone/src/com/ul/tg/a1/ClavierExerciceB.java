@@ -22,40 +22,6 @@ public class ClavierExerciceB extends JFrame implements KeyListener {
 
     private int cursorPosition = 0;
 
-/*    @Override
-    public void keyReleased(KeyEvent e) {
-        char expectedChar = texteASaisir.charAt(cursorPosition);
-
-        if (e.getKeyChar() == expectedChar) {
-            // Caractère correct, avancer le curseur
-            cursorPosition++;
-
-            // Mettre à jour la couleur du texte saisi
-            displayArea.setSelectionStart(0);
-            displayArea.setSelectionEnd(cursorPosition);
-            displayArea.setSelectionColor(Color.GREEN);
-
-            if (cursorPosition >= texteASaisir.length()) {
-                // Réinitialiser la saisie après avoir terminé la fable
-                cursorPosition = 0;
-                inputArea.setText("");
-
-                // Réinitialiser la couleur du texte affiché
-                displayArea.setSelectionStart(0);
-                displayArea.setSelectionEnd(0);
-                displayArea.setSelectionColor(Color.BLACK);
-            }
-        } else {
-            // Caractère incorrect, mettre en surbrillance en rouge
-            displayArea.setSelectionStart(cursorPosition);
-            displayArea.setSelectionEnd(cursorPosition + 1);
-            displayArea.setSelectionColor(Color.RED);
-        }
-
-        // Réactiver la zone de saisie
-        inputArea.setEnabled(true);
-    }*/
-
     public ClavierExerciceB() {
         setTitle("Exercice de clavier B");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
