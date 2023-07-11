@@ -4,14 +4,18 @@
 #include <iostream>
 #include <string>
 
-public:
-    Arme();
-    Arme(std::string nom, int degats);
-    void changer(std::string nom, int degats);
-    void afficher() const;
+class Arme
+{
+    public:
+        Arme();
+        Arme(std::string nom, int degats);
+        void changer(std::string nom, int degats);
+        void afficher() const;
+        int getDegats() const;
 
-private:
-    std::string m_nom;
-    int m_degats;
+    private:
+        std::string m_nom;
+        int m_degats;
 
+};
 #endif // ARME_H_INCLUDED

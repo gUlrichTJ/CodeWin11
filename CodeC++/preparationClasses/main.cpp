@@ -13,5 +13,12 @@ int main()
     david.changerArme("Double hache tranchante veneneuse de la mort", 40);
     goliath.attaquer(david);
     david.attaquer(goliath);
+
+    // Affichons les etats
+    cout << "David : " << endl;
+    david.afficherEtat();
+
+    cout << "Goliath : " << endl;
+    goliath.afficherEtat();
     return 0;
 }

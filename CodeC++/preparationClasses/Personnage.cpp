@@ -45,7 +45,7 @@ void Personnage::recevoirDegats(int nbDegats)
 
 void Personnage::attaquer(Personnage &cible)
 {
-    cible.recevoirDegats(m_degatArme);
+    cible.recevoirDegats(m_arme.getDegats());
 }
 
 void Personnage::boirePotionDeVie(int quantitePotion)
@@ -60,8 +60,13 @@ void Personnage::boirePotionDeVie(int quantitePotion)
 
 void Personnage::changerArme(std::string nomNouvelleArme, int degatNouvelleArme)
 {
-    m_nomArme = nomNouvelleArme;
-    m_degatArme = degatNouvelleArme;
+    m_arme.changer(nomNouvelleArme, degatNouvelleArme);
+}
+
+void afficherEtat() const
+{
+    cout << "Vie : " << m_vie << " Mana : " << m_mana << endl;
+    m_arme.afficher();
 }
 
 bool Personnage::estVivant()
