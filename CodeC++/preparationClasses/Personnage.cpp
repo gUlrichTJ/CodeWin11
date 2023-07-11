@@ -15,7 +15,7 @@ Personnage::Personnage()
 
 // Constructeur de copie
 Personnage::Personnage(Personnage const& autre) : m_vie(autre.m_vie), m_mana(autre.m_mana),
-    m_nomArme(autre.m_nomArme), m_degatArme(autre.m_degatArme)
+    m_arme()
     {
 
     }

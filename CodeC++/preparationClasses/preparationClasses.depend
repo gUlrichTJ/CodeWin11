@@ -1,4 +1,19 @@
 # depslib dependency file v1.0
-1584205420 source:c:\netbeansprojectswin\codec++\preparationclasses\main.cpp
+1689100030 source:c:\netbeansprojectswin\codec++\preparationclasses\main.cpp
 	<iostream>
+	"Personnage.h"
+
+1689096138 source:c:\netbeansprojectswin\codec++\preparationclasses\arme.cpp
+	<iostream>
+	<string>
+	"Arme.h"
+
+1689100291 c:\netbeansprojectswin\codec++\preparationclasses\arme.h
+	<iostream>
+	<string>
+
+1689096441 c:\netbeansprojectswin\codec++\preparationclasses\personnage.h
+	<iostream>
+	<string>
+	"Arme.h"
 
