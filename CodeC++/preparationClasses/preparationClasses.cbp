@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Arme.cpp" />
+		<Unit filename="Arme.h" />
+		<Unit filename="Personnage.cpp" />
+		<Unit filename="Personnage.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
