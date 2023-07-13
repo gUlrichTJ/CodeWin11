@@ -21,20 +21,23 @@ ZFraction::ZFraction(int a, int b)
     {
         cout << "Division by zero" << endl;
     }
+    else
+    {
+        // Nous allons reduire la fraction
+        int petitCommunDiviseur = findGCD(a, b);
 
-    // Nous allons reduire la fraction
-    int petitCommunDiviseur = findGCD(a, b);
+        // Pour aller plus rapidement, on peut ecrire
+        /*
+            a /= petitCommunDiviseur;
+            b /= petitCommunDiviseur;
+        */
+        // Mais nous allons faire de telle sorte que tout le monde comprenne.
+        int numerateurReduit = a / petitCommunDiviseur;
+        int denominateurReduit = b / petitCommunDiviseur;
+        m_a = numerateurReduit;
+        m_b = denominateurReduit;
 
-    // Pour aller plus rapidement, on peut ecrire
-    /*
-        a /= petitCommunDiviseur;
-        b /= petitCommunDiviseur;
-    */
-    // Mais nous allons faire de telle sorte que tout le monde comprenne.
-    int numerateurReduit = a / petitCommunDiviseur;
-    int denominateurReduit = b / petitCommunDiviseur;
-    m_a = numerateurReduit;
-    m_b = denominateurReduit;
+    }
 }
 
 // Constructeur de copie
@@ -57,4 +60,10 @@ ZFraction::findGCD(int a, int b)
         return a;
     }
     return findGCD(a, a%b);
+}
+
+// La conversion en chaîne de caractère
+std::string ZFraction::toString() const
+{
+
 }
