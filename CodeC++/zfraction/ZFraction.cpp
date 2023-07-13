@@ -53,7 +53,7 @@ ZFraction::~ZFraction()
 }
 
 // Methode pour trouver le plus petit commun diviseur
-ZFraction::findGCD(int a, int b)
+ZFraction::findGCD(int a, int b) const
 {
     if (b == 0)
     {
@@ -79,5 +79,5 @@ ZFraction ZFraction::operator+(const ZFraction& autre) const
     // Nous réduisons
     nouveauNumerateur /= petitCommunDiviseur;
     nouveauDenominateur /= petitCommunDiviseur;
-    return ZFraction(nouveauDenominateur, nouveauDenominateur);
+    return ZFraction(nouveauNumerateur, nouveauDenominateur);
 }

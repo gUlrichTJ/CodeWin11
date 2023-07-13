@@ -14,7 +14,7 @@ class ZFraction
         // Destructeur
         ~ZFraction();
         // Fonction pour trouver les plus petit commun diviseur
-        int findGCD(int a, int b);
+        int findGCD(int a, int b) const;
         std::string toString() const;
         ZFraction operator+(const ZFraction& autre) const;
 
