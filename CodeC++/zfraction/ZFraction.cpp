@@ -65,5 +65,19 @@ ZFraction::findGCD(int a, int b)
 // La conversion en chaîne de caractère
 std::string ZFraction::toString() const
 {
+    return std::to_string(m_a) + "/" + std::to_string(m_b);
+}
 
+ZFraction ZFraction::operator+(const ZFraction& autre) const
+{
+    int nouveauNumerateur = m_a * autre.m_b + autre.m_a * m_b;
+    int nouveauDenominateur = m_b * autre.m_b;
+
+    // Nous réduisons nouveau numérateur et nouveau dénominateur
+    int petitCommunDiviseur = findGCD(nouveauNumerateur, nouveauDenominateur);
+
+    // Nous réduisons
+    nouveauNumerateur /= petitCommunDiviseur;
+    nouveauDenominateur /= petitCommunDiviseur;
+    return ZFraction(nouveauDenominateur, nouveauDenominateur);
 }

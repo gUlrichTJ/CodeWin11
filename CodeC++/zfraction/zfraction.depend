@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1689264524 source:c:\netbeansprojectswin\codec++\zfraction\main.cpp
+	<iostream>
+	<string>
+	"ZFraction.h"
+
+1689271538 c:\netbeansprojectswin\codec++\zfraction\zfraction.h
+	<iostream>
+	<string>
+

@@ -9,7 +9,8 @@ class ZFraction
         ZFraction();
         ZFraction(int a);
         ZFraction(int a, int b);
-        ZFraction(ZFraction cont& autre);
+        ZFraction(ZFraction& autre);
+        ZFraction(ZFraction const& autre);
         // Destructeur
         ~ZFraction();
         // Fonction pour trouver les plus petit commun diviseur
