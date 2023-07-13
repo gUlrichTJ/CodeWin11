@@ -10,6 +10,8 @@ class ZFraction
         ZFraction(ZFraction cont& autre);
         // Destructeur
         ~ZFraction();
+        // Fonction pour trouver les plus petit commun diviseur
+        int findGCD(int a, int b);
 
     private :
         int m_a;

@@ -22,8 +22,19 @@ ZFraction::ZFraction(int a, int b)
         cout << "Division by zero" << endl;
     }
 
-    m_a = a;
-    m_b = b;
+    // Nous allons reduire la fraction
+    int petitCommunDiviseur = findGCD(a, b);
+
+    // Pour aller plus rapidement, on peut ecrire
+    /*
+        a /= petitCommunDiviseur;
+        b /= petitCommunDiviseur;
+    */
+    // Mais nous allons faire de telle sorte que tout le monde comprenne.
+    int numerateurReduit = a / petitCommunDiviseur;
+    int denominateurReduit = b / petitCommunDiviseur;
+    m_a = numerateurReduit;
+    m_b = denominateurReduit;
 }
 
 // Constructeur de copie
@@ -36,4 +47,14 @@ ZFraction::ZFraction(ZFraction &autre) : m_a(autre.m_a), m_b(autre.m_b)
 ZFraction::~ZFraction()
 {
 
+}
+
+// Methode pour trouver le plus petit commun diviseur
+ZFraction::findGCD(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    return findGCD(a, a%b);
 }
