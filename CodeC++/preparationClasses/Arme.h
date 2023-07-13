@@ -12,6 +12,7 @@ class Arme
         void changer(std::string nom, int degats);
         void afficher() const;
         int getDegats() const;
+        int getNom() const;
 
     private:
         std::string m_nom;

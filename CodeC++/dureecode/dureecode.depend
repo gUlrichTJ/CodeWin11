@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1689257758 source:c:\netbeansprojectswin\codec++\dureecode\main.cpp
+	<iostream>
+	"Duree.h"
+
+1689257698 source:c:\netbeansprojectswin\codec++\dureecode\duree.cpp
+	<iostream>
+	<string>
+	"Duree.h"
+
+1689260766 c:\netbeansprojectswin\codec++\dureecode\duree.h
+

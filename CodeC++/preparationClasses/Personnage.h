@@ -13,6 +13,7 @@ class Personnage
         // Constructeur de copie
         ~Personnage();
         Personnage(Personnage const& autre);
+        Personnage(std::string nomArme, int nbDegats);
         void recevoirDegats(int nbDegats);
         void attaquer(Personnage &cible);
         void boirePotionDeVie(int quantitePotion);

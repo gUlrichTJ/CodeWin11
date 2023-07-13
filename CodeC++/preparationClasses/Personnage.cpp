@@ -13,26 +13,24 @@ Personnage::Personnage()
     m_mana = 100;
 }
 
-// Constructeur de copie
-Personnage::Personnage(Personnage const& autre) : m_vie(autre.m_vie), m_mana(autre.m_mana),
-    m_arme()
-    {
-
-    }
-
-// Surcharge du constructeur
-Personnage::Personnage(std;;string nomArme, int degatsArme) :
-    m_vie(100), m_mana(100), m_arme(nomArme, degatsArme)
-    {
-
-    }
-
 // Destructeur
 Personnage::~Personnage()
 {
 
 }
 
+// Constructeur de copie
+Personnage::Personnage(Personnage const& autre) : m_vie(autre.m_vie), m_mana(autre.m_mana),
+    m_arme(autre.m_arme)
+    {
+
+    }
+
+// Surcharge du constructeurs
+Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100),
+m_mana(100),m_arme(nomArme, degatsArme)
+{
+}
 // Mettre les methodes
 void Personnage::recevoirDegats(int nbDegats)
 {
@@ -63,7 +61,7 @@ void Personnage::changerArme(std::string nomNouvelleArme, int degatNouvelleArme)
     m_arme.changer(nomNouvelleArme, degatNouvelleArme);
 }
 
-void afficherEtat() const
+void Personnage::afficherEtat() const
 {
     cout << "Vie : " << m_vie << " Mana : " << m_mana << endl;
     m_arme.afficher();

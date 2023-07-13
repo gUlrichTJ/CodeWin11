@@ -1,0 +1,19 @@
+#ifndef ZFRACTION_H_INCLUDED
+#define ZFRACTION_H_INCLUDED
+
+class ZFraction
+{
+    public :
+        ZFraction();
+        ZFraction(int a);
+        ZFraction(int a, int b);
+        ZFraction(ZFraction cont& autre);
+        // Destructeur
+        ~ZFraction();
+
+    private :
+        int m_a;
+        int m_b;
+};
+
+#endif // ZFRACTION_H_INCLUDED

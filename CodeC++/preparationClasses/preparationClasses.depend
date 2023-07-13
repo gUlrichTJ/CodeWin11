@@ -3,16 +3,16 @@
 	<iostream>
 	"Personnage.h"
 
-1689096138 source:c:\netbeansprojectswin\codec++\preparationclasses\arme.cpp
+1689252799 source:c:\netbeansprojectswin\codec++\preparationclasses\arme.cpp
 	<iostream>
 	<string>
 	"Arme.h"
 
-1689100291 c:\netbeansprojectswin\codec++\preparationclasses\arme.h
+1689252669 c:\netbeansprojectswin\codec++\preparationclasses\arme.h
 	<iostream>
 	<string>
 
-1689096441 c:\netbeansprojectswin\codec++\preparationclasses\personnage.h
+1689253721 c:\netbeansprojectswin\codec++\preparationclasses\personnage.h
 	<iostream>
 	<string>
 	"Arme.h"
