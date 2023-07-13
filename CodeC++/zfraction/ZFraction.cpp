@@ -25,3 +25,15 @@ ZFraction::ZFraction(int a, int b)
     m_a = a;
     m_b = b;
 }
+
+// Constructeur de copie
+ZFraction::ZFraction(ZFraction &autre) : m_a(autre.m_a), m_b(autre.m_b)
+{
+
+}
+
+// Destructeur
+ZFraction::~ZFraction()
+{
+
+}
