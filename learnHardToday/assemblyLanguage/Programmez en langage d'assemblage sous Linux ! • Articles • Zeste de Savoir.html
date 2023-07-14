@@ -1,0 +1,3681 @@
+<!DOCTYPE html>
+<html class="enable-mobile-menu js" antidoteapi_jsconnect="true" lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    
+
+    <title>
+        Programmez en langage d'assemblage sous Linux ! • Articles • Zeste de Savoir
+    </title>
+
+    <meta name="language" content="fr">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+
+    
+    <meta name="theme-color" content="#084561">
+    <meta name="msapplication-navbutton-color" content="#084561">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    
+    
+    <meta name="description" content="Prise en main de nasm et découverte du langage d'assemblage x86 / x64">
+
+
+    
+
+
+    
+    <meta property="og:site_name" content="Zeste de Savoir">
+    <meta property="og:title" content="Programmez en langage d'assemblage sous Linux ! • Articles • Zeste de Savoir">
+    <meta property="og:url" content="https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/">
+    <meta property="og:language" content="fr_FR">
+    <meta property="og:image:url" content="http://zestedesavoir.com/media/galleries/2465/95cdd0f7-830b-4c2d-a1b4-4cdd2bb450a9.png.144x144_q95_crop.png">
+    <meta property="og:image:secure_url" content="https://zestedesavoir.com/media/galleries/2465/95cdd0f7-830b-4c2d-a1b4-4cdd2bb450a9.png.144x144_q95_crop.png">
+    
+    <meta property="og:type" content="article">
+
+
+
+
+<meta property="og:article:section" content="Tutoriels">
+
+    <meta property="og:article:tag" content="Systèmes d'exploitation">
+
+
+
+
+    
+    <meta property="twitter:domain" content="https://zestedesavoir.com/">
+    
+        <meta property="twitter:card" content="summary">
+    
+    <meta property="twitter:url" content="https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/">
+    <meta property="twitter:title" content="Programmez en langage d'assemblage sous Linux ! • Articles • Zeste de Savoir">
+    <meta property="twitter:description" content="Prise en main de nasm et découverte du langage d'assemblage x86 / x64">
+    <meta property="twitter:site" content="@ZesteDeSavoir">
+    <meta property="twitter:creator" content="@ZesteDeSavoir">
+    <meta property="twitter:image" content="http://zestedesavoir.com/media/galleries/2465/95cdd0f7-830b-4c2d-a1b4-4cdd2bb450a9.png.144x144_q95_crop.png">
+
+
+    
+    
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.publisher" content="Zeste de Savoir" lang="fr">
+    
+    <meta name="DC.creator" content="Ge0">
+    
+    <meta name="DC.type" content="text">
+    <meta name="DC.title" content="Programmez en langage d'assemblage sous Linux !">
+    <meta name="DC.abstract" content="Programmez en langage d'assemblage sous Linux !">
+    <meta name="DC.subject" content="Systèmes d'exploitation – diy ; gnu/linux" lang="fr">
+    
+    <meta name="DC.date" content="2015/04/28">
+    <meta name="DC.format" content="text/html">
+    
+    <meta name="DC.language" content="fr">
+    <meta name="DC.rights" content="Licence CC 0">
+
+
+
+    
+    <link rel="stylesheet" href="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <link rel="stylesheet" href="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/easymde.css">
+    <link rel="stylesheet" href="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/katex.css">
+    <link rel="stylesheet" href="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/main.css">
+
+    
+    
+
+
+    
+    <link href="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/css.css" rel="stylesheet" type="text/css">
+
+
+    
+    
+
+    
+    
+        
+    
+
+    
+        
+            <link rel="icon" sizes="16x16" type="image/png" href="https://zestedesavoir.com/static/images/favicons/16.3cb06f49a319.png">
+        
+            <link rel="icon" sizes="32x32" type="image/png" href="https://zestedesavoir.com/static/images/favicons/32.8864f5e754ff.png">
+        
+            <link rel="icon" sizes="64x64" type="image/png" href="https://zestedesavoir.com/static/images/favicons/64.b399daf7e2f5.png">
+        
+            <link rel="icon" sizes="96x96" type="image/png" href="https://zestedesavoir.com/static/images/favicons/96.9ed1415603d4.png">
+        
+            <link rel="icon" sizes="128x128" type="image/png" href="https://zestedesavoir.com/static/images/favicons/128.07157f777049.png">
+        
+            <link rel="icon" sizes="256x256" type="image/png" href="https://zestedesavoir.com/static/images/favicons/256.b4304d164aa4.png">
+        
+    
+
+    
+    
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/114.772f39c33b1a.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/120.8cf680a96e7d.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/144.a9e39f886050.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/152.a2003b17a9b2.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/167.540217e160af.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/180.e167ecab6abe.png">
+        
+    
+
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="Forum" href="https://zestedesavoir.com/forums/flux/messages/rss/">
+    <link rel="alternate" type="application/rss+xml" title="Nouveaux tutoriels (RSS)" href="https://zestedesavoir.com/tutoriels/flux/rss/">
+    <link rel="alternate" type="application/atom+xml" title="Nouveaux tutoriels (ATOM)" href="https://zestedesavoir.com/tutoriels/flux/atom/">
+    <link rel="alternate" type="application/rss+xml" title="Nouveaux articles (RSS)" href="https://zestedesavoir.com/articles/flux/rss/">
+    <link rel="alternate" type="application/atom+xml" title="Nouveaux articles (ATOM)" href="https://zestedesavoir.com/articles/flux/atom/">
+    <link rel="alternate" type="application/rss+xml" title="Nouveaux billets (RSS)" href="https://zestedesavoir.com/billets/flux/rss/">
+    <link rel="alternate" type="application/atom+xml" title="Nouveaux billets (ATOM)" href="https://zestedesavoir.com/billets/flux/atom/">
+    
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="Zeste de Savoir" href="https://zestedesavoir.com/rechercher/opensearch.xml">
+
+    
+    
+    
+    <script type="text/javascript" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/MathJax.js" integrity="sha384-Ra6zh6uYMmH5ydwCqqMoykyf1T/+ZcnOQfFPhDrp2kI4OIxadnhsvvA2vv9A7xYv" crossorigin="anonymous" async="">
+</script>
+
+
+    
+
+</head>
+
+
+    
+
+
+<body class="" itemscope="" itemtype="http://schema.org/WebPage" data-show-markdown-help="true">
+
+    
+<div id="old-browser-warning-container"></div>
+
+
+
+
+<script>
+
+(function () {
+    var container = document.getElementById("old-browser-warning-container");
+
+    if (window.ActiveXObject || 'ActiveXObject' in window) {
+        var more = document.createElement('A');
+        more.innerText = 'En savoir plus';
+        more.setAttribute('href', 'https://browsehappy.com/?locale=fr');
+
+        var div = document.createElement('DIV');
+        div.className = 'old-browser-warning';
+        div.innerText = 'Le bon fonctionnement du site avec Internet Explorer n’est pas garanti  •  ';
+        div.appendChild(more);
+        container.appendChild(div);
+
+        document.body.classList.add('old-browser-warning-shown');
+    }
+})();
+
+</script>
+
+
+    
+    
+
+
+    
+
+
+
+    <div class="mobile-menu" id="mobile-menu"></div>
+
+    <div class="page-container">
+
+        <ul id="accessibility">
+            <li>
+                <a href="#menu">Aller au menu</a>
+            </li>
+            <li>
+                <a href="#content" accesskey="s">Aller au contenu</a>
+            </li>
+            <li>
+                <a href="#search-top" accesskey="4">Aller à la recherche</a>
+            </li>
+        </ul>
+
+        <div class="header-container">
+            
+
+
+
+
+
+
+
+
+
+<header>
+    <div class="mobile-menu-btn ico-after"></div>
+
+    
+    <div class="header-logo">
+        <a href="https://zestedesavoir.com/" class="header-logo-link">
+            Zeste de Savoir
+        </a>
+    </div>
+
+    <div class="header-mobile-page-title">
+        
+            Zeste de Savoir
+        
+    </div>
+
+    
+    <nav class="header-menu" id="menu" data-title="Menu">
+
+        <ul class="header-menu-list">
+            <li>
+                <a href="https://zestedesavoir.com/bibliotheque/" class="mobile-menu-link has-dropdown">
+                    Bibliothèque
+                    <span class="arrow"></span>
+                </a>
+
+                
+                    <div class="header-dropdown header-menu-dropdown">
+                        <a href="https://zestedesavoir.com/bibliotheque/" class="dropdown-link-all">
+                            Accéder à tous les contenus de la bibliothèque
+                        </a>
+
+                        <ul class="dropdown-list">
+                            
+                            
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/bibliotheque/informatique/">
+                                                    Informatique
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/autres-informatique/">
+                                                        Autres (informatique)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/bureautique-et-redaction/">
+                                                        Bureautique et rédaction
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/site-web/">
+                                                        Développement Web
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/materiel-et-electronique/">
+                                                        Matériel et électronique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/programmation-et-algorithmique/">
+                                                        Programmation et algorithmique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/systemes-dexploitation/">
+                                                        Systèmes d'exploitation
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/">
+                                                    Sciences de la nature
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/astronomie/">
+                                                        Astronomie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/autres-sciences-de-la-nature/">
+                                                        Autres (sciences de la nature)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/biologie/">
+                                                        Biologie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/chimie/">
+                                                        Chimie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/mathematiques/">
+                                                        Mathématiques
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/physique/">
+                                                        Physique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/geologie-et-geographie-physique/">
+                                                        Sciences de la terre
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/">
+                                                    Sciences humaines et sociales
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/autres-sciences-humaines-et-sociales/">
+                                                        Autres (sciences humaines et sociales)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/droit/">
+                                                        Droit
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/economie/">
+                                                        Économie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/histoire/">
+                                                        Histoire
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/langues/">
+                                                        Langues
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/psychologie/">
+                                                        Psychologie
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/bibliotheque/autres/">
+                                                    Autres
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/autres/arts-graphisme-et-multimedia/">
+                                                        Arts, graphisme et multimédia
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/autres/autres/">
+                                                        Autres
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/autres/communication-et-management/">
+                                                        Communication et management
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/autres/zeste-de-savoir/">
+                                                        Zeste de Savoir
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Tags les plus utilisés
+                                            </li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=zds">zds</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=mathematiques">mathématiques</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=algorithmique">algorithmique</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=python">python</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=physique">physique</a></li>
+                                            
+                                            <li><a href="https://zestedesavoir.com/contenus/tags/">Tous les tags</a></li>
+                                        </ul>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                
+            </li>
+            <li>
+                <a href="https://zestedesavoir.com/billets/" class="mobile-menu-link has-dropdown">
+                    Tribune
+                    <span class="arrow"></span>
+                </a>
+                
+                    <div class="header-dropdown header-menu-dropdown">
+                        <a href="https://zestedesavoir.com/billets/" class="dropdown-link-all">
+                            Tous les billets
+                        </a>
+
+                        <ul class="dropdown-list">
+                            
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Informatique
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=autres-informatique">
+                                                        Autres (informatique)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=bureautique-et-redaction">
+                                                        Bureautique et rédaction
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=site-web">
+                                                        Développement Web
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=materiel-et-electronique">
+                                                        Matériel et électronique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=programmation-et-algorithmique">
+                                                        Programmation et algorithmique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=systemes-dexploitation">
+                                                        Systèmes d'exploitation
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Sciences de la nature
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=astronomie">
+                                                        Astronomie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=autres-sciences-de-la-nature">
+                                                        Autres (sciences de la nature)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=biologie">
+                                                        Biologie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=chimie">
+                                                        Chimie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=mathematiques">
+                                                        Mathématiques
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=physique">
+                                                        Physique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=geologie-et-geographie-physique">
+                                                        Sciences de la terre
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Sciences humaines et sociales
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=autres-sciences-humaines-et-sociales">
+                                                        Autres (sciences humaines et sociales)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=droit">
+                                                        Droit
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=economie">
+                                                        Économie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=histoire">
+                                                        Histoire
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=langues">
+                                                        Langues
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=psychologie">
+                                                        Psychologie
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Autres
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=arts-graphisme-et-multimedia">
+                                                        Arts, graphisme et multimédia
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=autres">
+                                                        Autres
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=communication-et-management">
+                                                        Communication et management
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=zeste-de-savoir">
+                                                        Zeste de Savoir
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Tags les plus utilisés
+                                            </li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=python">python</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=zds">zds</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=c">c++</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=musique">musique</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=javascript">javascript</a></li>
+                                            
+                                            <li><a href="https://zestedesavoir.com/contenus/tags/?type=opinion">Tous les tags</a></li>
+                                        </ul>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                
+            </li>
+            <li>
+                <a href="https://zestedesavoir.com/forums/" class="mobile-menu-link has-dropdown">
+                    Forum
+                    <span class="arrow"></span>
+                </a>
+                
+                    <div class="header-dropdown header-menu-dropdown">
+                        <a href="https://zestedesavoir.com/forums/" class="dropdown-link-all">
+                            Tous les forums
+                        </a>
+
+                        <ul class="dropdown-list">
+                            
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/forums/savoirs/">
+                                                    Savoirs
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/programmation/">Programmation</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/site-web/">Développement Web</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/multimedia-et-jeux-video/">Multimédia et Jeux vidéo</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/systemes-et-materiels/">Systèmes et Matériels</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/sciences/">Sciences</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/autres-savoirs/">Les autres savoirs</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/forums/communaute/">
+                                                    Communauté
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/bar-smoothies/">Le bar à smoothies</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/bug-suggestions/">Bugs et Suggestions</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/dev-zone/">Dev Zone</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/beta-zone/">Contenus en cours de rédaction</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/projets/">Vos projets</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/association/">L'association</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Tags les plus utilisés
+                                            </li>
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/python/">python</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/c/">c++</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/php/">php</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/arduino/">arduino</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/c-3/">c</a>
+                                                    </li>
+                                                
+                                            
+                                        </ul>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                
+            </li>
+        </ul>
+    </nav>
+
+
+    
+    <div class="logbox header-right unlogged">
+         
+            <a href="https://zestedesavoir.com/membres/connexion/?next=/articles/130/programmez-en-langage-dassemblage-sous-linux/">Connexion</a>
+            <a href="https://zestedesavoir.com/membres/inscription/">Inscription</a>
+        
+    </div>
+</header>
+
+
+            <div class="clearfix sub-header">
+                <div class="breadcrumb" itemprop="breadcrumb">
+                    <ol>
+                        <li>
+                            <a href="https://zestedesavoir.com/" rel="home" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                        </li>
+                        
+    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="https://zestedesavoir.com/bibliotheque/?type=article" itemprop="url">
+            <span itemprop="title">Articles</span>
+        </a>
+    </li>
+
+                        
+    <li>Programmez en langage d'assemblage sous Linux !</li>
+
+                    </ol>
+                </div>
+                <div class="search header-right" id="search">
+                    <form action="/rechercher/">
+                        <input id="search-top" type="text" name="q" placeholder="Rechercher" title="Contenu de la recherche">
+                        <button type="submit" class="ico-after search-submit" title="Lancer la recherche">OK</button>
+                    </form>
+                    <a href="https://zestedesavoir.com/rechercher/" title="Recherche avancée" class="search-more"></a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="main-container">
+            
+                <div class="main wrapper clearfix">
+                    <main class="content-container" role="main" id="content">
+                        
+                            
+
+
+
+                        
+
+                        
+    <article class="content-wrapper" itemscope="" itemtype="http://schema.org/Article">
+        <header>
+            
+    
+        <span class="license" itemprop="license">
+            Licence CC 0
+        </span>
+    
+
+    <h1 class="illu" itemprop="name">
+        
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/95cdd0f7-830b-4c2d-a1b4-4cdd2bb450a9.png" alt="" itemprop="thumbnailUrl">
+        
+        Programmez en langage d'assemblage sous Linux !
+    </h1>
+
+    
+        <h2 class="subtitle" itemprop="description">
+            Prise en main de nasm et découverte du langage d'assemblage x86 / x64
+        </h2>
+    
+
+    
+
+
+
+
+
+
+
+<aside class="meta">
+    <div class="meta-column">
+        <div class="members">
+            <span class="authors-label">
+                Auteur&nbsp;:
+            </span>
+            <ul>
+                
+                    <li>
+                        
+
+
+
+
+    <a href="https://zestedesavoir.com/@Ge0" class="member-item" itemscope="" itemtype="http://schema.org/Person"><img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/272fe3fa-4952-4f0e-bdad-ded6afa2aff6.png" alt="" class="avatar" itemprop="image" aria-hidden="true"><span itemprop="name">Ge0</span></a>
+
+
+                    </li>
+                
+
+                
+            </ul>
+        </div>
+
+        
+            
+        
+
+        <p>
+            Catégorie&nbsp;:
+
+            
+                
+                
+                    <a href="https://zestedesavoir.com/bibliotheque/?subcategory=systemes-dexploitation">Systèmes d'exploitation</a>
+                
+            
+        </p>
+
+        <p>
+            
+                Temps de lecture estimé&nbsp;: 27&nbsp;minutes
+            
+        </p>
+
+        
+            
+        
+
+        
+            <p class="pubdate">
+            
+                Dernière mise à jour
+                <time datetime="2017-10-11T11:27:35" pubdate="pubdate" itemprop="dateModified">
+                    mercredi 11 octobre 2017 à 11h27
+                </time>
+            
+            </p>
+        
+    </div>
+
+    <div class="meta-column">
+        
+
+        
+            <ul class="taglist" itemprop="keywords">
+                
+                    <li><a href="https://zestedesavoir.com/bibliotheque/?tag=diy" rel="tag">diy</a></li>
+                
+                    <li><a href="https://zestedesavoir.com/bibliotheque/?tag=gnulinux" rel="tag">gnu/linux</a></li>
+                
+            </ul>
+        
+
+        
+<button class="btn btn-grey ico-after view open-zen-mode" data-content-on-click="Quitter la lecture zen">Lecture zen</button>
+    </div>
+</aside>
+
+
+    
+
+        </header>
+        
+            <section class="article-content">
+                
+    
+
+    
+
+    
+
+    <ul class="pagination pagination- pagination-chapter">
+        
+            <li class="prev">
+                <a href="https://zestedesavoir.com/articles/99/zeste-de-savoir-passe-en-version-1-7/" class="ico-after arrow-left" rel="prev">
+                    Zeste de Savoir passe en version 1.7
+                </a>
+            </li>
+        
+
+        
+            <li class="next">
+                <a href="https://zestedesavoir.com/articles/142/interview-rencontre-avec-taguan/" class="ico-after arrow-right" rel="next">
+                    Interview : Rencontre avec Taguan
+                </a>
+            </li>
+        
+    </ul>
+
+    
+        
+
+
+
+
+
+    <p>Cet article se veut la suite logique de l’<a href="http://zestedesavoir.com/articles/167/introduction-a-la-retroingenierie-de-binaires/">introduction à la rétroingénierie des binaires</a> et de l’<a href="http://zestedesavoir.com/articles/171/introduction-aux-buffer-overflows/">introduction aux "buffer overflows"</a>. Au travers de ces écrits, nous souhaitons faire écrire au lecteur ses premiers programmes écrits en langage machine.</p>
+<p>Le fait qu’il soit la suite logique de l’introduction au <em>reverse engineering</em>
+ est qu’il se veut être une suite pratique à cet article qui montrait 
+comment fonctionnait un programme écrit à l’origine en C, notamment avec
+ l’utilisation de la pile d’exécution.</p>
+<p>De même, le fait qu’il soit la suite de l’introduction aux "buffer overflows" est qu’il se veut <strong>aussi</strong>
+ être une suite pratique pour l’exploitation de vulnérabilités plus 
+"critiques". Parce que s’il s’avère nécessaire dans la plupart des cas 
+de savoir comprendre un binaire désassemblé pour débusquer des 
+vulnérabilités liées à des défauts de programmation (manque de rigueur, 
+notamment), il peut être intéressant d’injecter son propre code au sein 
+d’un processus. Ce code sera naturellement une suite d’instructions 
+binaires. D’où la nécessité de savoir programmer en langage d’assemblage
+ dans ces cas-là.</p>
+<p>De fait, nous verrons trois exemples au travers de cet article. Le 
+premier exemple illustrera un programme destiné aux architectures 32-bit
+ basique qui se contentera de faire un "Hello world" en utilisant la 
+fonction <code>printf</code> de la bibliothèque standard C. Le deuxième 
+exemple illustrera la même fonctionnalité que le premier, mais en 
+utilisant cette fois-ci les <strong>appels systèmes</strong>. Enfin, le troisième et dernier exemple illustrera le même cas que son prédécesseur, mais pour les architectures 64-bit.</p>
+<p>Vous êtes prêts ? Attachez vos ceintures, ça va secouer ! <img alt=":pirate:" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/pirate.png"></p>
+
+
+
+    <ul>
+        
+            <li>
+                <a href="#1-avant-de-commencer">
+                    Avant de commencer
+
+
+                </a>
+            </li>
+        
+            <li>
+                <a href="#2-programmons-en-binaire">
+                    Programmons en binaire !
+
+
+                </a>
+            </li>
+        
+    </ul>
+
+
+
+    <h2 id="1-avant-de-commencer">
+        <a href="#1-avant-de-commencer">
+            Avant de commencer
+
+
+        </a>
+    </h2>
+    
+        <p>Avant de commencer à écrire nos programmes en langage d’assemblage, je me dois d’éclaircir certains points.</p>
+<p>Vous aurez remarqué que je parle de langage d’assemblage et d’assembleur de manière distincte. En effet, l’<strong>assembleur</strong> est le programme qui va convertir le langage d’assemblage en binaire. C’est exactement comme le rôle du <strong>compilateur</strong> qui va traduire le langage C en binaire ; sauf qu’ici, on parle d’assembleur.</p>
+<p>Beaucoup disent qu’ils "programment en assembleur" pour faire un 
+raccourci. Il s’agit d’un amalgame communément accepté, mais qui ne 
+plait pas aux puristes. Ainsi, dans cet article, je m’engagerai à faire 
+la part des choses entre le langage d’assemblage et l’assembleur.</p>
+<p>Un fichier contenant du langage d’assemblage comporte généralement l’extension <strong>.asm</strong>. Pour assembler ces fichiers, nous utiliserons <strong>nasm</strong>. Son acronyme signifie "<strong>Netwide ASseMbler</strong>", il s’agit de l’assembleur de référence pour les architectures x86-64 d’Intel/AMD. <a href="http://www.nasm.us/">Son site officiel</a>
+ est au goût du jour et présentera bien mieux que moi les possibilités 
+de cet assembleur. La source officielle est en anglais, mais cela ne 
+doit pas vous arrêter ! <img alt=";)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/clin.png"></p>
+<p>L’assembleur <code>nasm</code> est sûrement disponible dans les 
+paquets de votre distribution. Étant utilisateur régulier de Debian, je 
+vous communiquerai simplement la ligne magique pour installer 
+l’assembleur :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install nasm
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Vous êtes prêt à écrire des programmes en langage d’assemblage ! 
+Commençons par notre premier programme : un Hello World en utilisant la 
+bibliothèque standard C (c’est possible, ça ?! <img alt=":D" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/heureux.png"> ).</p>
+    
+
+    <h2 id="2-programmons-en-binaire">
+        <a href="#2-programmons-en-binaire">
+            Programmons en binaire !
+
+
+        </a>
+    </h2>
+    
+        <h3>Exemple 1 : "Hello world", Intel x86, en utilisant la libc</h3>
+<p>Ouvrez votre éditeur préféré et inscrivez-y le contenu suivant que nous décortiquerons pas-à-pas.</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">bits</span> <span class="mi">32</span>
+<span class="nf">extern</span> <span class="no">printf</span>
+<span class="nf">global</span> <span class="no">main</span>
+
+<span class="nf">section</span> <span class="no">.data</span>
+<span class="nf">Hello</span> <span class="no">db</span> <span class="err">"</span><span class="no">Hello</span> <span class="no">world</span><span class="p">!</span><span class="err">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span>
+
+
+<span class="nf">section</span> <span class="no">.text</span>
+
+<span class="nl">main:</span>
+    <span class="nf">push</span> <span class="no">ebp</span>
+    <span class="nf">mov</span> <span class="no">ebp</span><span class="p">,</span> <span class="no">esp</span>
+    <span class="nf">sub</span> <span class="no">esp</span><span class="p">,</span> <span class="mi">4</span>
+    <span class="nf">mov</span> <span class="no">dword</span> <span class="p">[</span><span class="no">esp</span><span class="p">],</span> <span class="no">Hello</span>
+    <span class="nf">call</span> <span class="no">printf</span>
+    <span class="nf">xor</span> <span class="no">eax</span><span class="p">,</span> <span class="no">eax</span>
+    <span class="nf">leave</span>
+    <span class="nf">ret</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Commençons par nous attarder sur les trois premières lignes :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">bits</span> <span class="mi">32</span>
+<span class="nf">global</span> <span class="no">main</span>
+<span class="nf">extern</span> <span class="no">printf</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>La première ligne indique que le code que nous écrirons par la suite 
+sera du code 32-bit. Cette directive n’est pas indispensable dans le cas
+ présent puisqu’il n’y a aucune ambiguïté sur le code qui suivra, mais 
+il fait toujours bon de l’insérer à titre informatif. <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>Les deux lignes suivantes sont intéressantes et vont servir à l’éditeur de liens, ou <strong>linker</strong>. La seconde directive, <code>global main</code>, indique que nous avons une étiquette <code>main</code>
+ au sein de notre programme qui devra être considérée comme un symbole 
+public. Sans ça, l’éditeur de lien ne pourra pas trouver où se situe la 
+fameuse "fonction main" que vous écririez en C !</p>
+<p>Enfin, la troisième ligne - <code>extern printf</code> - indique à 
+l’assembleur qu’il doit faire fi de ce symbole et que celui-ci sera 
+résolu au moment de l’édition de liens. En effet, le code de la fonction
+ <code>printf</code> se situe dans la libc. Notre binaire final se 
+chargera d’appeler ladite fonction et d’exécuter son code au moment de 
+l’appel. Nous verrons plus tard comment appeler une directive plus bas 
+niveau pour afficher du texte à l’écran.</p>
+<p>Attardons-nous sur la suite du programme :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">section</span> <span class="no">.data</span>
+<span class="nf">Hello</span> <span class="no">db</span> <span class="err">"</span><span class="no">Hello</span> <span class="no">world</span><span class="p">!</span><span class="err">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>La première ligne indique que nous déclarons le contenu de la "section .data"…</p>
+<div class="information ico-after">
+<p>Question aux lecteurs de l’article sur la rétroingénierie de binaires
+ référencé dans l’introduction : vous vous souvenez du "format ELF" 
+auquel je faisais référence ? Eh bien nous parlons ici des sections 
+contenues dans un binaire structuré dans ce format ! Pour rappel, une 
+section a des propriétés (son adresse mémoire de base, sa taille 
+physique dans le fichier, la taille qu’elle prendra en mémoire, des 
+droits d’accès…) et un contenu. C’est tout ce que vous avez à savoir 
+pour ce qui va suivre.</p>
+</div>
+<p>Par convention, la section nommée ".data" contient… Des données ! 
+Rien de plus que des données accessibles par votre programme, le plus 
+souvent en lecture et parfois en écriture également. Mais jamais (ô 
+grand jamais) en exécution, à moins qu’il s’agisse d’un binaire réécrit à
+ la main ou autre.</p>
+<p>En résumé, à partir de cette ligne, tout ce que nous déclarerons sera stocké dans la section .data ! <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>Analysons de près la seconde ligne :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">Hello</span> <span class="no">db</span> <span class="err">"</span><span class="no">Hello</span> <span class="no">world</span><span class="p">!</span><span class="err">"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Celle-ci va nous permettre de déclarer des données dans notre section
+ .data. Ces données seront référencées au moyen d’un symbole nommé 
+"Hello".</p>
+<p>La directive <code>db</code> signifie littéralement <code>data byte</code>. Elle permet de spécifier que l’unité des données décrites par la suite sera huit bits ("one byte", "un octet"…).</p>
+<p>La syntaxe générale est la suivante :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">Symbol</span> <span class="no">db</span> <span class="mi">0xde</span><span class="p">,</span> <span class="mi">0037</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">0</span><span class="no">b0110</span><span class="p">,</span> <span class="err">"</span><span class="no">Some</span> <span class="no">String</span><span class="err">"</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Il est en effet possible de déclarer des octets en <strong>hexadécimal</strong>
+ (0xde ou 0deh avec le suffixe "h"), en octal (0037), en décimal (137), 
+en binaire (0b0110) et en chaîne de caractères ("Some String"). Les 
+possibilités sont grandes si vous souhaitez représenter votre 
+information d’une certaine manière. <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>Pour en revenir à notre ligne, nous avons déclaré "Hello world", 
+suivi des octets 10 et 0. Les habitués du langage C remarqueront que la 
+valeur décimale 10 représente dans le code ASCII le fameux "Line Feed" 
+qui permet de revenir à la ligne, et que le 0 n’est autre que le fameux 
+null-byte de terminaison de chaîne "à la C". Le fameux <code>\0</code> si vous préférez. <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>En passant rapidement les autres directives, pour pourrez déclarer des mots de 16 bits via <code>dw</code> (<strong>declare word</strong>), des doubles mots de 32 bits via <code>dd</code> (<strong>declare double (word)</strong>) ou des quadruples mots de 64 bits via <code>dq</code> (<strong>declare quadruple (word)</strong>).</p>
+<p>Nous avons déclaré toutes les données dont nous avons besoin ; à 
+savoir notre chaîne à afficher à l’écran. Attaquons-nous maintenant à la
+ section .text. Les explications vont être rapides !</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">section</span> <span class="no">.text</span>
+
+<span class="nl">main:</span>
+    <span class="c">; ... code</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>On déclare en premier lieu que nous ne sommes plus dans la section 
+.data, mais bien dans la section .text. Il faut savoir que celle-ci 
+contient par convention le code machine destiné à être exécuté. Pourquoi
+ .text et pas .code ? Aucune idée. Sachez juste qu’il s’agit d’une 
+convention, et que l’assembleur saura quels droits affecter à ladite 
+section s’il reconnaît son nom, à savoir les droits d’exécution !</p>
+<p>Enfin, on déclare une <strong>étiquette</strong>, un <strong>libellé</strong> que nous appellerons… <code>main</code>. Vous reconnaissez là qu’il s’agit du début de notre traditionnelle fonction <code>main</code> en C ? <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>Ici, c’est pareil. Au sens de l’assembleur, il s’agit juste d’une 
+simple étiquette pour permettre de référencer plus facilement une 
+destination que par rapport à une adresse mémoire brute. Mais le fait 
+d’avoir considéré cette étiquette comme "globale" comme nous l’avons 
+fait plus haut au sein de notre code permet de spécifier à l’éditeur de 
+lien qu’il s’agira d’un symbole exporté.</p>
+<p>Vient ensuite… Le code du programme en lui-même :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="nf">push</span> <span class="no">ebp</span>
+    <span class="nf">mov</span> <span class="no">ebp</span><span class="p">,</span> <span class="no">esp</span>
+    <span class="nf">sub</span> <span class="no">esp</span><span class="p">,</span> <span class="mi">4</span>
+    <span class="nf">mov</span> <span class="no">dword</span> <span class="p">[</span><span class="no">esp</span><span class="p">],</span> <span class="no">Hello</span>
+    <span class="nf">call</span> <span class="no">printf</span>
+    <span class="nf">xor</span> <span class="no">eax</span><span class="p">,</span> <span class="no">eax</span>
+    <span class="nf">leave</span>
+    <span class="nf">ret</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>C’est là que je ne veux pas perdre énormément de temps sur les 
+explications du code et que j’aimerais vous renvoyer à l’article sur la 
+rétro-ingénierie des binaires. Je vous dirai juste qu’après 
+compréhension des tenants et des aboutissants, il est aisé de repérer :</p>
+<ul>
+<li>Le prologue de la fonction qui va mettre en place le cadre de pile 
+et allouer son propre espace mémoire au sein de la pile d’exécution, 
+ceci afin de préserver les données utilisées par la fonction parente.</li>
+<li>L’instruction <code>mov dword [esp], Hello</code> qui dépose au sommet de la pile l’adresse mémoire qui pointe sur nos données que la fonction <code>printf</code> va afficher. Il est possible de réaliser cette instruction au lieu d’un <code>push Hello</code> puisque nous avons précédemment fait un <code>sub esp, 4</code>.
+ L’intérêt de faire un "sub" au lieu de push successifs permet d’allouer
+ de la place dans la pile d’exécution d’une seule traite.</li>
+<li>L’appel à printf et le <code>xor eax, eax</code> qui met à zéro le registre éponyme pour mettre à jour le code de retour de notre fonction.</li>
+<li>L’épilogue de la fonction.</li>
+</ul>
+<p>Et si l’on construisait tout ça ? <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"> Enregistrez le code que je vous ai donné sous un fichier <strong>hello.asm</strong> et exécutez la ligne de commande suivante :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>% nasm -f elf32 hello.asm -o hello.o
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Cette ligne de commande va produire le fameux fichier .o que les 
+programmeurs C reconnaîtront. Au risque de me répéter, nous avons ici 
+fait de l’assemblage et non de la compilation. Il en ressort juste que 
+nous avons un fichier .o prêt à être lié à d’autres afin de produire un 
+binaire exécutable, au format ELF ! En effet, la commande suivante :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">%</span> <span class="nf">file</span> <span class="no">hello.o</span>
+<span class="nl">hello.o:</span> <span class="nf">ELF</span> <span class="mi">32</span><span class="p">-</span><span class="no">bit</span> <span class="no">LSB</span> <span class="no">relocatable</span><span class="p">,</span> <span class="no">Intel</span> <span class="mi">80386</span><span class="p">,</span> <span class="no">version</span> <span class="mi">1</span> <span class="p">(</span><span class="no">SYSV</span><span class="p">),</span> <span class="no">not</span> <span class="no">stripped</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Ôte toute ambiguïté quant au contenu de notre fichier. Pour faire 
+l’édition de liens, utilisez votre compilateur C favori. Pour ma part, 
+j’utilise gcc, mais cela dépend de tout un chacun ! <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>% gcc -o hello hello.o -m32
+</pre></div>
+</td></tr></tbody></table></div>
+<p>N’oubliez pas l’option -m32 si vous êtes sous un système 64-bit, évidemment. Car nous voulons produire un binaire 32-bit.</p>
+<p>À la fin de l’exécution de ces deux commandes, nous avons notre binaire fonctionnel :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> % ./hello 
+Hello world!
+ % file hello
+hello: ELF <span class="m">32</span>-bit LSB executable, Intel <span class="m">80386</span>, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, dynamically linked <span class="o">(</span>uses shared libs<span class="o">)</span>, <span class="k">for</span> GNU/Linux <span class="m">2</span>.6.26, BuildID<span class="o">[</span>sha1<span class="o">]=</span>0x5f5a4592997bc9380054ebe8836b01f7d86ef24b, not stripped
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Et j’espère que vous en voulez encore, car ce n’est pas fini ! Nous allons voir comment écrire un programme qui n’utilise ni <code>printf</code>, ni la fonction <code>main</code>, mais qui se contente tout de même d’afficher les mêmes informations à l’écran, ceci à l’aide d’<strong>appels systèmes</strong> !</p>
+<h3>Exemple 2 : "Hello world", Intel x86, en utilisant les appels systèmes</h3>
+<p>Puisqu’on parle d’assembleur, de bas niveau, de binaire, il y a une question qu’il nous semble légitime de nous poser :</p>
+<div class="information ico-after">
+<p>À quoi ressemble le code de printf ? Existe-t-il une ou des 
+instructions miracles qui permettent d’afficher nos données à l’écran ?</p>
+</div>
+<p>La réponse est : oui. <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>En effet, les systèmes d’exploitation récents ont des noyaux qui mettent à disposition ce qu’on appelle des <strong>appels systèmes</strong>. Pour faire simple, il s’agit d’une interface que le noyau met à disposition pour les programmes de l’utilisateur.</p>
+<p>Il faut savoir que la gestion des fichiers, des entrées/sorties au 
+sens large, des processus, de l’affichage graphique, etc. reposent sur 
+des mécanismes <strong>compliqués</strong>. Ceux-ci sont gérés par votre
+ système d’exploitation et votre noyau sans que vous ayez à vous soucier
+ d’accéder, par exemple, au disque dur pour écrire sur un fichier, à la 
+mémoire pour écrire une phrase à l’écran, etc.</p>
+<p>Et donc, grâce à ces appels systèmes, qui ressemblent fortement à des
+ fonctions, il est possible d’accéder à des fichiers, de manipuler des 
+sockets, des mutex, des sémaphores et j’en passe !</p>
+<p>On traduit en anglais le terme appel système par "syscall". Chaque appel système possède un numéro et des arguments.</p>
+<p>Le programme que nous avons construit dans l’exemple 1 fait appel à 
+printf. La fonction printf va elle-même utiliser un appel système pour 
+afficher des données à l’écran.</p>
+<p>Pour connaître les appels systèmes employés par un programme, l’outil <code>strace</code> est parfaitement indiqué. <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>Pour ceux qui ne l’auraient pas sur leur machine, strace est sûrement disponible dans les dépôts de votre distribution linux.</p>
+<p>Pour "stracer" le binaire "./hello" que nous avons construit, rien de plus simple :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> % strace ./hello 
+execve<span class="o">(</span><span class="s2">"./hello"</span>, <span class="o">[</span><span class="s2">"./hello"</span><span class="o">]</span>, <span class="o">[</span>/* <span class="m">17</span> vars */<span class="o">])</span> <span class="o">=</span> <span class="m">0</span>
+<span class="o">[</span> Process <span class="nv">PID</span><span class="o">=</span><span class="m">13792</span> runs in <span class="m">32</span> bit mode. <span class="o">]</span>
+brk<span class="o">(</span><span class="m">0</span><span class="o">)</span>                                  <span class="o">=</span> 0x878d000
+access<span class="o">(</span><span class="s2">"/etc/ld.so.nohwcap"</span>, F_OK<span class="o">)</span>      <span class="o">=</span> -1 ENOENT <span class="o">(</span>No such file or directory<span class="o">)</span>
+...
+write<span class="o">(</span><span class="m">1</span>, <span class="s2">"Hello world!\n"</span>, 13Hello world!
+<span class="o">)</span>          <span class="o">=</span> <span class="m">13</span>
+exit_group<span class="o">(</span><span class="m">0</span><span class="o">)</span>                           <span class="o">=</span> ?
+</pre></div>
+</td></tr></tbody></table></div>
+<p>On voit qu’il y a pléthore d’appels systèmes appelés par notre programme ! <img alt="o_O" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/blink.gif"></p>
+<p>Je ne vais pas vous demander de comprendre tous les appels systèmes 
+qui ont été appelés par notre programme. Celui qui nous intéresse le 
+plus, c’est celui-là :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>write<span class="o">(</span><span class="m">1</span>, <span class="s2">"Hello world!\n"</span>, 13Hello world!
+<span class="o">)</span>          <span class="o">=</span> <span class="m">13</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Il s’agit, vous l’aurez deviné, de l’appel système "write".</p>
+<p>Pour avoir des informations sur cet appel système, la commande <code>man 2 write</code> vous donnera toutes les informations dont vous aurez besoin. Y compris le prototype C :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+
+<span class="kt">ssize_t</span> <span class="nf">write</span><span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span><span class="o">*</span> <span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">count</span><span class="p">);</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>En résumé, <code>write</code> va écrire <code>count</code> octets pointés par <code>buf</code> dans le descripteur <code>fd</code>. C’est bien plus compliqué que si nous appelions <code>printf</code>. <img alt="o_O" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/blink.gif"></p>
+<p>Notre programme, en utilisant <code>printf</code>, a appelé <code>write</code> de la sorte :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">write</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="mi">13</span><span class="p">);</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>On arrive à mettre en évidence la valeur de nos deux derniers 
+arguments - la chaîne à afficher et sa taille. Quant au premier 
+argument, il correspond tout simplement à <code>stdout</code>, la "sortie standard" dont le descripteur vaut <code>1</code> sur les systèmes Linux.</p>
+<p>Il ne nous reste plus qu’à savoir comment appeler cet appel système en langage d’assemblage.</p>
+<div class="information ico-after">
+<p>Je sais ! Il suffit d’utiliser la directive <code>extern write</code> et de faire un <code>call write</code> en ayant inséré tous les arguments qui vont bien sur la pile d’exécution !</p>
+</div>
+<p>Et la réponse est… Oui, mais non ! <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>En effet, la libc met à disposition ce qu’on appelle un "wrapper" autour de l’appel système <code>write</code>. Une interface d’appel, si vous préférez. Mais nous, on veut <strong>vraiment</strong> faire un appel système en pur et dur !</p>
+<p>Pour cela, nous allons utiliser ce qu’on appelle une <strong>interruption logicielle</strong>. Le noyau Linux met en effet à disposition l’interruption <code>0x80</code> - 128 en décimal - qui permet d’effectuer un appel système au niveau des logiciels utilisateurs.</p>
+<p>Cette information est décrite et disponible dans ce qu’on appelle l’<strong>ABI</strong> - Application Binary Interface. C’est sensiblement le même principe d’une <strong>API</strong>, sauf qu’ici, on se met d’accord sur des conventions au niveau binaire.</p>
+<p>L’ABI x86 sur système Linux impose les standard suivant lors d’un appel système :</p>
+<ul>
+<li>Le registre <strong>eax</strong> contiendra le <strong>numéro de l’appel système</strong> ;</li>
+<li>Le registre <strong>ebx</strong> contiendra le premier argument de l’appel système ;</li>
+<li>Le registre <strong>ecx</strong> contiendra le second/deuxième argument de l’appel système ;</li>
+<li>Le registre <strong>edx</strong> contiendra le troisième argument de l’appel système ;</li>
+<li>Le registre <strong>esi</strong> contiendra le quatrième argument de l’appel système ;</li>
+<li>Le registre <strong>edi</strong> contiendra le cinquième argument de l’appel système.</li>
+</ul>
+<p>Ceci sous réserve qu’un appel système ait besoin d’autant d’arguments, bien sûr.</p>
+<p>Dans notre cas, l’appel système <code>write</code> ne prend que trois arguments. On aura donc le schéma suivant :</p>
+<ul>
+<li>Le registre <strong>eax</strong> contiendra le numéro d’appel système de <strong>write</strong> ;</li>
+<li>Le registre <strong>ebx</strong> contiendra la valeur du descripteur de l’entrée sortie, soit <code>1</code> ;</li>
+<li>Le registre <strong>ecx</strong> contiendra l’adresse vers notre mémoire à écrire dans le descripteur (notre chaîne <code>"Hello World\n"</code>) ;</li>
+<li>Le registre <strong>edx</strong> contiendra le nombre de caractères à écrire dans le descripteur (<code>13</code>).</li>
+</ul>
+<p>Il ne nous reste plus qu’à récupérer le numéro de l’appel système <code>write</code>. De nombreuses ressources sur internet vous permettront de l’identifier.</p>
+<p>Par exemple, sur le lien suivant : <a href="http://docs.cs.up.ac.za/programming/asm/derick_tut/syscalls.html">http://docs.cs.up.ac.za/programming/asm/derick_tut/syscalls.html</a> ; on nous informe que le numéro d’appel système de <code>write</code> est <code>4</code>.</p>
+<p>Sous système 64-bit, il est aisé de vérifier cette affirmation :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> % cat /usr/include/asm/unistd_32.h <span class="p">|</span> grep write   
+<span class="c1">#define __NR_write                4</span>
+<span class="c1">#define __NR_writev             146</span>
+<span class="c1">#define __NR_pwrite64           181</span>
+<span class="c1">#define __NR_pwritev            334</span>
+<span class="c1">#define __NR_process_vm_writev  348</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Il s’agit bien du numéro <code>4</code> ! <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>Il nous faut aussi pouvoir quitter le programme proprement, grâce à l’appel système <code>exit</code>. Celui-ci prend en unique argument la valeur de retour du programme. Vous savez ? Le fameux <code>0</code> qui indique que tout s’est bien passé !</p>
+<p>Le numéro d’appel système d<code>exit</code> est le…? <img alt=":D" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/heureux.png"></p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> % cat /usr/include/asm/unistd_32.h <span class="p">|</span> grep <span class="nb">exit</span> 
+<span class="c1">#define __NR_exit                 1</span>
+<span class="c1">#define __NR_exit_group         252</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>C’est le numéro 1 ! <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>OUF ! Cela en fait, des explications pour simple hello world au plus bas niveau possible !</p>
+<p>Nous pouvons faire notre Hello world sans avoir besoin de la libc désormais. Ouvrons notre fichier <code>hello2.asm</code> et inscrivons-y le code suivant :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">bits</span> <span class="mi">32</span>
+
+<span class="nf">global</span> <span class="no">_start</span>
+
+<span class="nf">section</span> <span class="no">.data</span>
+<span class="nf">Hello</span> <span class="no">db</span> <span class="err">'</span><span class="no">Hello</span> <span class="no">world</span><span class="err">'</span><span class="p">,</span> <span class="mi">10</span>
+
+<span class="nf">section</span> <span class="no">.text</span>
+<span class="nl">_start:</span>
+    <span class="nf">push</span>    <span class="no">ebp</span>
+    <span class="nf">mov</span>     <span class="no">ebp</span><span class="p">,</span> <span class="no">esp</span>
+    <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">4</span> <span class="c">; sys_write</span>
+    <span class="no">mov</span>     <span class="no">ebx</span><span class="p">,</span> <span class="mi">1</span> <span class="c">; stdout</span>
+    <span class="no">mov</span>     <span class="no">ecx</span><span class="p">,</span> <span class="no">Hello</span>
+    <span class="nf">mov</span>     <span class="no">edx</span><span class="p">,</span> <span class="mi">13</span>
+    <span class="nf">int</span>     <span class="mi">0x80</span>
+
+    <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="nf">xor</span>     <span class="no">ebx</span><span class="p">,</span> <span class="no">ebx</span> <span class="c">; ebx = 0</span>
+    <span class="no">int</span>     <span class="mi">0x80</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Ici, nul besoin de prologue et d’épilogue de fonction. On va exécuter
+ du code situé directement au point d’entrée du programme, c’est-à-dire à
+ partir du symbole <code>_start</code>. Dans un programme écrit en C, le code présent à partir de <code>_start</code> se chargerait de faire des opérations diverses et variées avant d’appeler <code>main</code> avec les arguments qui vont bien. Ici, on fait <strong>ce qu’on veut</strong>.</p>
+<p>L’instruction <code>int</code>, vous l’aurez deviné, permet de 
+déclencher une interruption au niveau logiciel. Ici, on appelle 
+l’interruption 0x80 avec nos registres correctement initialisés, comme 
+je l’ai expliqué plus haut.</p>
+<p>On n’a plus qu’à assembler et lier notre programme ! Cette fois-ci, ce sera un poil différent :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>% nasm -f elf32 hello2.asm -o hello2.o
+% ld -m elf_i386 -o hello2 hello2.o
+</pre></div>
+</td></tr></tbody></table></div>
+<p>On utilisera en effet l’outil <code>ld</code> pour lier notre 
+programme, en lui précisant que nous aurons un binaire 32-bit "émulé" 
+sur système 64-bit. Toujours un ELF, bien entendu ! <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>Le binaire sera tout autant fonctionnel que dans le premier exemple :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> % file hello2
+hello2: ELF <span class="m">32</span>-bit LSB executable, Intel <span class="m">80386</span>, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+ % ./hello2 
+Hello world
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Et si nous voyions un troisième et dernier exemple, toujours sur les 
+appels systèmes, mais sur une architecture 64-bit désormais ? Vous 
+verrez que peu de choses changent et que l’exemple sera présent surtout 
+pour la postérité, afin que vous puissiez rapidement vous faire la main 
+sur le langage d’assemblage intel x64 si le coeur vous en dit ! <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<h3>Exemple 3 : "Hello world", Intel x64, en utilisant les appels systèmes</h3>
+<p>La partie de cet article sera plutôt rapide par rapport à la 
+précédente, puisque nous nous passerons d’explications redondantes cette
+ fois-ci.</p>
+<p>Il y a juste deux-trois choses à savoir : vous vous douterez que le 
+numéro des appels systèmes est sujet à changer d’une part, et que l’<strong>ABI</strong> sera différente d’autre part ! <img alt=";)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/clin.png"></p>
+<p>En effet, pour effectuer un appel système sur un Linux 64-bit, il faut avoir le schéma suivant :</p>
+<ul>
+<li>le registre <strong>rax</strong> doit contenir le <strong>numéro d’appel système</strong> ;</li>
+<li>le registre <strong>rdi</strong> doit contenir le premier argument ;</li>
+<li>le registre <strong>rsi</strong> doit contenir le deuxième/second argument ;</li>
+<li>le registre <strong>rdx</strong> doit contenir le troisième argument ;</li>
+<li>le registre <strong>r10</strong> doit contenir le quatrième argument ;</li>
+<li>le registre <strong>r8</strong> doit contenir le cinquième argument ;</li>
+<li>le registre <strong>r9</strong> doit contenir le sixième argument.</li>
+</ul>
+<p>Pour les curieux de la chose, vous pouvez consulter le document traitant de l’<strong>ABI</strong> de Linux x64 ici : <a href="http://www.x86-64.org/documentation/abi.pdf">http://www.x86-64.org/documentation/abi.pdf</a></p>
+<p>Les numéros d’appels systèmes sont probablement différents. Il peut ne plus s’agir de <code>4</code> pour <code>write</code> ni de <code>1</code> pour <code>exit</code>. Vérifions-le ! </p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> % cat /usr/include/asm/unistd_64.h <span class="p">|</span> grep write   
+<span class="c1">#define __NR_write                              1</span>
+__SYSCALL<span class="o">(</span>__NR_write, sys_write<span class="o">)</span>
+<span class="o">[</span>...<span class="o">]</span>
+ % cat /usr/include/asm/unistd_64.h <span class="p">|</span> grep <span class="nb">exit</span> 
+<span class="c1">#define __NR_exit                               60</span>
+__SYSCALL<span class="o">(</span>__NR_exit, sys_exit<span class="o">)</span>
+<span class="o">[</span>...<span class="o">]</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Il s’agit respectivement de <code>1</code> et <code>60</code>. </p>
+<p>Un dernier détail qui a toute son importance ! Sur architecture x64, nous n’utiliserons plus l’interruption logicielle <code>0x80</code> pour effectuer un appel système, mais nous utiliserons à la place une instruction <strong>dédiée</strong> : l’instruction <code>syscall</code>.</p>
+<p>En plus d’être plus parlante, elle a l’avantage d’être plus rapide. En effet, l’instruction <code>int</code>
+ provoque une interruption. Dans le domaine de l’architecture matérielle
+ des ordinateurs, les interruptions sont réputées pour être lentes, car 
+il y a tout un tas d’opérations "lourdes" à effectuer - aller chercher 
+la routine à appeler pour l’interruption 0x80, sauvegarder le contexte 
+d’exécution actuel… Or, notre instruction <code>syscall</code> s’occupera de faire un appel système sans passer par le mécanisme coûteux de l’interruption.</p>
+<div class="information ico-after">
+<p>En résumé, préférez exécuter des binaires 64 bits sur votre machine que des binaires 32 bits. C’est plus rapide. <img alt=":-°" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/siffle.png"></p>
+</div>
+<p>Écrivons notre troisième et dernier programme une fois pour toutes :</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">bits</span> <span class="mi">64</span>
+<span class="nf">global</span> <span class="no">_start</span>
+
+<span class="nf">section</span> <span class="no">.data</span>
+<span class="nf">Hello</span> <span class="no">db</span> <span class="err">"</span><span class="no">Hello</span> <span class="no">world</span><span class="p">!</span><span class="err">"</span><span class="p">,</span> <span class="mi">10</span>
+
+<span class="nf">section</span> <span class="no">.text</span>
+<span class="nl">_start:</span>
+    <span class="nf">mov</span> <span class="no">rax</span><span class="p">,</span> <span class="mi">1</span> <span class="c">; sys_write</span>
+    <span class="no">mov</span> <span class="no">rdi</span><span class="p">,</span> <span class="mi">1</span> <span class="c">; stdout</span>
+    <span class="no">mov</span> <span class="no">rsi</span><span class="p">,</span> <span class="no">Hello</span>
+    <span class="nf">mov</span> <span class="no">rdx</span><span class="p">,</span> <span class="mi">13</span>
+    <span class="nf">syscall</span>
+
+    <span class="nf">mov</span> <span class="no">rax</span><span class="p">,</span> <span class="mi">60</span> <span class="c">; sys_exit</span>
+    <span class="no">xor</span> <span class="no">rdi</span><span class="p">,</span> <span class="no">rdi</span> <span class="c">; exit(0)</span>
+    <span class="no">syscall</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>On assemble et lie ? <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>% nasm -f elf64 hello3.asm -o hello3.o
+% ld -o hello3 hello3.o
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Aucun problème : vérifions le fichier et exécutons-le.</p>
+<div><table class="codehilitetable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> % file hello3
+ % ./hello3   
+Hello world!
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Félicitations, lecteurs. Vous venez de fouler les terres inconnues 
+d’un monde passionnant, dont l’étendue nous donne le vertige !</p>
+<p>Alors, pas perdus ? <img alt=":D" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/heureux.png"></p>
+<p>Vous savez désormais écrire des petits programmes basiques en langage
+ d’assemblage sous Linux. Appelons un chat un chat : vous savez 
+programmer en <strong>binaire</strong> ! <img alt="o_O" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/blink.gif"></p>
+<p>L’utilisation d’un assembleur et de mnémoniques nous est bénéfique 
+puisque la dernière étape serait carrément d’ouvrir un éditeur 
+hexadécimal pour taper nos octets nous-mêmes. Que je vous rassure si 
+l’idée vous traverse l’esprit : vous n’êtes pas forcément masochistes 
+puisque cette technique est utilisée pour <strong>patcher</strong> à 
+froid certains binaires. Notamment par les casseurs de logiciels qui 
+font en sorte que votre version de Photoshop valide n’importe quelle 
+clef-cd, par exemple. Mais programmer de but en blanc une routine en 
+hexadécimal… Là, je vous souhaite bonne chance ! <img alt=":P" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/langue.png"></p>
+<p>Nous n’avons vraiment vu que les bases, puisqu’il ne s’agit pas d’un 
+tutoriel à proprement parler, mais d’un article. Si vous tenez vraiment à
+ écrire des programmes avec plus de fonctionnalités, des conditions et 
+j’en passe, renseignez-vous sur les instructions de branchement et 
+autre. Il y a de quoi faire. Ou… Compilez un programme écrit en C et 
+désassemblez-le ? C’est un excellent moyen d’apprendre, n’est-ce pas ?</p>
+<p>Les possibilités sont énormes. De l’apprentissage et l’amusement au 
+développement de routines sophistiquées au sein de programmes 
+originellement écrits en C ou C++, le langage d’assemblage se défend 
+encore assez et garde une place intéressante dans le milieu de 
+l’informatique.</p>
+<p><em>L’icône de ce tutoriel a été réalisée par <a href="http://zestedesavoir.com/membres/voir/Norwen/">Norwen</a> et est soumise à la licence <strong>CC BY-NC-SA</strong></em>.</p>
+    
+
+
+<hr>
+
+
+    
+
+
+    
+    <ul class="pagination pagination- pagination-chapter">
+        
+            <li class="prev">
+                <a href="https://zestedesavoir.com/articles/99/zeste-de-savoir-passe-en-version-1-7/" class="ico-after arrow-left" rel="prev">
+                    Zeste de Savoir passe en version 1.7
+                </a>
+            </li>
+        
+
+        
+            <li class="next">
+                <a href="https://zestedesavoir.com/articles/142/interview-rencontre-avec-taguan/" class="ico-after arrow-right" rel="next">
+                    Interview : Rencontre avec Taguan
+                </a>
+            </li>
+        
+    </ul>
+    
+
+
+
+
+    
+
+
+
+
+
+
+            </section>
+        
+        
+    
+
+
+
+
+    <h3 class="comments-title" id="comments">
+        
+            <span itemprop="commentCount">
+                11
+            </span>
+            commentaires
+        
+    </h3>
+
+
+    
+
+
+
+
+
+
+    
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p81647">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@Michelouzooo" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/rlun.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@Michelouzooo" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Michelouzooo</span></a><span class="username-date-separator">, </span><a href="#p81647" class="date" title="Il y a 7&nbsp;ans, 4&nbsp;mois"><time itemprop="dateCreated" datetime="2015-04-28T11:40:58"><span class="long-date">mardi 28 avril 2015 à 11h40</span><span class="short-date" aria-hidden="true">28/04/15 à 11h40</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>Encore un article qui me paraît bien intéressant ! Je lis ça de suite <img alt=";)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/clin.png"></p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p81647" class="mobile-permalink">28/04/15 à 11h40</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                        
+                            
+                                <label class="signature">
+                                    <input type="checkbox">
+                                    
+                                        <p>Un jour j’irai vivre en Théorie, car en Théorie tout se passe bien. Desproges</p>
+                                    
+                                </label>
+                            
+                        
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/81647/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       more-voted
+                                       has-vote" title="4 personnes ont trouvé ce message utile" aria-describedby="tooltip-0">
+                                +4
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-1">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p81648">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@Arius" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/f625ef12-28bf-4ca4-bdf0-1d9f25110354.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@Arius" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Arius</span></a><span class="username-date-separator">, </span><a href="#p81648" class="date" title="Il y a 7&nbsp;ans, 4&nbsp;mois"><time itemprop="dateCreated" datetime="2015-04-28T14:28:35"><span class="long-date">mardi 28 avril 2015 à 14h28</span><span class="short-date" aria-hidden="true">28/04/15 à 14h28</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>Un tout grand merci (déjà dit en MP, mais bon… <em>bis repetita placent</em> <img alt=";)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/clin.png"> ) à notre samouraï pour cet article fort intéressant <img alt=":D" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/heureux.png"></p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p81648" class="mobile-permalink">28/04/15 à 14h28</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                        
+                            
+                                <label class="signature">
+                                    <input type="checkbox">
+                                    
+                                        <p>"Throw me to the wolves and I will return leading the pack." — Seneca</p>
+                                    
+                                </label>
+                            
+                        
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/81648/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       more-voted
+                                       has-vote" title="5 personnes ont trouvé ce message utile" aria-describedby="tooltip-2">
+                                +5
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-3">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p81649">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@Dominus%20Carnufex" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/b5bff02a-a258-40b3-9960-2cd426856b78.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@Dominus%20Carnufex" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Dominus Carnufex</span></a><span class="username-date-separator">, </span><a href="#p81649" class="date" title="Il y a 7&nbsp;ans, 4&nbsp;mois"><time itemprop="dateCreated" datetime="2015-04-28T15:28:30"><span class="long-date">mardi 28 avril 2015 à 15h28</span><span class="short-date" aria-hidden="true">28/04/15 à 15h28</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>Pour ceux que cela intéresse (et qui disposent 
+d'un compte), vous pourrez étudier plus en détail le fonctionnement d'un
+ « Hello World&nbsp;» en 64 bits dans les premiers chapitres de <a href="https://zestedesavoir.com/forums/sujet/1577/lassembleur-x86-sous-linux/">ce tuto en bêta</a>.</p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p81649" class="mobile-permalink">28/04/15 à 15h28</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                        
+                            
+                                <label class="signature">
+                                    <input type="checkbox">
+                                    
+                                        <p><a rel="nofollow" href="https://zestedesavoir.com/forums/sujet/697/lopen-bar-a-smoothies/?page=100#p129925">#JeSuisGrimur</a> #OnVautMieuxQueÇa</p>
+                                    
+                                </label>
+                            
+                        
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/81649/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       more-voted
+                                       has-vote" title="4 personnes ont trouvé ce message utile" aria-describedby="tooltip-4">
+                                +4
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-5">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p81650">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@mrjay42" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/463399a1c8d6e207deffd92a6c53f90e.jpg" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@mrjay42" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">mrjay42</span></a><span class="username-date-separator">, </span><a href="#p81650" class="date" title="Il y a 7&nbsp;ans, 4&nbsp;mois"><time itemprop="dateCreated" datetime="2015-04-30T10:20:32"><span class="long-date">jeudi 30 avril 2015 à 10h20</span><span class="short-date" aria-hidden="true">30/04/15 à 10h20</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>Je commence a vraiment aimer ce site.</p>
+<p>En passant, "comme ca", a chaque fois j'apprends quelque chose…et je ressent cette envie d'apprendre de nouvelles choses <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"></p>
+<p>Bref, merci pour cet article <img alt=":)" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.png"> Et aussi merci pour l'article/tuto sur l'introduction à la rétroingénierie de binaires</p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p81650" class="mobile-permalink">30/04/15 à 10h20</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                        
+                            
+                                <label class="signature">
+                                    <input type="checkbox">
+                                    
+                                        <p>S’il n’y pas d’accents dans mes messages c’est parce que je suis sur un clavier norvegien <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/smile.svg" alt=":)" class="smiley"> ÅÅØØøøøÆÆÆ</p>
+                                    
+                                </label>
+                            
+                        
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/81650/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       more-voted
+                                       has-vote" title="12 personnes ont trouvé ce message utile" aria-describedby="tooltip-6">
+                                +12
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-7">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p81651">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@Gabbro" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/f6135278-0870-4087-be56-e6be4f4555e5.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@Gabbro" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Gabbro</span></a><span class="username-date-separator">, </span><a href="#p81651" class="date" title="Il y a 7&nbsp;ans, 4&nbsp;mois"><time itemprop="dateCreated" datetime="2015-05-07T21:09:01"><span class="long-date">jeudi 07 mai 2015 à 21h09</span><span class="short-date" aria-hidden="true">07/05/15 à 21h09</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>Un article très intéressant, merci !</p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p81651" class="mobile-permalink">07/05/15 à 21h09</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                        
+                            
+                                <label class="signature">
+                                    <input type="checkbox">
+                                    
+                                        <p>Il y a bien des façons de passer à l’acte. Se taire en est une. <em>Attribué à Jean-Bertrand Pontalis</em></p>
+                                    
+                                </label>
+                            
+                        
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/81651/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       more-voted
+                                       has-vote" title="1 personne a trouvé ce message utile" aria-describedby="tooltip-8">
+                                +1
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-9">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p120484">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@hackedethiquesecurite" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/22df03b15dc5dcaf45f77b44464d802b.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@hackedethiquesecurite" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">hackedethiquesecurite</span></a><span class="username-date-separator">, </span><a href="#p120484" class="date" title="Il y a 6&nbsp;ans, 1&nbsp;mois"><time itemprop="dateCreated" datetime="2016-08-17T00:09:51"><span class="long-date">mercredi 17 août 2016 à 00h09</span><span class="short-date" aria-hidden="true">17/08/16 à 00h09</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>cool c'est super cette article, même le site est cool.</p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p120484" class="mobile-permalink">17/08/16 à 00h09</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/120484/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-10">
+                                +0
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-11">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p158546">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@UnixX" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/0b2e725ee356a46325cc0e3759a62207.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@UnixX" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">UnixX</span></a><span class="username-date-separator">, </span><a href="#p158546" class="date" title="Il y a 5&nbsp;ans, 1&nbsp;mois"><time itemprop="dateCreated" datetime="2017-08-02T12:53:00"><span class="long-date">mercredi 02 août 2017 à 12h53</span><span class="short-date" aria-hidden="true">02/08/17 à 12h53</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>Bonjour à tous, je suis nouveau et je suis tombé 
+par hasard sur le site chose qui est excellent cependant, je pense qu’il
+ y a de toutes petites erreurs dans le tutoriel dans la partie 
+concernant les ABI GNU/Linux <em>(Unix, GNU/Linux &amp; Mac OS X)</em> les paramètres de fonction sont respectivement RDI, RSI , RDX, RCX, r8, r9 et XMM0–7. r10 ne fais donc pas partie.
+<a href="http://sco.com/developers/devspecs/abi386-4.pdf">Doc</a> &amp; <a href="https://en.wikipedia.org/wiki/X86_calling_conventions#cite_note-AMD-17">ABI Wiki</a> sauf si mon anglais est rouiller et que je suis a côté de la plaque. 
+à bientôt</p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p158546" class="mobile-permalink">02/08/17 à 12h53</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/158546/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-12">
+                                +0
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-13">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p167253">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@Ge0" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/272fe3fa-4952-4f0e-bdad-ded6afa2aff6.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@Ge0" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Ge0</span></a><span class="username-date-separator">, </span><a href="#p167253" class="date" title="Il y a 4&nbsp;ans, 9&nbsp;mois"><time itemprop="dateCreated" datetime="2017-11-25T17:36:32"><span class="long-date">samedi 25 novembre 2017 à 17h36</span><span class="short-date" aria-hidden="true">25/11/17 à 17h36</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <figure>
+<blockquote>
+<p>Bonjour à tous, je suis nouveau et je suis tombé par hasard sur le 
+site chose qui est excellent cependant, je pense qu’il y a de toutes 
+petites erreurs dans le tutoriel dans la partie concernant les ABI 
+GNU/Linux <em>(Unix, GNU/Linux &amp; Mac OS X)</em> les paramètres de fonction sont respectivement RDI, RSI , RDX, RCX, r8, r9 et XMM0–7. r10 ne fais donc pas partie.
+<a href="http://sco.com/developers/devspecs/abi386-4.pdf">Doc</a> &amp; <a href="https://en.wikipedia.org/wiki/X86_calling_conventions#cite_note-AMD-17">ABI Wiki</a> sauf si mon anglais est rouiller et que je suis a côté de la plaque. 
+à bientôt</p>
+</blockquote>
+<figcaption><a href="https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/?page=1#p158546">UnixX</a></figcaption>
+</figure>
+<p>Il est précisé dans <a href="https://en.wikipedia.org/wiki/X86_calling_conventions#cite_note-AMD-17">ABI Wiki</a> :</p>
+<blockquote>
+<p>The kernel interface uses RDI, RSI, RDX, R10, R8 and R9</p>
+</blockquote>
+<p>Cela n’a rien à voir avec la convention pour fournir les paramètres à
+ une fonction. Ici, on parle de la manière de fournir les paramètres à 
+un <strong>appel système</strong> (pour faire appel aux service du noyau).</p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p167253" class="mobile-permalink">25/11/17 à 17h36</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                        
+                            
+                                <label class="signature">
+                                    <input type="checkbox">
+                                    
+                                        <p><a rel="nofollow" href="https://ge0.dev/">Ge0</a> – <a rel="nofollow" href="https://ge0-anagram.herokuapp.com/">Anagrams</a></p>
+                                    
+                                </label>
+                            
+                        
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/167253/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-14">
+                                +0
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-15">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p177752">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@Capello" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/avatar.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@Capello" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Capello</span></a><span class="username-date-separator">, </span><a href="#p177752" class="date" title="Il y a 4&nbsp;ans, 5&nbsp;mois"><time itemprop="dateCreated" datetime="2018-04-16T23:33:33"><span class="long-date">lundi 16 avril 2018 à 23h33</span><span class="short-date" aria-hidden="true">16/04/18 à 23h33</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>Salut,
+J’ai lu le tuto avec plaisir, ça faisait bien 30 ans que je n’avais pas 
+lu de l’assembleur x86… ça m’a évidemment donné envie d’essayer les 
+exemples, et là, le premier ne link pas <img alt=":'(" src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/pleure.png">
+Je suis sur une debian 64 bits, et gcc ne trouve pas les lib crt1 et Scrt1.
+Y-a-t-il un paquet nécessaire manquant&nbsp;? Dans /usr/lib32 je n’ai que les lib gcc.
+En 64 bits, on retrouve les fichiers dans : /usr/lib/x86_64-linux-gnu .</p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p177752" class="mobile-permalink">16/04/18 à 23h33</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/177752/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-16">
+                                +0
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-17">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p177771">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@Ge0" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/272fe3fa-4952-4f0e-bdad-ded6afa2aff6.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@Ge0" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Ge0</span></a><span class="username-date-separator">, </span><a href="#p177771" class="date" title="Il y a 4&nbsp;ans, 5&nbsp;mois"><time itemprop="dateCreated" datetime="2018-04-17T10:49:16"><span class="long-date">mardi 17 avril 2018 à 10h49</span><span class="short-date" aria-hidden="true">17/04/18 à 10h49</span></time></a></li><li class="message-edited"><time itemprop="dateModified" datetime="2018-04-17T10:50:37" class="has-tooltip is-tooltip-bottom " aria-describedby="Mardi 17 avril 2018 à 10h50">Modifié</time></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>Salut,</p>
+<p>Tu peux me montrer les commandes complètes que tu utilises, ainsi que leur résultat ?</p>
+<p>Edit : à tout hasard, essaie un <code>sudo apt-get install gcc-multilib</code></p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p177771" class="mobile-permalink">17/04/18 à 10h49</a>
+                    </li>
+                    
+                        <li>
+                            
+                                
+
+
+
+
+
+
+<time itemprop="dateModified" datetime="2018-04-17T10:50:37" class="has-tooltip is-tooltip-top " aria-describedby="Mardi 17 avril 2018 à 10h50">Modifié</time>
+
+                            
+                        </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                        
+                            
+                                <label class="signature">
+                                    <input type="checkbox">
+                                    
+                                        <p><a rel="nofollow" href="https://ge0.dev/">Ge0</a> – <a rel="nofollow" href="https://ge0-anagram.herokuapp.com/">Anagrams</a></p>
+                                    
+                                </label>
+                            
+                        
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/177771/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       more-voted
+                                       has-vote" title="2 personnes ont trouvé ce message utile" aria-describedby="tooltip-18">
+                                +2
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-19">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+            
+        
+
+        
+            
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+<article class="topic-message
+           
+           
+           
+           " id="p177855">
+
+    
+
+
+
+
+<div class="user">
+    
+        <a href="https://zestedesavoir.com/@Capello" class="avatar-link">
+            <img src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/avatar.png" alt="" class="avatar">
+        </a>
+
+        
+
+
+
+
+
+
+        
+    
+</div>
+
+
+
+    <div class="message">
+        
+        <header>
+            <ul class="message-metadata"><li><a href="https://zestedesavoir.com/@Capello" class="username" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Capello</span></a><span class="username-date-separator">, </span><a href="#p177855" class="date" title="Il y a 4&nbsp;ans, 5&nbsp;mois"><time itemprop="dateCreated" datetime="2018-04-18T00:14:48"><span class="long-date">mercredi 18 avril 2018 à 00h14</span><span class="short-date" aria-hidden="true">18/04/18 à 00h14</span></time></a></li></ul>
+
+            
+        </header>
+
+        <div class="message-content">
+            <aside><p class="message-helpful tick ico-after green hidden" data-ajax-output="mark-message-as-useful">
+                            Cette réponse a été utile
+                        </p></aside>
+
+            
+                <div class="message-text" itemprop="text">
+                    <p>C’est ce qu’il me manquait. Avec l’installation des bibliothèque 32 bits, tout roule.</p>
+<p>Merci.</p>
+                </div>
+            
+        </div>
+
+        
+
+        <div class="message-bottom">
+            <div class="metadata-mobile">
+                <ul>
+                    <li>
+                        <a href="#p177855" class="mobile-permalink">18/04/18 à 00h14</a>
+                    </li>
+                    
+                    
+                        
+                    
+                </ul>
+            </div>
+
+            
+                
+                    
+                
+
+                
+                    <div class="message-karma" data-karma-uri="/api/contenus/reactions/177855/karma/">
+                        
+
+                        
+                            <span class="upvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-20">
+                                +0
+                            </span>
+                            <span class="downvote
+                                       ico-after
+                                       
+                                       " aria-describedby="tooltip-21">
+                                -0
+                            </span>
+                        
+                    </div>
+                
+            
+        </div>
+    </div>
+</article>
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+
+
+
+
+
+    <script src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/easymde.js"></script>
+
+
+
+
+
+    <div class="alert-box info alert-box-not-closable">
+        Connectez-vous pour pouvoir poster un message.
+        <br>
+        <a href="https://zestedesavoir.com/membres/connexion/?next=/articles/130/programmez-en-langage-dassemblage-sous-linux/" class="alert-box-btn alert-box-btn-right">Connexion</a>
+    </div>
+    <div class="alert-box not-member alert-box-not-closable">
+        <h4 class="alert-box-title">Pas encore membre&nbsp;?</h4>
+        <p>
+            Créez un compte en une minute pour profiter pleinement de 
+toutes les fonctionnalités de Zeste de Savoir. Ici, tout est gratuit et 
+sans publicité.
+            <br>
+            <a href="https://zestedesavoir.com/membres/inscription/" class="alert-box-btn">Créer un compte</a>
+        </p>
+    </div>
+
+
+
+    </article>
+    
+
+                    </main>
+
+                    
+    <aside class="sidebar summary mobile-menu-hide">
+        
+
+        
+
+        
+
+        
+    
+
+
+
+
+
+
+<div class="mobile-menu-bloc " data-title="Sommaire du contenu">
+    <h3>Sommaire</h3>
+    
+
+     
+        <ol>
+            
+                <li>
+                    <a data-num="1" href="#1-avant-de-commencer" class="mobile-menu-link mobile-menu-sublink">
+                        Avant de commencer
+
+
+                    </a>
+                </li>
+            
+                <li>
+                    <a data-num="2" href="#2-programmons-en-binaire" class="mobile-menu-link mobile-menu-sublink">
+                        Programmons en binaire !
+
+
+                    </a>
+                </li>
+            
+        </ol>
+    
+</div>
+
+
+    
+    
+    
+
+<div class="mobile-menu-bloc mobile-all-links mobile-show-ico" data-title="Partager">
+    <h3>Partager</h3>
+    <ul>
+        <li>
+            <a href="https://twitter.com/share?url=https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/&amp;text=Programmez%20en%20langage%20d%27assemblage%20sous%20Linux%20!" class="ico-after twitter blue" rel="nofollow">
+                Twitter
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/&amp;t=Programmez%20en%20langage%20d%27assemblage%20sous%20Linux%20!" class="ico-after facebook blue" rel="nofollow">
+                Facebook
+            </a>
+        </li>
+        <li>
+            <a href="#share-to-mastodon" class="open-modal ico-after mastodon blue" rel="nofollow">
+                Mastodon
+            </a>
+            
+        </li>
+        <li>
+            <a href="http://sharetodiaspora.github.io/?url=https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/&amp;title=Programmez%20en%20langage%20d%27assemblage%20sous%20Linux%20!" class="ico-after diaspora blue" rel="nofollow">
+                Diaspora*
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=Programmez en langage d'assemblage sous Linux !&amp;body=https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/" class="ico-after email blue" rel="nofollow">
+                Envoyer par mail
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div class="mobile-menu-bloc mobile-all-links mobile-show-ico" data-title="Télécharger">
+                    
+                        
+<h3>Télécharger</h3>
+<ul>
+    
+        
+        
+        
+            <li>
+                <a href="https://zestedesavoir.com/articles/pdf/130/programmez-en-langage-dassemblage-sous-linux.pdf" class="ico-after download blue">
+                    PDF
+                    
+                        
+                            (112,2&nbsp;Kio)
+                        
+                    
+                </a>
+            </li>
+        
+        
+            <li>
+                <a href="https://zestedesavoir.com/articles/tex/130/programmez-en-langage-dassemblage-sous-linux.tex" class="ico-after download blue">
+                    LaTeX
+                    
+                        
+                            (27,7&nbsp;Kio)
+                        
+                    
+                </a>
+            </li>
+        
+        
+        
+            <li>
+                <a href="https://zestedesavoir.com/articles/zip/130/programmez-en-langage-dassemblage-sous-linux.zip" class="ico-after download blue">
+                    Archive
+                    
+                        
+                            (26,8&nbsp;Kio)
+                        
+                    
+                </a>
+            </li>
+        
+    
+</ul>
+
+                    
+                </div>
+            
+        
+    </aside>
+
+                </div>
+            
+        </div>
+
+
+
+        
+
+<footer class="page-footer">
+    <div class="wrapper">
+        <p class="copyright">
+            Zeste de Savoir
+            <span class="version">
+                • Version :
+                
+                    <a href="https://github.com/zestedesavoir/zds-site/tree/30d51313d8fd94349f00f376cf1fc51574bbfc2d">v30.3-hiderigami/30d5131</a>
+                
+            </span>
+        </p>
+
+        <ul class="social">
+            
+                <li>
+                    <a href="https://framapiaf.org/@ZesteDeSavoir" title="Suivez-nous sur Mastodon" class="btn ico-after mastodon light btn-mastodon btn-holder"></a>
+                </li>
+            
+
+            
+                <li>
+                    <a href="https://www.facebook.com/ZesteDeSavoir" title="Aimez notre page Facebook" class="btn ico-after facebook light btn-facebook btn-holder"></a>
+                </li>
+            
+
+            
+                <li>
+                    <a href="https://twitter.com/ZesteDeSavoir" title="Suivez-nous sur Twitter" class="btn ico-after twitter light btn-twitter btn-holder"></a>
+                </li>
+            
+
+            
+
+            
+                <li>
+                    <a href="https://github.com/zestedesavoir/zds-site" title="Contribuez au développement" class="btn ico-after github light btn-github btn-holder"></a>
+                </li>
+            
+        </ul>
+
+        <ul class="links">
+            <li><a href="https://zestedesavoir.com/api/">API</a></li>
+            <li><a href="https://zestedesavoir.com/pages/cgu/">CGU</a></li>
+            <li><a href="https://zestedesavoir.com/pages/apropos/">À propos</a></li>
+            
+                <li><a href="https://zestedesavoir.com/pages/association/">L’association</a></li>
+                <li>
+                    <a href="https://www.helloasso.com/associations/zeste-de-savoir/adhesions/adhesion-2022-2023">
+                        <span class="wide">Adhérer à l'association</span>
+                        <span class="until-wide" aria-hidden="true">Adhérer</span>
+                    </a>
+                </li>
+            
+            <li><a href="https://zestedesavoir.com/pages/contact/">Contact</a></li>
+            <li><a href="https://zestedesavoir.com/pages/cookies/">Les cookies</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+
+
+
+
+
+    
+    <script src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/jquery.js"></script>
+    
+    
+    <script src="Programmez%20en%20langage%20d'assemblage%20sous%20Linux%20!%20%E2%80%A2%20Articles%20%E2%80%A2%20Zeste%20de%20Savoir_fichiers/script.js"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$','$$']],
+            processEscapes: true,
+            processClass: "mathjax-wrapper|mathjax-span",
+            ignoreClass: "page-container"
+        },
+        TeX: { extensions: ["color.js", "cancel.js", "enclose.js", "bbox.js", "mathchoice.js", "newcommand.js", "verb.js", "unicode.js", "autobold.js", "mhchem.js"] },
+        messageStyle: "none",
+    });
+</script>
+<script type="application/javascript">
+    // When the page has been loaded (which means the DOM and Mathjax has been loaded)
+    window.addEventListener("load", function() {
+
+        // We look for <span> inside contents
+        $(".message-content span, .article-content span").each(function () {
+            // We only want those with no CSS class
+            if($(this).attr("class") === undefined) {
+                var text = $(this).text();
+                // We check that they start with $ and end with $
+                if (text && text[0] == "$" && text[text.length - 1] == "$") {
+                    // We add a class to mark them
+                    $(this).addClass("mathjax-span");
+                }
+            }
+        });
+
+        // If there is content waiting for Mathjax
+        if($(".mathjax-span, .mathjax-wrapper").length) {
+            // We run Mathjax
+            MathJax.Hub.Configured();
+        }
+
+    });
+</script>
+
+
+
+<div class="modals-container"><div class="modals-wrapper"><form id="share-to-mastodon" class="modal modal-flex tab-modalize" target="_blank" method="GET">
+                
+                
+                
+
+                
+            <div class="modal-title mastodon light ico-after">
+                Mastodon
+            </div><div class="modal-body"><p>
+                    Entrez l'adresse de votre instance Mastodon (ex: https://mamot.fr).
+                </p><input type="text" class="input" name="instance" placeholder="https://" required=""><input type="hidden" class="input" name="text" value="Programmez en langage d'assemblage sous Linux ! https://zestedesavoir.com/articles/130/programmez-en-langage-dassemblage-sous-linux/"></div><div class="modal-footer"><button type="submit" class="btn btn-submit" disabled="disabled">Partager</button><a class="btn btn-cancel" href="#close-modal">Annuler</a></div></form><div class="modal modal-flex tab-modalize"><div class="modal-title"></div><div class="modal-body"><div class="modal-title">Lien hypertexte</div><div class="modal-body"><div><label for="zform-modal-link-href">Lien :</label><input type="text" id="zform-modal-link-href"></div><div><label for="zform-modal-link-text">Texte :</label><input type="text" id="zform-modal-link-text"></div></div><div class="modal-footer"></div></div><div class="modal-footer"><a class="btn btn-submit" href="javascript:;">Valider</a><a class="btn btn-cancel" href="#close-modal">Annuler</a><a class="btn btn-cancel" href="#close-modal">Annuler</a></div></div><div class="modal modal-flex tab-modalize"><div class="modal-title"></div><div class="modal-body"><div class="modal-title">Image</div><div class="modal-body"><div><label for="zform-modal-image-src">URL :</label><input type="text" id="zform-modal-image-src"></div><div><label for="zform-modal-image-text">Texte :</label><input type="text" id="zform-modal-image-text"></div></div><div class="modal-footer"></div></div><div class="modal-footer"><a class="btn btn-submit" href="javascript:;">Valider</a><a class="btn btn-cancel" href="#close-modal">Annuler</a><a class="btn btn-cancel" href="#close-modal">Annuler</a></div></div><div class="modal modal-flex tab-modalize"><div class="modal-title"></div><div class="modal-body"><div class="modal-title">Abréviation</div><div class="modal-body"><div><label for="zform-modal-abbr-abbr">Abréviation :</label><input type="text" id="zform-modal-abbr-abbr"></div><div><label for="zform-modal-abbr-text">Texte :</label><input type="text" id="zform-modal-abbr-text"></div></div><div class="modal-footer"></div></div><div class="modal-footer"><a class="btn btn-submit" href="javascript:;">Valider</a><a class="btn btn-cancel" href="#close-modal">Annuler</a><a class="btn btn-cancel" href="#close-modal">Annuler</a></div></div></div><div class="modals-overlay"></div></div><div class="tooltips-container"><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-0" role="tooltip" aria-hidden="true">Chargement...</div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-1" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-2" role="tooltip" aria-hidden="true">Chargement...</div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-3" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-4" role="tooltip" aria-hidden="true">Chargement...</div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-5" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-6" role="tooltip" aria-hidden="true">Chargement...</div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-7" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-8" role="tooltip" aria-hidden="true">Chargement...</div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-9" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-10" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-11" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-12" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-13" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-14" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-15" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-16" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-17" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-18" role="tooltip" aria-hidden="true">Chargement...</div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-19" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-20" role="tooltip" aria-hidden="true"></div></div><div class="tooltip-wrapper top" style="display: none;"><div class="tooltip" id="tooltip-21" role="tooltip" aria-hidden="true"></div></div></div></body></html>
