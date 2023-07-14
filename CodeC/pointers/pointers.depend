@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1683018951 source:/home/mgraciano/Documents/FichiersCB/FichiersC/pointers/main.c
+	<stdio.h>
+	<stdlib.h>
+

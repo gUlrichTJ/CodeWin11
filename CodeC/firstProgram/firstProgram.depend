@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1665188576 source:/home/mgraciano/Documents/FichiersCB/FichiersC/firstProgram/main.c
+	<stdio.h>
+	<stdlib.h>
+	"plusGrand.h"
+	"zesteFile.h"
+
+1665184741 /home/mgraciano/Documents/FichiersCB/FichiersC/firstProgram/plusGrand.h
+
+1665266149 /home/mgraciano/Documents/FichiersCB/FichiersC/firstProgram/zesteFile.h
+
