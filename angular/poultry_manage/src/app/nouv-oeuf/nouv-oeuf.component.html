@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">PoultryTracker</a>
+            <div class="navbar-nav ms-auto">
+                <button class="btn btn-outline-danger" routerLink="/login">Déconnexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <mat-toolbar style="background-color: #1709d2; width:100%">
+        <!-- <mat-icon class="menu" (click)="sidenav.toggle()">menu</mat-icon> -->
+        <nav class="nav">
+            <a class="nav-link active" routerLink="/login/accueil" style="color:white; font-size: medium;">
+                <i class="bi bi-house-door"></i> Accueil
+            </a>
+            <a class="nav-link active" routerLink="/login/accueil/oeuf" style="color:white; font-size: medium; margin-right: 20px;">
+                <i class="bi bi-egg"></i> Gestion des oeufs
+            </a>
+        </nav>
+    </mat-toolbar>
+    <main>
+        <div class="container mt-3 col-md-6 offset-md-3">
+            <form [formGroup]="oeufFormGroup" (ngSubmit)="handleAddSubmit()">
+                <div class="mb-3">
+                    <label class="form-label text-primary">Date</label>
+                    <input type="date" formControlName="date" class="form-control">
+                    <small *ngIf="oeufFormGroup.controls['date'].errors && oeufFormGroup.controls['date'].touched"
+                        class="text-danger">
+                        {{oeufService.getErrorMessage('Date', oeufFormGroup.controls['date'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Qualite</label>
+                    <select class="form-select form-select-md mb-3 form-control" aria-label=".form-select-lg example"
+                        formControlName="qualite">
+                        <option value="bon">Bon</option>
+                        <option value="mauvais">Mauvais</option>
+                    </select>
+                    <small *ngIf="oeufFormGroup.controls['qualite'].errors && oeufFormGroup.controls['qualite'].touched"
+                    class="text-danger">
+                    {{oeufService.getErrorMessage('Qualite', oeufFormGroup.controls['qualite'].errors)}}
+                </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Quantite</label>
+                    <input type="number" formControlName="quantite" class="form-control">
+                    <small *ngIf="oeufFormGroup.controls['quantite'].errors && oeufFormGroup.controls['quantite'].touched"
+                        class="text-danger">
+                        {{oeufService.getErrorMessage('Quantite', oeufFormGroup.controls['quantite'].errors)}}
+                    </small>
+                </div>
+                <div>
+                    <button [disabled]="!oeufFormGroup.valid" class="btn btn-success mt-5 mb-3"
+                        type="submit">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

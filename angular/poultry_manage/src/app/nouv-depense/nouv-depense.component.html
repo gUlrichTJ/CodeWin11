@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">PoultryTracker</a>
+            <div class="navbar-nav ms-auto">
+                <button class="btn btn-outline-danger" routerLink="/login">Déconnexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <mat-toolbar style="background-color: #1709d2; width:100%">
+        <!-- <mat-icon class="menu" (click)="sidenav.toggle()">menu</mat-icon> -->
+        <nav class="nav">
+            <a class="nav-link active" routerLink="/login/accueil" style="color:white; font-size: medium;">
+                <i class="bi bi-house-door"></i> Accueil
+            </a>
+            <a class="nav-link active" routerLink="/login/accueil/depense" style="color:white; font-size: medium; margin-right: 20px;">
+                <i class="bi bi-graph-down-arrow"></i> Gestion des dépenses
+            </a>
+        </nav>
+    </mat-toolbar>
+    <main>
+        <div class="container mt-3 col-md-6 offset-md-3">
+            <form [formGroup]="depensesFormGroup" (ngSubmit)="handleAddDepense()">
+                <div class="mb-3">
+                    <label class="form-label text-primary">Libellé</label>
+                    <input type="text" formControlName="libelle" class="form-control">
+                    <small *ngIf="depensesFormGroup.controls['libelle'].errors && depensesFormGroup.controls['libelle'].touched"
+                        class="text-danger">
+                        {{depenseService.getErrorMessage('Libellé', depensesFormGroup.controls['libelle'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Montant</label>
+                    <input type="number" formControlName="montant" class="form-control">
+                    <small *ngIf="depensesFormGroup.controls['montant'].errors && depensesFormGroup.controls['montant'].touched"
+                        class="text-danger">
+                        {{depenseService.getErrorMessage('Montant', depensesFormGroup.controls['montant'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Date</label>
+                    <input type="date" formControlName="date" class="form-control">
+                    <small *ngIf="depensesFormGroup.controls['date'].errors && depensesFormGroup.controls['date'].touched"
+                        class="text-danger">
+                        {{depenseService.getErrorMessage('Date', depensesFormGroup.controls['date'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Auteur</label>
+                    <input type="text" formControlName="auteur" class="form-control">
+                    <small *ngIf="depensesFormGroup.controls['auteur'].errors && depensesFormGroup.controls['auteur'].touched"
+                        class="text-danger">
+                        {{depenseService.getErrorMessage('Auteur', depensesFormGroup.controls['auteur'].errors)}}
+                    </small>
+                </div>
+                <div>
+                    <button [disabled]="!depensesFormGroup.valid" class="btn btn-success mt-5 mb-3"
+                        type="submit">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

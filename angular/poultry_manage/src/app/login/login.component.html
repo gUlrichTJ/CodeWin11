@@ -1,0 +1,74 @@
+<router-outlet>
+
+</router-outlet>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.component.css">
+  <title>Connexion</title>
+</head>
+
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#" style="font-weight: 600;">PoultryTracker</a>
+      <!-- <div class="navbar-nav ms-auto">
+        <button class="btn btn-outline-danger">Déconnexion</button>
+      </div> -->
+    </div>
+  </nav>
+
+  <!-- <mat-toolbar style="background-color: #1709d2; width:100%">
+    <mat-icon class="menu" (click)="sidenav.toggle()">menu</mat-icon>
+    <nav class="nav">
+     <span style="position:absolute; right:45%; top: 75px;">AUTHENTIFICATION</span>
+    </nav>
+  </mat-toolbar> -->
+  <ng-template #errors>
+    <span class="text-danger">{{errorMessage}} </span>
+  </ng-template>
+  <main class="">
+    <div class="container  d-flex align-items-center justify-content-center" style="height: 80vh;">
+      <form action="" method="post" [formGroup]="formGroup" (ngSubmit)="handleLogin()">
+        <div class="mb-3">
+          <span class="text-white" style="font-weight: bold; font-size:x-large;">AUTHENTIFICATION</span>
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label text-white" style="font-weight: 600;">Identifiant</label>
+          <input type="text" class="form-control" formControlName="identifiant" id="username" max="10" required>
+          <div id="emailHelp" class="form-text text-warning" style="font-size: smaller;">Votre identifiant est privé et
+            ne sera pas diffusé.</div>
+          <small *ngIf="formGroup.controls['identifiant'].errors && formGroup.controls['identifiant'].touched"
+            class="text-danger">
+            {{authService.getErrorMessage('Identifiant', formGroup.controls['identifiant'].errors)}}
+          </small>
+        </div>
+        <div class="mb-3">
+          <label for="Password1" class="form-label text-white" style="font-weight: 600;">Mot de passe</label>
+          <input type="password" class="form-control" formControlName="motDePasse" id="Password1">
+          <small *ngIf="formGroup.controls['motDePasse'].errors && formGroup.controls['motDePasse'].touched"
+            class="text-danger">
+            {{authService.getErrorMessage('Mot de passe', formGroup.controls['motDePasse'].errors)}}
+          </small>
+        </div>
+        <!-- <div>
+            <span>{{formGroup.value.identifiant}}</span>
+            <span>{{formGroup.value.motDePasse}}</span>
+
+          </div> -->
+        <div class="passwordProblems">
+          <a routerLink="/login/changer-mot-de-passe" class="text-white">mot de passe oublié ?.</a>
+          <a routerLink="/login/creer-compte" class="text-white">créer un compte ?</a>
+        </div>
+        <button type="submit" class="btn btn-success text-center" [disabled]="!formGroup.valid">Connexion</button>
+
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+body{
+    overflow: scroll;
+}
+
+#salesChart{
+    display: block;
+    width: 200px;
+    height: 200px;
+}

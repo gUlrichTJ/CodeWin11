@@ -1,0 +1,7 @@
+body {
+    overflow: scroll;
+}
+
+.tooltip-inner {
+    font-size: 30px;
+  }

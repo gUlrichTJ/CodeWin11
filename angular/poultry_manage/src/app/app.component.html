@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" onscroll="return false;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+</head>
+
+<body >
+  <router-outlet>
+
+  </router-outlet>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">PoultryTracker</a>
+      <div class="navbar-nav ms-auto">
+        <!-- <button class="btn btn-outline-success me-2" routerLink="/login">Se connecter</button> -->
+        <button class="btn btn-outline-danger" routerLink="/login">Se déconnecter</button>
+      </div>
+    </div>
+  </nav>
+
+  <mat-toolbar style="background-color: #1709d2;">
+    <mat-icon class="menu" (click)="sidenav.toggle()" >menu</mat-icon>
+    <div class="lien-baroutil">
+          
+      <a mat-button href="#">Nous contacter</a>
+      <a mat-button href="#">Autres</a>
+    </div>
+    
+  </mat-toolbar>
+  
+  
+
+  <div class="sidebar-container" (click)="sidenav.close()" class="sidebar" [class.hidden]="!showSidebar">
+    <mat-sidenav-container class="sidenav-container" style="background-color: #000000">
+      <mat-sidenav #sidenav mode="over" [fixedInViewport]="true" style="background-color: #1709d2;">
+
+
+        <mat-nav-list>
+          <div class="container mb-15">
+            <button type="button" class="close menu" aria-label="Close" (click)="toggleSidebar()"
+              class=" text-danger border-none ">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="container mt-5" >
+            <a mat-list-item routerLink="/login/accueil"><i class="bi bi-house-door mr-50" style="margin-right: 20px;"></i><span class="lien">Accueil</span> </a>
+            <a mat-list-item routerLink="/login/accueil/poule"><i class="bi bi-fast-forward-circle" style="margin-right: 20px;"></i><span class="lien">Gestion des poules</span> </a>
+            <a mat-list-item routerLink="/login/accueil/oeuf"><i class="bi bi-egg" style="margin-right: 20px;"></i><span class="lien">Gestion des oeufs</span> </a>
+            <a mat-list-item routerLink="/login/accueil/vente"><i class="bi bi-basket" style="margin-right: 20px;"></i><span class="lien">Gestion des ventes</span> </a>
+            <a mat-list-item routerLink="/login/accueil/depense"><i class="bi bi-graph-down-arrow" style="margin-right: 20px;"></i><span class="lien">Gestion des dépenses</span> </a>
+            <a mat-list-item routerLink="/login/accueil/rapport"><i class="bi bi-graph-up-arrow" style="margin-right: 20px;"></i><span class="lien">Rapports</span> </a>
+          </div>
+        </mat-nav-list>
+      </mat-sidenav>
+      <div class="main-content" style="height: 400px;">
+        <carousel [interval]="3000" [showIndicators]="true">
+          <slide>
+            <img src="../assets/images/carousel-img1.jpg" alt="image 1" class="d-block mx-auto" style="height: 400px;">
+          </slide>
+          <slide>
+            <img src="../assets/images/carousel-img2.jpg" alt="image 2" class="d-block mx-auto" style="height: 400px;">
+          </slide>
+          <slide>
+            <img src="../assets/images/carousel-img3.jpg" alt="image 3" class="d-block mx-auto" style="height: 400px;">
+          </slide>
+        </carousel>
+      </div>
+
+    </mat-sidenav-container>
+  </div>
+
+</body>
+</html>

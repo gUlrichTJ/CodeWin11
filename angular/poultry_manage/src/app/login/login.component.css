@@ -1,0 +1,19 @@
+body{
+    color: white;
+}
+
+#emailHelp {
+    color: rgb(173, 216, 230);
+    font-weight: 400;
+}
+.passwordProblems{
+    margin-bottom: 15px  
+    
+    ;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(173, 216, 230);
+    font-weight: 400;
+    font-style: italic;
+    font-size: small;
+}

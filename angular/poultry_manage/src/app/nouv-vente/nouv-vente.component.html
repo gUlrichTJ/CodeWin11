@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajouterVente</title>
+    <link rel="stylesheet" href="nouv-vente.component.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">PoultryTracker</a>
+            <div class="navbar-nav ms-auto">
+                <button class="btn btn-outline-danger" routerLink="/login">Déconnexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <mat-toolbar style="background-color: #1709d2; width:100%">
+        <!-- <mat-icon class="menu" (click)="sidenav.toggle()">menu</mat-icon> -->
+        <nav class="nav">
+            <a class="nav-link active" routerLink="/login/accueil" style="color:white; font-size: medium;">
+                <i class="bi bi-house-door"></i> Accueil
+            </a>
+            <a class="nav-link active" routerLink="/login/accueil/vente" style="color:white; font-size: medium; margin-right: 20px;">
+                <i class="bi bi-fast-forward-circle"></i> Gestion des ventes
+            </a>
+        </nav>
+    </mat-toolbar>
+    <main>
+
+        <!-- <div class="container mt-3 col-md-6 offset-md-3">
+            <form [formGroup]="clientFormGroup" (ngSubmit)="handleClientSubmit()">
+                <div class="mb-3">
+                    <span class="text-dark">INFORMATIONS SUR LE CLIENT</span>
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col"><label class="form-label text-primary" for="nom">Nom</label></th>
+                                <th scope="col"><label class="form-label text-primary" for="prenom">Prenom</label></th>
+                                <th scope="col"><label class="form-label text-primary" for="sexe">Sexe</label></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" formControlName="nom" class="form-control"></td>
+                                <td><input type="text" formControlName="prenom" class="form-control"></td>
+                                <td>
+                                    Masculin <input type="radio" formControlName="sexe" id="sexe" name="sexe"
+                                        value="masculin">
+                                    Feminin <input type="radio" formControlName="sexe" id="sexe" name="sexe"
+                                        value="feminin">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <small
+                                        *ngIf="clientFormGroup.controls['nom'].errors && clientFormGroup.controls['nom'].touched"
+                                        class="text-danger">
+                                        {{venteService.getErrorMessage('Nom', clientFormGroup.controls['nom'].errors)}}
+                                    </small>
+                                </td>
+                                <td class="mr-5">
+                                    <small
+                                        *ngIf="clientFormGroup.controls['prenom'].errors && clientFormGroup.controls['prenom'].touched"
+                                        class="text-danger">
+                                        {{venteService.getErrorMessage('Prenom',
+                                        clientFormGroup.controls['prenom'].errors)}}
+                                    </small>
+                                </td>
+                                <td>
+                                    <small
+                                        *ngIf="clientFormGroup.controls['sexe'].errors && clientFormGroup.controls['sexe'].touched"
+                                        class="text-danger">
+                                        {{venteService.getErrorMessage('Sexe',
+                                        clientFormGroup.controls['sexe'].errors)}}
+                                    </small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col"><label class="form-label text-primary" for="email">E-mail</label></th>
+                                <th scope="col"><label class="form-label text-primary" for="adresse">Adresse</label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="email" formControlName="email" class="form-control"></td>
+                                <td><input type="text" formControlName="adresse" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <small
+                                        *ngIf="clientFormGroup.controls['email'].errors && clientFormGroup.controls['email'].touched"
+                                        class="text-danger">
+                                        {{venteService.getErrorMessage('Email',
+                                        clientFormGroup.controls['email'].errors)}}
+                                    </small>
+                                </td>
+                                <td class="mr-5">
+                                    <small
+                                        *ngIf="clientFormGroup.controls['adresse'].errors && clientFormGroup.controls['adresse'].touched"
+                                        class="text-danger">
+                                        {{venteService.getErrorMessage('Adresse',clientFormGroup.controls['adresse'].errors)}}
+                                    </small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mb-3">
+                    <button [disabled]="!clientFormGroup.valid" class="btn btn-success" type="submit">Enreg.
+                        client</button>
+                </div>
+            </form>
+        </div> -->
+        <div class="container mt-3 col-md-6 offset-md-3">
+            <form [formGroup]="venteFormGroup" (ngSubmit)="handleAddSubmit()">
+                <div class="mb-3">
+                    <label class="form-label text-primary">Produit</label>
+                    <select class="form-select form-select-md mb-3 form-control" aria-label=".form-select-lg example"
+                        formControlName="produit">
+                        <option value="poule">Poule</option>
+                        <option value="oeuf">Oeuf</option>
+                    </select>
+                    <small
+                        *ngIf="venteFormGroup.controls['produit'].errors && venteFormGroup.controls['produit'].touched"
+                        class="text-danger">
+                        {{venteService.getErrorMessage('Produit', venteFormGroup.controls['produit'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Prix_U</label>
+                    <input type="number" formControlName="prix_U" class="form-control">
+                    <small *ngIf="venteFormGroup.controls['prix_U'].errors && venteFormGroup.controls['prix_U'].touched"
+                        class="text-danger">
+                        {{venteService.getErrorMessage('Prix_U', venteFormGroup.controls['prix_U'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Quantite</label>
+                    <input type="number" formControlName="quantite" class="form-control">
+                    <small
+                        *ngIf="venteFormGroup.controls['quantite'].errors && venteFormGroup.controls['quantite'].touched"
+                        class="text-danger">
+                        {{venteService.getErrorMessage('Quantite', venteFormGroup.controls['quantite'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Remise</label>
+                    <input type="number" formControlName="remise" class="form-control">
+                    <small *ngIf="venteFormGroup.controls['remise'].errors && venteFormGroup.controls['remise'].touched"
+                        class="text-danger">
+                        {{venteService.getErrorMessage('Remise', venteFormGroup.controls['remise'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Date</label>
+                    <input type="date" formControlName="date" class="form-control">
+                    <small *ngIf="venteFormGroup.controls['date'].errors && venteFormGroup.controls['date'].touched"
+                        class="text-danger">
+                        {{venteService.getErrorMessage('Date', venteFormGroup.controls['date'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <button [disabled]="!venteFormGroup.valid" class="btn btn-success"
+                        type="submit">Enregistrer</button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+</body>
+
+</html>

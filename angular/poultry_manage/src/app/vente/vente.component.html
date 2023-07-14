@@ -1,0 +1,104 @@
+
+<router-outlet>
+    
+</router-outlet>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vente.component.css">
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">PoultryTracker</a>
+            <div class="navbar-nav ms-auto">
+                <button class="btn btn-outline-danger" routerLink="/login">Déconnexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <mat-toolbar style="background-color: #1709d2; width:100%">
+        <!-- <mat-icon class="menu" (click)="sidenav.toggle()">menu</mat-icon> -->
+        <nav class="nav">
+            <a class="nav-link active" routerLink="/login/accueil" style="color:white; font-size: medium;">
+                <i class="bi bi-house-door"></i> Accueil
+            </a>
+        </nav>
+        <span style="margin-left: 36%;">PAGE DES VENTES</span>
+    </mat-toolbar>
+    <main class="m-2">
+        <ng-template #errors>
+            <div class="text-danger">{{errorMessage}}</div>
+        </ng-template>
+        <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchVente()">
+            <div class="input-group">
+                <label class="input-group-text">Taper ici</label>
+                <input type="text" name="" id="" class="form-control" placeholder="saisir un mot clé..."
+                    formControlName="motCle">
+                <button class="btn btn-info"><i class="bi bi-search"></i></button>
+            </div>
+        </form>
+        <p></p>
+        <table class="table table-bordered table-striped table-light table-hover text-center table-responsive">
+            <thead class="table-dark ">
+                <tr class="table-secondary ">
+                    <th scope="col">Id</th>
+                    <th scope="col">Produit</th>
+                    <th scope="col">Prix_U</th>
+                    <th scope="col">Quantite</th>
+                    <th scope="col">Remise</th>
+                    <th scope="col">Date</th>
+                    <!-- <th scope="col">Client</th> -->
+                    <th scope="col">Modifier</th>
+                    <th scope="col">Supprimer</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="ventes; else errors">
+                <tr *ngFor='let v of ventes' class="table-dark">
+                    <th scope="row"> {{v.id}} </th>
+                    <td> {{v.produit}} </td>
+                    <td> {{v.prix_U}} </td>
+                    <td> {{v.quantite}} </td>
+                    <td> {{v.remise}} </td>
+                    <td> {{v.date}} </td>
+                    <!-- <td data-toggle="tooltip" data-placement="top" data-trigger="click" title="ID : {{v.client.id}}
+                    Nom : {{v.client.nom}}&#013;
+                    Prénom : {{v.client.prenom}}&#013;
+                    E-mail : {{v.client.email}}&#013;
+                    Sexe : {{v.client.sexe}}&#013;
+                    Adresse : {{v.client.adresse}}">
+                        {{v.client.nom}} {{v.client.prenom}}
+                        <script>
+                            $(function () {
+                                $('[data-toggle="tooltip"]').tooltip()
+                            })
+                        </script>
+                    </td> -->
+                    <td><button class="btn btn-warning " (click)="handleEditVente(v)"><i
+                                class="bi bi-pencil bi-white"></i></button></td>
+                    <td><button class="btn btn-danger" (click)="handleDeleteVente(v)"><i
+                                class="fas fa-trash-alt"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+        <ul class="nav nav-pills">
+            <li *ngFor="let item of [].constructor(this.totalPages); let i = index">
+                <a (click)="goToPage(i)" [ngClass]="i == currentPage?'btn-info':'btn-outline-info'"
+                    class="btn  ms-1 mt-1">{{i}}</a>
+            </li>
+        </ul>
+        <div class="mt-3">
+            <div class="container">
+                <button class="btn btn-success" (click)="handleNewVente()">+ AJOUTER</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="edit-poule.component.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">PoultryTracker</a>
+            <div class="navbar-nav ms-auto">
+                <button class="btn btn-outline-danger" routerLink="/login">Déconnexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <mat-toolbar style="background-color: #1709d2; width:100%">
+        <!-- <mat-icon class="menu" (click)="sidenav.toggle()">menu</mat-icon> -->
+        <nav class="nav">
+            <a class="nav-link active" routerLink="/login/accueil" style="color:white; font-size: medium;">
+                <i class="bi bi-house-door"></i> Accueil
+            </a>
+            <a class="nav-link active" routerLink="/login/accueil/poule" style="color:white; font-size: medium; margin-right: 20px;">
+                <i class="bi bi-fast-forward-circle"></i> Gestion des poules
+            </a>
+        </nav>
+    </mat-toolbar>
+    <main>
+        <div class="container col-md-6 offset-md-3">
+            <form [formGroup]="pouleFormGroup" (ngSubmit)="handleUpdatePoule()">
+                <div class="mb-3">
+                    <label class="form-label text-primary">Id :</label>&nbsp;&nbsp;&nbsp;
+                    <label class="form-label text-primary ">{{poule.id}}</label>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Date</label>
+                    <input type="date" formControlName="date" class="form-control">
+                    <small *ngIf="pouleFormGroup.controls['date'].errors && pouleFormGroup.controls['date'].touched"
+                        class="text-danger">
+                        {{pouleService.getErrorMessage('Date', pouleFormGroup.controls['date'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Race</label>
+                    <input type="text" formControlName="race" class="form-control">
+                    <small *ngIf="pouleFormGroup.controls['race'].errors && pouleFormGroup.controls['race'].touched"
+                        class="text-danger">
+                        {{pouleService.getErrorMessage('Race', pouleFormGroup.controls['race'].errors)}}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Sexe</label>
+                    <select class="form-select form-select-md mb-3 form-control" aria-label=".form-select-lg example"
+                        formControlName="sexe">
+                        <option value="M">M (Male)</option>
+                        <option value="F">F (Femelle)</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Poids</label>
+                    <select class="form-select form-select-md mb-3 form-control" aria-label=".form-select-lg example"
+                        formControlName="poids">
+                        <option value="petite">Petite</option>
+                        <option value="moyen">Moyenne</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary">Quantite</label>
+                    <input type="number" formControlName="quantite" class="form-control">
+                    <small *ngIf="pouleFormGroup.controls['quantite'].errors && pouleFormGroup.controls['quantite'].touched"
+                        class="text-danger">
+                        {{pouleService.getErrorMessage('Quantite', pouleFormGroup.controls['quantite'].errors)}}
+                    </small>
+                </div>
+                <div >
+                    <button [disabled]="!pouleFormGroup.valid" class="btn btn-success mb-3"
+                        type="submit">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

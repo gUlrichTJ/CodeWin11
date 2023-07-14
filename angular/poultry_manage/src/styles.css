@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+html, body { height: 100%; }
+body { margin: 0; }
+.mat-sidenav {
+    height: 100vh;
+    width: 260px;
+    /* ou la largeur souhaitée */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.mat-sidenav-container {
+    height: 100vh;
+
+}
+
+.mat-sidenav-content {
+    padding: 24px;
+}
+
+button.mat-icon-button {
+    border: none;
+}
+
+.butn-connexion {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.lien {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.lien-baroutil{
+    position: fixed;
+    right: 40px;
+    display: flex;
+}
+.lien-baroutil a{
+    margin-left: 8px;
+    margin-right: 8px;
+    color: white;
+    font-size: 1rem;
+}
