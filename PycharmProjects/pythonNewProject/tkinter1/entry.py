@@ -11,6 +11,7 @@ def onclick():
     label = Label(root, text=e.get(), font=("Serif", 12))
     label.pack()
 
+
 button = Button(root, text="What did he write ?", foreground="red", background="lightgray",
                 command=onclick, font=("Verdana", 11))
 
