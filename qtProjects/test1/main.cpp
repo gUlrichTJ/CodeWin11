@@ -1,7 +1,8 @@
 #include <QApplication>
 #include <QPushButton>
 
-#include "MaFenetre.h"
+// #include "MaFenetre.h"
+#include "MaFenetre2.h"
 
 int main(int argc, char *argv[])
 {
