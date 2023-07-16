@@ -10,6 +10,7 @@ import java.awt.event.KeyListener;
 public class ClavierExerciceB extends JFrame implements KeyListener {
     private JTextArea displayArea;
     private JTextArea inputArea;
+
     private String texteASaisir = "Maître Corbeau, sur un arbre perché,\n" +
             "Tenait en son bec un fromage.\n" +
             "Maître Renard, par l'odeur alléché,\n" +
@@ -18,7 +19,16 @@ public class ClavierExerciceB extends JFrame implements KeyListener {
             "Que vous êtes joli ! que vous me semblez beau !\n" +
             "Sans mentir, si votre ramage\n" +
             "Se rapporte à votre plumage,\n" +
-            "Vous êtes le Phénix des hôtes de ces bois.\"";
+            "Vous êtes le Phénix des hôtes de ces bois.\"\n" +
+            "Le Corbeau, tout fier et tout content,\n" +
+            "Ouvrit alors un large bec béant,\n" +
+            "Pour laisser échapper un chant puissant,\n" +
+            "Mais le fromage tomba dans l'instant.\n" +
+            "Le Renard, rapide et plein de malice,\n" +
+            "S'empara du fromage sans compromis.\n" +
+            "Le Corbeau, dépité et plein de honte,\n" +
+            "Réalisa qu'il avait été dupé sans contrepoids.";
+
 
     private int cursorPosition = 0;
 
