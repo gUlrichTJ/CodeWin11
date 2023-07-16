@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class ClavierExerciceB extends JFrame implements KeyListener {
-    private JTextArea displayArea;
+    private final JTextArea displayArea;
     private JTextArea inputArea;
 
     private String texteASaisir = "Maître Corbeau, sur un arbre perché,\n" +
