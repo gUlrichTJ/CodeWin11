@@ -58,9 +58,9 @@ public class ClavierExerciceB extends JFrame implements KeyListener {
 
         add(panel, BorderLayout.CENTER);
         add(validerSaisie(), BorderLayout.SOUTH);
-//        add(displayScrollPane, BorderLayout.CENTER);
-//        add(inputScrollPane, BorderLayout.SOUTH);
-
+/*       add(displayScrollPane, BorderLayout.CENTER);
+         add(inputScrollPane, BorderLayout.SOUTH);
+*/
         pack();
         setLocationRelativeTo(null);
         setVisible(true);

@@ -18,6 +18,8 @@ def button_clear():
     e.delete(0, END)
 
 
+// Hello
+
 def button_add():
     first_number = e.get()
     global f_num
