@@ -473,26 +473,27 @@ public class Panneau1Haut extends JMenuBar {
     JMenu run = new JMenu("Run");
     
         // The jmenuitems for run
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
-        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'      Shift+F10");
+        JMenuItem debugMainDart = new JMenuItem("Debug 'main.dart'      Shift+F9");
+        JMenuItem runMainDartWithCoverage = new JMenuItem("Run 'main.dart' with Coverage");
+        JMenuItem runMainDart2 = new JMenuItem("Run 'main.dart'");
+        JMenuItem runRun = new JMenuItem("Run...            Alt+Shift+F10");
+        JMenuItem debugRun = new JMenuItem("Debug...        Alt+Shift+F9");
+        JMenuItem profilRun = new JMenuItem("Profile...");
+        JMenuItem recordEspressoTest = new JMenuItem("Record Espresso Test");
+        JMenuItem attachToProcess = new JMenuItem("Attach to Process...         Ctrl+Alt+5");
+        JMenuItem editConfigurationsRun = new JMenuItem("Edit Configurations...");
+        JMenuItem selectDevice = new JMenuItem("Select Device...        Alt+Shift+F11");
+        JMenuItem stopRun = new JMenuItem("Stop             Ctrl+F2");
+        JMenuItem flutterHotReload = new JMenuItem("Flutter Hot Reload      Ctrl+\\");
+        JMenuItem flutterHotRestart = new JMenuItem("Flutter Hot Restart        Ctrl+Shift+\\");
+        JMenuItem flutterHotReloadAllDevices = new JMenuItem("Flutter Hot Reload (All Devices)  Ctrl+Alt+\\");
+        JMenuItem flutterHotRestartAllDevices = new JMenuItem("Flutter Hot Restart (All Devices) Ctrl+Alt+Shift+\\");
+        JMenuItem flutterRunMainDartInProfileMode = new JMenuItem("Flutter Run 'main.dart' in Profile Mode");
+        JMenuItem flutterRunMainDartInReleaseMode = new JMenuItem("Flutter Run 'main.dart'in Release Mode");
+        JMenuItem flutterAttachRun = new JMenuItem("Flutter Attach");
+        JMenuItem stopBackgroundProcesses = new JMenuItem("Stop Background Processes        Ctrl+Shift+F2");
+        JMenuItem showRunningList = new JMenuItem("Show Running List");
         
     JMenu tools = new JMenu("Tools");
     JMenu vcs = new JMenu("VCS");
