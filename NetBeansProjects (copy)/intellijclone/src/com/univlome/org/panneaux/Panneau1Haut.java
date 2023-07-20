@@ -5,6 +5,7 @@
 package com.univlome.org.panneaux;
 
 import com.univlome.org.fenetres.Fenetre;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JMenu;
@@ -470,6 +471,29 @@ public class Panneau1Haut extends JMenuBar {
         JMenuItem analyseBuildPerformance  = new JMenuItem("Analyse Build Performance");
     
     JMenu run = new JMenu("Run");
+    
+        // The jmenuitems for run
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        JMenuItem runMainDart = new JMenuItem("Run 'main.dart'");
+        
     JMenu tools = new JMenu("Tools");
     JMenu vcs = new JMenu("VCS");
     JMenu window = new JMenu("Window");
@@ -479,6 +503,8 @@ public class Panneau1Haut extends JMenuBar {
     public Panneau1Haut(Fenetre fenetre) {
         
         this.fenetre = fenetre;
+        
+        setBackground(new Color(135, 206, 235));
         /**
          Pour ajouter des sous-menus à un élément de menu, vous pouvez créer un 
          * autre JMenu et l'ajouter à l'élément de menu parent.
