@@ -596,9 +596,109 @@ public class Panneau1Haut extends JMenuBar {
         JMenuItem agpUpgradeAssistant = new JMenuItem("AGP Upgrade Assistant...");
         
         JMenu flutterTools = new JMenu("Flutter");
+        
+            JMenuItem gettingStarted = new JMenuItem("Getting Started");
+            JMenuItem flutterUpgrade = new JMenuItem("Flutter Upgrade");
+            JMenuItem flutterDoctor = new JMenuItem("Flutter Doctor");
+            JMenuItem flutterPubGet = new JMenuItem("Flutter Pub Get");
+            JMenuItem flutterPubUpgrade = new JMenuItem("Flutter Pub Upgrade");
+            JMenuItem flutterClean = new JMenuItem("Flutter Clean");
+            JMenuItem openFlutterDevTools = new JMenuItem("Open Flutter DevTools");
+            JMenuItem openForEditingInAndroidStudio = new JMenuItem("Open for Editing in Android Studio");
+            JMenuItem sbmitFeedback = new JMenuItem("Submit Feedback...");
     
     JMenu vcs = new JMenu("VCS");
+    
+        // Les jmenuitems de vcs
+        JMenuItem enableVersionControlIntegration = new JMenuItem("Enable Version Control Integration...");
+        JMenuItem vcsOperationsPopup = new JMenuItem("VCS Operations Popup...");
+        JMenuItem applyPatch = new JMenuItem("Apply Patch...");
+        JMenuItem applyPatchFromClipboard = new JMenuItem("Apply Patch from Clipboard");
+        JMenuItem getProjectFromVersionControl = new JMenuItem("Get project from Version Control");
+        
+        JMenu browseVCSRepository = new JMenu("Browse VCS Repository");
+        
+            JMenuItem showGitRepositoryLog = new JMenuItem("Show Git Repository Log...");
+            JMenuItem browseSubversionRepository = new JMenuItem("Browse Subversion Repository...");
+            
+        JMenuItem createMercurialRepository = new JMenuItem("Create Mercurial Repository");    
+        JMenuItem createGitRepository = new JMenuItem("Create Git Repository...");
+        JMenuItem shareProjectOnGitHub = new JMenuItem("Share Project on GitHub");
+        JMenuItem setupOnGoogleCloudSourceRepositories = new JMenuItem("Setup on Google Cloud Source Repositories...");
+        JMenuItem importIntoSubversion = new JMenuItem("Import into Subversion...");
+        JMenuItem shareProjectSubverion = new JMenuItem("Share Project (Subversion)...");
+        
     JMenu window = new JMenu("Window");
+
+        JMenuItem storeCurrentLayoutAsDefault = new JMenuItem("Store Current Layout as Default");
+        JMenuItem restoreDefaultLayout = new JMenuItem("Restore Default Layout      Shift+F12");
+        
+        JMenu storeLayout = new JMenu("Store Layout");
+        
+            JMenuItem defaultStoreLayout = new JMenuItem("Default");
+            JMenuItem newStoreLayout = new JMenuItem("New");
+            
+        JMenu restoreLayout = new JMenu("Restore Layout");
+        
+            JMenuItem defaultRestoreLayout = new JMenuItem("Default");
+            
+        JMenu deleteLayout = new JMenu("Delete Layout");
+        
+        JMenu activeToolWindow = new JMenu("Active Tool Window");
+        
+            JMenuItem hideActiveToolWindow = new JMenuItem("Hide Active Tool Window     Shift+Ecape");
+            JMenuItem hideSideToolWindows = new JMenuItem("Hide Side Tool Window");
+            JMenuItem hideAllToolWindows = new JMenuItem("Hide All Tool Window Ctrl+Shift+F12");
+            JMenuItem closeActiveTab = new JMenuItem("Close Active Tab    Ctrl+Shift+F4");
+            JMenuItem jumpToLastToolWindow = new JMenuItem("Jump to Last Tool Window        F12");
+            JMenuItem maximizeToolWindow = new JMenuItem("Maximize Tool Window       Ctrl+Shift+Quote");
+            
+            JMenu viewMode = new JMenu("View Mode");
+            JMenu moveTo = new JMenu("Move To");
+            
+            JMenuItem groupTabs = new JMenu("Group Tabs");
+            
+            JMenu resize = new JMenu("Resize");
+            
+        JMenu editorTabs = new JMenu("Editor Tabs");
+        
+            JMenuItem selectNextTab = new JMenuItem("Select Next Tab        Alt+Right");
+            JMenuItem selectPreviousTab = new JMenuItem("Select Previous Tab        Alt+Left");
+            JMenuItem pinTab = new JMenuItem("Pin Tab");
+            JMenuItem keepTabOpen = new JMenuItem("Keep Tab Open");
+            JMenuItem closeTab = new JMenuItem("Close Tab");
+            JMenuItem closeOtherTabs = new JMenuItem("Close Other Tabs");
+            JMenuItem closeAllTabs = new JMenuItem("Close All Tabs");
+            JMenuItem closeUnmodifiedTabs = new JMenuItem("Close Unmodified Tabs");
+            JMenuItem closeAllButPinned = new JMenuItem("Close All But Pinned");
+            JMenuItem closeTabsToTheLeft = new JMenuItem("Close Tabs to the Left");
+            JMenuItem closeTabsToTheRight = new JMenuItem("Close Tabs to the Right");
+            JMenuItem closeAllReadOnly = new JMenuItem("Close All Read-Only");
+            JMenuItem reopenClosedTab = new JMenuItem("Reopen Closed Tab");
+            JMenuItem splitRight = new JMenuItem("Split Right");
+            JMenuItem splitDown = new JMenuItem("Split Down");
+            JMenuItem stretchEditorToTop = new JMenuItem("Stretch Editor to Top");
+            JMenuItem stretchEditorToLeft = new JMenuItem("Stretch Editor to Left");
+            JMenuItem stretchEditorToBottom = new JMenuItem("Stretch Editor to Bottom");
+            JMenuItem stretchEditorToRight = new JMenuItem("Stretch Editor to Right");
+            JMenuItem changeSplitterOrientation = new JMenuItem("Change Splittser Orientation");
+            JMenuItem maximizeEditorNormalizeSplits = new JMenuItem("Maximize Editor/Normalize Splits");
+            JMenuItem unsplit = new JMenuItem("Unsplit");
+            JMenuItem unsplitAll = new JMenuItem("Unsplit All");
+            JMenuItem gotoNextSplitter = new JMenuItem("Goto Next Splitter");
+            JMenuItem gotoPreviousSplitter = new JMenuItem("Goto Previous Splitter");
+            JMenuItem configureEditorTabs = new JMenuItem("Configure Editor Tabs...");
+    
+        JMenu notifications = new JMenu("Notifications");
+        
+            JMenuItem closeFirst = new JMenuItem("Close First");
+            JMenuItem closeAll = new JMenuItem("Close All");
+            
+        JMenu backgroundTasks = new JMenu("Background Tasks");
+        
+            JMenuItem showBackgroundTasks = new JMenuItem("Show");
+            JMenuItem autoShowBackgroundTasks = new JMenuItem("Auto Show");
+            
     JMenu help = new JMenu("Help");
 
     // Constructor
