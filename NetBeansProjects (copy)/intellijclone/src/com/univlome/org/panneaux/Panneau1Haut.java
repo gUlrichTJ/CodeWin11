@@ -452,6 +452,23 @@ public class Panneau1Haut extends JMenuBar {
     
     JMenu build = new JMenu("Build");
     
+        // We add the things for the build
+        JMenu flutterBuild = new JMenu("Flutter");
+        
+            // We add the jmenuitems for the flutterBuild
+            JMenuItem buildAAR = new JMenuItem("Build AAR");
+            JMenuItem buildAPK = new JMenuItem("Build APK");
+            JMenuItem buildAppBundle = new JMenuItem("Build App Bundle");
+            JMenuItem buildIOS = new JMenuItem("Build iOS");
+            JMenuItem buildWeb = new JMenuItem("Build Web");
+            
+        // We continue adding the jmenuitems for the build
+        JMenuItem recompileMainDart = new JMenuItem("Recompile 'main.dart'");
+        JMenuItem buildBundlesApk = new JMenuItem("Build Bundle(s) / APK(s)");
+        JMenuItem analyseAPK = new JMenuItem("Analyze APK");
+        JMenuItem deployModuleToAppEngine = new JMenuItem("Deploy Module to App Engine...");
+        JMenuItem analyseBuildPerformance  = new JMenuItem("Analyse Build Performance");
+    
     JMenu run = new JMenu("Run");
     JMenu tools = new JMenu("Tools");
     JMenu vcs = new JMenu("VCS");
@@ -895,6 +912,23 @@ public class Panneau1Haut extends JMenuBar {
             
         
         this.add(refactor);
+        
+            // We add them to build
+                // We add them to flutter
+                flutterBuild.add(buildAAR);
+                flutterBuild.add(buildAPK);
+                flutterBuild.add(buildAppBundle);
+                flutterBuild.add(buildIOS);
+                flutterBuild.add(buildWeb);
+                
+            // We add flutter
+            build.add(flutterBuild);
+            build.add(recompileMainDart);
+            build.add(buildBundlesApk);
+            build.add(analyseAPK);
+            build.add(deployModuleToAppEngine);
+            build.add(analyseBuildPerformance);
+        
         this.add(build);
         this.add(run);
         this.add(tools);
