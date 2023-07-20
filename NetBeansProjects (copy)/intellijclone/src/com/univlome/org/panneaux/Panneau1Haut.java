@@ -531,6 +531,72 @@ public class Panneau1Haut extends JMenuBar {
         JMenuItem attachDebuggerToAndroidProcess = new JMenuItem("Attach Debugger to Android Process");
         
     JMenu tools = new JMenu("Tools");
+    
+        // Les jmenus et les jmenuitems de tools
+        JMenu taskEtContexts = new JMenu("Task & Contexts");
+        
+            // Les jmenuitems du task && contexts
+            JMenuItem switchTask = new JMenuItem("Switch Task...        Alt+Shift+T");
+            JMenuItem openTask = new JMenuItem("Open Task...        Alt+Shift+N");
+            JMenuItem closeActiveTask = new JMenuItem("Close Active Task...        Alt+Shift+W");
+            JMenuItem editDefaultTask = new JMenuItem("Edit 'Default Task'");
+            JMenuItem createChangelist = new JMenuItem("Create Changelist...");
+            JMenuItem showDescription = new JMenuItem("Show Description");
+            JMenuItem openInBrowser = new JMenuItem("Open in Browser        Alt+Shift+B");
+            JMenuItem analyzeStackTraceFromTask = new JMenuItem("Analyze Stack Trace From Task...");
+            JMenuItem configureServers = new JMenuItem("AConfigure Servers...");
+            JMenuItem saveContext = new JMenuItem("Save Context...     Alt+Shift+S");
+            JMenuItem loadContext = new JMenuItem("Load Context...     Alt+Shift+L");
+            JMenuItem clearContext = new JMenuItem("Clear Context...     Alt+Shift+X");
+            
+        JMenuItem generateJavaDoc = new JMenuItem("Generate JavaDoc...");
+        JMenuItem createCommandLineLaucher = new JMenuItem("Create Cpmmand-line Launcher...");
+        JMenuItem createDesktopEntry = new JMenuItem("Create Desktop Entry...");
+        
+        JMenu xmlActions = new JMenu("XML Actions");
+        
+            JMenuItem generateDTDFromXMLFile = new JMenuItem("Generate DTD from XML File");
+            JMenuItem convertSchema = new JMenuItem("Convert Schema...");
+            JMenuItem createXSDSchemaFromXMLFile = new JMenuItem("Create XSD Schema from XML File...");
+            JMenuItem generateXMLDocumentFromXSDSchema = new JMenuItem("Generate XML Document from XSD Schema...");
+            
+        JMenu markdownConverter = new JMenu("Markdown Converter");
+        
+            // Les jmenuitems de markdown converter
+            JMenuItem importWordDocument = new JMenuItem("Import Word Document...");
+            JMenuItem exportMarkdownFileTo = new JMenuItem("Export Markdown File To...");
+            JMenuItem configurePandoc = new JMenuItem("Configure Pandoc...");
+            
+        JMenuItem jShellConsole = new JMenuItem("JSell Console...");
+        
+        JMenu clingTools = new JMenu("Cling");
+        
+            JMenuItem startNewClingSession = new JMenuItem("Start New Cling Session...");
+            JMenuItem sendIncludedHeadersToCling = new JMenuItem("Send Included Headers to Cling");
+            JMenuItem sendToCling = new JMenuItem("Send to Cling");
+        
+        JMenu kotlinTools = new JMenu("Kotlin");
+        
+            JMenuItem configureKotlinPluginUPdates = new JMenuItem("Configure Kotlin Plugin Updates");
+            JMenuItem enableMigrationsDetection = new JMenuItem("Enable Migrations Detection");
+            JMenuItem kotlinREPLExperimantal = new JMenuItem("Kotlin REPL (Experimental)");
+            JMenuItem configureKotlinInProject = new JMenuItem("Configure Kotlin in Project");
+            JMenuItem configureKotlinJavaScriptInProject = new JMenuItem("Configure Kotlin (JavaScript) in Project");
+            JMenuItem showKotlinBytecode = new JMenuItem("Show Kotlin Bytecode");
+            JMenuItem decompileToJava = new JMenuItem("Decompile to Java");
+            
+        JMenuItem deviceManager = new JMenuItem("Device Manager");
+        JMenuItem sdkManager = new JMenuItem("SDK Manager");
+        JMenuItem resourceManager = new JMenuItem("Resource Manager");
+        JMenuItem troubleshootDeviceConnections = new JMenuItem("Troubleshoot Device Connections");
+        JMenuItem androidSDKUpgradeAssistant = new JMenuItem("Android SDK Upgrage Assistant");
+        JMenuItem firebase = new JMenuItem("Firebase");
+        JMenuItem appLinksAssistant = new JMenuItem("App Links Assistant");
+        JMenuItem layoutInspector = new JMenuItem("Layout Inspector");
+        JMenuItem agpUpgradeAssistant = new JMenuItem("AGP Upgrade Assistant...");
+        
+        JMenu flutterTools = new JMenu("Flutter");
+    
     JMenu vcs = new JMenu("VCS");
     JMenu window = new JMenu("Window");
     JMenu help = new JMenu("Help");
