@@ -700,7 +700,7 @@ public class Panneau1Haut extends JMenuBar {
             JMenuItem autoShowBackgroundTasks = new JMenuItem("Auto Show");
             
         JMenuItem nextProjectWindow = new JMenuItem("Next Project Window        Ctrl+Alt+]");    
-        JMenuItem previousProjectWindow = new JMenuItem("Previous Project Window        Ctrl+Alt+]");    
+        JMenuItem previousProjectWindow = new JMenuItem("Previous Project Window        Ctrl+Alt+[");    
             
     JMenu help = new JMenu("Help");
 
