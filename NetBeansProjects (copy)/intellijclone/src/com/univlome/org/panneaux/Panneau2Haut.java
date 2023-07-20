@@ -27,20 +27,20 @@ import javax.swing.border.LineBorder;
 // iconexperience.com
 public class Panneau2Haut extends JMenuBar {
     
-    BoutonImage smartPhoneBouton = new BoutonImage("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\smartphone.png", "SmartPhone beau");
-    BoutonImage emulator = new BoutonImage("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\/mobilephone.png", "emulator-5554");
+    BoutonImage smartPhoneBouton = new BoutonImage("/com/univlome/org/images/smartphone.png", "SmartPhone beau");
+    BoutonImage emulator = new BoutonImage("/com/univlome/org/images/mobilephone.png", "emulator-5554");
 
     // We try with the button run
-    Icon runIcon = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\play-store.png");
-    Icon smartPhone = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\smartphone.png");
-    Icon mobilePhone = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\mobilephone.png");
-    Icon debug = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\debug1.png");
-    Icon stop1 = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\stop1.png");
-    Icon debug2 = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\debug2.png");
-    Icon device  = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\device.png");
-    Icon search1 = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\search1.png");
-    Icon settings = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\settings.png");
-    Icon singIn = new ImageIcon("C:\\NetbeansProjectsWin\\NetBeansProjects\\images\\signIn.png");
+    Icon runIcon = new ImageIcon(getClass().getResource("/com/univlome/org/images/play-store.png"));
+    Icon smartPhone = new ImageIcon(getClass().getResource("/com/univlome/org/images/smartphone.png"));
+    Icon mobilePhone = new ImageIcon(getClass().getResource("/com/univlome/org/images/mobilephone.png"));
+    Icon debug = new ImageIcon(getClass().getResource("/com/univlome/org/images/debug1.png"));
+    Icon stop1 = new ImageIcon(getClass().getResource("/com/univlome/org/images/stop1.png"));
+    Icon debug2 = new ImageIcon(getClass().getResource("/com/univlome/org/images/debug2.png"));
+    Icon device  = new ImageIcon(getClass().getResource("/com/univlome/org/images/device.png"));
+    Icon search1 = new ImageIcon(getClass().getResource("/com/univlome/org/images/search1.png"));
+    Icon settings = new ImageIcon(getClass().getResource("/com/univlome/org/images/settings.png"));
+    Icon singIn = new ImageIcon(getClass().getResource("/com/univlome/org/images/signIn.png"));
 // We create a JButton where we add the image
     JButton runButton;
     

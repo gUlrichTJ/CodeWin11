@@ -18,7 +18,7 @@ public class BoutonImage extends JButton {
     // Constructor
     public BoutonImage(String cheminImage, String texte) {
         
-        ImageIcon icon = new ImageIcon(cheminImage);
+        ImageIcon icon = new ImageIcon(getClass().getResource(cheminImage));
         
         // Nous créons un JLabel pour recevoir les deux
         
