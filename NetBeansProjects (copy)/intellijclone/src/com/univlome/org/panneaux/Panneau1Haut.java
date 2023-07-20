@@ -507,7 +507,7 @@ public class Panneau1Haut extends JMenuBar {
             JMenuItem stepOut = new JMenuItem("Step Out         Shift+F8");
             JMenuItem runToCursor = new JMenuItem("Run to Cursor        Alt+Shift+9");
             JMenuItem forceRunToCursor = new JMenuItem("Force Run to Cursor         Ctrl+Alt+9");
-            JMenuItem restFrame = new JMenuItem("Reset Frame");
+            JMenuItem resetFrame = new JMenuItem("Reset Frame");
             JMenuItem forceReturn = new JMenuItem("Froce Return");
             JMenuItem throwException = new JMenuItem("Throw Exception");
             JMenuItem resumeProgram = new JMenuItem("Resume Program     F9");
@@ -523,6 +523,12 @@ public class Panneau1Haut extends JMenuBar {
             JMenuItem methodBreakpoint = new JMenuItem("Method Breakpoint");
             JMenuItem temporaryLineBreakpoint = new JMenuItem("Temporary Line Breakpoint  Ctrl+Alt+Shift+F8");
             JMenuItem toogleBreakpointEnabled = new JMenuItem("Toogle Breakpoint Enabled");
+            
+        JMenuItem viewBreakpoints = new JMenuItem("View Breakpoints...      Ctrl+Shift+F8");
+        JMenuItem testHistory = new JMenuItem("Test History");
+        JMenuItem importTestFromFile = new JMenuItem("Import Test from File...");
+        JMenuItem showCoverageData = new JMenuItem("Show Coverage Data...       Ctrl+Alt+6");
+        JMenuItem attachDebuggerToAndroidProcess = new JMenuItem("Attach Debugger to Android Process");
         
     JMenu tools = new JMenu("Tools");
     JMenu vcs = new JMenu("VCS");
@@ -986,6 +992,64 @@ public class Panneau1Haut extends JMenuBar {
             build.add(analyseBuildPerformance);
         
         this.add(build);
+        
+            // Nous ajoutons les jmenus et les jmenuitems one by one
+            run.add(runMainDart);
+            run.add(debugMainDart);
+            run.add(runMainDartWithCoverage);
+            run.add(runMainDart2);
+            run.add(runRun);
+            run.add(debugRun);
+            run.add(profilRun);
+            run.add(recordEspressoTest);
+            run.add(attachToProcess);
+            run.add(editConfigurationsRun);
+            run.add(selectDevice);
+            run.add(stopRun);
+            run.add(flutterHotReload);
+            run.add(flutterHotRestart);
+            run.add(flutterHotReloadAllDevices);
+            run.add(flutterHotRestartAllDevices);
+            run.add(flutterRunMainDartInProfileMode);
+            run.add(flutterRunMainDartInReleaseMode);
+            run.add(flutterAttachRun);
+            run.add(stopBackgroundProcesses);
+            run.add(showRunningList);
+            
+                // We add the jmenuitems to the debuggin actions
+                debuggingActions.add(stepOver);
+                debuggingActions.add(forceStepOver);
+                debuggingActions.add(stepInto);
+                debuggingActions.add(forceStepInto);
+                debuggingActions.add(smartStepInto);
+                debuggingActions.add(stepOut);
+                debuggingActions.add(runToCursor);
+                debuggingActions.add(forceRunToCursor);
+                debuggingActions.add(resetFrame);
+                debuggingActions.add(forceReturn);
+                debuggingActions.add(throwException);
+                debuggingActions.add(resumeProgram);
+                debuggingActions.add(evaluateExpression);
+                debuggingActions.add(quickEvaluateExpression);
+                debuggingActions.add(showExecutionPoint);
+                debuggingActions.add(getThreadDump);
+                
+            run.add(debuggingActions);
+            
+                // We add the jmenuitems to the toogle breakpoint
+                toogleBreakpoint.add(lineBreakpoint);
+                toogleBreakpoint.add(methodBreakpoint);
+                toogleBreakpoint.add(temporaryLineBreakpoint);
+                toogleBreakpoint.add(toogleBreakpointEnabled);
+                
+            run.add(toogleBreakpoint);
+            
+            run.add(viewBreakpoints);
+            run.add(testHistory);
+            run.add(importTestFromFile);
+            run.add(showCoverageData);
+            run.add(attachDebuggerToAndroidProcess);
+            
         this.add(run);
         this.add(tools);
         this.add(vcs);
