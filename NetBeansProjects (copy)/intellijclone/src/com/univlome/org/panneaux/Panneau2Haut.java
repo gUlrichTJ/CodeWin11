@@ -49,10 +49,7 @@ public class Panneau2Haut extends JMenuBar {
     
     // Constructor iciclis unconscientious atop unsheathed
     public Panneau2Haut(Fenetre fenetre) {
-        /*this.setLayout(new FlowLayout(FlowLayout.LEFT));
-        this.setBorder(new LineBorder(Color.WHITE, 2));
-        this.setPreferredSize(new Dimension(30, 49));*/
-        //runButton = new JButton(runIcon);
+        
         this.fenetre = fenetre;
         
         this.setPreferredSize(new Dimension(20, 30));

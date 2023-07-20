@@ -17,7 +17,7 @@ public class BoutonImage extends JButton {
     // Constructor
     public BoutonImage(String texte, String pathIcon) {
         super();
-        ImageIcon icon = new ImageIcon(pathIcon);
+        ImageIcon icon = new ImageIcon(getClass().getResource(pathIcon));
         this.setIcon(icon);
         this.setText(texte);
         this.setFont(new Font("Serif", Font.PLAIN, 13));

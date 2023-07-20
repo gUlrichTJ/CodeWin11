@@ -24,13 +24,13 @@ import javax.swing.JPanel;
 public class Gauche extends JPanel {
 
     JPanel panel = new JPanel();
-    BoutonImage accueil = new BoutonImage("Accueil", "C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\home1.png");
-    BoutonImage utilisateur = new BoutonImage("Utilisateurs", "C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\users2.png");
-    BoutonImage caisse = new BoutonImage("Caisse", "C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\caisse2.png");
-    BoutonImage itineraire = new BoutonImage("Itineraire", "C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\itineraire1.png");
-    BoutonImage parametres = new BoutonImage("Paramètres", "C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\settings.png");
-    BoutonImage aide = new BoutonImage("Aide", "C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\help.png");
-    BoutonImage quitter = new BoutonImage("Quitter", "C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\exit.png");
+    BoutonImage accueil = new BoutonImage("Accueil", "/apoo/jpa/images/home1.png");
+    BoutonImage utilisateur = new BoutonImage("Utilisateurs", "/apoo/jpa/images/users2.png");
+    BoutonImage caisse = new BoutonImage("Caisse", "/apoo/jpa/images/caisse2.png");
+    BoutonImage itineraire = new BoutonImage("Itineraire", "/apoo/jpa/images/itineraire1.png");
+    BoutonImage parametres = new BoutonImage("Paramètres", "/apoo/jpa/images/settings.png");
+    BoutonImage aide = new BoutonImage("Aide", "/apoo/jpa/images/help.png");
+    BoutonImage quitter = new BoutonImage("Quitter", "/apoo/jpa/images/exit.png");
     
     // Nous déclarons Principal pour pouvoir fermer la fenetre
     Principal principal;

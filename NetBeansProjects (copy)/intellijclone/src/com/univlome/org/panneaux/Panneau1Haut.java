@@ -495,6 +495,35 @@ public class Panneau1Haut extends JMenuBar {
         JMenuItem stopBackgroundProcesses = new JMenuItem("Stop Background Processes        Ctrl+Shift+F2");
         JMenuItem showRunningList = new JMenuItem("Show Running List");
         
+        // Le jmenu
+        JMenu debuggingActions = new JMenu("Debugging Actions");
+        
+            // Les JMenuItems de debugging action
+            JMenuItem stepOver = new JMenuItem("Step Over       F8");
+            JMenuItem forceStepOver = new JMenuItem("Froce Step Over    Alt+Shift+F8");
+            JMenuItem stepInto = new JMenuItem("Step Into           F7");
+            JMenuItem forceStepInto = new JMenuItem("Force Step Into");
+            JMenuItem smartStepInto = new JMenuItem("Smart Step Into");
+            JMenuItem stepOut = new JMenuItem("Step Out         Shift+F8");
+            JMenuItem runToCursor = new JMenuItem("Run to Cursor        Alt+Shift+9");
+            JMenuItem forceRunToCursor = new JMenuItem("Force Run to Cursor         Ctrl+Alt+9");
+            JMenuItem restFrame = new JMenuItem("Reset Frame");
+            JMenuItem forceReturn = new JMenuItem("Froce Return");
+            JMenuItem throwException = new JMenuItem("Throw Exception");
+            JMenuItem resumeProgram = new JMenuItem("Resume Program     F9");
+            JMenuItem evaluateExpression = new JMenuItem("Evaluate Expression...        Alt+F8");
+            JMenuItem quickEvaluateExpression = new JMenuItem("Quick Evaluate Expression       Ctrl+Alt+8");
+            JMenuItem showExecutionPoint = new JMenuItem("Show Execution Point      Alt+F19");
+            JMenuItem getThreadDump = new JMenuItem("Get Thread Dump");
+            
+        JMenu toogleBreakpoint = new JMenu("Toogle Breakpoint");
+        
+            // JMenuItems for toogleBreakpoint
+            JMenuItem lineBreakpoint = new JMenuItem("Line Breakpoint       Ctrl+F8");
+            JMenuItem methodBreakpoint = new JMenuItem("Method Breakpoint");
+            JMenuItem temporaryLineBreakpoint = new JMenuItem("Temporary Line Breakpoint  Ctrl+Alt+Shift+F8");
+            JMenuItem toogleBreakpointEnabled = new JMenuItem("Toogle Breakpoint Enabled");
+        
     JMenu tools = new JMenu("Tools");
     JMenu vcs = new JMenu("VCS");
     JMenu window = new JMenu("Window");

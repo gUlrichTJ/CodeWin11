@@ -57,7 +57,7 @@ public class Authentification extends JFrame {
         setLayout(new BorderLayout());
         
         // Nous allons mettre l'image comme font de background
-        ImageIcon iconDeDerriere = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\busAuth.jpg");
+        ImageIcon iconDeDerriere = new ImageIcon(getClass().getResource("/apoo/jpa/images/busAuth.jpg"));
         JLabel label = new JLabel(iconDeDerriere);
         label.setIcon(iconDeDerriere);
         
@@ -75,7 +75,7 @@ public class Authentification extends JFrame {
         JPanel panelAuth = new JPanel();
         panelAuth.setPreferredSize(new Dimension(150, 40));
         // Nous créons l'image qui sera à gauche
-        ImageIcon authBus = new ImageIcon("C:\\NetbeansProjectsWin\\NetbeansProjects\\images\\busAuth.jpg");
+        ImageIcon authBus = new ImageIcon(getClass().getResource("/apoo/jpa/images/busAuth.jpg"));
         
         JLabel labelAuth = new JLabel(authBus);
         
