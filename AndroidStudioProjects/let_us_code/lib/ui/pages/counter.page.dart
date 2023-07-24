@@ -11,7 +11,15 @@ class CounterPage extends StatelessWidget {
           child: Text('Counter Value => ${counter}',
           style: TextStyle(fontSize: 23, color: Colors.purple),
         ),
-      )
+      ),
+      // Pour créer les boutons qui
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          ++counter;
+          print(counter); 
+        },
+      ),
     );
   }
 }
