@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CounterPage extends StatelessWidget {
+class CounterPage extends StatefulWidget {
 
+  @override
+  State<CounterPage> createState() => _CounterPageState();
+}
+
+class _CounterPageState extends State<CounterPage> {
   int counter = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,13 +19,45 @@ class CounterPage extends StatelessWidget {
         ),
       ),
       // Pour créer les boutons qui
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          ++counter;
-          print(counter); 
-        },
-      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            child: Icon(Icons.add),
+            onPressed: () {
+              setState(() {
+                counter += 2;
+              });
+              print(counter);
+            },
+          ),
+
+          // Pour décrémenter
+          FloatingActionButton(
+            child: Icon(Icons.remove),
+            onPressed: () {
+              setState(() {
+                --counter;
+              });
+              print(counter);
+            },
+          ),
+
+          /*
+          // Pour multiplier
+          FloatingActionButton(
+            child: Icon(Icons.multiple_stop),
+            onPressed: () {
+              setState(() {
+                counter %= 3;
+              });
+              print(counter);
+            },
+          ),
+        */
+          SizedBox(width: 8,),
+        ],
+      )
     );
   }
 }
