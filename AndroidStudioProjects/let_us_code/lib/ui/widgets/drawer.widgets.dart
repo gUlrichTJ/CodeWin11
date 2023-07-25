@@ -20,9 +20,19 @@ class MyDrawer extends StatelessWidget {
                 )
             ),
             child: Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage("images/images/about.png"),
-                radius: 80,
+              child: Row(
+                // Pour les séparer
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage("images/images/about.png"),
+                    radius: 80,
+                  ),
+                  CircleAvatar(
+                    backgroundImage: AssetImage("images/images/users2.png"),
+                    radius: 40,
+                  ),
+                ]
               ),
             ),
           ),
@@ -30,7 +40,7 @@ class MyDrawer extends StatelessWidget {
     ...(GlobalParams.menus as List).map((item) {
             return ListTile(
               title: Text('${item['title']}', style: TextStyle(fontSize: 22),),
-              leading: Icon(Icons.home, color: Colors.grey,),
+              leading: item['icon'],
               trailing: Icon(Icons.arrow_right, color: Colors.black,),
               onTap: () {
                 Navigator.of(context).pop();
