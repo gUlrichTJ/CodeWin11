@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:let_us_code/config/global.params.dart';
 
-/**Nous créons un stateless widget que nous appelons drawer*/
+/// Nous créons un stateless widget que nous appelons drawer
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
@@ -10,7 +10,7 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
                     colors: [
