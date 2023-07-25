@@ -28,7 +28,10 @@ class OurDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text("Hello"),
-            trailing: Icon(Icons.car_crash),
+            trailing: Icon(
+                Icons.car_crash,
+              color: Colors.lightBlue.shade900,
+            ),
 
             onTap: () {
               Navigator.of(context).pop();
