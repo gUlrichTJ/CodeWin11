@@ -68,7 +68,12 @@ class _UsersPageState extends State<UsersPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Users => ${query} => $currentPage / $totalPages'),),
+      appBar: AppBar(
+        elevation: 0,
+        title: Text('${query} ($currentPage / $totalPages)',
+          style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18),
+        ),
+      ),
       body: Center(
         child: Column(
           children: [
@@ -78,6 +83,7 @@ class _UsersPageState extends State<UsersPage> {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     child: TextFormField(
+                      cursorColor: Colors.green[300],
                       obscureText: notVisible,
                       onChanged: (value) {
                         setState(() {
@@ -86,8 +92,19 @@ class _UsersPageState extends State<UsersPage> {
                       },
                       controller: queryTextEditingController,
                       decoration: InputDecoration(
-                        //icon: Icon(Icons.logout), // Icone de gauche
                         suffixIcon: IconButton(
+                            icon: Icon(Icons.search, color: Colors.green[300]),
+                            onPressed: () {
+                              setState(() {
+                                items = [];
+                                currentPage = 0;
+                                this.query = queryTextEditingController.text;
+                                _search(query);
+                              });
+                            }
+                        ),
+                        //icon: Icon(Icons.logout), // Icone de gauche
+                        /*suffixIcon: IconButton(
                           onPressed: () {
                             setState(() {
                               notVisible = !notVisible;
@@ -95,8 +112,9 @@ class _UsersPageState extends State<UsersPage> {
                           },
                           icon: Icon(
                             notVisible == true ? Icons.visibility_off: Icons.visibility,
+                            color: Colors.green[300],
                           ),
-                        ), // Icone dans le champ de texte
+                        ),*/ // Icone dans le champ de texte
                         contentPadding: EdgeInsets.only(left: 20),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(50),
@@ -109,22 +127,12 @@ class _UsersPageState extends State<UsersPage> {
                     ),
                   ),
                 ),
-                IconButton(
-                  icon: Icon(Icons.search, color: Colors.grey),
-                    onPressed: () {
-                      setState(() {
-                        items = [];
-                        currentPage = 0;
-                        this.query = queryTextEditingController.text;
-                        _search(query);
-                      });
-                    }
-                ),
+
               ],
             ),
             Expanded(
               child: ListView.separated(
-                separatorBuilder: (context, index) => Divider(height: 2, color: Colors.grey,),
+                separatorBuilder: (context, index) => Divider(height: 2, color: Colors.green,),
                 controller: scrollController,
                 itemCount: items.length,
                   itemBuilder: (context, index) {
@@ -146,9 +154,9 @@ class _UsersPageState extends State<UsersPage> {
                             children: [
                               CircleAvatar(
                                 backgroundImage: NetworkImage(items[index]['avatar_url']),
-                                radius: 40,
+                                radius: 30,
                               ),
-                              SizedBox(width: 20,),
+                              SizedBox(width: 18,),
                               Text("${items[index]['login']}"),
                             ],
                           ),
