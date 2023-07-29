@@ -1,14 +1,6 @@
 package ad.univlome.tg.bard;
 
 import javax.swing.*;
-import javax.swing.text.Element;
-import javax.swing.text.html.ImageView;
-import android.widget.ImageView;
-import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import android.view.View;
-import android.content.Context;
 
 public class UseIcons extends JFrame {
 
@@ -20,8 +12,6 @@ public class UseIcons extends JFrame {
         this.setLocationRelativeTo(null);
 
         // Nous allons ajouter l'image.
-        Icon icon = new Icon(Icons.visibility);
-        ImageView imageView = new ImageView((Element) icon);
 
         this.setVisible(true);
     }
