@@ -557,7 +557,7 @@ public class Panneau1Haut extends JMenuBar {
         
             JMenuItem generateDTDFromXMLFile = new JMenuItem("Generate DTD from XML File");
             JMenuItem convertSchema = new JMenuItem("Convert Schema...");
-            JMenuItem createXSDSchemaFromXMLFile = new JMenuItem("Create XSD Schema from XML File...");
+            JMenuItem generateXSDSchemaFromXMLFile = new JMenuItem("Generate XSD Schema from XML File...");
             JMenuItem generateXMLDocumentFromXSDSchema = new JMenuItem("Generate XML Document from XSD Schema...");
             
         JMenu markdownConverter = new JMenu("Markdown Converter");
@@ -585,12 +585,12 @@ public class Panneau1Haut extends JMenuBar {
             JMenuItem showKotlinBytecode = new JMenuItem("Show Kotlin Bytecode");
             JMenuItem decompileToJava = new JMenuItem("Decompile to Java");
             
-        JMenuItem deviceManager = new JMenuItem("Device Manager");
+        JMenuItem deviceManagerTools = new JMenuItem("Device Manager");
         JMenuItem sdkManager = new JMenuItem("SDK Manager");
         JMenuItem resourceManager = new JMenuItem("Resource Manager");
         JMenuItem troubleshootDeviceConnections = new JMenuItem("Troubleshoot Device Connections");
         JMenuItem androidSDKUpgradeAssistant = new JMenuItem("Android SDK Upgrage Assistant");
-        JMenuItem firebase = new JMenuItem("Firebase");
+        JMenuItem firebaseTools = new JMenuItem("Firebase");
         JMenuItem appLinksAssistant = new JMenuItem("App Links Assistant");
         JMenuItem layoutInspector = new JMenuItem("Layout Inspector");
         JMenuItem agpUpgradeAssistant = new JMenuItem("AGP Upgrade Assistant...");
@@ -605,7 +605,7 @@ public class Panneau1Haut extends JMenuBar {
             JMenuItem flutterClean = new JMenuItem("Flutter Clean");
             JMenuItem openFlutterDevTools = new JMenuItem("Open Flutter DevTools");
             JMenuItem openForEditingInAndroidStudio = new JMenuItem("Open for Editing in Android Studio");
-            JMenuItem sbmitFeedback = new JMenuItem("Submit Feedback...");
+            JMenuItem submitFeedback = new JMenuItem("Submit Feedback...");
     
     JMenu vcs = new JMenu("VCS");
     
@@ -703,6 +703,42 @@ public class Panneau1Haut extends JMenuBar {
         JMenuItem previousProjectWindow = new JMenuItem("Previous Project Window        Ctrl+Alt+[");    
             
     JMenu help = new JMenu("Help");
+    
+        JMenuItem findAction = new JMenuItem("Find Action...        Ctrl+Shift+A");
+        JMenuItem androidStudioHelp = new JMenuItem("Android Studio Help");
+        JMenuItem flutterPluginHelp = new JMenuItem("Flutter Plugin Help");
+        JMenuItem intellijIdeaHelp = new JMenuItem("IntelliJ IDEA Help");
+        JMenuItem whatsNewInAndroidStudio = new JMenuItem("What's New in Android Studio");
+        JMenuItem gettingStartedHelp = new JMenuItem("Getting Started");
+        JMenuItem androidStudioOnYoutube = new JMenuItem("Android Studio on YouTube");
+        JMenuItem licencesHelp = new JMenuItem("Licenses");
+        JMenuItem keyBoardShortcutsPDF = new JMenuItem("Keyboard Shortcuts PDF");
+        JMenuItem tipOfTheDay = new JMenuItem("Tip of the Day");
+        JMenuItem myProductivity = new JMenuItem("My Productivity");
+        JMenuItem submitFeedbackHelp = new JMenuItem("Submit Feedback");
+        JMenuItem showLogInVisualStudioCode = new JMenuItem("Show Log in Visual Studio Code");
+        JMenuItem collectLogsAndDiagnosticData = new JMenuItem("Collect Logs and Diagnostic Data");
+        JMenuItem analyzeMemoryUsage = new JMenuItem("Analyze Memory Usage");
+        JMenuItem deleteLeftOverIdeDirectories = new JMenuItem("Delete Leftover IDE Directories...");
+        
+        JMenu diagnosticTools = new JMenu("Dagnostic Tools");
+        
+            JMenuItem activityMonitor = new JMenuItem("Activity Monitor...");            
+            JMenuItem analyzePluginStartupPerformance = new JMenuItem("Analyze Plugin Startup Performance");
+            JMenuItem dumpThreads = new JMenuItem("Dump Threads");
+            JMenuItem debugLogSettings = new JMenuItem("Debug Log Settings...");
+            JMenuItem ccppEnableEventTracing = new JMenuItem("C/C++: Enable Event Tracing");
+            JMenuItem executePerformanceScript = new JMenuItem("Execute Performance Script...");
+            JMenuItem traceResourceUpdates = new JMenuItem("Trace Resource Updates");
+            JMenuItem dumpResourceTrace = new JMenuItem("Dump Resource Trace");
+            JMenuItem openIndexingDiagnostics = new JMenuItem("Open Indexing Diagnostics");
+
+        JMenuItem changeMemorySettings = new JMenuItem("Chage Memory Settings");
+        JMenuItem editCustomProperties = new JMenuItem("Edit Custom Properties...");
+        JMenuItem editCustomVMOptions = new JMenuItem("Edit Custom VM Options...");
+        JMenuItem checkForUpdates = new JMenuItem("Check for Updates...");
+        JMenuItem aboutHelp = new JMenuItem("About");
+
 
     // Constructor
     public Panneau1Haut(Fenetre fenetre) {
@@ -710,7 +746,7 @@ public class Panneau1Haut extends JMenuBar {
         this.fenetre = fenetre;
         
         setBackground(new Color(135, 206, 235));
-        /**
+        /**1111111111111111111111
          Pour ajouter des sous-menus à un élément de menu, vous pouvez créer un 
          * autre JMenu et l'ajouter à l'élément de menu parent.
          */
@@ -1220,10 +1256,209 @@ public class Panneau1Haut extends JMenuBar {
             run.add(attachDebuggerToAndroidProcess);
             
         this.add(run);
+        
+                taskEtContexts.add(switchTask);
+                taskEtContexts.add(openTask);
+                taskEtContexts.add(closeActiveTask);
+                taskEtContexts.add(editDefaultTask);
+                taskEtContexts.add(createChangelist);
+                taskEtContexts.add(showDescription);
+                taskEtContexts.add(openInBrowser);
+                taskEtContexts.add(analyzeStackTraceFromTask);
+                taskEtContexts.add(configureServers);
+                taskEtContexts.add(saveContext);
+                taskEtContexts.add(loadContext);
+                taskEtContexts.add(clearContext);
+            
+            tools.add(taskEtContexts);
+            
+            tools.add(generateJavaDoc);
+            tools.add(createCommandLineLaucher);
+            tools.add(createDesktopEntry);
+            
+                xmlActions.add(generateDTDFromXMLFile);
+                xmlActions.add(convertSchema);
+                xmlActions.add(generateXSDSchemaFromXMLFile);
+                xmlActions.add(generateXMLDocumentFromXSDSchema);
+            
+            tools.add(xmlActions);
+            
+                markdownConverter.add(importWordDocument);
+                markdownConverter.add(exportMarkdownFileTo);
+                markdownConverter.add(configurePandoc);
+            
+            tools.add(markdownConverter);
+            
+            tools.add(jShellConsole);
+            
+                clingTools.add(startNewClingSession);
+                clingTools.add(sendIncludedHeadersToCling);
+                clingTools.add(sendToCling);
+               
+            tools.add(clingTools);
+            
+                kotlinTools.add(configureKotlinPluginUPdates);
+                kotlinTools.add(enableMigrationsDetection);
+                kotlinTools.add(kotlinREPLExperimantal);
+                kotlinTools.add(configureKotlinInProject);
+                kotlinTools.add(configureKotlinJavaScriptInProject);
+                kotlinTools.add(showKotlinBytecode);
+                kotlinTools.add(decompileToJava);
+                
+            tools.add(kotlinTools);
+            
+            tools.add(deviceManagerTools);
+            tools.add(sdkManager);
+            tools.add(resourceManager);
+            tools.add(troubleshootDeviceConnections);
+            tools.add(androidSDKUpgradeAssistant);
+            tools.add(firebaseTools);
+            tools.add(appLinksAssistant);
+            tools.add(layoutInspector);
+            tools.add(agpUpgradeAssistant);
+            
+                flutterTools.add(gettingStarted);
+                flutterTools.add(flutterUpgrade);
+                flutterTools.add(flutterDoctor);
+                flutterTools.add(flutterPubGet);
+                flutterTools.add(flutterPubUpgrade);
+                flutterTools.add(flutterClean);
+                flutterTools.add(flutterClean);
+                flutterTools.add(openFlutterDevTools);
+                flutterTools.add(openForEditingInAndroidStudio);
+                flutterTools.add(submitFeedback);
+                
+            tools.add(flutterTools);
+            
         this.add(tools);
+
+            
+            vcs.add(enableVersionControlIntegration);
+            vcs.add(vcsOperationsPopup);
+            vcs.add(applyPatch);
+            vcs.add(applyPatchFromClipboard);
+            vcs.add(getProjectFromVersionControl);
+            
+                browseVCSRepository.add(showGitRepositoryLog);
+                browseVCSRepository.add(browseSubversionRepository);
+                
+            vcs.add(browseVCSRepository);
+            
+            vcs.add(createMercurialRepository);
+            vcs.add(createGitRepository);
+            vcs.add(shareProjectOnGitHub);
+            vcs.add(setupOnGoogleCloudSourceRepositories);
+            vcs.add(importIntoSubversion);
+            vcs.add(shareProjectSubverion);
+            
         this.add(vcs);
+        
+            window.add(storeCurrentLayoutAsDefault);
+            window.add(restoreDefaultLayout);
+            
+                storeLayout.add(defaultStoreLayout);
+                storeLayout.add(newStoreLayout);
+                
+            window.add(storeLayout);
+            
+                restoreLayout.add(defaultRestoreLayout);
+                
+            window.add(restoreLayout);
+            
+            window.add(deleteLayout);
+            
+                activeToolWindow.add(hideActiveToolWindow);
+                activeToolWindow.add(hideSideToolWindows);
+                activeToolWindow.add(hideAllToolWindows);
+                activeToolWindow.add(closeActiveTab);
+                activeToolWindow.add(jumpToLastToolWindow);
+                activeToolWindow.add(maximizeToolWindow);
+                activeToolWindow.add(viewMode);
+                activeToolWindow.add(moveTo);
+                activeToolWindow.add(groupTabs);
+                activeToolWindow.add(resize);
+                
+            window.add(activeToolWindow);
+            
+                editorTabs.add(selectNextTab);
+                editorTabs.add(selectPreviousTab);
+                editorTabs.add(pinTab);
+                editorTabs.add(keepTabOpen);
+                editorTabs.add(closeTab);
+                editorTabs.add(closeOtherTabs);
+                editorTabs.add(closeAllTabs);
+                editorTabs.add(closeUnmodifiedTabs);
+                editorTabs.add(closeAllButPinned);
+                editorTabs.add(closeTabsToTheLeft);
+                editorTabs.add(closeTabsToTheRight);
+                editorTabs.add(closeAllReadOnly);
+                editorTabs.add(splitRight);
+                editorTabs.add(splitDown);
+                editorTabs.add(stretchEditorToTop);
+                editorTabs.add(stretchEditorToLeft);
+                editorTabs.add(stretchEditorToBottom);
+                editorTabs.add(stretchEditorToRight);
+                editorTabs.add(changeSplitterOrientation);
+                editorTabs.add(maximizeEditorNormalizeSplits);
+                editorTabs.add(unsplit);
+                editorTabs.add(unsplitAll);
+                editorTabs.add(gotoNextSplitter);
+                editorTabs.add(gotoPreviousSplitter);
+                editorTabs.add(configureEditorTabs);
+                
+            window.add(editorTabs);
+            
+                notifications.add(closeFirst);
+                notifications.add(closeAll);
+                
+            window.add(notifications);
+            
+                backgroundTasks.add(showBackgroundTasks);
+                backgroundTasks.add(autoShowBackgroundTasks);
+                
+             window.add(backgroundTasks);
+             
+             window.add(nextProjectWindow);
+             window.add(previousProjectWindow);
+            
         this.add(window);
-        this.add(help);
+        
+            help.add(findAction);
+            help.add(androidStudioHelp);
+            help.add(flutterPluginHelp);
+            help.add(intellijIdeaHelp);
+            help.add(whatsNewInAndroidStudio);
+            help.add(gettingStartedHelp);
+            help.add(androidStudioOnYoutube);
+            help.add(licencesHelp);
+            help.add(keyBoardShortcutsPDF);
+            help.add(tipOfTheDay);
+            help.add(myProductivity);
+            help.add(submitFeedbackHelp);
+            help.add(showLogInVisualStudioCode);
+            help.add(collectLogsAndDiagnosticData);
+            help.add(analyzeMemoryUsage);
+            help.add(deleteLeftOverIdeDirectories);
+            
+                diagnosticTools.add(activityMonitor);
+                diagnosticTools.add(analyzePluginStartupPerformance);
+                diagnosticTools.add(dumpThreads);
+                diagnosticTools.add(debugLogSettings);
+                diagnosticTools.add(ccppEnableEventTracing);
+                diagnosticTools.add(executePerformanceScript);
+                diagnosticTools.add(traceResourceUpdates);
+                diagnosticTools.add(dumpResourceTrace);
+                diagnosticTools.add(openIndexingDiagnostics);
+            
+            help.add(diagnosticTools);
+            
+            help.add(changeMemorySettings);
+            help.add(editCustomProperties);
+            help.add(editCustomVMOptions);
+            help.add(checkForUpdates);
+            help.add(aboutHelp);
+
+            this.add(help);
     }
     
     // Getters and setters
