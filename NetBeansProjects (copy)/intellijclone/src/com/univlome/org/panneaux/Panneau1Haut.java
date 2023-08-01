@@ -745,7 +745,7 @@ public class Panneau1Haut extends JMenuBar {
         
         this.fenetre = fenetre;
         
-        setBackground(new Color(135, 206, 235));
+        /// setBackground(new Color(135, 206, 235));
         /**1111111111111111111111
          Pour ajouter des sous-menus à un élément de menu, vous pouvez créer un 
          * autre JMenu et l'ajouter à l'élément de menu parent.
@@ -1392,6 +1392,7 @@ public class Panneau1Haut extends JMenuBar {
                 editorTabs.add(closeTabsToTheLeft);
                 editorTabs.add(closeTabsToTheRight);
                 editorTabs.add(closeAllReadOnly);
+                editorTabs.add(reopenClosedTab);
                 editorTabs.add(splitRight);
                 editorTabs.add(splitDown);
                 editorTabs.add(stretchEditorToTop);
