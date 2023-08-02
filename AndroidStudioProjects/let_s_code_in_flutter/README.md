@@ -4,7 +4,8 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This is a project where we create a page and a menu where we juste 
+change the names of the home text.
 
 A few resources to get you started if this is your first Flutter project:
 
