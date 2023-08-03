@@ -11,7 +11,7 @@ class UsersPage extends StatefulWidget {
 
 class _UsersPageState extends State<UsersPage> {
 
-  // Pour récupérer ce que l'user a saisi
+  // Pour récupérer ce que l'user a saisi, on utilise texteditcontroller
   TextEditingController queryTextEditingController = new TextEditingController();
 
   String query = "";
