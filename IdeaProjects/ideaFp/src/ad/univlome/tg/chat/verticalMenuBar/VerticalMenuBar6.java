@@ -15,6 +15,7 @@ public class VerticalMenuBar6 extends JFrame {
 
         JMenuBar menuBar = new JMenuBar();
         //menuBar.setLayout(new GridLayout(0, 1, 0, 0)); // Utiliser un GridLayout pour empiler les JMenu verticalement
+        menuBar.setLayout(new BoxLayout(menuBar, BoxLayout.Y_AXIS));
 
         // Créer et ajouter les JMenu au JMenuBar
         addVerticalMenu(menuBar, "File");

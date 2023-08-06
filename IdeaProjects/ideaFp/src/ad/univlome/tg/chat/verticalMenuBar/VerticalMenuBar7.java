@@ -14,7 +14,7 @@ public class VerticalMenuBar7 extends JFrame {
         setLocationRelativeTo(null);
 
         JMenuBar menuBar = new JMenuBar();
-        menuBar.setLayout(new GridLayout(1, 0)); // Utiliser un GridLayout pour les JMenu horizontalement
+        menuBar.setLayout(new BoxLayout(menuBar, BoxLayout.Y_AXIS));
 
         // Créer et ajouter les JMenu au JMenuBar
         addVerticalMenu(menuBar, "File");

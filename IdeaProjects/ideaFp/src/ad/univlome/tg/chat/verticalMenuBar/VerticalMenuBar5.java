@@ -14,7 +14,7 @@ public class VerticalMenuBar5 extends JFrame {
         setLocationRelativeTo(null);
 
         JMenuBar menuBar = new JMenuBar();
-        menuBar.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0)); // Utiliser un FlowLayout avec alignement à gauche
+        menuBar.setLayout(new BoxLayout(menuBar, BoxLayout.Y_AXIS));
 
         // Créer et ajouter les JMenuItems au JMenuBar
         addVerticalMenuItem(menuBar, "File");
