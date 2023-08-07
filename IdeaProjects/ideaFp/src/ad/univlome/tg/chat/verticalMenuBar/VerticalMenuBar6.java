@@ -30,6 +30,7 @@ public class VerticalMenuBar6 extends JFrame {
 
     // Méthode pour créer et ajouter un JMenu vertical au JMenuBar
     private void addVerticalMenu(JMenuBar menuBar, String text) {
+        menuBar.setLayout(new BoxLayout(menuBar, BoxLayout.Y_AXIS));
         VerticalMenu menu = new VerticalMenu(text);
         menuBar.add(menu);
     }

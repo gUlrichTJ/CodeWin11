@@ -5,7 +5,9 @@
 package com.univlome.org.fenetres;
 
 import com.univlome.org.panneaux.Center;
-import com.univlome.org.panneaux.Panneau1Haut;
+import com.univlome.org.jmenubars.Panneau1Bas;
+import com.univlome.org.jmenubars.Panneau1Gauche;
+import com.univlome.org.jmenubars.Panneau1Haut;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
@@ -21,6 +23,8 @@ public class Fenetre extends JFrame {
     // We create an instance of Center
     Center center = new Center(this);
     
+    Panneau1Bas panneau1Bas = new Panneau1Bas(this);
+    
     // Constructor
     public Fenetre() {
         this.setTitle("AndroidStudio clone");
@@ -33,6 +37,8 @@ public class Fenetre extends JFrame {
         
         // We add the center
         this.add(center);
+        
+        this.add(panneau1Bas, BorderLayout.SOUTH);
         // Visibility of the window
         this.setVisible(true);
     }

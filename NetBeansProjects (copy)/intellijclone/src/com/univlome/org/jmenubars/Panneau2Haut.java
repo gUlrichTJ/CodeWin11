@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.univlome.org.panneaux;
+package com.univlome.org.jmenubars;
 
 import com.univlome.org.boutons.BoutonImage;
 import com.univlome.org.fenetres.Fenetre;
