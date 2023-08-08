@@ -14,7 +14,6 @@ public class SplitPane extends JFrame {
         setSize(new Dimension(400, 400));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
-        //setLayout(new FlowLayout());
 
         JPanel panel = new JPanel();
         panel.setBackground(new Color(200, 100, 50));
