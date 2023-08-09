@@ -16,10 +16,10 @@ public class SplitPane extends JFrame {
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel();
-        panel.setBackground(new Color(200, 100, 50));
+        panel.setBackground(new Color(200, 105, 50));
 
         JPanel panel2 = new JPanel();
-        panel2.setBackground(new Color(100, 0, 120));
+        panel2.setBackground(new Color(100, 2, 120));
 
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, panel, panel2);
 
