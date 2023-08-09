@@ -1,0 +1,8 @@
+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
+
+// To have maximize, minimize and close button on gnome, paste this in the terminal
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+
+Token for all repositories
+
+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
