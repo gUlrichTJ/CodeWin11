@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
+        create: (context) => MyAppState(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Namer App',
@@ -48,11 +48,13 @@ class MyAppState extends ChangeNotifier {
 }
 
 class MyHomePage extends StatefulWidget {
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   var selectedIndex = 0;
 
   @override
@@ -84,31 +86,32 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Row(
         children: [
           SafeArea(
-            child: NavigationRail(
+              child: NavigationRail(
               extended: true,
-              destinations: [
-                NavigationRailDestination(
-                  icon: Icon(Icons.home),
-                  label: Text('Home'),
-                ),
-                NavigationRailDestination(
-                  icon: Icon(Icons.favorite),
-                  label: Text('Favorites'),
-                ),
-              ],
-              selectedIndex: selectedIndex,
-              onDestinationSelected: (value) {
-                setState(() {
-                  selectedIndex = value;
-                });
-              },
+                destinations: [
+                  NavigationRailDestination(
+                      icon: Icon(Icons.home),
+                      label: Text('Home'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.favorite),
+                    label: Text('Favorites'),
+                  ),
+                ],
+                selectedIndex: selectedIndex,
+                  onDestinationSelected: (value) {
+                    setState(() {
+                      selectedIndex = value;
+                    });
+                  },
             ),
           ),
           Expanded(
               child: Container(
-            color: Theme.of(context).colorScheme.primaryContainer,
-            child: page,
-          )),
+                color: Theme.of(context).colorScheme.primaryContainer,
+                child: page,
+              )
+          ),
         ],
       ),
     );
@@ -117,6 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 // The new class named GeneratorPage
 class GeneratorPage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
@@ -131,39 +135,35 @@ class GeneratorPage extends StatelessWidget {
     }
 
     return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          // Text('A random idea:'),
-          BigCard(pair: pair),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Text('A random idea:'),
+            BigCard(pair: pair),
 
-          SizedBox(
-            height: 10,
-          ), // Pour mettre l'espace
+            SizedBox(height: 10,),    // Pour mettre l'espace
 
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              ElevatedButton.icon(
-                onPressed: () {
-                  appState.toggleFavorite();
-                },
-                icon: Icon(icon),
-                label: Text('Like'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  appState.getNext();
-                },
-                child: Text('Next'),
-              ),
-            ],
-          )
-        ],
-      ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ElevatedButton.icon(
+                  onPressed: () {
+                    appState.toggleFavorite();
+                  },
+                  icon: Icon(icon),
+                  label: Text('Like'),
+                ),
+                SizedBox(height: 10,),
+                ElevatedButton(
+                  onPressed: () {
+                    appState.getNext();
+                  },
+                  child: Text('Next'),
+                ),
+              ],
+            )
+          ],
+        ),
     );
   }
 }
@@ -211,16 +211,20 @@ class FavoritePages extends StatelessWidget {
     return ListView(
       children: [
         Padding(
-          padding: const EdgeInsetsDirectional.all(20),
+            padding: const EdgeInsetsDirectional.all(20),
           child: Text('You have '
-              '${appState.favorites.length} favorites'),
+              '${appState.favorites.length} favorites'
+          ),
         ),
         for (var pair in appState.favorites)
           ListTile(
             leading: Icon(Icons.favorite),
             title: Text(pair.asLowerCase),
           )
+
       ],
     );
   }
 }
+
+
