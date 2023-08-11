@@ -6,3 +6,4 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize
 Token for all repositories
 
 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
+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
