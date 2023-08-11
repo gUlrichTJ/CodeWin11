@@ -203,6 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 */
+/*
 
 void main() => runApp(MyApp());
 
@@ -277,6 +278,133 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+*/
+/*
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(primarySwatch: Colors.brown),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _counter = 0;
+
+  void _pressedButton() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'The title of the app',
+          style: TextStyle(
+            fontSize: 20,
+            fontFamily: 'Arial',
+            fontWeight: FontWeight.w100,
+          ),
+        ),
+        elevation: 0,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Center(
+              child: new Text(
+                  "You've pushed button this many times ",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            new Text("${_counter}"),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _pressedButton,
+        tooltip: 'Flutter Demo',
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+*/
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  final String title = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: new Text("Cars"),
+      ),
+      body: new Column(
+        children: <Widget>[
+          CarWidget("Bmw", "M3", "")
+        ],
+      ),
+    );
+  }
+}
+
+class CarWidget extends StatelessWidget {
+  CarWidget(this.make, this.model, this.imageSrc) : super();
+
+  String make = "",
+      model = "",
+      imageSrc = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: <Widget>[
+          Text(make),
+          Text(model),
+          Image.asset(imageSrc),
+        ],
       ),
     );
   }

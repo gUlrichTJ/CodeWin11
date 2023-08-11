@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:english_words/english_words.dart';
+/*
 
 void main() {
   runApp(MyApp());
@@ -59,7 +60,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    /*var appState = context.watch<MyAppState>();
+    */
+/*var appState = context.watch<MyAppState>();
 
     var pair = appState.current;
 
@@ -68,7 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
       icon = Icons.favorite;
     } else {
       icon = Icons.favorite_border;
-    }*/
+    }*//*
+
 
     Widget page;
     switch (selectedIndex) {
@@ -226,5 +229,8 @@ class FavoritePages extends StatelessWidget {
     );
   }
 }
+*/
 
-
+void main() {
+  print("Hello");
+}
