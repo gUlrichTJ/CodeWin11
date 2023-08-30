@@ -30,8 +30,26 @@ class HomePage extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
+          Cars(
+              "BMW",
+              "R2",
+              "https://www.topgear.com/sites/default/files/news-listicle"
+                  "/image/2023/01/1.jpeg?w=827&h=465"
+          ),
+          Cars(
+              "BMW",
+              "R2",
+              "https://www.topgear.com/sites/default/files/news-listicle"
+                  "/image/2023/01/1.jpeg?w=827&h=465"
+          ),
+          Cars(
+              "BMW",
+              "R2",
+              "https://www.topgear.com/sites/default/files/news-listicle"
+                  "/image/2023/01/1.jpeg?w=827&h=465"
+          ),
           Cars(
               "BMW",
               "R2",
@@ -59,17 +77,20 @@ class Cars extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: [
-          Text(name),
-          Text(model),
-          Container(
-            height: 100,
-            width: 100,
-            child: Image.network(image, fit: BoxFit.cover,),
-          )
-        ],
+    return Padding(
+      padding: EdgeInsets.all(20.0),
+      child: Center(
+        child: Column(
+          children: [
+            Text(name),
+            Text(model),
+            Container(
+              height: 200,
+              width: 200,
+              child: Image.network(image, fit: BoxFit.cover,),
+            ),
+          ],
+        ),
       ),
     );
   }
