@@ -79,17 +79,25 @@ class Cars extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(20.0),
-      child: Center(
-        child: Column(
-          children: [
-            Text(name),
-            Text(model),
-            Container(
-              height: 200,
-              width: 200,
-              child: Image.network(image, fit: BoxFit.cover,),
-            ),
-          ],
+      child: Container(
+        decoration: BoxDecoration(border: Border.all()),
+        padding: EdgeInsets.all(20.0),
+        child: Center(
+          child: Column(
+            children: [
+              Text('${name} ${model}',
+                style: TextStyle(fontSize: 24),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 20.0),
+                child: Container(
+                  height: 200,
+                  width: 200,
+                  child: Image.network(image, fit: BoxFit.cover,),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
