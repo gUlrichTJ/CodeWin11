@@ -1,61 +1,132 @@
+import 'dart:ui';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(AppWidget());
 
-class MyApp extends StatelessWidget {
+class AppWidget extends StatefulWidget {
+  AppWidget() {
+    debugPrint("AppWidget - constructor -" + hashCode.toString());
+  }
+
+  @override
+  _AppWidgetState createState() {
+    debugPrint("AppWidget - createState -" + hashCode.toString());
+    return _AppWidgetState();
+  }
+}
+
+class _AppWidgetState extends State<AppWidget> {
+  bool _bright = false;
+
+  _brightnessCallback() {
+    setState(() {
+      _bright = !_bright;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    debugPrint("_AppWidgetState - build -" + hashCode.toString());
+
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
+        brightness: _bright ? Brightness.light : Brightness.dark,
       ),
-      home: new MyHomePage(),
+      home: FlowerWidget(
+        imageSrc: _bright ? "https://www.viewbug.com/media/mediafiles/" +
+            "2015/07/05/56234977_large1300.jpg"
+            : "https://images.unsplash.com/" +
+            "photo-1531603071569-0dd65ad72d53?ixlib=rb-1.2.1&ixid=" +
+            "eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+        brightnessCallback: _brightnessCallback(),
+      ),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class FlowerWidget extends StatefulWidget {
+  String imageSrc = "";
+  late VoidCallback brightnessCallback;
 
-  final String title = "Cars";
+  FlowerWidget({required this.imageSrc, required this.brightnessCallback})
+       {
+    debugPrint("FlowerWidget - constructor - " + hashCode.toString());
+  }
+
+  @override
+  _FlowerWidgetState createState() {
+    debugPrint("FlowerWidget - createState - " + hashCode.toString());
+    return _FlowerWidgetState();
+  }
+}
+
+class _FlowerWidgetState extends State<FlowerWidget> {
+  double _blur = 0;
+
+  _FlowerWidgetState() {
+    debugPrint("_FlowerWidgetState - constructor - " + hashCode.toString());
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    debugPrint("_FlowerWidgetState - initState - " + hashCode.toString());
+  }
+
+  @override
+  void didChangeDependencies() {
+    debugPrint(
+      "_FlowerWidgetState didChangeDependencies - " + hashCode.toString()
+    );
+  }
+
+  void didUpdateWidget(Widget oldWidget) {
+    debugPrint("_FlowerWidgetState - didUpdateWidget - " + hashCode.toString());
+
+    // The flower image has changed, so reset the blur.
+    _blur = 0;
+  }
+
+  void _blurMore() {
+    setState(() {
+      _blur += 5.0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text(this.title),
+    debugPrint("_FlowerWidgetState - build - " + hashCode.toString());
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Flower"),
+        actions: [
+          new IconButton(
+            icon: new Icon(Icons.refresh),
+              onPressed: () {
+                widget.brightnessCallback();
+              },
+          )
+        ],
+      ),
+
+      body: new Container(
+        decoration: new BoxDecoration(
+          // dependancy on inherited widget - start
+          color: Theme.of(context).backgroundColor,
+          // dependancy on inherited widget - end
+          image: new DecorationImage(
+              image: NetworkImage(widget.imageSrc),
+            // dependancy on data from widget - end
+            fit: BoxFit.cover,
+          )
         ),
-        body: new Column(
-          children: <Widget>[
-            CarWidget("Bmw", "M3",
-            "https://media.ed.edmunds-media.com/bmw/m3/2018/oem/2018_bmw_m3_sedan_base_fq_oem_4_150.jpg"),
-            CarWidget("Nissan", "GTR",
-            "https://media.ed.edmunds-media.com/nissan/gt-r/2018/oem/2018_nissan_gt-r_coupe_nismo_fq_oem_1_150.jpg"),
-            CarWidget("Nissan", "Sentra",
-            "https://media.ed.edmunds-media.com/nissan/sentra/2017/oem/2017_nissan_sentra_sedan_sr-turbo_fq_oem_4_150.jpg"),
-          ]
-        )
-    );
-  }
-}
-
-class CarWidget extends StatelessWidget {
-  CarWidget(this.make, this.model, this.imageSrc) : super();
-
-  final String make;
-  final String model;
-  final String imageSrc;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Column(children: <Widget>[
-          Text(make),
-          Text(model),
-          Image.network(imageSrc)
-        ]
-      )
+      ),
     );
   }
 }
