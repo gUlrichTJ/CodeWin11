@@ -126,6 +126,21 @@ class _FlowerWidgetState extends State<FlowerWidget> {
             fit: BoxFit.cover,
           )
         ),
+        child: new BackdropFilter(
+          filter: ImageFilter.blur(
+              (sigmaX: _blur, sigmaY: _blur),
+          ),
+          child: new Container(
+            decoration: new BoxDecoration(
+              color: Colors.white.withOpacity(0.0),
+            ),
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _blurMore,
+        tooltip: 'Blur More',
+        child: Icon(Icons.add),
       ),
     );
   }
