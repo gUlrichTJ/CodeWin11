@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(AppWidget());
@@ -43,7 +42,7 @@ class _AppWidgetState extends State<AppWidget> {
             : "https://images.unsplash.com/" +
             "photo-1531603071569-0dd65ad72d53?ixlib=rb-1.2.1&ixid=" +
             "eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
-        brightnessCallback: _brightnessCallback(),
+        brightnessCallback: _brightnessCallback,
       ),
     );
   }
@@ -94,7 +93,7 @@ class _FlowerWidgetState extends State<FlowerWidget> {
 
   void _blurMore() {
     setState(() {
-      _blur += 5.0;
+      _blur += 1.0;
     });
   }
 

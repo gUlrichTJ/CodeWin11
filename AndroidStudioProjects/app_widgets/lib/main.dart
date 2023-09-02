@@ -74,7 +74,8 @@ class _MyAppState extends State<MyApp> {
                   height: 10,
                 ),
                 ConfigureButton(
-                    widgetId: _widgetId, appWidgetPlugin: _appWidgetPlugin),
+                    widgetId: _widgetId, appWidgetPlugin: _appWidgetPlugin
+                ),
                 const SizedBox(
                   height: 10,
                 ),
