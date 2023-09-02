@@ -52,6 +52,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: const Text('AppWidgetPlugin example app'),
@@ -162,7 +163,9 @@ class GetWidgetIdsButton extends StatelessWidget {
           ),
         );
       },
-      child: const Text('Get WidgetIds'),
+      child: const Text('Get WidgetIds',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
     );
   }
 }
@@ -187,7 +190,7 @@ class ReloadWidgetButton extends StatelessWidget {
         messenger.showSnackBar(
           const SnackBar(
             content:
-            Text('Reload broadcast has been sent check Android debug log'),
+                Text('Reload broadcast has been sent check Android debug log'),
           ),
         );
       },
@@ -232,7 +235,8 @@ class WidgetExistButton extends StatelessWidget {
             }
           }
         },
-        child: const Text('check if Widget Exist'));
+        child: const Text('check if Widget Exist')
+    );
   }
 }
 
@@ -271,7 +275,9 @@ class ConfigureButton extends StatelessWidget {
           } else {
             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                 content:
-                Text('Opps, no widget id from WIDGET_CONFIGURE event')));
+                    Text('Opps, no widget id from WIDGET_CONFIGURE event')
+             )
+            );
           }
         },
         child: const Text('Configure Widget'));
