@@ -4,4 +4,4 @@ Light/Dark Mode toggle
 - what HTML markup 
 - Switching between light/dark mode
 
-CSS Variables
+CSS Variables (custom properties)
