@@ -41,6 +41,30 @@ ins {
     line-height: 10;
 }
 
+.hot, .cold{
+    border-style: solid;
+    border-radius: 120px/100px;
+    border-width: 2em;
+    background-color: red;
+    border-color: red;
+    color: white;
+    font-size: 2em;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.cold {
+  background-color: blue;
+  color: rgb(255, 255, 255);
+  font: bold xx-large Lucida, monospace;
+  border: solid black;
+  border-radius: 50px/50px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
+
 /*code {
     color: aqua;
 }*/
