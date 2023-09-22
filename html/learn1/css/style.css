@@ -2,6 +2,15 @@
     color: brown;
 }
 
+.monospace {
+    font-family: monospace;
+}
+
+hr {
+    width: 50%;
+    
+}
+
 /*code {
     color: aqua;
 }*/
