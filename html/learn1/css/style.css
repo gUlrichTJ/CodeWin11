@@ -6,9 +6,30 @@
     font-family: monospace;
 }
 
-hr {
+.hr-middle {
     width: 50%;
-    
+    color: black;
+}
+
+.middle-blue-italique {
+    color: blue;
+    text-align: center;
+    font-style: italic;
+    background-color: whitesmoke;
+}
+
+.font-style-font-variant {
+    font-style: oblique;
+    /* font-variant: small-caps;*/
+    font-weight: 100;
+    font-family: Prestige, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-decoration: blink;
+    text-transform: lowercase;
+}
+
+ins {
+    line-height: 10;
 }
 
 /*code {
