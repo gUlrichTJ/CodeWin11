@@ -25,7 +25,16 @@
     font-family: Prestige, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     text-decoration: blink;
-    text-transform: lowercase;
+    text-transform: uppercase;
+    
+    border-style: outset;
+    border-width: .5em;
+    border-collapse: separate;
+    border-radius: 10px/60px;
+    padding-left: 10px;
+    margin: 4em;
+    /*display: inline-block;*/
+    /*border-color: rgb(27, 13, 226);*/
 }
 
 ins {
