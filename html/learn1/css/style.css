@@ -41,17 +41,18 @@ ins {
     line-height: 10;
 }
 
-.hot, .cold{
-    border-style: solid;
-    border-radius: 120px/100px;
-    border-width: 2em;
-    background-color: red;
-    border-color: red;
+.hot {
     color: white;
-    font-size: 2em;
-    margin: 20px;
-    padding: 20px;
-    display: inline-block;
+    border-style: solid;
+    border-color: black;
+    background-color: red;
+    border-radius: 140px/130px;
+    margin: 30px;
+    padding: 30px;
+    margin-left: 8em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: xx-large;
 }
 
 .cold {
@@ -63,6 +64,16 @@ ins {
   padding: 20px;
   margin: 20px;
   display: inline-block;
+  
+}
+
+.feliz-navidad {
+    display: inline-block;
+    background-color: pink;
+    color: rgb(7, 61, 7);
+    margin: 20px;
+    padding: 20px;
+    text-size-adjust: inherit;
 }
 
 /*code {
