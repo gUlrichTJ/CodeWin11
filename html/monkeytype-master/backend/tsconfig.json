@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "module": "commonjs",
+    "target": "es6",
+    "sourceMap": false,
+    "allowJs": false,
+    "checkJs": false,
+    "outDir": "build",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true
+  },
+  "ts-node": {
+    "files": true
+  },
+  "files": ["./src/types/types.d.ts"],
+  "include": ["./src/**/*"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "worker.js",
+    "setup-tests.ts",
+    "**/*.spec.ts"
+  ]
+}

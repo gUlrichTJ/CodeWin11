@@ -1,0 +1,108 @@
+.pageAbout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: unset;
+  }
+
+  .created {
+    text-align: center;
+    color: var(--sub-color);
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .section {
+    display: grid;
+    gap: 0.25rem;
+
+    .bigtitle {
+      font-size: 2rem;
+      line-height: 2rem;
+      color: var(--sub-color);
+      margin: 0 0 1rem 0;
+    }
+
+    .title {
+      font-size: 1rem;
+      line-height: 1rem;
+      color: var(--sub-color);
+      margin: 0;
+      font-weight: 300;
+    }
+
+    .contactButtons,
+    .supportButtons {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1rem;
+      button,
+      .button {
+        font-size: 1.5rem;
+        padding: 2rem 0;
+      }
+    }
+
+    .supportButtons {
+      grid-template-columns: 1fr;
+    }
+
+    .supporters,
+    .contributors {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 0.25rem;
+      color: var(--text-color);
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      &.small {
+        font-size: 0.75em;
+        color: var(--sub-color);
+        text-align: right;
+      }
+    }
+  }
+
+  .triplegroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+    margin-top: 1rem;
+  }
+  .group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    .label {
+      color: var(--sub-color);
+    }
+    .val {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+    .valSmall {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .chart canvas {
+    width: 100% !important;
+  }
+  .chart {
+    margin-top: 1rem;
+    position: relative;
+  }
+}
