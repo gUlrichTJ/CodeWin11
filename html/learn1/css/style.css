@@ -76,6 +76,55 @@ ins {
     text-size-adjust: inherit;
 }
 
+.center {
+    text-align: center;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.common-font-familly {
+    font-family: 'Commic Sans MS', 'Courrier new', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.border-dashed {
+    border: dashed red 3px;
+}
+
+.background-gray {
+    background-color: rgba(58, 47, 47, 0.836);
+}
+
+.all-page-color {
+    background-color: rgb(42, 161, 155);
+    border: groove;
+    border-radius: 8px;
+    border-width: 7px;
+}
+.blue {
+    color: blue;
+}
+
+.italique {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.silver {
+    color: silver;
+}
+
+.purple {
+    color: purple;
+}
+
+.orange {
+    color: orange;
+}
 /*code {
     color: aqua;
 }*/
