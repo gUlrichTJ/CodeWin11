@@ -143,3 +143,13 @@ ins {
 .light-green {
     background-color: rgb(114, 247, 114);
 }
+
+.float {
+    border: solid 1px;
+    margin: 2px;
+    padding: 10px;
+    width: 50%;
+    float: right;
+    text-align: justify;
+    color: rgb(54, 54, 10);
+}
