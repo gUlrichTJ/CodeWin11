@@ -130,3 +130,16 @@ ins {
     text-decoration: underline;
     font-weight: bold;
 }
+
+.light-yellow {
+    background-color: rgb(247, 245, 177);
+}
+
+.light-blue {
+    /*background-color: rgb(149, 211, 231);*/
+    background-color: powderblue;
+}
+
+.light-green {
+    background-color: rgb(114, 247, 114);
+}
