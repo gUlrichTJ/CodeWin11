@@ -185,3 +185,7 @@ ins {
     color: white;
     background-color: purple;
 }
+
+table, td, th {
+    border: solid 0.8px;
+}
