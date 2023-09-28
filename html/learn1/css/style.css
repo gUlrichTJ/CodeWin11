@@ -163,3 +163,25 @@ ins {
     background-color: rgb(207, 191, 191);
     color: purple;
 }
+
+.blue-head {
+    background-color: rgb(3, 3, 71);
+    color: white;
+}
+
+.white-top-head {
+    background-color: rgb(240, 240, 240);
+    float: right;
+    color: black;
+    border: solid;
+    border-color: rgb(3, 3, 71);
+    margin-top: 0px;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.white-on-purple {
+    color: white;
+    background-color: purple;
+}
