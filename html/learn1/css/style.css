@@ -153,3 +153,13 @@ ins {
     text-align: justify;
     color: rgb(54, 54, 10);
 }
+
+.float2 {
+    float: none;
+    text-align: center;
+    border: solid 1px;
+    width: 40%;
+    display: inline-block;
+    background-color: rgb(207, 191, 191);
+    color: purple;
+}
