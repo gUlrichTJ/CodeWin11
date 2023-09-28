@@ -188,4 +188,30 @@ ins {
 
 table, td, th {
     border: solid 0.8px;
+    text-align: left;
+    padding: 3px;
+    border-bottom: 4px groove purple;
+    border-collapse: separate;
+    /*border-radius: 1em*/
+}
+
+caption {
+    caption-side: bottom;
+}
+
+.table2 {
+    border-style: solid;
+    border-collapse: collapse;
+    border-color: rgb(253, 137, 4);
+    border-width: 1px;
+}
+
+.th2 {
+    /*background-color: rgb(238, 190, 134);*/
+    background-color: peachpuff;
+}
+
+.light-orange {
+    /*background-color: rgb(226, 207, 190);*/
+    background-color: palegoldenrod;
 }
