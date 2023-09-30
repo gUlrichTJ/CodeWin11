@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:github_find_users/pages/repositories/git.repositories.page.dart';
 import 'package:http/http.dart' as http;
 
+/*Je te montrerai ce que j'ai fait from scratch dans le mois d'octobre. Je te le promets.
+* We shall meet. */
 class UsersPage extends StatefulWidget {
 
   @override
