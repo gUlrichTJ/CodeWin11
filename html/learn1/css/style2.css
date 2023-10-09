@@ -1,0 +1,53 @@
+.average_annual, thead, td, th {
+    border-collapse: collapse;
+    border-bottom: 0px white;
+    border-color: white;
+    text-align: center;
+    padding: 10px;
+    border-style: none;
+}
+
+.average_annual thead {
+    /*background-color: rgb(52, 52, 150);*/
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    border-style: none;
+}
+
+.average_annual tr {
+    border-bottom: 0px white;
+    border-style: none;
+}
+
+.pink {
+    /*background-color: rgb(216, 21, 63);*/
+    background-color: mediumvioletred;
+    color: white;
+}
+
+.light-pink {
+    /*background-color: lightpink;*/
+    background-color: mistyrose;
+}
+
+.my-favorite-eras, th, td, tr {
+    border: solid black 1px;
+    border-spacing: 5px;
+}
+
+.my-favorite-eras th {
+    background-color: rgb(209, 227, 235);
+}
+
+.my-favorite-eras caption {
+    caption-side: top;
+}
+
+.my-favorite-eras thead {
+    background-color: rgb(34, 207, 28);
+}
+figcaption {
+    text-align: left;
+}
