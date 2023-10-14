@@ -51,3 +51,7 @@
 figcaption {
     text-align: left;
 }
+
+.border-spacing {
+    border-spacing: 15px;
+}
