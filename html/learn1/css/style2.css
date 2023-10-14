@@ -55,3 +55,9 @@ figcaption {
 .border-spacing {
     border-spacing: 15px;
 }
+
+.right {
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+}

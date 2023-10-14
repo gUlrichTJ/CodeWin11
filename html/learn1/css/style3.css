@@ -1,0 +1,5 @@
+.inline-block {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
