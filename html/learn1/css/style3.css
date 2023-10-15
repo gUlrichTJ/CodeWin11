@@ -2,4 +2,6 @@
     display: inline-block;
     float: left;
     width: 50%;
+    margin: 20px;
+    text-align: justify;
 }
