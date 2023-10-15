@@ -2,6 +2,10 @@
     display: inline-block;
     float: left;
     width: 50%;
-    margin: 20px;
     text-align: justify;
+    margin: 10px;
+}
+
+.inline-block2 {
+    margin: 20px;
 }
