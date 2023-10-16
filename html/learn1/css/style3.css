@@ -24,4 +24,14 @@
 }
 .green {
     background-color: rgb(93, 204, 93);
+    text-align: center;
+}
+
+.light-green {
+    background-color: rgb(153, 250, 153);
+    text-align: justify;
+}
+
+.center {
+    text-align: center;
 }
