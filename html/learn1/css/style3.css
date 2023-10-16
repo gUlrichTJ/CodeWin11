@@ -13,7 +13,7 @@
 }
 
 .bottom {
-    position: fixed;
+    position: relative;
     bottom: 0;
     font-style: italic;
 }
@@ -34,4 +34,33 @@
 
 .center {
     text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.table1 th, .table1 td, .table1{
+    border: solid 1px;
+    border-collapse: collapse;
+}
+
+.blue {
+    background-color: rgb(116, 193, 219);
+}
+
+.table-blue {
+    border: solid 1px;
+    border-collapse: collapse;
+}
+.table-blue td, .table-blue th {
+    border: solid 1px;
+    border-bottom: none;
+    border-top: none;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-calendar {
+    border: solid 1px;
 }
