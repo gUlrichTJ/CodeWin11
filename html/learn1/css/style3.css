@@ -62,5 +62,7 @@
 }
 
 .table-calendar {
-    border: solid 1px;
+    border: solid 2px;
+    text-align: center;
+    border-collapse: collapse;
 }
