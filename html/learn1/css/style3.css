@@ -8,4 +8,20 @@
 
 .inline-block2 {
     margin: 20px;
+    width: 40%;
+    float: right;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    font-style: italic;
+}
+
+.together {
+    /*border-style: solid;*/
+    clear: both;
+}
+.green {
+    background-color: rgb(93, 204, 93);
 }
