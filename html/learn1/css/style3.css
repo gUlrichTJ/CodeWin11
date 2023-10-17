@@ -66,3 +66,17 @@
     text-align: center;
     border-collapse: collapse;
 }
+
+.yellow {
+    background-color: yellow;
+}
+
+.table4, .table4 td {
+    border: solid 1px;
+    padding: 1px;
+}
+
+.red {
+    background-color: rgb(233, 38, 38);
+    color: white;
+}
