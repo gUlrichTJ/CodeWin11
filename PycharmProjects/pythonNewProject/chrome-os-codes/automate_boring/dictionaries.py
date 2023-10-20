@@ -5,10 +5,38 @@ import pprint
 
 
 def dimension(label):
+    lines = input(f"Number of {str(label)} : ")
     while True:
-        lines = input(f"Number of {str(label)} : ")
         if not lines.isdigit():
-            print("")
+            lines = input("You must enter a number : ")
+        else:
+            break
+
+    return int(lines)
+
+
+def second(table):
+    lines = dimension("lines")  # We receive the number of lines
+    columns = dimension("columns")  # We receive the number of columns
+
+    for i in range(lines):  # We iterate
+        for j in range(columns):
+            table[i][j] = input(f"Name[{i}][{j}] : ")   # We receive datas
+
+    display(table, lines, columns)
+
+    return table    # We return the table
+
+
+def display(table, lines, columns):
+    for i in range(lines):
+        for j in range(columns):
+            print(f"{table[i][j]:>20}", end=" ")
+        print()
+
+
+two_dim_table = [[None] * 10 for i in range(10)]
+second(two_dim_table)
 
 
 def string_store(table, n, c):  # We're going to store string in a table
