@@ -1,6 +1,28 @@
 # Dictionaries
 import pprint
 
+
+# We're going to enter datas in a table of two dimensions
+
+def two_dim_table(tab, l, c):
+    # We enter datas
+    for i in range(l):
+        for j in range(c):
+            print(f"Enter value [{i+1}][{j+1}] : ")
+            data = input()
+            if data.isdigit():
+                tab[i][j] = data
+            else:
+                print("You must enter an integer")
+
+    for i in range(l):
+        for j in range(c):
+            print(f"[{i}][{j}]", end=" ")
+        print()
+
+# We create a table were we put the integers
+
+
 # strip and ...
 message = "Éloignez o Seigneur Jesus, les attractions de ce monde   ."
 message.strip()
