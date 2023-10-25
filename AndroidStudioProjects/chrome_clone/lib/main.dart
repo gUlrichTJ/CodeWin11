@@ -39,9 +39,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  bool checked = false;
-  late Function() onChanged;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -201,29 +198,69 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       // TODO: Le code du body
-      body: CustomScrollView(
+      /*body: Stack(
+        children: [
+          Image.network(
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png",
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () {
+// Add your action here for the microphone icon
+                  },
+                  icon: Icon(Icons.mic, size: 48, color: Colors.white),
+                ),
+                SizedBox(height: 20),
+                IconButton(
+                  onPressed: () {
+                    // Add your action here for the camera icon
+                  },
+                  icon: Icon(Icons.camera_alt, size: 48, color: Colors.white),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),*/
+      /*body: CustomScrollView(
         slivers: [
           SliverAppBar(
             expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
-              background: Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"),
+              background: Image.asset("assets/google_image.jpeg") // Image.network("http://cdn.primedia.co.za/primedia-broadcasting/image/upload/c_fill,w_847/fvzlw5w65lxgv9zlussq"),
             ),
           ),
           // Research bar with voice and camera icons
-          SliverAppBar(
-            pinned: true,
-            title: Text("Google search"),
-            actions: <Widget>[
-              IconButton(
-                  onPressed: () {
+          SliverToBoxAdapter(
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  IconButton(
+                      onPressed: () {
 
-                  },
-                  icon: Icon(Icons.mic)
+                      },
+                      icon: Icon(Icons.mic)
+                  ),
+                  IconButton(
+                      onPressed: () {
+
+                      },
+                      icon: Icon(Icons.camera_alt_outlined)
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ],
-      ),
+          SliverFillRemaining(),
+      ],
+      ),*/
     );
   }
 }
@@ -234,7 +271,7 @@ class HistoryIcon extends Icon {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 3,
       width: 3,
       child: Text("${nombre_donglet_ouvert()}"),
