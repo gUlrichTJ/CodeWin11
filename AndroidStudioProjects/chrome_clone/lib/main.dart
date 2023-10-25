@@ -174,7 +174,53 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),*/
                   ),
                 ),
+                PopupMenuDivider(),
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.settings),
+                    title: Text("Settings"),
+                  ),
+                ),
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.help),
+                    title: Text("Help & feedback"),
+                  ),
+                ),
               ],
+          ),
+        ],
+      ),
+
+      // TODO: Le code du body
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 200,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"),
+            ),
+          ),
+          // Research bar with voice and camera icons
+          SliverAppBar(
+            pinned: true,
+            title: Text("Google search"),
+            actions: <Widget>[
+              IconButton(
+                  onPressed: () {
+
+                  },
+                  icon: Icon(Icons.mic)
+              ),
+            ],
           ),
         ],
       ),
