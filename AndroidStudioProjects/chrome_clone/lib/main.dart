@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,13 +31,17 @@ class _MyAppState extends State<MyApp> {
 
 // TODO: Home page
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  bool checked = false;
+  late Function() onChanged;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
           onPressed: () {
 
-    },
+          },
           icon: Icon(
               Icons.square,
             size: 20,
@@ -70,8 +75,106 @@ class _MyHomePageState extends State<MyHomePage> {
           )
           ),
           PopupMenuButton(
+            elevation: 2,
+            padding: EdgeInsets.all(1),
             icon: Icon(Icons.more_vert),
-            itemBuilder: (context) =>
+              itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.add_box_outlined),
+                    title: Text("New tab"),
+                  ),
+                ),
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.lock_outline),
+                    title: Text("New Incognito tab"),
+                  ),
+                ),
+                PopupMenuDivider(),
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.history),
+                    title: Text("History"),
+                  ),
+                ),
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.download),
+                    title: Text("Downloads"),
+                  ),
+                ),
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.bookmark),
+                    title: Text("Bookmarks"),
+                  ),
+                ),
+
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.tab),
+                    title: Text("Recent tabs"),
+                  ),
+                ),
+                PopupMenuDivider(),
+                PopupMenuItem(
+                  padding: EdgeInsets.all(1),
+                  child: ListTile(
+                    onTap: () {
+
+                    },
+                    leading: Icon(Icons.desktop_windows),
+                    title: Text("Desktop site"),
+                    /*trailing: Checkbox(
+
+                      onChanged: (bool? value) {
+                        setState(() {
+                          widget.checked = true;
+                        });
+                        widget.onChanged;
+                      },
+                      value: widget.checked,
+                    ),
+
+                     */
+                    /*leading: CheckboxListTile(
+                      title: Text("Desktop site"),
+                      secondary: Icon(Icons.desktop_windows),
+                      value: checkBoxValueDesktop,
+                      onChanged: (ne) {
+                        setState(() {
+                          checkBoxValueDesktop = newValue;
+                        });
+                      },
+                    ),*/
+                  ),
+                ),
+              ],
           ),
         ],
       ),
