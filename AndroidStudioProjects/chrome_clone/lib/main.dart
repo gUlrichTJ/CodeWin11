@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
         // The icon of home
         leading: IconButton(
@@ -64,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
 
           },
-          icon: Icon(
+          icon: const Icon(
               Icons.square,
             size: 20,
             fill: 0.0,
@@ -73,8 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           PopupMenuButton(
             elevation: 2,
-            padding: EdgeInsets.all(1),
-            icon: Icon(Icons.more_vert),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.10),
+            ),
+            padding: const EdgeInsets.all(1),
+            icon: const Icon(Icons.more_vert),
               itemBuilder: (BuildContext context) => <PopupMenuEntry>[
                 PopupMenuItem(
                   padding: EdgeInsets.all(1),
@@ -147,28 +151,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     leading: Icon(Icons.desktop_windows),
                     title: Text("Desktop site"),
-                    /*trailing: Checkbox(
-
-                      onChanged: (bool? value) {
-                        setState(() {
-                          widget.checked = true;
-                        });
-                        widget.onChanged;
-                      },
-                      value: widget.checked,
-                    ),
-
-                     */
-                    /*leading: CheckboxListTile(
-                      title: Text("Desktop site"),
-                      secondary: Icon(Icons.desktop_windows),
-                      value: checkBoxValueDesktop,
-                      onChanged: (ne) {
-                        setState(() {
-                          checkBoxValueDesktop = newValue;
-                        });
-                      },
-                    ),*/
                   ),
                 ),
                 PopupMenuDivider(),
@@ -186,7 +168,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.all(1),
                   child: ListTile(
                     onTap: () {
-
                     },
                     leading: Icon(Icons.help),
                     title: Text("Help & feedback"),
@@ -198,71 +179,35 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       // TODO: Le code du body
-      /*body: Stack(
-        children: [
-          Image.network(
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png",
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+      body: Container(
+        decoration: BoxDecoration(
+        ),
+        child: Center(
+          child: Text(
+            "I love you so much",
+            style: TextStyle(fontSize: 30),
           ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: () {
-// Add your action here for the microphone icon
-                  },
-                  icon: Icon(Icons.mic, size: 48, color: Colors.white),
-                ),
-                SizedBox(height: 20),
-                IconButton(
-                  onPressed: () {
-                    // Add your action here for the camera icon
-                  },
-                  icon: Icon(Icons.camera_alt, size: 48, color: Colors.white),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),*/
-      /*body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            expandedHeight: 200,
-            flexibleSpace: FlexibleSpaceBar(
-              background: Image.asset("assets/google_image.jpeg") // Image.network("http://cdn.primedia.co.za/primedia-broadcasting/image/upload/c_fill,w_847/fvzlw5w65lxgv9zlussq"),
-            ),
-          ),
-          // Research bar with voice and camera icons
-          SliverToBoxAdapter(
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  IconButton(
-                      onPressed: () {
+        ),
+      ),
 
-                      },
-                      icon: Icon(Icons.mic)
-                  ),
-                  IconButton(
-                      onPressed: () {
-
-                      },
-                      icon: Icon(Icons.camera_alt_outlined)
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SliverFillRemaining(),
-      ],
-      ),*/
     );
   }
+}
+
+// TODO : the class that will return the popupmenuitem
+PopupMenuItem createCustomPopupMenuItem({
+  required IconData leadingIcon,
+  required String title,
+  required VoidCallback onTap,
+}) {
+  return PopupMenuItem(
+    padding: EdgeInsets.all(1),
+    child: ListTile(
+      onTap: onTap,
+      leading: Icon(leadingIcon),
+      title: Text(title),
+    ),
+  );
 }
 
 // We will try to create our icon
@@ -283,4 +228,17 @@ class HistoryIcon extends Icon {
 int nombre_donglet_ouvert() {
   int i = 3;
   return i;
+}
+class Our extends StatefulWidget {
+  const Our({Key? key}) : super(key: key);
+
+  @override
+  State<Our> createState() => _OurState();
+}
+
+class _OurState extends State<Our> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
 }
