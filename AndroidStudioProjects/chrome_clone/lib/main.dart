@@ -138,13 +138,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     onTap: () {
 
                     },
-                    leading: Icon(Icons.tab),
+                    leading: const Icon(Icons.tab),
                     title: Text("Recent tabs"),
                   ),
                 ),
                 PopupMenuDivider(),
                 createCustomPopupMenuItem(
-                    leadingIcon: Icon(Icons.desktop_windows),
+                    leadingIcon: const Icon(Icons.desktop_windows),
                     title: "Desktop site",
                     onTap: () {
 
@@ -152,21 +152,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 PopupMenuDivider(),
                 createCustomPopupMenuItem(
-                    leadingIcon: Icon(Icons.settings),
+                    leadingIcon: const Icon(Icons.settings),
                     title: "Settings",
                     onTap: () => {
 
                     },
                 ),
                 createCustomPopupMenuItem(
-                    leadingIcon: Icon(Icons.help),
+                    leadingIcon: const Icon(Icons.help),
                     title: "Help & feedback",
                     onTap: () {
 
                     }
                 ),
                 createCustomPopupMenuItem(
-                    leadingIcon: Icon(Icons.add_box_outlined),
+                    leadingIcon: const Icon(Icons.add_box_outlined),
                     title: "We try sth",
                     onTap: () => {
 
@@ -198,17 +198,19 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Stack(
               children: [
-
                 Container(
                   child: Padding(
-                    padding: EdgeInsets.all(2),
+                    padding: const EdgeInsets.all(2),
                     child: SearchAnchor(
                       builder: (context, controller) {
-                        return SearchBar(
-                          padding: MaterialStatePropertyAll<EdgeInsets>(
-                            EdgeInsets.symmetric(horizontal: 10.0),
+                        return SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.9,
+                          child: SearchBar(
+                            padding: MaterialStatePropertyAll<EdgeInsets>(
+                              EdgeInsets.symmetric(horizontal: 20.0),
+                            ),
+                            leading: Icon(Icons.search),
                           ),
-                          leading: Icon(Icons.search),
                         );
                       }, suggestionsBuilder: (BuildContext context, SearchController controller) {
                       return List.empty();
