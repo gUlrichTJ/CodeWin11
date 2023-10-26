@@ -143,35 +143,34 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 PopupMenuDivider(),
-                PopupMenuItem(
-                  padding: EdgeInsets.all(1),
-                  child: ListTile(
+                createCustomPopupMenuItem(
+                    leadingIcon: Icon(Icons.desktop_windows),
+                    title: "Desktop site",
                     onTap: () {
 
                     },
-                    leading: Icon(Icons.desktop_windows),
-                    title: Text("Desktop site"),
-                  ),
                 ),
                 PopupMenuDivider(),
-                PopupMenuItem(
-                  padding: EdgeInsets.all(1),
-                  child: ListTile(
-                    onTap: () {
+                createCustomPopupMenuItem(
+                    leadingIcon: Icon(Icons.settings),
+                    title: "Settings",
+                    onTap: () => {
 
                     },
-                    leading: Icon(Icons.settings),
-                    title: Text("Settings"),
-                  ),
                 ),
-                PopupMenuItem(
-                  padding: EdgeInsets.all(1),
-                  child: ListTile(
+                createCustomPopupMenuItem(
+                    leadingIcon: Icon(Icons.help),
+                    title: "Help & feedback",
                     onTap: () {
+
+                    }
+                ),
+                createCustomPopupMenuItem(
+                    leadingIcon: Icon(Icons.add_box_outlined),
+                    title: "We try sth",
+                    onTap: () => {
+
                     },
-                    leading: Icon(Icons.help),
-                    title: Text("Help & feedback"),
-                  ),
                 ),
               ],
           ),
@@ -196,7 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 // TODO : the class that will return the popupmenuitem
 PopupMenuItem createCustomPopupMenuItem({
-  required IconData leadingIcon,
+  required Icon leadingIcon,
   required String title,
   required VoidCallback onTap,
 }) {
@@ -204,7 +203,7 @@ PopupMenuItem createCustomPopupMenuItem({
     padding: EdgeInsets.all(1),
     child: ListTile(
       onTap: onTap,
-      leading: Icon(leadingIcon),
+      leading: leadingIcon,
       title: Text(title),
     ),
   );
