@@ -179,14 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       // TODO: Le code du body
       body: Container(
-        decoration: BoxDecoration(
-        ),
-        child: Center(
-          child: Text(
-            "I love you so much",
-            style: TextStyle(fontSize: 30),
-          ),
-        ),
+
       ),
 
     );
