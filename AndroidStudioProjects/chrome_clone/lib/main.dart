@@ -178,8 +178,22 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       // TODO: Le code du body
-      body: Container(
-
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            LayoutBuilder( // TODO : Un layout builder pour ocuuper
+              // toute la taille réservée
+              builder: (context, constraints) {
+                return SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                    child: const Image(
+                        image:AssetImage("assets/google_image.jpeg")
+                    ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
 
     );
