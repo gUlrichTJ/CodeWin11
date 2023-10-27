@@ -237,7 +237,9 @@ class _MyHomePageState extends State<MyHomePage> {
             retourneImageCliquable(
               context,
               "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1600px-Flag_of_New_Zealand.svg.png",
-              "New Zeland"
+              "New Zealand is a beautiful island country located"
+                  " in the southwestern Pacific Ocean.",
+              "Description"
             ),
           ],
         ),
@@ -296,10 +298,18 @@ class _OurState extends State<Our> {
   }
 }
 
+// TODO : la classe qui retourne l'image cliquable
+
 // TODO : Fonction qui va retourner l'image cliquable dans le container
-Widget retourneImageCliquable(BuildContext context, String lienImage, String description) {
+Widget retourneImageCliquable(
+    BuildContext context,
+    String lienImage,
+    String description,
+    String descriptionListTile,
+    ) {
   return Column(
     children: [
+      // TODO : The image's box
       SizedBox(
         height: 150,
         child: ClipRRect(
@@ -312,7 +322,37 @@ Widget retourneImageCliquable(BuildContext context, String lienImage, String des
         ),
       ),
       // TODO : The description of the image
-      Text(description),
+      SizedBox(
+        width: MediaQuery.of(context).size.width * 0.83,
+          child: Text(
+              description,
+            // TODO : The style of the description
+            style: const TextStyle(
+            ),
+            textAlign: TextAlign.justify,
+          ),
+      ),
+      // TODO : The widget to have the icon, the title, the share icon and the more_vert's icon
+      ListTile(
+        leading: const Icon(Icons.square_outlined),
+        trailing: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            IconButton(
+                onPressed: () {
+                },
+                icon: const Icon(Icons.share),
+            ),
+            // Thank You Jesus
+            IconButton(
+              onPressed: () {
+            },
+                icon: const Icon(Icons.more_vert),
+            ),
+          ],
+        ),
+        title: Text(descriptionListTile),
+      ),
     ],
   );
 }
