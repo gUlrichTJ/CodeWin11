@@ -220,8 +220,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+            Divider(),
             // TODO : Créer le container qui va recevoir les images avec les liens.
-            Text("Try"),
+            retourneImageCliquable(context, "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1600px-Flag_of_New_Zealand.svg.png"),
           ],
         ),
       ),
@@ -280,16 +281,16 @@ class _OurState extends State<Our> {
 }
 
 // TODO : Fonction qui va retourner l'image cliquable dans le container
-Container retourneImageCliquable(BuildContext context, String lienImage) {
-  return Container(
-    width: MediaQuery.of(context).size.width * 0.85,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(4.0),
-    ),
-    child: Stack(
-      children: [
-        Image.network(lienImage),
-      ],
+Widget retourneImageCliquable(BuildContext context, String lienImage) {
+  return SizedBox(
+    height: 150,
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Image.network(
+        fit: BoxFit.cover,
+        lienImage,
+        width: MediaQuery.of(context).size.width * 0.84,
+      ),
     ),
   );
 }
