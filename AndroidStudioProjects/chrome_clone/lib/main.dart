@@ -210,6 +210,18 @@ class _MyHomePageState extends State<MyHomePage> {
                               EdgeInsets.symmetric(horizontal: 20.0),
                             ),
                             leading: Icon(Icons.search),
+                            trailing: <Widget>[
+                              IconButton(onPressed: () {
+
+                              },
+                                  icon: Icon(Icons.mic_rounded)
+                              ),
+                              IconButton(onPressed: () {
+
+                              },
+                                  icon: Icon(Icons.photo_camera_outlined)
+                              ),
+                            ],
                           ),
                         );
                       }, suggestionsBuilder: (BuildContext context, SearchController controller) {
@@ -222,7 +234,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Divider(),
             // TODO : Créer le container qui va recevoir les images avec les liens.
-            retourneImageCliquable(context, "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1600px-Flag_of_New_Zealand.svg.png"),
+            retourneImageCliquable(
+              context,
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1600px-Flag_of_New_Zealand.svg.png",
+              "New Zeland"
+            ),
           ],
         ),
       ),
@@ -281,16 +297,22 @@ class _OurState extends State<Our> {
 }
 
 // TODO : Fonction qui va retourner l'image cliquable dans le container
-Widget retourneImageCliquable(BuildContext context, String lienImage) {
-  return SizedBox(
-    height: 150,
-    child: ClipRRect(
-      borderRadius: BorderRadius.circular(20),
-      child: Image.network(
-        fit: BoxFit.cover,
-        lienImage,
-        width: MediaQuery.of(context).size.width * 0.84,
+Widget retourneImageCliquable(BuildContext context, String lienImage, String description) {
+  return Column(
+    children: [
+      SizedBox(
+        height: 150,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Image.network(
+            fit: BoxFit.cover,
+            lienImage,
+            width: MediaQuery.of(context).size.width * 0.84,
+          ),
+        ),
       ),
-    ),
+      // TODO : The description of the image
+      Text(description),
+    ],
   );
 }
