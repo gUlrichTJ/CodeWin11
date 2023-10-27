@@ -220,6 +220,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+            // TODO : Créer le container qui va recevoir les images avec les liens.
+            Text("Try"),
           ],
         ),
       ),
@@ -275,4 +277,19 @@ class _OurState extends State<Our> {
   Widget build(BuildContext context) {
     return const Placeholder();
   }
+}
+
+// TODO : Fonction qui va retourner l'image cliquable dans le container
+Container retourneImageCliquable(BuildContext context, String lienImage) {
+  return Container(
+    width: MediaQuery.of(context).size.width * 0.85,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(4.0),
+    ),
+    child: Stack(
+      children: [
+        Image.network(lienImage),
+      ],
+    ),
+  );
 }
