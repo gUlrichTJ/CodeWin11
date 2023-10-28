@@ -239,7 +239,7 @@ class _MyHomePageState extends State<MyHomePage> {
               "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1600px-Flag_of_New_Zealand.svg.png",
               "New Zealand is a beautiful island country located"
                   " in the southwestern Pacific Ocean.",
-              "Description"
+              "just"
             ),
           ],
         ),
@@ -333,25 +333,31 @@ Widget retourneImageCliquable(
           ),
       ),
       // TODO : The widget to have the icon, the title, the share icon and the more_vert's icon
-      ListTile(
-        leading: const Icon(Icons.square_outlined),
-        trailing: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            IconButton(
+      SizedBox(
+        width: MediaQuery.of(context).size.width * 0.9,
+        child: ListTile(
+          contentPadding: const EdgeInsets.all(4),
+          leading: const Icon(Icons.square_outlined),
+          trailing: SizedBox(
+            width: MediaQuery.of(context).size.width * 0.3,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [IconButton(
+                  onPressed: () {
+                  },
+                  icon: const Icon(Icons.share),
+              ),
+              // Thank You Jesus
+              IconButton(
                 onPressed: () {
-                },
-                icon: const Icon(Icons.share),
-            ),
-            // Thank You Jesus
-            IconButton(
-              onPressed: () {
-            },
-                icon: const Icon(Icons.more_vert),
-            ),
-          ],
+              },
+                  icon: const Icon(Icons.more_vert),
+              ),
+            ],
+          ),
+          ),
+          title: Text(descriptionListTile),
         ),
-        title: Text(descriptionListTile),
       ),
     ],
   );
