@@ -333,7 +333,7 @@ Widget retourneImageCliquable(
           ),
       ),
       // TODO : The widget to have the icon, the title, the share icon and the more_vert's icon
-      // TODO : God is beside us
+      // TODO : God is beside us. He gives us strength and we just thank Him
       SizedBox(
         width: MediaQuery.of(context).size.width * 0.9,
         child: ListTile(
