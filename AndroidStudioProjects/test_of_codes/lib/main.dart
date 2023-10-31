@@ -62,6 +62,7 @@ class _SearchBarAppState extends State<SearchBarApp> {
               final String item = 'item $index';
               return ListTile(
                 title: Text(item),
+                // Stay focused ok ?
                 onTap: () {
                   setState(() {
                     controller.closeView(item);

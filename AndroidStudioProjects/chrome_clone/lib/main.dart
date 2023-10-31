@@ -241,6 +241,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   " in the southwestern Pacific Ocean.",
               "just"
             ),
+            // TODO : Retourner une autre image cliquable
+            retourneImageCliquable(
+                context,
+                lienImage,
+                description,
+                descriptionListTile
+            ),
           ],
         ),
       ),
