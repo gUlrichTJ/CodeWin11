@@ -314,6 +314,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Solar system",
                 "Solar system",
             ),
+            retourneImageCliquable(
+                context,
+                "https://static.independent.co.uk/2023/11/01/04/Trump_Fraud_Lawsuit_50285.jpg?quality=75&width=640&auto=webp",
+                "Donald Trump’s sons Don Jr. and Eric set to testify at fraud trial that threatens family’s empire",
+                "Donald Trump",
+            ),
+            retourneImageCliquable(
+                context,
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Photo_Faure_Gnassingbe_2023.jpg/440px-Photo_Faure_Gnassingbe_2023.jpg",
+                "The president of Togo has done more than 16 years on the head of the country.",
+                "M. Faure Essossimna G.",
+            ),
           ],
         ),
       ),
@@ -322,7 +334,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// TODO : the class that will return the popupmenuitem
+// TODO : the class that will return the popupmenu item
 PopupMenuItem createCustomPopupMenuItem({
   required Icon leadingIcon,
   required String title,
