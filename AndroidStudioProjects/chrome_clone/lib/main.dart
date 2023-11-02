@@ -326,6 +326,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 "The president of Togo has done more than 16 years on the head of the country.",
                 "M. Faure Essossimna G.",
             ),
+            retourneImageCliquable(
+                context,
+                "https://media.licdn.com/dms/image/D5603AQEI4UU6lhir8w/profile-displayphoto-shrink_800_800/0/1668182393725?e=1704326400&v=beta&t=Uwbsf7eKruMC0BSYO5_KMkqQDzedG7JdM9tFZCH--rQ",
+                "The winner at the Ambassadrice de l'environnement constest. She is the best of all speakers and competitors.",
+                "Alassani Karima",
+            ),
           ],
         ),
       ),
