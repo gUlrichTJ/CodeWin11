@@ -241,12 +241,36 @@ class _MyHomePageState extends State<MyHomePage> {
                   " in the southwestern Pacific Ocean.",
               "just"
             ),
-            // TODO : Retourner une autre image cliquable
+            // TODO : Retourner l'image de R cliquable
             retourneImageCliquable(
                 context,
                 "https://microbenotes.com/wp-content/uploads/2023/04/Bioinformatics-Python-and-R-Programming-Language.jpg",
                 "Learn the R Programming language for data science like the Python Language.",
                 "Description"
+            ),
+            retourneImageCliquable(
+                context,
+                "https://images.shiksha.com/mediadata/images/articles/1600012449phpmcJG1Q.jpeg",
+                "Mit Students are among the best of the world. I really appreciate them.",
+                "MIT Students.",
+            ),
+            retourneImageCliquable(
+                context,
+                "https://chinesepod.com/blog/wp-content/uploads/2018/11/read-pinyin.jpg",
+                "Learn chinesse and speak it fluently like natives. It's not difficult. Just enroll !",
+                "Chinesse learning",
+            ),
+            retourneImageCliquable(
+                context,
+                "https://southernstudies.olemiss.edu/media/new-encyclopedia-southern-culture-940x348.jpeg",
+                "Read encyclopedia of southern culture of 1989",
+                "Southern encyclopedia",
+            ),
+            retourneImageCliquable(
+                context,
+                "https://i.pcmag.com/imagery/reviews/05cItXL96l4LE9n02WfDR0h-5.fit_scale.size_1028x578.v1582751026.png",
+                "When you're tired, watch films on netflix for fun and for free. Secured films.",
+                "Netflix",
             ),
           ],
         ),
@@ -318,7 +342,7 @@ Widget retourneImageCliquable(
     children: [
       // TODO : The image's box
       SizedBox(
-        height: 150,
+        height: 170,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: Image.network(
