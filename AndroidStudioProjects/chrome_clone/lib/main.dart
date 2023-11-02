@@ -214,12 +214,12 @@ class _MyHomePageState extends State<MyHomePage> {
                               IconButton(onPressed: () {
 
                               },
-                                  icon: Icon(Icons.mic_rounded)
+                                  icon: const Icon(Icons.mic_rounded)
                               ),
                               IconButton(onPressed: () {
 
                               },
-                                  icon: Icon(Icons.photo_camera_outlined)
+                                  icon: const Icon(Icons.photo_camera_outlined)
                               ),
                             ],
                           ),
@@ -232,7 +232,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-            Divider(),
+            const Divider(),
             // TODO : Créer le container qui va recevoir les images avec les liens.
             retourneImageCliquable(
               context,
@@ -292,9 +292,27 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJLgYh0m-MfcABUv8-ZADCB7c4UwsjfwDiG3BuYBW6cg&s",
               "Melé Urielle G. the Africa Beauty Miss",
               "Urielle Graciela",
+            ),
+            retourneImageCliquable(
+                context,
+                "https://media.wired.com/photos/5fd2c29c2a4ddaf3b6389694/16:9/w_2240%2Cc_limit/Gear-Books-Roundup-671406905.jpg",
+                "Books reading is necessary for humans",
+                "Library",
+            ),
+            retourneImageCliquable(
+                context,
+                "https://i.guim.co.uk/img/media/ced917f337eab6470263656836d2cfdea8640a7d/232_152_5212_3128/master/5212.jpg?width=700&dpr=2&s=none",
+                "Lionel Messi and Cristiano Ronaldo in action during the Riyadh All-Star XI vs Paris Saint-Germain match.",
+                "Messi and CR7",
+            ),
+            retourneImageCliquable(
+                context,
+                "https://physics.aps.org/assets/8e52db55-73fc-43b7-a90b-a45e6d01fff9/es111_medium_1.png",
+                "Solar system",
+                "Solar system",
             ),
           ],
         ),
@@ -311,7 +329,7 @@ PopupMenuItem createCustomPopupMenuItem({
   required VoidCallback onTap,
 }) {
   return PopupMenuItem(
-    padding: EdgeInsets.all(1),
+    padding: const EdgeInsets.all(1),
     child: ListTile(
       onTap: onTap,
       leading: leadingIcon,
@@ -366,7 +384,7 @@ Widget retourneImageCliquable(
     children: [
       // TODO : The image's box
       SizedBox(
-        height: 170,
+        height: MediaQuery.of(context).size.width * 0.4,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: Image.network(
@@ -414,6 +432,11 @@ Widget retourneImageCliquable(
           ),
           title: Text(descriptionListTile),
         ),
+      ),
+      // TODO : The divider
+      const Divider(
+        height: 5,
+        color: Colors.grey,
       ),
     ],
   );
