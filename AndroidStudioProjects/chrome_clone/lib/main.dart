@@ -244,9 +244,9 @@ class _MyHomePageState extends State<MyHomePage> {
             // TODO : Retourner une autre image cliquable
             retourneImageCliquable(
                 context,
-                lienImage,
-                description,
-                descriptionListTile
+                "https://microbenotes.com/wp-content/uploads/2023/04/Bioinformatics-Python-and-R-Programming-Language.jpg",
+                "Learn the R Programming language for data science like the Python Language.",
+                "Description"
             ),
           ],
         ),
