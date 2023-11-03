@@ -123,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 },
               ),
-              PopupMenuDivider(),
+              const PopupMenuDivider(),
               createCustomPopupMenuItem(
                 leadingIcon: const Icon(Icons.settings),
                 title: "Settings",
