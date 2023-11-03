@@ -27,3 +27,31 @@ for i in range(nombreDeLignes):
 
     # Nous allons à la ligne
     print()
+
+# Nous allons afficher un losange d'étoiles
+
+etoile = "*"
+espace = ' '
+
+# L'utilisateur entre la hauteur du losange
+hauteur = int(input("Hauteur du losange : "))
+
+# Vérification que la hauteur est un nombre impair
+if hauteur % 2 == 0:
+    print("La hauteur doit être un nombre impair.")
+else:
+    for i in range(1, hauteur * 2):
+        # Calcul du nombre d'espaces avant les étoiles
+        espaces = abs((hauteur // 2) - (i - (hauteur // 2)))
+
+        # Nous parcourons la boucle pour afficher les espaces
+        for j in range(espaces):
+            print(espace, end="")
+
+        # Maintenant, nous affichons les étoiles
+        for k in range(hauteur - 2 * espaces):
+            print(etoile, end="")
+
+        # Nous allons à la ligne
+        print()
+
