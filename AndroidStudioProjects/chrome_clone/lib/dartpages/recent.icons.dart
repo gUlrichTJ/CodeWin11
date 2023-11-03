@@ -19,19 +19,19 @@ class RecentIcons extends StatelessWidget {
               color: Colors.red,
             ),
           ),
-          ImageIcon(AssetImage("assets/images/users2.png")),
+          const ImageIcon(AssetImage("assets/images/users2.png")),
           IconButton(
               onPressed: () {
 
               },
-              icon: Icon(Icons.youtube_searched_for)
+              icon: const Icon(Icons.youtube_searched_for)
           ),
-          ImageIcon(AssetImage("assets/images/users2.png")),
+          const ImageIcon(AssetImage("assets/images/users2.png")),
           IconButton(
             onPressed: () {
 
             },
-            icon: Icon(Icons.backup_outlined)
+            icon: const Icon(Icons.backup_outlined)
           ),
         ],
       ),
