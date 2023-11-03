@@ -207,7 +207,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             // TODO : Nous allons mettre les icones récentes
-            
+
             const Divider(),
             // TODO : Créer le container qui va recevoir les images avec les liens.
             retourneImageCliquable(
@@ -321,7 +321,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-
     );
   }
 }
