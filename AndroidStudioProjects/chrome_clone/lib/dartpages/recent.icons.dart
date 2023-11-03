@@ -8,7 +8,25 @@ class RecentIcons extends StatelessWidget {
     return SizedBox(
       /// The width of the container
       width: MediaQuery.of(context).size.width * 0.8,
-      child: Table(
+      child: Row(
+        children: [
+          IconButton(
+            onPressed: () {
+
+            },
+            icon: const Icon(
+                Icons.youtube_searched_for,
+              color: Colors.red,
+            ),
+          ),
+          ImageIcon(AssetImage("assets/google_image.jpeg")),
+          IconButton(
+              onPressed: () {
+
+              },
+              icon: Icon(Icons.youtube_searched_for)
+          ),
+        ],
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:chrome_clone/dartpages/recent.icons.dart';
 import 'package:flutter/material.dart';
 
 import '../main.dart';
@@ -207,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             // TODO : Nous allons mettre les icones récentes
-
+            const RecentIcons(),
             const Divider(),
             // TODO : Créer le container qui va recevoir les images avec les liens.
             retourneImageCliquable(
