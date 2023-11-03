@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   title: Text("Recent tabs"),
                 ),
               ),
-              PopupMenuDivider(),
+              const PopupMenuDivider(),
               createCustomPopupMenuItem(
                 leadingIcon: const Icon(Icons.desktop_windows),
                 title: "Desktop site",
@@ -156,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Stack(
               children: [
-                LayoutBuilder( // TODO : Un layout builder pour ocuuper
+                LayoutBuilder( // TODO : Un layout builder pour occupy
                   // toute la taille réservée
                   builder: (context, constraints) {
                     return SizedBox(
@@ -178,11 +178,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       builder: (context, controller) {
                         return SizedBox(
                           width: MediaQuery.of(context).size.width * 0.9,
+                          // TODO : La barre de recherche
                           child: SearchBar(
-                            padding: MaterialStatePropertyAll<EdgeInsets>(
+                            padding: const MaterialStatePropertyAll<EdgeInsets>(
                               EdgeInsets.symmetric(horizontal: 20.0),
                             ),
-                            leading: Icon(Icons.search),
+                            leading: const Icon(Icons.search),
                             trailing: <Widget>[
                               IconButton(onPressed: () {
 
