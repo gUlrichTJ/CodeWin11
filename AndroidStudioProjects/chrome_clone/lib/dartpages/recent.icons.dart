@@ -8,30 +8,76 @@ class RecentIcons extends StatelessWidget {
     return SizedBox(
       /// The width of the container
       width: MediaQuery.of(context).size.width * 0.8,
-      child: Row(
+      child: Column(
         children: [
-          IconButton(
-            onPressed: () {
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: () {
 
-            },
-            icon: const Icon(
-                Icons.youtube_searched_for,
-              color: Colors.red,
-            ),
+                },
+                icon: const Icon(
+                    Icons.history_sharp,
+                  color: Colors.grey,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                    Icons.location_on_outlined,
+                  color: Colors.blueAccent,
+                ),
+              ),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.youtube_searched_for)
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.group_add),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.backup_outlined)
+              ),
+            ],
           ),
-          const ImageIcon(AssetImage("assets/images/users2.png")),
-          IconButton(
-              onPressed: () {
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.snapchat,
+                  color: Colors.red,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.download_rounded),
+              ),
+              IconButton(
+                  onPressed: () {
 
-              },
-              icon: const Icon(Icons.youtube_searched_for)
-          ),
-          const ImageIcon(AssetImage("assets/images/users2.png")),
-          IconButton(
-            onPressed: () {
+                  },
+                  icon: const Icon(
+                      Icons.sunny,
+                    color: Colors.amber,
+                  ),
+              ),
+              IconButton(
+                  onPressed: () {
+                },
+                icon: const Icon(Icons.lock_outline),
+              ),
+              IconButton(
+                  onPressed: () {
 
-            },
-            icon: const Icon(Icons.backup_outlined)
+                  },
+                  icon: const Icon(Icons.receipt_long)
+              ),
+            ],
           ),
         ],
       ),
