@@ -76,7 +76,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_tts:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_tts
       sha256: "23d47e1335c632228b80d9693e2494a834393fff5893b66e8ae494dcce4e9867"
