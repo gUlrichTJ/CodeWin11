@@ -19,4 +19,9 @@ class TextToSpeechManager {
   Future<void> stop() async {
     await flutterTts.stop();
   }
+
+  /// Methode pour recuperer le poeme depuis un fichier text
+  Future<String> loadPoem() async {
+    return await rootBundle.loadString("assets/texttospeech.file.txt");
+  }
 }

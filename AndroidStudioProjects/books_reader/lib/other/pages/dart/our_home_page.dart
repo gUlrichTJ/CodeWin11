@@ -1,5 +1,6 @@
 import 'package:books_reader/other/pages/dart/texttospeech.file.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class OurHomePage extends StatefulWidget {
   const OurHomePage({Key? key}) : super(key: key);
@@ -10,6 +11,8 @@ class OurHomePage extends StatefulWidget {
 
 class _OurHomePageState extends State<OurHomePage> {
   TextToSpeechManager toSpeechManager = TextToSpeechManager();
+  // TODO : A changer plus tard
+  String texte2 =  loadPoem().toString();
   String texte = "Hello, how're you doing my dear ?"
       "I think we will have to work hard and praise The Lord"
       "Then Job replied: 2 Even today my complaint is bitter;"
@@ -60,4 +63,10 @@ class _OurHomePageState extends State<OurHomePage> {
       ),
     );
   }
+}
+
+// TODO : A changer plus tard
+/// Methode pour recuperer le poeme depuis un fichier text
+Future<String> loadPoem() async {
+  return await rootBundle.loadString("assets/texttospeech.file.txt");
 }
