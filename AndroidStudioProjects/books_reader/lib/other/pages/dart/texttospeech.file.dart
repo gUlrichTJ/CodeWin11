@@ -7,8 +7,8 @@ class TextToSpeechManager {
   FlutterTts flutterTts = FlutterTts();
   TextToSpeechManager() {
     flutterTts.setLanguage("en-US");
-    flutterTts.setSpeechRate(0.70);
-    flutterTts.setPitch(1.0);
+    flutterTts.setSpeechRate(0.40);
+    flutterTts.setPitch(0.70);
   }
   /// Méthode pour lire le texte à haute voix
   Future<void> speak(String text) async {
