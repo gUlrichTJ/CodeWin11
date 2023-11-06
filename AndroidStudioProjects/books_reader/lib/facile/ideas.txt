@@ -5,3 +5,14 @@
 We put two icons at the same place. One is visible an activated. When
 the second is disabled. One will permit to read the text loudly
 and the second will permit to stop it.
+
+*******************************************************************
+We must give the opportunity to the user to chose his language.
+We shall start with english and french for the beginning.
+We can put that in the settings (by that, think to the settings icon)
+We will permit to the user to chose his pitch, the accuracy of the
+voice, its quickness,
+******************************************************************
+After this, we will highlight the text as it's read and scroll it
+like in the Bible application.
+When it has read until the bottom of the page, we stop scrolling.
