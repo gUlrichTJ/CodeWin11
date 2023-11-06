@@ -53,6 +53,7 @@ class _OurHomePageState extends State<OurHomePage> {
           if (selected == true) {
             /// It reads the text.
             toSpeechManager.speak(texte!);
+          /// If we press the button to stop reading, it means selected = false
           } else {
             toSpeechManager.stop();
           }
