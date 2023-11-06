@@ -1,3 +1,4 @@
+import 'package:books_reader/other/pages/dart/app_bar.dart';
 import 'package:books_reader/other/pages/dart/load_file.dart';
 import 'package:books_reader/other/pages/dart/text_to_speech.file.dart';
 import 'package:flutter/material.dart';
@@ -37,10 +38,10 @@ class _OurHomePageState extends State<OurHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: CustomAppBar(),
       body: SingleChildScrollView(
         child: Text(
-            texte.toString(),
+          texte.toString(),
           textAlign: TextAlign.justify,
           style: const TextStyle(
             fontFamily: "Comic Sans MS",
@@ -53,7 +54,7 @@ class _OurHomePageState extends State<OurHomePage> {
           if (selected == true) {
             /// It reads the text.
             toSpeechManager.speak(texte!);
-          /// If we press the button to stop reading, it means selected = false
+            /// If we press the button to stop reading, it means selected = false
           } else {
             toSpeechManager.stop();
           }
@@ -65,14 +66,14 @@ class _OurHomePageState extends State<OurHomePage> {
           // toSpeechManager.stop();
         },
         icon: selected ?
-          const Icon(
-              Icons.speaker_phone_rounded,
-            color: Colors.blueAccent,
-          ) :
-          const Icon(
-            Icons.stop,
-            color: Colors.red,
-          ),
+        const Icon(
+          Icons.speaker_phone_rounded,
+          color: Colors.blueAccent,
+        ) :
+        const Icon(
+          Icons.stop,
+          color: Colors.red,
+        ),
       ),
     );
   }
