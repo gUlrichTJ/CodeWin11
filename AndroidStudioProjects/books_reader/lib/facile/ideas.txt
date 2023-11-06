@@ -1,0 +1,7 @@
+******************************************************************
+        Here, we put the ideas we have to ameliorate the app
+******************************************************************
+
+We put two icons at the same place. One is visible an activated. When
+the second is disabled. One will permit to read the text loudly
+and the second will permit to stop it.
