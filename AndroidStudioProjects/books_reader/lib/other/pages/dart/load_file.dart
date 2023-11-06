@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 class FileLoad {
@@ -10,14 +9,16 @@ class FileLoad {
   /// if _text is null
   Future<String> get file async {
     /// If the text is null, we wait
-    if (_text == null) {
+    if (_text == "") {
       _text = await rootBundle.loadString("assets/job23.txt");
     }
     return _text;
   }
 }
 
-/// We create a class that will have a gloabal variable
+/// We create a class that will have a global variable
 class GlobalString {
   static String? text;
 }
+
+

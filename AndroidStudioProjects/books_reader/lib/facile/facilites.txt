@@ -1,0 +1,9 @@
+Nous disons merci à Dieu. Nous voulons passer la valeur du contenu
+d'un fichier texte à une chaine de caractère.
+
+Nous avons essayé :
+    var texte = File('assets/file.txt');
+mais, nous n'avons pas encore trouvé. Ce n'est qu'une question de temps.
+
+La mort et la vie sont au pouvoir de la langue. Par la grace de Dieu,
+le problème est résolu. Bernadin has helped me.

@@ -1,10 +1,8 @@
-import 'dart:io';
-
 import 'package:books_reader/other/pages/dart/our_home_page.dart';
 import 'package:flutter/material.dart';
 
 void main () {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -24,4 +22,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-

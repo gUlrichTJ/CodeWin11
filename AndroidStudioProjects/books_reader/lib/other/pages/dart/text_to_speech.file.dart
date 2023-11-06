@@ -10,18 +10,18 @@ class TextToSpeechManager {
     flutterTts.setSpeechRate(0.40);
     flutterTts.setPitch(0.70);
   }
-  /// Méthode pour lire le texte à haute voix
+  /// Method to read the text loudly
   Future<void> speak(String text) async {
     await flutterTts.speak(text);
   }
 
-  /// Methode pour arreter la lecture du texte
+  /// Method to stop the reading
   Future<void> stop() async {
     await flutterTts.stop();
   }
 
-  /// Methode pour recuperer le poeme depuis un fichier text
+  /// Method to have the text from the text file
   Future<String> loadPoem() async {
-    return await rootBundle.loadString("assets/texttospeech.file.txt");
+    return await rootBundle.loadString("assets/text_to_speech.file.txt");
   }
 }
