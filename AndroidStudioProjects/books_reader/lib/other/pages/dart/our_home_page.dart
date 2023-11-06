@@ -12,7 +12,7 @@ class OurHomePage extends StatefulWidget {
 class _OurHomePageState extends State<OurHomePage> {
   String? texte;
   /// Variable that will help us to select the icon
-  bool selected = false;
+  bool selected = true;
   TextToSpeechManager toSpeechManager = TextToSpeechManager();
   // TODO : We have to change this later
   // TODO : We create an instance of LoadFile
@@ -50,7 +50,13 @@ class _OurHomePageState extends State<OurHomePage> {
       floatingActionButton: IconButton(
         /// When we press the button for the fist time, it starts reading
         onPressed: () {
-          toSpeechManager.speak(texte!);  /// It reads the text.
+          if (selected == true) {
+            /// It reads the text.
+            toSpeechManager.speak(texte!);
+          } else {
+            toSpeechManager.stop();
+          }
+
           /// We change the state, we change the icon to another
           setState(() {
             selected = !selected;
