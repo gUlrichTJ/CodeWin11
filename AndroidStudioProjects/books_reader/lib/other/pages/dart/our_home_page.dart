@@ -65,8 +65,14 @@ class _OurHomePageState extends State<OurHomePage> {
           // toSpeechManager.stop();
         },
         icon: selected ?
-          const Icon(Icons.speaker_phone_rounded) :
-          const Icon(Icons.speaker_notes_off_outlined),
+          const Icon(
+              Icons.speaker_phone_rounded,
+            color: Colors.blueAccent,
+          ) :
+          const Icon(
+            Icons.stop,
+            color: Colors.red,
+          ),
       ),
     );
   }
