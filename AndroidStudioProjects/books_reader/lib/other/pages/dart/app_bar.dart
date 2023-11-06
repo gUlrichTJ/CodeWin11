@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatefulWidget {
-  const CustomAppBar();
+class CustomAppBar extends AppBar {
+  CustomAppBar({super.key});
 
-  @override
-  State<CustomAppBar> createState() => _CustomAppBarState();
-}
-
-class _CustomAppBarState extends State<CustomAppBar> {
-  @override
-  Widget build(BuildContext context) {
+  // TODO : Function that return our appBar
+  AppBar returnCustomAppBar() {
     return AppBar(
       leading: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          // TODO : We return to the home page that shows the pdfs
+        },
         icon: const Icon(Icons.home_outlined),
       ),
+      // TODO : The icons of action
       actions: [
-        // TODO : Mettre l'icone de recherche et l'icone de morevert
+        IconButton(
+            onPressed: () {},
+          icon: const Icon(Icons.search),
+        ),
+        IconButton(
+          onPressed: (){},
+          icon: const Icon(Icons.more_vert),
+        ),
       ],
     );
   }
