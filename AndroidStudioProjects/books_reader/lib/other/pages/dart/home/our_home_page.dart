@@ -38,7 +38,8 @@ class _OurHomePageState extends State<OurHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar().returnCustomAppBar(),
+      appBar: CustomAppBar().returnCustomAppBar(), /// We receive
+      /// the appBar from the custom appBar class
       body: SingleChildScrollView(
         child: Text(
           texte.toString(),
