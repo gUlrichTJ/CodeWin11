@@ -11,6 +11,8 @@ class OurHomePage extends StatefulWidget {
 
 class _OurHomePageState extends State<OurHomePage> {
   String? texte;
+  /// Variable that will help us to select the icon
+  bool selected = false;
   TextToSpeechManager toSpeechManager = TextToSpeechManager();
   // TODO : We have to change this later
   // TODO : We create an instance of LoadFile
@@ -51,17 +53,13 @@ class _OurHomePageState extends State<OurHomePage> {
           toSpeechManager.speak(texte!);  /// It reads the text.
           /// We change the state, we change the icon to another
           setState(() {
-            IconButton(
-              /// When we press the second button, we stop the reading.
-              onPressed: () {
-                toSpeechManager.stop();
-              },
-                icon : const Icon(Icons.speaker_notes_off_outlined),
-            );
+            selected = !selected;
           });
           // toSpeechManager.stop();
         },
-        icon: const Icon(Icons.speaker_phone_rounded),
+        icon: selected ?
+          const Icon(Icons.speaker_phone_rounded) :
+          const Icon(Icons.speaker_notes_off_outlined),
       ),
     );
   }
