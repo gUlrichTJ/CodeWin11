@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:books_reader/other/pages/dart/load_file.dart';
 import 'package:books_reader/other/pages/dart/texttospeech.file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,7 +16,10 @@ class _OurHomePageState extends State<OurHomePage> {
   TextToSpeechManager toSpeechManager = TextToSpeechManager();
   // TODO : A changer plus tard
   String texte2 =  loadPoem().toString();
-  String texte = "Hello, how're you doing my dear ?"
+  // TODO : We create an instance of LoadFile
+  FileLoad load = FileLoad();
+  String texte = "Hello";
+      String testString = "Hello, how're you doing my dear ?"
       "I think we will have to work hard and praise The Lord"
       " Then Job replied:  Even today my complaint is bitter;"
   "his hand is heavy in spite of my groaning."
@@ -55,7 +61,7 @@ class _OurHomePageState extends State<OurHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Text(
             "Hello, how're you doing my dear ?"
                 "I think we will have to work hard and praise The Lord"
