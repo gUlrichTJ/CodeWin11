@@ -20,3 +20,21 @@ When it has read until the bottom of the page, we stop scrolling.
 When you notice that life is becoming difficult for you, acquire
 a deep knowledge of the Bible through consistent reading.
 ******************************************************************
+
+************The main screen************
+When we open the app, we have all the PDFs of the phone like the
+app file manager. They will be sorted by the name of the pdf,
+the size, the date created and the date modified.
+
+When the user taps in the list, the app will open another
+page.
+
+************Reading screen**************
+The reading screen will display the pdf in a scrollable view.
+The user will be able to zoom in and zoom out.
+************Buttons*********************
+We can have a button to pause and play, a button to go to the next
+page, and the previous page, a button to go to the search bar.
+************Settings********************
+In the settings, the user will be able to chose the pitch of the
+voice, the background color, the font size...
