@@ -1,0 +1,17 @@
+We want to, when the user enters in the app, he can see the folders
+and enter in the folder he wants.
+
+We can do another thing. If the user enters in the app, he will see
+the pdfs that are in his mobile phone. The will be disposed as the
+recent folder of google docs.
+
+********Question******
+How can we have access to the files that are in the mobile phone ?
+How can we dispose them according to something like their size
+or the last pdf opened ?
+How can we do that when the user clicks the pdf, it opens and
+allows him to scroll and read it ?
+We will do so that the app reads it for him.
+Also,
+How can we stat without sinning ? I mean walking in holiness like
+Jesus-Christ. No doing something that displease God.

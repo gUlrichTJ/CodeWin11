@@ -1,81 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:test_of_codes/other_pages/other.page.dart';
 
-/// Flutter code sample for [Table].
+void main() => runApp(const MyApp());
 
-void main() => runApp(const TableExampleApp());
-
-class TableExampleApp extends StatelessWidget {
-  const TableExampleApp({super.key});
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Table Sample')),
-        body: const TableExample(),
-      ),
-    );
-  }
+  State<MyApp> createState() => _MyAppState();
 }
 
-class TableExample extends StatelessWidget {
-  const TableExample({super.key});
-
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Table(
-      border: TableBorder.all(),
-      columnWidths: const <int, TableColumnWidth>{
-        0: IntrinsicColumnWidth(),
-        1: FlexColumnWidth(),
-        2: FixedColumnWidth(64),
-      },
-      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-      children: <TableRow>[
-        TableRow(
-          children: <Widget>[
-            Container(
-              height: 32,
-              color: Colors.green,
-            ),
-            TableCell(
-              verticalAlignment: TableCellVerticalAlignment.top,
-              child: Container(
-                height: 32,
-                width: 32,
-                color: Colors.red,
-              ),
-            ),
-            Container(
-              height: 64,
-              color: Colors.blue,
-            ),
-          ],
-        ),
-        TableRow(
-          decoration: const BoxDecoration(
-            color: Colors.grey,
-          ),
-          children: <Widget>[
-            Container(
-              height: 64,
-              width: 128,
-              color: Colors.purple,
-            ),
-            Container(
-              height: 32,
-              color: Colors.yellow,
-            ),
-            Center(
-              child: Container(
-                height: 32,
-                width: 32,
-                color: Colors.orange,
-              ),
-            ),
-          ],
-        ),
-      ],
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Access to folder",
+      home: MyHomePage(),
     );
   }
 }
