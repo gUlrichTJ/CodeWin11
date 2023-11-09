@@ -1,10 +1,14 @@
 library dashboard;
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+// Controllers
+part '../../controllers/dashboard_controllers.dart';
+// Component
 part '../components/bottom_navbar.dart';
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends GetView<DashboardController> {
   const DashboardScreen() : super();
 
   @override
@@ -13,7 +17,12 @@ class DashboardScreen extends StatelessWidget {
       body: Center(
         child: Text("dashboard"),
       ),
-      bottomNavigationBar: BottomNavbar(),
+      bottomNavigationBar: BottomNavbar(
+        currentIndex: controller.currentIndex.value,
+        onSelected: (index) {
+          controller.onChangedPage(index);
+        },
+      ),
     );
   }
 }
