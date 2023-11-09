@@ -1,3 +1,4 @@
+import 'package:file_manager/app/config/routes/app_routes.dart';
 
 /// Contains all configuration pages
 class AppPages {
