@@ -11,6 +11,10 @@ class BottomNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      currentIndex: currentIndex,
+      onTap: (value) {
+        onSelected(value);
+      },
       showSelectedLabels: false,
         showUnselectedLabels: false,
         items: [
