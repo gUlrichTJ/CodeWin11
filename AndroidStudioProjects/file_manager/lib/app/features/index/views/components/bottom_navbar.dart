@@ -1,11 +1,18 @@
 part of dashboard;
 
-class _BottomNavbar extends StatelessWidget {
-  const _BottomNavbar({Key? key}) : super(key: key);
+class BottomNavbar extends StatelessWidget {
+  const BottomNavbar({
+    required this.onSelected,
+    required this.currentIndex,
+    Key? key}) : super(key: key);
 
+  final Function(int index) onSelected;
+  final int currentIndex;
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined),
