@@ -12,6 +12,7 @@ class AppPages {
     GetPage(
       name: Paths.dashboard,
       page: () => DashboardScreen(),
+      binding: DashboardBinding(),
     ),
   ];
 }

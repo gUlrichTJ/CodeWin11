@@ -19,11 +19,13 @@ class DashboardScreen extends GetView<DashboardController> {
       body: Center(
         child: Text("dashboard"),
       ),
-      bottomNavigationBar: BottomNavbar(
-        currentIndex: controller.currentIndex.value,
-        onSelected: (index) {
-          controller.onChangedPage(index);
-        },
+      bottomNavigationBar: Obx(
+        () =>  BottomNavbar(
+          currentIndex: controller.currentIndex.value,
+          onSelected: (index) {
+            controller.onChangedPage(index);
+          },
+        ),
       ),
     );
   }
