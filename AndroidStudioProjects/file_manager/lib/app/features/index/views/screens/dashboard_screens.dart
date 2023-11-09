@@ -3,9 +3,11 @@ library dashboard;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-// Controllers
+// binding
+part '../../bindings/dashboard_binding.dart';
+// controllers
 part '../../controllers/dashboard_controllers.dart';
-// Component
+// component
 part '../components/bottom_navbar.dart';
 
 class DashboardScreen extends GetView<DashboardController> {
