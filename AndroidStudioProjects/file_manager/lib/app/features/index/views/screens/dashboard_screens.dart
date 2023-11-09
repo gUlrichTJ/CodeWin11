@@ -2,6 +2,8 @@ library dashboard;
 
 import 'package:flutter/material.dart';
 
+part '../components/bottom_navbar.dart';
+
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
 
@@ -11,6 +13,7 @@ class DashboardScreen extends StatelessWidget {
       body: Center(
         child: Text("dashboard"),
       ),
+      bottomNavigationBar: _BottomNavbar(),
     );
   }
 }
