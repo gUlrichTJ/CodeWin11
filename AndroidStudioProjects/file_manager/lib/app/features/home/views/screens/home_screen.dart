@@ -1,3 +1,4 @@
+import 'package:file_manager/app/features/home/views/components/header.dart';
 import 'package:flutter/material.dart';
 
 // part '../../models/usage.dart';
@@ -12,8 +13,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("home"),
+      body: SafeArea(
+        child: CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              child: Column(
+                children: [
+                  Header(),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
