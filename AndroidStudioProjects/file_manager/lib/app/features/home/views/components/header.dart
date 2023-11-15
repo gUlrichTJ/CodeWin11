@@ -1,4 +1,3 @@
-import 'package:file_manager/app/features/home/models/user.dart';
 import 'package:flutter/material.dart';
 
 // part of home;
@@ -22,7 +21,7 @@ class Header extends StatelessWidget {
 
   // Function that will return a widget
   Widget title() {
-    return Text(
+    return const Text(
         "Good morning",
       style: TextStyle(fontSize: 20),
     );

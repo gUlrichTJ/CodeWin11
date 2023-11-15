@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Header(),
-                  
+
                 ],
               ),
             ),
