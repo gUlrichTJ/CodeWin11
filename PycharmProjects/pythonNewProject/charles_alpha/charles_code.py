@@ -33,6 +33,7 @@ def conversionISOversUTF8(texte_iso):
     texte_utf8 = texte_iso.encode("iso-8859-1").decode("utf-8")
     return texte_utf8
 
+
 # Nous testons le code.
 texte_iso_test = "Nous ne sommes pas des enfants illégitimes, nous sommes des enfants de la maison."
 resultat = conversionISOversUTF8(texte_iso_test)
