@@ -43,4 +43,4 @@ if resultat:
     print("Texte converti en UTF-8 :")
     print(resultat)
 
-print("Hello World!")
+print("Hello World !")
