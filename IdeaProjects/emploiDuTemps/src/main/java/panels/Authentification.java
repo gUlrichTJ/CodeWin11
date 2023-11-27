@@ -32,6 +32,7 @@ public class Authentification extends JFrame {
       panel.setBackground(Color.BLACK);
 
       JPanel panelMail = new JPanel();
+      panelMail.setSize(new Dimension(200, 100));
       panelMail.setBorder(new LineBorder(Color.white));
       // We add the text areas
       JTextArea mail = new JTextArea();
