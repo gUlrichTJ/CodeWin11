@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9123cc1d-7f7e-4f10-9a5a-c11ae4e06b79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taskPlanning/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../taskPlanning/.gradle/checksums/checksums.lock" afterDir="false" />
-    </list>
+    <list default="true" id="9123cc1d-7f7e-4f10-9a5a-c11ae4e06b79" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
