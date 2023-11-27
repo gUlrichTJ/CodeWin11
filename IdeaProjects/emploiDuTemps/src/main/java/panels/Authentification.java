@@ -31,6 +31,13 @@ public class Authentification extends JFrame {
       // The color of the great panel
       panel.setBackground(Color.lightGray);
 
+      // We create the panel for the message of mail
+      JPanel enterMail = new JPanel();
+      JLabel enterMail2 = new JLabel("Enter your mail");
+
+      // We add the label to the panel
+      enterMail.add(enterMail2);
+
       JPanel panelMail = new JPanel();
       panelMail.setSize(new Dimension(200, 100));
       panelMail.setBorder(new LineBorder(Color.white));
@@ -40,6 +47,8 @@ public class Authentification extends JFrame {
 
       panelMail.add(mail);
 
+      // We add the label of mail to the panel
+      panel.add(enterMail);
       // We add the textArea to the panel
       panel.add(panelMail);
 
