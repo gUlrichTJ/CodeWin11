@@ -1,6 +1,7 @@
 package panels;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Authentification extends JFrame {
 
@@ -13,6 +14,8 @@ public class Authentification extends JFrame {
       this.setLocationRelativeTo(null);
       this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       this.setResizable(false);
+
+      this.setBackground(Color.BLACK);
 
       // Visibility of the window
       this.setVisible(true);
