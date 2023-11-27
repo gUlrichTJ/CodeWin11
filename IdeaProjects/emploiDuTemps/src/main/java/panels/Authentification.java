@@ -1,6 +1,7 @@
 package panels;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class Authentification extends JFrame {
@@ -31,9 +32,10 @@ public class Authentification extends JFrame {
       panel.setBackground(Color.BLACK);
 
       JPanel panelMail = new JPanel();
-      panelMail.setBorder(new );
+      panelMail.setBorder(new LineBorder(Color.white));
       // We add the text areas
       JTextArea mail = new JTextArea();
+      mail.setSize(new Dimension(200, 100));
 
       panelMail.add(mail);
 
