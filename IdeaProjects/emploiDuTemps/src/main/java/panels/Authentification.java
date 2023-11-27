@@ -28,14 +28,14 @@ public class Authentification extends JFrame {
    JPanel panelAuth() {
       JPanel panel = new JPanel();
 
-      // The color of the panel
-      panel.setBackground(Color.BLACK);
+      // The color of the great panel
+      panel.setBackground(Color.lightGray);
 
       JPanel panelMail = new JPanel();
       panelMail.setSize(new Dimension(200, 100));
       panelMail.setBorder(new LineBorder(Color.white));
       // We add the text areas
-      JTextArea mail = new JTextArea();
+      JTextField mail = new JTextField(20);
       mail.setSize(new Dimension(200, 100));
 
       panelMail.add(mail);
