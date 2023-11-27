@@ -15,9 +15,20 @@ public class Authentification extends JFrame {
       this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       this.setResizable(false);
 
+      // The color of the frame
+
       this.setBackground(Color.BLACK);
 
       // Visibility of the window
       this.setVisible(true);
+   }
+
+   // We create a panel for the authentification
+   JPanel panelAuth() {
+      JPanel panel = new JPanel();
+
+      // The color of the panel
+      panel.setBackground();
+      return panel;
    }
 }
