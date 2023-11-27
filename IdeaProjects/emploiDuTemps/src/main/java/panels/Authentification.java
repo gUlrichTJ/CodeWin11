@@ -18,7 +18,7 @@ public class Authentification extends JFrame {
       // The color of the frame
 
       this.setBackground(Color.BLACK);
-
+      this.add(panelAuth());
       // Visibility of the window
       this.setVisible(true);
    }
@@ -28,7 +28,7 @@ public class Authentification extends JFrame {
       JPanel panel = new JPanel();
 
       // The color of the panel
-      panel.setBackground();
+      panel.setBackground(Color.BLACK);
       return panel;
    }
 }
