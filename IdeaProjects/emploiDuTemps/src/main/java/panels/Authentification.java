@@ -8,6 +8,12 @@ public class Authentification extends JFrame {
    JPanel panel = new JPanel();
    // Constructor
    public Authentification() {
-      panel.setTitle("Hello");
+      this.setTitle("Authentification");
+      this.setSize(500, 500);
+      this.setLocationRelativeTo(null);
+      this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+      // Visibility of the window
+      this.setVisible(true);
    }
 }
