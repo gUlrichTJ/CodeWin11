@@ -29,6 +29,13 @@ public class Authentification extends JFrame {
 
       // The color of the panel
       panel.setBackground(Color.BLACK);
+
+      // We add the text areas
+      JTextArea mail = new JTextArea();
+
+      // We add the textArea to the panel
+      panel.add(mail);
+
       return panel;
    }
 }
