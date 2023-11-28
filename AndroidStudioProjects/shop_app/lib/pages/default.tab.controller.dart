@@ -69,5 +69,6 @@ TabBar buildTabBar() {
         ),
       )
     ],
+    isScrollable: true,
   );
 }
