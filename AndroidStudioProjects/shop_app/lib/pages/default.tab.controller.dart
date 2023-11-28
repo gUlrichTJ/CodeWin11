@@ -20,7 +20,7 @@ class CustomTabController extends StatelessWidget {
                 ],
             ),
           ),
-          body: TabBarView(
+          body: const TabBarView(
               children: <Widget>[
                 Center(
                   child: Text("It is cloudy here"),
