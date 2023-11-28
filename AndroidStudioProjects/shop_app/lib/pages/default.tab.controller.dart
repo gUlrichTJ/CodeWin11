@@ -10,6 +10,7 @@ class CustomTabController extends StatelessWidget {
         length: 5,
         child: Scaffold(
           appBar: AppBar(
+            elevation: 0,
             bottom: const TabBar(
                 tabs: <Widget>[
                   Text("ALL"),
