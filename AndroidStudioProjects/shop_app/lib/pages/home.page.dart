@@ -13,7 +13,9 @@ class MyHomePage extends StatelessWidget {
         ),
         leading: IconButton(
           onPressed: () {},
-          icon: Image.asset("assets/images/left-arrow1.png"),
+          icon: Image.asset("assets/images/left-arrow1.png",
+            width: 25,
+          ),
         ),
         actions: [
           IconButton(
