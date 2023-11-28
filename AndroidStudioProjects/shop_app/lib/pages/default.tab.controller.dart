@@ -16,10 +16,34 @@ class CustomTabController extends StatelessWidget {
               elevation: 0,
               bottom: const TabBar(
                   tabs: <Widget>[
-                    Text("ALL"),
-                    Text("WOMEN"),
-                    Text("MEN"),
-                    Text("KIDS"),
+                    Text(
+                        "ALL",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                        "WOMEN",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                        "MEN",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                        "KIDS",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ],
               ),
             ),
