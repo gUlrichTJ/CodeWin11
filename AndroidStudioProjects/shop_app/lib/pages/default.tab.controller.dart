@@ -56,14 +56,16 @@ class CustomTabController extends StatelessWidget {
               ),
             ),
           ),
-          body: const CustomTabBar(),
+          body: const CustomBodyTabBar(),
       ),
     );
   }
 }
 
-class CustomTabBar extends StatelessWidget {
-  const CustomTabBar({
+// TODO: The things that will stay in the bottom of the tabbars
+
+class CustomBodyTabBar extends StatelessWidget {
+  const CustomBodyTabBar({
     super.key,
   });
 

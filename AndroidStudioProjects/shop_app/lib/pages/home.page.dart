@@ -42,7 +42,7 @@ class MyHomePage extends StatelessWidget {
         ),
 
         // TODO: The body of the app
-        body: const CustomTabBar(),
+        body: const CustomBodyTabBar(),
       ),
     );
   }
