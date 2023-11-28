@@ -11,6 +11,10 @@ class MyHomePage extends StatelessWidget {
             "BOOTS",
           style: TextStyle(color: Colors.black),
         ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Image.asset("assets/images/left-arrow1.png"),
+        ),
         actions: [
           IconButton(
               onPressed: () {},
