@@ -7,11 +7,19 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("BOOTS"),
+        title: const Text(
+            "BOOTS",
+          style: TextStyle(color: Colors.black),
+        ),
         actions: [
           IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.search),
+              icon: const Icon(
+                  Icons.search,
+                color: Colors.black,
+                weight: 0.3,
+                fill: 0.5,
+              ),
           ),
           IconButton(
               onPressed: () {},
