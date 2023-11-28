@@ -37,7 +37,7 @@ class MyHomePage extends StatelessWidget {
       ),
 
       // TODO: The body of the app
-      body: CustomTabController(),
+      body: const CustomTabController(),
     );
   }
 }

@@ -5,7 +5,7 @@ class CustomTabController extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return const DefaultTabController(
       initialIndex: 1,
         length: 5,
         child: Scaffold(
