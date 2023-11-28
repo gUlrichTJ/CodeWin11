@@ -10,7 +10,7 @@ class CustomTabController extends StatelessWidget {
         length: 5,
         child: Scaffold(
           appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(40),
+            preferredSize: const Size.fromHeight(50),
             child: AppBar(
               backgroundColor: Colors.white,
               elevation: 0,
@@ -46,7 +46,11 @@ class CustomTabController extends StatelessWidget {
                     ),
                     IconButton(
                         onPressed: () {},
-                        icon: const Icon(Icons.table_bar))
+                        icon: const Icon(
+                            Icons.table_bar,
+                          size: 20,
+                        ),
+                    )
                   ],
               ),
             ),
