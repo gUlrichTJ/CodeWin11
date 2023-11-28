@@ -19,7 +19,7 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.black,
                 weight: 0.1,
                 fill: 0.1,
-                size: 2,
+                size: 26,
               ),
           ),
           IconButton(
