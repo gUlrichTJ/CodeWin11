@@ -7,6 +7,14 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text("BOOTS"),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+          ),
+
+        ],
       ),
     );
   }
