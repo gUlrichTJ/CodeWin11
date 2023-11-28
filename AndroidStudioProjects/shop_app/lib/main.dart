@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
       theme: ThemeData(
+        brightness: Brightness.light,
       primarySwatch: Colors.blue,
         appBarTheme: const AppBarTheme(
           centerTitle: true,
