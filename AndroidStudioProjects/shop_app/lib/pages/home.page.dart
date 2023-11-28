@@ -17,8 +17,9 @@ class MyHomePage extends StatelessWidget {
               icon: const Icon(
                   Icons.search,
                 color: Colors.black,
-                weight: 0.3,
-                fill: 0.5,
+                weight: 0.1,
+                fill: 0.1,
+                size: 2,
               ),
           ),
           IconButton(
