@@ -12,6 +12,7 @@ class CustomTabController extends StatelessWidget {
           appBar: PreferredSize(
             preferredSize: const Size.fromHeight(40),
             child: AppBar(
+              backgroundColor: Colors.white,
               elevation: 0,
               bottom: const TabBar(
                   tabs: <Widget>[
