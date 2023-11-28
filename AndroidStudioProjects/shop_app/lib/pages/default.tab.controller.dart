@@ -49,6 +49,7 @@ class CustomTabController extends StatelessWidget {
                         icon: const Icon(
                             Icons.table_bar,
                           size: 20,
+                          color: Colors.black,
                         ),
                     )
                   ],
