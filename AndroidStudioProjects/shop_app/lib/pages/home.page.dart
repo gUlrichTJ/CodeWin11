@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/pages/default.tab.controller.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -34,6 +35,9 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
+
+      // TODO: The body of the app
+      body: CustomTabController(),
     );
   }
 }
