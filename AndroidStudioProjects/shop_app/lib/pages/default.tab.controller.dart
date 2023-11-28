@@ -14,36 +14,39 @@ class CustomTabController extends StatelessWidget {
             child: AppBar(
               backgroundColor: Colors.white,
               elevation: 0,
-              bottom: const TabBar(
+              bottom: TabBar(
                   tabs: <Widget>[
-                    Text(
+                    const Text(
                         "ALL",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                         "WOMEN",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                         "MEN",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                         "KIDS",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.table_bar))
                   ],
               ),
             ),
