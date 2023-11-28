@@ -5,18 +5,24 @@ class CustomTabController extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
+    return DefaultTabController(
       initialIndex: 1,
         length: 5,
         child: Scaffold(
           appBar: AppBar(
-            bottom: TabBar(
-                tabs: <Widgets>[
-                  Tab(
-                    icon: Icon(Icons.outbond),
-                  )
+            bottom: const TabBar(
+                tabs: <Widget>[
+                  Text("ALL"),
+                  Text("WOMEN"),
+                  Text("MEN"),
+                  Text("KIDS"),
                 ],
             ),
+          ),
+          body: TabBarView(
+              children: <Widget>[
+                
+              ],
           ),
       ),
     );
