@@ -56,23 +56,34 @@ class CustomTabController extends StatelessWidget {
               ),
             ),
           ),
-          body: const TabBarView(
-              children: <Widget>[
-                Center(
-                  child: Text("It is cloudy here"),
-                ),
-                Center(
-                  child: Text("It is cloudy here"),
-                ),
-                Center(
-                  child: Text("It is cloudy here"),
-                ),
-                Center(
-                  child: Text("It is cloudy here"),
-                )
-              ],
-          ),
+          body: const CustomTabBar(),
       ),
+    );
+  }
+}
+
+class CustomTabBar extends StatelessWidget {
+  const CustomTabBar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const TabBarView(
+        children: <Widget>[
+          Center(
+            child: Text("It is cloudy here"),
+          ),
+          Center(
+            child: Text("It is cloudy here"),
+          ),
+          Center(
+            child: Text("It is cloudy here"),
+          ),
+          Center(
+            child: Text("It is cloudy here"),
+          )
+        ],
     );
   }
 }

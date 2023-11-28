@@ -38,10 +38,50 @@ class MyHomePage extends StatelessWidget {
                 icon: Image.asset("assets/images/shopping-bag.png"),
             ),
           ],
+          bottom: TabBar(
+            tabs: <Widget>[
+              const Text(
+                "ALL",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "WOMEN",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "MEN",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "KIDS",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.table_bar,
+                  size: 20,
+                  color: Colors.black,
+                ),
+              )
+            ],
+          ),
         ),
 
         // TODO: The body of the app
-        body: const CustomTabController(),
+        body: const CustomTabBar(),
       ),
     );
   }
