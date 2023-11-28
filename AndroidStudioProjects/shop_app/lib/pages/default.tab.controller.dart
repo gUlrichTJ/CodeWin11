@@ -6,7 +6,7 @@ class CustomTabController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+      initialIndex: 0,
         length: 5,
         child: Scaffold(
           appBar: AppBar(
@@ -21,7 +21,18 @@ class CustomTabController extends StatelessWidget {
           ),
           body: TabBarView(
               children: <Widget>[
-                
+                Center(
+                  child: Text("It is cloudy here"),
+                ),
+                Center(
+                  child: Text("It is cloudy here"),
+                ),
+                Center(
+                  child: Text("It is cloudy here"),
+                ),
+                Center(
+                  child: Text("It is cloudy here"),
+                )
               ],
           ),
       ),
