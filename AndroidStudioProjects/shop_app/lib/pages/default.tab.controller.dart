@@ -9,15 +9,18 @@ class CustomTabController extends StatelessWidget {
       initialIndex: 0,
         length: 5,
         child: Scaffold(
-          appBar: AppBar(
-            elevation: 0,
-            bottom: const TabBar(
-                tabs: <Widget>[
-                  Text("ALL"),
-                  Text("WOMEN"),
-                  Text("MEN"),
-                  Text("KIDS"),
-                ],
+          appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(40),
+            child: AppBar(
+              elevation: 0,
+              bottom: const TabBar(
+                  tabs: <Widget>[
+                    Text("ALL"),
+                    Text("WOMEN"),
+                    Text("MEN"),
+                    Text("KIDS"),
+                  ],
+              ),
             ),
           ),
           body: const TabBarView(
