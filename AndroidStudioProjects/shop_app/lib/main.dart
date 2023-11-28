@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(),
       theme: ThemeData(
         brightness: Brightness.light,
-      primarySwatch: Colors.blue,
+      primarySwatch: Colors.lightBlue,
         appBarTheme: const AppBarTheme(
           centerTitle: true,
         )
