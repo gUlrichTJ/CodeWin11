@@ -9,7 +9,15 @@ class CustomTabController extends StatelessWidget {
       initialIndex: 1,
         length: 5,
         child: Scaffold(
-
+          appBar: AppBar(
+            bottom: TabBar(
+                tabs: <Widgets>[
+                  Tab(
+                    icon: Icon(Icons.outbond),
+                  )
+                ],
+            ),
+          ),
       ),
     );
   }
