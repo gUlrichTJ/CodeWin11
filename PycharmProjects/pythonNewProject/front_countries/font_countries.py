@@ -101,13 +101,13 @@ village.forward(village_size * 0.75)
 village.left(90)
 village.forward(village_size)
 
-village.left(10)
+village.right(110)
 village.forward(village_size)
 
 village.left(160)
 village.forward(village_size)
 
-# village.fillcolor("navy")
+village.fillcolor("navy")
 village.end_fill()
 
 village.mainloop()
