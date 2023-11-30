@@ -3,6 +3,9 @@ import turtle as village
 # TODO : The title of our window
 village.title("We draw villages")
 
+# TODO : The place where the turtle will start
+village.setworldcoordinates(10, 10, 10, 10)
+
 # TODO: The size of villages
 village_size = 100
 
