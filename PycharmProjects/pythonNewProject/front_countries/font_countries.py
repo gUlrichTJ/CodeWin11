@@ -50,9 +50,10 @@ colors = ["black", "purple", "orange", "blue", "green", "brown"]
 
 for i in range(3):
     # TODO: We turn to draw the second village
-    village.begin_fill()
     village.left(90)
     village.forward(village_size)
+    village.begin_fill()
+
     village.left(90)
     village.forward(village_size / 2)
     village.left(90)
