@@ -84,7 +84,15 @@ village.left(160)
 village.forward(village_size)
 
 village.right(10)
+
+# We draw the fire of the roket
+village.right(90)
+village.forward(village_size)
+village.left(90)
+
 village.forward(village_size * 0.75)
+
+village.right(90)
 
 village.right(10)
 village.forward(village_size)
@@ -92,7 +100,7 @@ village.forward(village_size)
 village.left(160)
 village.forward(village_size)
 
-village.fillcolor("navy")
+# village.fillcolor("navy")
 village.end_fill()
 
 village.mainloop()
