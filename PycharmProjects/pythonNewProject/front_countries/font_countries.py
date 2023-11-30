@@ -83,10 +83,10 @@ village.forward(village_size)
 village.right(10)
 village.forward(village_size / 2)
 
-village.right(20)
+village.right(10)
 village.forward(village_size)
 
-village.left(160)
+village.left(150)
 village.forward(village_size)
 
 village.mainloop()
