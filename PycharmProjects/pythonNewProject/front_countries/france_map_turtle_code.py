@@ -2,7 +2,7 @@ import turtle as france
 
 # We move the pen
 france.penup()
-france.goto(70, 200)
+france.goto(250, 300)
 france.pendown()
 
 print(france.width())
