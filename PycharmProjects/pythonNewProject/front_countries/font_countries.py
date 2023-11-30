@@ -101,7 +101,7 @@ village.forward(village_size * 0.75)
 village.left(90)
 village.forward(village_size)
 
-village.right(110)
+village.right(105)
 village.forward(village_size)
 
 village.left(160)
