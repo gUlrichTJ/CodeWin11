@@ -47,6 +47,7 @@ color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow",
          "olivedrab", "powderblue", "royalblue", "saddlebrown", "salmon",
          "seashell", "slategray", "tan", "thistle", "wheat",
          ]
+"""
 for i in range(int(n / 2)):
     if j == len(color) - 1:
         j = 0
@@ -74,7 +75,9 @@ for i in range(int(n / 2)):
 france.penup()
 france.goto(300, 300)
 france.pendown()
+"""
 
+"""
 for i in range(int(n / 2)):
     if j == len(color) - 1:
         j = 0
@@ -97,6 +100,42 @@ for i in range(int(n / 2)):
     # And we turn again to 180
     france.left(deg)
     j += 1
+"""
+
+k = 0
+xi = 300
+yi = 300
+
+while k < 5:
+    france.penup()
+    france.goto(xi, yi)
+    france.pendown()
+
+    for i in range(int(n / 2)):
+        if j == len(color) - 1:
+            j = 0
+        france.pencolor(color[j])
+        france.begin_fill()
+        # We draw
+        france.forward(x)
+        # We turn 180 deg
+        france.left(deg)
+        # We up the pen
+        france.penup()
+        # We come back at the same place
+        france.forward(x)
+        # We move the pen for 1 deg
+        france.left(deg + 2)
+        # We down the pen
+        france.pendown()
+        # We draw again
+        france.forward(x)
+        # And we turn again to 180
+        france.left(deg)
+        j += 1
+
+    k += 1
+    xi -= 50
 
 france.end_fill()
 
