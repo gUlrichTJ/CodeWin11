@@ -69,6 +69,35 @@ for i in range(int(n / 2)):
     # And we turn again to 180
     france.left(deg)
     j += 1
+
+# We move the pen
+france.penup()
+france.goto(175, 300)
+france.pendown()
+
+for i in range(int(n / 2)):
+    if j == len(color) - 1:
+        j = 0
+    france.pencolor(color[j])
+    france.begin_fill()
+    # We draw
+    france.forward(x)
+    # We turn 180 deg
+    france.left(deg)
+    # We up the pen
+    france.penup()
+    # We come back at the same place
+    france.forward(x)
+    # We move the pen for 1 deg
+    france.left(deg + 2)
+    # We down the pen
+    france.pendown()
+    # We draw again
+    france.forward(x)
+    # And we turn again to 180
+    france.left(deg)
+    j += 1
+
 france.end_fill()
 
 """
