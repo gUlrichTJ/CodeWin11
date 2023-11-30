@@ -1,6 +1,5 @@
 import random
 import turtle as france
-import colorsys
 
 # We move the pen
 france.penup()
@@ -73,7 +72,7 @@ while k < 7:
         if j == len(color) - 1:
             j = 0
         # france.pencolor(color[j])
-        random_color = (random.randint(250, 255), random.randint(250, 255), random.randint(250, 255))
+        random_color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 
         france.pencolor(rgb_to_turtle_color(random_color))
         france.begin_fill()
