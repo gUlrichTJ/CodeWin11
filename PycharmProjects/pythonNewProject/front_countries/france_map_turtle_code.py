@@ -7,8 +7,7 @@ france.pendown()
 
 france.speed(10000)
 
-x = 300
-deg = n = 180
+
 """
 # We draw
 france.forward(x)
@@ -27,7 +26,13 @@ france.forward(x)
 # And we turn again to 180
 france.left(180)
 """
+x = 300
+deg = n = 180
+j = 0
+color = ["", "", "", ""]
 for i in range(n):
+    france.fillcolor(color[j])
+    france.begin_fill()
     # We draw
     france.forward(x)
     # We turn 180 deg
@@ -44,6 +49,8 @@ for i in range(n):
     france.forward(x)
     # And we turn again to 180
     france.left(deg)
+    j += 1
+france.end_fill()
 
 """
 i = 0
