@@ -17,9 +17,9 @@ G.add_edge("G", "F")
 G.add_edge("F", "E")
 G.add_edge("b", "c")
 
-
-
 # We can add node from a nodelist
+
+
 node_list = ["f", "g", "h"]
 G.add_node(node_list)
 
