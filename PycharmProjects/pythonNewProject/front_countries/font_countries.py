@@ -26,7 +26,7 @@ village.left(90)
 village.forward(village_size / 2)
 village.left(90)
 village.forward(village_size)
-village.fillcolor("grey")
+village.fillcolor("black")
 village.end_fill()
 
 # TODO: We draw the third village
@@ -45,7 +45,7 @@ village.forward(village_size / 2)
 
 # TODO: We draw the rest of the villages
 # TODO: We put the colors in a table
-colors = ["black", "purple", "coral"]
+colors = ["indigo", "purple", "coral"]
 colours = ["gold", "teal", "brown"]
 
 for i in range(3):
@@ -74,7 +74,9 @@ for i in range(3):
     # We move to the end of the second village
     village.forward(village_size / 2)
 
-# We draw the last village
+# TODO: We draw the last village
+village.begin_fill()
+
 village.left(30)
 village.forward(village_size)
 
