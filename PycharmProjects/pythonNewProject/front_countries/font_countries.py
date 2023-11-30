@@ -7,7 +7,7 @@ village.title("We draw villages")
 # TODO: The size of villages
 village_size = 100
 
-village.speed(2)
+village.speed(5)
 village.begin_fill()
 village.forward(village_size)
 village.left(120)
@@ -83,7 +83,7 @@ village.forward(village_size)
 village.right(10)
 village.forward(village_size / 2)
 
-village.left(160)
+village.right(10)
 village.forward(village_size)
 
 village.mainloop()
