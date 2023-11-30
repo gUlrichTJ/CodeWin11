@@ -29,4 +29,11 @@ village.forward(village_size)
 village.fillcolor("grey")
 village.end_fill()
 
+# TODO: We draw the third village
+village.begin_fill()
+village.right(90)
+village.forward(village_size / 2)
+village.right(90)
+village.forward(village_size)
+
 village.mainloop()
