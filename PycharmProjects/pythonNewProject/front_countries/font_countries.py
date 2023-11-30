@@ -92,4 +92,7 @@ village.forward(village_size)
 village.left(160)
 village.forward(village_size)
 
+village.fillcolor("navy")
+village.end_fill()
+
 village.mainloop()
