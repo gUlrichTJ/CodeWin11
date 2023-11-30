@@ -18,8 +18,8 @@ france.penup()
 france.forward(30)
 france.pendown()
 
-for i in range(0, 200, 2):
-    france.forward(i - i / 2)
+for i in range(0, 400, 2):
+    france.forward(i - i ** 2)
     france.left(i)
     france.forward(i)
 
