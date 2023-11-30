@@ -32,6 +32,10 @@ france.left(180)
 x = 300
 deg = n = 180
 j = 0
+tabXi = [300, 200, 150, 100, -50, 75, -100]
+tabYi = [-300, 100, 300, 50, 0, 25, 300]
+tabN = [170, 120, 179, 360, 270, 100, 80]
+
 color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow",
          "green", "purple", "orange", "cyan",
          "pink", "violet", "brown", "teal", "olive", "maroon",
@@ -134,14 +138,10 @@ while k < 7:
         france.left(deg)
         j += 1
 
-    if k // 2 == 0:
-        n = 100
-    else:
-        n = 180
-
     k += 1
-    xi -= 75
-    yi -= 50
+    xi = tabXi[k]
+    yi = tabYi[k]
+    n = tabN[k]
 
 france.end_fill()
 
