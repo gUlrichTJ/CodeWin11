@@ -8,13 +8,41 @@ france.pendown()
 france.speed(10000)
 
 x = 100
+deg = 180
+# We draw
 france.forward(x)
+# We turn 180 deg
 france.left(180)
+# We up the pen
 france.penup()
+# We come back at the same place
 france.forward(x)
+# We move the pen for 1 deg
 france.left(181)
+# We down the pen
+france.pendown()
+# We draw again
 france.forward(x)
+# And we turn again to 180
 france.left(180)
+
+for i in range(100):
+    france.forward(x)
+    # We turn 180 deg
+    france.left(deg)
+    # We up the pen
+    france.penup()
+    # We come back at the same place
+    france.forward(x)
+    # We move the pen for 1 deg
+    france.left(deg + 1)
+    # We down the pen
+    france.pendown()
+    # We draw again
+    france.forward(x)
+    # And we turn again to 180
+    france.left(deg)
+
 """
 i = 0
 while i < 10:
