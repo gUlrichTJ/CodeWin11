@@ -29,7 +29,10 @@ france.left(180)
 x = 300
 deg = n = 180
 j = 0
-color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow"]
+color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow",
+         "green", "purple", "orange", "cyan",
+         "pink", "violet", "brown", "teal", "olive", "maroon",
+         ]
 for i in range(n):
     if j == len(color) - 1:
         j = 0
