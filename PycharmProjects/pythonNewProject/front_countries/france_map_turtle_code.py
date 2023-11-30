@@ -72,7 +72,7 @@ for i in range(int(n / 2)):
 
 # We move the pen
 france.penup()
-france.goto(255, 300)
+france.goto(300, 300)
 france.pendown()
 
 for i in range(int(n / 2)):
