@@ -110,4 +110,6 @@ village.forward(village_size)
 village.fillcolor("mediumvioletred")
 village.end_fill()
 
+village.hideturtle()
+
 village.mainloop()
