@@ -136,6 +136,7 @@ while k < 5:
 
     k += 1
     xi -= 50
+    yi -= 50
 
 france.end_fill()
 
