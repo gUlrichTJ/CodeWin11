@@ -8,7 +8,7 @@ france.pendown()
 print(france.width())
 france.width(4)
 
-france.speed(10)
+france.speed(100)
 
 
 """
@@ -136,6 +136,8 @@ while k < 7:
 
     if k // 2 == 0:
         n = 100
+    else:
+        n = 180
 
     k += 1
     xi -= 75
