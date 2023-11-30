@@ -10,3 +10,5 @@ G.add_edge("b", "c")
 node_list = ["f", "g", "h"]
 G.add_node(node_list)
 
+G.layout()
+G.draw("pygraphvis.png")
