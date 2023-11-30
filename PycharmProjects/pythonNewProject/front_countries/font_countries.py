@@ -46,7 +46,7 @@ village.forward(village_size / 2)
 # TODO: We draw the rest of the villages
 # TODO: We put the colors in a table
 colors = ["black", "purple", "coral"]
-colours = ["gold", "green", "brown"]
+colours = ["gold", "teal", "brown"]
 
 for i in range(3):
     # TODO: We turn to draw the second village
