@@ -7,6 +7,9 @@ france.pendown()
 
 france.speed(10000)
 
+x = 100
+france.forward(x)
+"""
 i = 0
 while i < 10:
     france.forward(i)
@@ -31,4 +34,5 @@ for i in range(0, 400, 2):
 #france.left(200)
 #france.forward(200)
 
+"""
 france.mainloop()
