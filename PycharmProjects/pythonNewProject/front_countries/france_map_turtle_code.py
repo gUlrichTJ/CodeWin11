@@ -134,8 +134,11 @@ while k < 5:
         france.left(deg)
         j += 1
 
+    if k // 2 == 0:
+        n = 100
+
     k += 1
-    xi -= 50
+    xi -= 75
     yi -= 50
 
 france.end_fill()
