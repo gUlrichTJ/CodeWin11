@@ -5,7 +5,7 @@ france.penup()
 france.goto(20, 100)
 france.pendown()
 
-france.speed(90)
+france.speed(150)
 
 i = 0
 while i < 250:
@@ -20,7 +20,7 @@ france.pendown()
 
 for i in range(100):
     france.forward(i)
-    france.left(360)
+    france.left(i)
 
 
 #france.left(200)
