@@ -45,10 +45,9 @@ village.end_fill()
 turtle.forward(village_size / 2)
 
 
-
 # TODO: We turn to draw the second village
 village.begin_fill()
-village.left(30)
+village.left(90)
 village.forward(village_size)
 village.left(90)
 village.forward(village_size / 2)
