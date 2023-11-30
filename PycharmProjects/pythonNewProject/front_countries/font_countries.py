@@ -44,7 +44,7 @@ village.right(90)
 village.forward(village_size)
 village.right(90)
 village.forward(village_size / 2)
-village.fillcolor("pink")
+village.fillcolor("indigo")
 village.end_fill()
 
 # We move to the end of the second village
