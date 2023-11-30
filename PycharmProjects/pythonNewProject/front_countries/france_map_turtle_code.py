@@ -8,7 +8,7 @@ france.pendown()
 print(france.width())
 france.width(4)
 
-france.speed(1000)
+france.speed(10)
 
 
 """
@@ -106,7 +106,7 @@ k = 0
 xi = 300
 yi = 300
 
-while k < 5:
+while k < 7:
     france.penup()
     france.goto(xi, yi)
     france.pendown()
