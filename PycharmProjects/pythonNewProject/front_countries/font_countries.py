@@ -4,6 +4,7 @@ import turtle as village
 village.title("We draw villages")
 
 # TODO : The place where the turtle will start
+# Merci Pere
 village.penup()
 village.goto(0, 90)
 village.pendown()
@@ -90,16 +91,17 @@ village.forward(village_size)
 
 village.right(10)
 
-# We draw the fire of the roket
+# We draw the fire of the rocket
 village.right(90)
 village.forward(village_size)
 village.left(90)
 
 village.forward(village_size * 0.75)
 
-village.right(90)
+village.left(90)
+village.forward(village_size)
 
-village.right(10)
+village.left(10)
 village.forward(village_size)
 
 village.left(160)
