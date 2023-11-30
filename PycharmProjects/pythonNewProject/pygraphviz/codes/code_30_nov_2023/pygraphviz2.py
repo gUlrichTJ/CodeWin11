@@ -13,5 +13,10 @@ G.add_edge("2", "4")
 G.add_edge("2", "6")
 G.add_edge("4", "6")
 
-G.layout()
+# Adjust graph attributes
+G.graph_attr['epsilon'] = '0.001'
+
+print(G.string())
+
+G.layout("dot")
 G.draw("../../images/oriented.png")
