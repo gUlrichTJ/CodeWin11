@@ -29,9 +29,11 @@ france.left(180)
 x = 300
 deg = n = 180
 j = 0
-color = ["rosybrown", "darkgoldenrod", "", ""]
+color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow"]
 for i in range(n):
-    france.fillcolor(color[j])
+    if j == len(color) - 1:
+        j = 0
+    france.pencolor(color[j])
     france.begin_fill()
     # We draw
     france.forward(x)
