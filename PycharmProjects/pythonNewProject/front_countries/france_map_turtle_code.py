@@ -19,9 +19,13 @@ france.forward(30)
 france.pendown()
 
 for i in range(0, 400, 2):
-    france.forward(i - i ** 2)
-    france.left(i)
-    france.forward(i)
+    if i > 200:
+        france.forward(i - 200)
+        france.left(i)
+    else:
+        france.forward(i)
+        france.left(i)
+        france.forward(i)
 
 
 #france.left(200)
