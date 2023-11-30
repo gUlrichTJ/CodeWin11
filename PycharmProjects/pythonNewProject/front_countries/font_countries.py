@@ -46,7 +46,8 @@ village.forward(village_size / 2)
 
 # TODO: We draw the rest of the villages
 # TODO: We put the colors in a table
-colors = ["black", "purple", "orange", "blue", "green", "brown"]
+colors = ["black", "purple", "orange"]
+colours = ["blue", "green", "brown"]
 
 for i in range(3):
     # TODO: We turn to draw the second village
@@ -67,7 +68,7 @@ for i in range(3):
     village.forward(village_size)
     village.right(90)
     village.forward(village_size / 2)
-    village.fillcolor(colors[i])
+    village.fillcolor(colours[i])
     village.end_fill()
 
     # We move to the end of the second village
