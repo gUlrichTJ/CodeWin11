@@ -7,8 +7,9 @@ france.pendown()
 
 france.speed(10000)
 
-x = 200
+x = 300
 deg = 180
+n = 175
 # We draw
 france.forward(x)
 # We turn 180 deg
@@ -26,7 +27,7 @@ france.forward(x)
 # And we turn again to 180
 france.left(180)
 
-for i in range(x):
+for i in range(n):
     france.forward(x)
     # We turn 180 deg
     france.left(deg)
