@@ -13,6 +13,10 @@ G.add_node("G", color="darkgreen")
 G.add_node("H", color="blue")
 G.add_node("I", color="darkgreen")
 G.add_node("J", color="red")
+
+# Node colors
+nodes_labels = ["A", "C", "F", "J",]
+
 G.add_edge("A", "B")
 G.add_edge("A", "H")
 G.add_edge("H", "I", color="blue")
