@@ -40,4 +40,4 @@ node_list = ["f", "g", "h"]
 G.add_node(node_list)
 
 G.layout()
-G.draw("../images/pygraphvis.png")
+G.draw("../../images/pygraphvis.png")
