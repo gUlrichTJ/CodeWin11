@@ -4,6 +4,7 @@ G = pygraphviz.AGraph()
 
 # We add a node
 G.add_node("A", color="red")
+G.add_node("B", color="blue")
 G.add_edge("A", "B")
 G.add_edge("A", "H")
 G.add_edge("H", "I", color="blue")
