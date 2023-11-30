@@ -21,7 +21,7 @@ village.left(120)
 village.forward(village_size)
 
 # TODO: We fill the first village
-village.fillcolor("red")
+village.fillcolor("mediumvioletred")
 village.end_fill()
 
 village.left(30)
