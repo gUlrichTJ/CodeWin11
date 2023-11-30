@@ -8,7 +8,7 @@ france.pendown()
 france.speed(10000)
 
 i = 0
-while i < 250:
+while i < 10:
     france.forward(i)
     france.right(i)
     i += 0.1
@@ -18,7 +18,7 @@ france.penup()
 france.forward(300)
 france.pendown()
 
-for i in range(100):
+for i in range(0, 100, 2):
     france.forward(i)
     france.left(i)
 
