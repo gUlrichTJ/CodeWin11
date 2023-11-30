@@ -65,7 +65,7 @@ while k < 7:
         if j == len(color) - 1:
             j = 0
         #france.pencolor(color[j])
-        france.pencolor(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+        france.pencolor(random.randint(250, 255), random.randint(250, 255), random.randint(250, 255))
         france.begin_fill()
         # We draw
         france.forward(x)
