@@ -58,6 +58,7 @@ for i in range(3):
     village.forward(village_size / 2)
     village.left(90)
     village.forward(village_size)
+    village.fillcolor(colors[i])
     village.end_fill()
 
     # TODO: We draw the third village
