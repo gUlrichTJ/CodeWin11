@@ -10,8 +10,8 @@ france.speed(40)
 i = 0
 while i < 300:
     france.forward(i)
-    france.right(i+15)
-    i += 1
+    france.right(i)
+    i += 0.1
     pass
 
 france.left(200)
