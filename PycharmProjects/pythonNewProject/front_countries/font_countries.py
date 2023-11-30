@@ -1,4 +1,3 @@
-import turtle
 import turtle as village
 
 # TODO : The title of our window
