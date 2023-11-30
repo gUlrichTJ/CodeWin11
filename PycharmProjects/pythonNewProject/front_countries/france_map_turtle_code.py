@@ -6,7 +6,7 @@ france.goto(20, 100)
 france.pendown()
 
 print(france.width())
-france.width(5)
+france.width(4)
 
 france.speed(10000)
 
@@ -47,7 +47,7 @@ color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow",
          "olivedrab", "powderblue", "royalblue", "saddlebrown", "salmon",
          "seashell", "slategray", "tan", "thistle", "wheat",
          ]
-for i in range(n):
+for i in range(int(n / 2)):
     if j == len(color) - 1:
         j = 0
     france.pencolor(color[j])
@@ -61,7 +61,7 @@ for i in range(n):
     # We come back at the same place
     france.forward(x)
     # We move the pen for 1 deg
-    france.left(deg + 4)
+    france.left(deg + 2)
     # We down the pen
     france.pendown()
     # We draw again
