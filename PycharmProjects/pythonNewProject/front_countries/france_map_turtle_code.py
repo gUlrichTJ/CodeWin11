@@ -8,7 +8,7 @@ france.pendown()
 france.speed(40)
 
 i = 0
-while i < 300:
+while i < 250:
     france.forward(i)
     france.right(i)
     i += 0.1
