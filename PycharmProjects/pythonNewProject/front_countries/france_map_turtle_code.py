@@ -10,7 +10,6 @@ france.width(4)
 
 france.speed(10000000000)
 
-
 """
 # We draw
 france.forward(x)
@@ -51,60 +50,6 @@ color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow",
          "olivedrab", "powderblue", "royalblue", "saddlebrown", "salmon",
          "seashell", "slategray", "tan", "thistle", "wheat",
          ]
-"""
-for i in range(int(n / 2)):
-    if j == len(color) - 1:
-        j = 0
-    france.pencolor(color[j])
-    france.begin_fill()
-    # We draw
-    france.forward(x)
-    # We turn 180 deg
-    france.left(deg)
-    # We up the pen
-    france.penup()
-    # We come back at the same place
-    france.forward(x)
-    # We move the pen for 1 deg
-    france.left(deg + 2)
-    # We down the pen
-    france.pendown()
-    # We draw again
-    france.forward(x)
-    # And we turn again to 180
-    france.left(deg)
-    j += 1
-
-# We move the pen
-france.penup()
-france.goto(300, 300)
-france.pendown()
-"""
-
-"""
-for i in range(int(n / 2)):
-    if j == len(color) - 1:
-        j = 0
-    france.pencolor(color[j])
-    france.begin_fill()
-    # We draw
-    france.forward(x)
-    # We turn 180 deg
-    france.left(deg)
-    # We up the pen
-    france.penup()
-    # We come back at the same place
-    france.forward(x)
-    # We move the pen for 1 deg
-    france.left(deg + 2)
-    # We down the pen
-    france.pendown()
-    # We draw again
-    france.forward(x)
-    # And we turn again to 180
-    france.left(deg)
-    j += 1
-"""
 
 k = 0
 xi = 300
@@ -145,30 +90,4 @@ while k < 7:
 
 france.end_fill()
 
-"""
-i = 0
-while i < 10:
-    france.forward(i)
-    france.right(i)
-    i += 0.1
-    pass
-
-france.penup()
-france.forward(30)
-france.pendown()
-
-for i in range(0, 400, 2):
-    if i > 200:
-        france.forward(i - 200)
-        france.left(i)
-    else:
-        france.forward(i)
-        france.left(i)
-        france.forward(i)
-
-
-#france.left(200)
-#france.forward(200)
-
-"""
 france.mainloop()
