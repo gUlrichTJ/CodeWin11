@@ -56,6 +56,13 @@ k = 0
 xi = 300
 yi = 300
 
+# Function to convert RGB to valid color
+
+
+def rgb_to_turtle_color(rgb):
+    return "#{:02x}{:02x}{:02x}".format(rgb[0], rgb[1], rgb[2])
+
+
 while k < 7:
     france.penup()
     france.goto(xi, yi)
@@ -64,8 +71,8 @@ while k < 7:
     for i in range(int(n / 2)):
         if j == len(color) - 1:
             j = 0
-        #france.pencolor(color[j])
-        france.pencolor(random.randint(250, 255), random.randint(250, 255), random.randint(250, 255))
+        # france.pencolor(color[j])
+        france.pencolor(rgb_to_turtle_color(random.randint(250, 255), random.randint(250, 255), random.randint(250, 255)))
         france.begin_fill()
         # We draw
         france.forward(x)
