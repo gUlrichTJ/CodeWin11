@@ -9,6 +9,11 @@ france.speed(10000)
 
 x = 100
 france.forward(x)
+france.left(180)
+france.penup()
+france.forward(x)
+france.left(90)
+france.forward(x)
 """
 i = 0
 while i < 10:
