@@ -6,6 +6,7 @@ france.goto(20, 100)
 france.pendown()
 
 print(france.width())
+france.width(2)
 
 france.speed(10000)
 
@@ -34,9 +35,9 @@ j = 0
 color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow",
          "green", "purple", "orange", "cyan",
          "pink", "violet", "brown", "teal", "olive", "maroon",
-         "gold", "navy", "indigo", "tomato", "steelblue",
+         "gold", "navy", "indigo", "tomato", "steelblue", "black",
          "aquamarine", "coral", "darkslategray", "firebrick", "khaki",
-         "lightcoral", "mediumseagreen", "peru", "rosybrown", "sienna",
+         "lightcoral", "mediumseagreen", "peru", "rosybrown", "sienna", "black",
          "darkorchid", "dodgerblue", "indianred", "mediumaquamarine", "orangered",
          "palegreen", "slateblue", "springgreen", "turquoise", "darkcyan",
          "darkslateblue", "forestgreen", "darkmagenta", "crimson", "darkolivegreen",
