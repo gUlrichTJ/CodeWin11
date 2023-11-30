@@ -8,7 +8,7 @@ france.pendown()
 print(france.width())
 france.width(4)
 
-france.speed(100000000)
+france.speed(10000000000)
 
 
 """
@@ -32,8 +32,8 @@ france.left(180)
 x = 300
 deg = n = 180
 j = 0
-tabXi = [-300, 200, -150, 100, -50, 75, -100, -400]
-tabYi = [-300, 100, -300, 50, 0, 25, -300, -400]
+tabXi = [-300, 200, -150, -300, -450, 75, -100, -400]
+tabYi = [-300, 100, -300, 350, -100, 25, -300, -400]
 tabN = [170, 120, 179, 360, 270, 100, 80, 23, 10]
 
 color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow",
