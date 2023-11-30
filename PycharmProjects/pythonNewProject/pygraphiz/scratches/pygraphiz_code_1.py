@@ -26,7 +26,7 @@ G.add_node(node_list)
 G.layout()
 G.draw("pygraphvis.png")
 
-A = pygraphviz.AGraph(directed=True, strict=True, rankdir="LR")
+A = pygraphviz.AGraph(directed=True, strict=False, rankdir="RL")
 # add node 1 with color red
 A.add_node(1, color="red")
 A.add_node(5, color="blue")
