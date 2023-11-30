@@ -21,7 +21,7 @@ village.left(120)
 village.forward(village_size)
 
 # TODO: We fill the first village
-village.fillcolor("mediumvioletred")
+village.fillcolor("red")
 village.end_fill()
 
 village.left(30)
@@ -33,7 +33,7 @@ village.left(90)
 village.forward(village_size / 2)
 village.left(90)
 village.forward(village_size)
-village.fillcolor("purple")
+village.fillcolor("indigo")
 village.end_fill()
 
 # TODO: We draw the third village
@@ -44,7 +44,7 @@ village.right(90)
 village.forward(village_size)
 village.right(90)
 village.forward(village_size / 2)
-village.fillcolor("indigo")
+village.fillcolor("purple")
 village.end_fill()
 
 # We move to the end of the second village
