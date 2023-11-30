@@ -14,6 +14,7 @@ france.penup()
 france.forward(x)
 france.left(181)
 france.forward(x)
+france.left(180)
 """
 i = 0
 while i < 10:
