@@ -114,3 +114,5 @@ village.end_fill()
 village.hideturtle()
 
 village.mainloop()
+
+# There are ten regions
