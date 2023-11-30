@@ -52,8 +52,8 @@ village.forward(village_size / 2)
 
 # TODO: We draw the rest of the villages
 # TODO: We put the colors in a table
-colors = ["indigo", "purple", "indigo"]
-colours = ["purple", "indigo", "purple"]
+colors = ["mediumvioletred", "yellow", "purple"]
+colours = ["indigo", "mediumvioletred", "yellow"]
 
 for i in range(3):
     # TODO: We turn to draw the second village
@@ -108,7 +108,7 @@ village.forward(village_size)
 village.left(160)
 village.forward(village_size)
 
-village.fillcolor("mediumvioletred")
+village.fillcolor("purple")
 village.end_fill()
 
 village.hideturtle()
