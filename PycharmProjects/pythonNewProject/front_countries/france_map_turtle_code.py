@@ -32,6 +32,9 @@ j = 0
 color = ["rosybrown", "darkgoldenrod", "yellow", "greenyellow",
          "green", "purple", "orange", "cyan",
          "pink", "violet", "brown", "teal", "olive", "maroon",
+         "gold", "navy", "indigo", "tomato", "steelblue",
+         "aquamarine", "coral", "darkslategray", "firebrick", "khaki",
+         "lightcoral", "mediumseagreen", "peru", "rosybrown", "sienna"
          ]
 for i in range(n):
     if j == len(color) - 1:
