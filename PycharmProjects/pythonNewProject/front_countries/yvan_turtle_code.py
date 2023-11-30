@@ -1,48 +1,41 @@
 import turtle
 
-def dessiner_rectangle(couleur, x, y, largeur, hauteur):
+def dessiner_region(couleur, points):
     turtle.fillcolor(couleur)
     turtle.penup()
-    turtle.goto(x, y)
+    turtle.goto(points[0][0], points[0][1])
     turtle.pendown()
     turtle.begin_fill()
-    for _ in range(4):
-        turtle.forward(largeur)
-        turtle.right(90)
+    for point in points:
+        turtle.goto(point[0], point[1])
     turtle.end_fill()
 
 def dessiner_france():
     turtle.speed(2)
 
-    # Région 1 : Hauts-de-France (rouge)
-    dessiner_rectangle("red", -200, 200, 150, 100)
+    # Coordonnées approximatives des régions
+    regions = {
+        "Hauts-de-France": [(-200, 200), (-50, 200), (-50, 100), (-200, 100)],
+        "Île-de-France": [(-50, 200), (100, 200), (100, 100), (-50, 100)],
+        "Grand Est": [(-200, 100), (-50, 100), (-50, 0), (-200, 0)],
+        "Normandie": [(-50, 100), (100, 100), (100, 0), (-50, 0)],
+        "Bretagne": [(-200, 0), (-50, 0), (-50, -100), (-200, -100)],
+        "Pays de la Loire": [(-50, 0), (100, 0), (100, -100), (-50, -100)],
+        "Nouvelle-Aquitaine": [(-200, -100), (-50, -100), (-50, -200), (-200, -200)],
+        "Occitanie": [(-50, -100), (100, -100), (100, -200), (-50, -200)],
+        "Auvergne-Rhône-Alpes": [(-200, -200), (-50, -200), (-50, -300), (-200, -300)],
+        "Provence-Alpes-Côte d'Azur": [(-50, -200), (100, -200), (100, -300), (-50, -300)]
+    }
 
-    # Région 2 : Île-de-France (jaune)
-    dessiner_rectangle("yellow", 0, 200, 150, 100)
-
-    # Région 3 : Grand Est (vert)
-    dessiner_rectangle("green", -200, 100, 150, 100)
-
-    # Région 4 : Normandie (blanc)
-    dessiner_rectangle("white", 0, 100, 150, 100)
-
-    # Région 5 : Bretagne (rouge)
-    dessiner_rectangle("red", -200, 0, 150, 100)
-
-    # Région 6 : Pays de la Loire (jaune)
-    dessiner_rectangle("yellow", 0, 0, 150, 100)
-
-    # Région 7 : Nouvelle-Aquitaine (vert)
-    dessiner_rectangle("green", -200, -100, 150, 100)
-
-    # Région 8 : Occitanie (blanc)
-    dessiner_rectangle("white", 0, -100, 150, 100)
-
-    # Région 9 : Auvergne-Rhône-Alpes (rouge)
-    dessiner_rectangle("red", -200, -200, 150, 100)
-
-    # Région 10 : Provence-Alpes-Côte d'Azur (jaune)
-    dessiner_rectangle("yellow", 0, -200, 150, 100)
+    for region, points in regions.items():
+        if "Nouvelle-Aquitaine" in region or "Occitanie" in region or "Auvergne-Rhône-Alpes" in region:
+            dessiner_region("green", points)
+        elif "Hauts-de-France" in region or "Bretagne" in region:
+            dessiner_region("red", points)
+        elif "Île-de-France" in region or "Normandie" in region or "Pays de la Loire" in region:
+            dessiner_region("yellow", points)
+        else:
+            dessiner_region("white", points)
 
     turtle.hideturtle()
     turtle.done()
