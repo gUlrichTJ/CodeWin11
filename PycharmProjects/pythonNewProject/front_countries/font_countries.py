@@ -42,7 +42,7 @@ village.fillcolor("pink")
 village.end_fill()
 
 # We move to the end of the second village
-turtle.forward(village_size / 2)
+village.forward(village_size / 2)
 
 # TODO: We draw the rest of the villages
 # TODO: We put the colors in a table
@@ -71,7 +71,10 @@ for i in range(3):
     village.end_fill()
 
     # We move to the end of the second village
-    turtle.forward(village_size / 2)
+    village.forward(village_size / 2)
 
+# We draw the last village
+village.left(30)
+village.forward(village_size)
 
 village.mainloop()
