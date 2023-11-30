@@ -8,7 +8,7 @@ france.pendown()
 print(france.width())
 france.width(4)
 
-france.speed(10000)
+france.speed(1000)
 
 
 """
