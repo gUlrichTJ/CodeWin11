@@ -5,7 +5,7 @@ village.title("We draw villages")
 
 # TODO : The place where the turtle will start
 village.penup()
-village.goto(5, 9)
+village.goto(0, 90)
 village.pendown()
 
 # TODO: The size of villages
