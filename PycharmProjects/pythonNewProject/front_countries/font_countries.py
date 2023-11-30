@@ -77,4 +77,7 @@ for i in range(3):
 village.left(30)
 village.forward(village_size)
 
+village.left(160)
+village.forward(village_size)
+
 village.mainloop()
