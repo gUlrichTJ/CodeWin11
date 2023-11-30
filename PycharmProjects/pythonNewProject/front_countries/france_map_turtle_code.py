@@ -29,7 +29,7 @@ france.left(180)
 x = 300
 deg = n = 180
 j = 0
-color = ["", "", "", ""]
+color = ["rosybrown", "darkgoldenrod", "", ""]
 for i in range(n):
     france.fillcolor(color[j])
     france.begin_fill()
