@@ -93,13 +93,13 @@ village.right(10)
 
 # We draw the fire of the rocket
 village.right(90)
-village.forward(village_size)
+village.forward(village_size / 2)
 village.left(90)
 
 village.forward(village_size * 0.75)
 
 village.left(90)
-village.forward(village_size)
+village.forward(village_size / 2)
 
 village.right(105)
 village.forward(village_size)
