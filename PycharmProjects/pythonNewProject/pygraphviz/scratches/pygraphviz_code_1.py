@@ -17,7 +17,7 @@ G.add_node("I", color="darkgreen")
 # Node colors
 nodes_labels = ["A", "C", "F", "J",]
 # We are going to set them to red color
-G.add_nodes_from(G, )
+G.add_nodes_from((G, {"color": "red"}) for node in nodes_labels)
 
 G.add_edge("A", "B")
 G.add_edge("A", "H")
