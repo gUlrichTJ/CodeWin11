@@ -8,9 +8,9 @@ france.pendown()
 france.speed(40)
 
 i = 0
-while i < 500:
-    france.forward(i + 10)
-    france.left(i)
+while i < 300:
+    france.forward(i + 1)
+    france.right(i)
     i += 1
     pass
 
