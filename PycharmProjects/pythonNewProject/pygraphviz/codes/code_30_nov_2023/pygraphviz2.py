@@ -1,6 +1,6 @@
 import pygraphviz as pgv
 
-G = pgv.AGraph(directed=True, strict=True)
+G = pgv.AGraph(directed=True, strict=True, rankdir="LR")
 
 # We create the nodes
 G.add_node("1", color="red")
