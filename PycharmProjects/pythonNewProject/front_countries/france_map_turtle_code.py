@@ -5,7 +5,7 @@ france.penup()
 france.goto(20, 100)
 france.pendown()
 
-france.speed(500)
+france.speed(1)
 
 i = 0
 while i < 250:
