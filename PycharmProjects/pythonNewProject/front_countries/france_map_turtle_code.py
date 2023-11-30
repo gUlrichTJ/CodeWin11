@@ -12,7 +12,7 @@ france.forward(x)
 france.left(180)
 france.penup()
 france.forward(x)
-france.left(90)
+france.left(181)
 france.forward(x)
 """
 i = 0
