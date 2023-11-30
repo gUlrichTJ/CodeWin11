@@ -1,6 +1,6 @@
 import pygraphviz as pgv
 
-G = pgv.AGraph()
+G = pgv.AGraph(directed=True, strict=True)
 
 # We create the nodes
 G.add_node("1", color="red")
@@ -14,3 +14,4 @@ G.add_edge("2", "6")
 G.add_edge("4", "6")
 
 G.layout()
+G.draw("../../images/oriented.png")
