@@ -15,4 +15,8 @@ village.forward(200)
 village.fillcolor("red")
 village.end_fill()
 
+# TODO: We turn to draw the second village
+village.left(30)
+village.forward(200)
+
 village.mainloop()
