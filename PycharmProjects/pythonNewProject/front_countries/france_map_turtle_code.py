@@ -6,7 +6,7 @@ france.goto(20, 100)
 france.pendown()
 
 print(france.width())
-france.width(2)
+france.width(5)
 
 france.speed(10000)
 
@@ -61,7 +61,7 @@ for i in range(n):
     # We come back at the same place
     france.forward(x)
     # We move the pen for 1 deg
-    france.left(deg + 1)
+    france.left(deg + 4)
     # We down the pen
     france.pendown()
     # We draw again
