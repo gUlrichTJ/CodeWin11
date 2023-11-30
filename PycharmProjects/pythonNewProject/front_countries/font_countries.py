@@ -46,7 +46,7 @@ turtle.forward(village_size / 2)
 
 # TODO: We draw the rest of the villages
 # TODO: We put the colors in a table
-colors = ["yellow", "purple", "orange", "blue"]
+colors = ["black", "purple", "orange", "blue", "green", "brown"]
 
 for i in range(3):
     # TODO: We turn to draw the second village
@@ -57,7 +57,6 @@ for i in range(3):
     village.forward(village_size / 2)
     village.left(90)
     village.forward(village_size)
-    village.fillcolor(colors[i])
     village.end_fill()
 
     # TODO: We draw the third village
@@ -68,7 +67,7 @@ for i in range(3):
     village.forward(village_size)
     village.right(90)
     village.forward(village_size / 2)
-    village.fillcolor("pink")
+    village.fillcolor(colors[i])
     village.end_fill()
 
     # We move to the end of the second village
