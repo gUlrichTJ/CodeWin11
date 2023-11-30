@@ -1,44 +1,38 @@
 import turtle
 
-def dessiner_region(couleur, points):
-    turtle.fillcolor(couleur)
+# Paramètres pour la carte
+largeur_fenetre = 800
+hauteur_fenetre = 600
+
+# Paramètres pour la carte du Togo
+togo_largeur = 480
+togo_hauteur = 200
+
+def dessiner_rectangle(largeur, hauteur):
+    for _ in range(2):
+        turtle.forward(largeur)
+        turtle.left(90)
+        turtle.forward(hauteur)
+        turtle.left(90)
+
+def dessiner_togo():
+    # Centrer la carte du Togo dans la fenêtre
     turtle.penup()
-    turtle.goto(points[0][0], points[0][1])
+    turtle.goto(-togo_largeur / 2, -togo_hauteur / 2)
     turtle.pendown()
-    turtle.begin_fill()
-    for point in points:
-        turtle.goto(point[0], point[1])
-    turtle.end_fill()
 
-def dessiner_france():
-    turtle.speed(2)
+    # Dessiner la carte du Togo
+    dessiner_rectangle(togo_largeur, togo_hauteur)
 
-    # Coordonnées approximatives des régions
-    regions = {
-        "Hauts-de-France": [(-200, 200), (-50, 200), (-50, 100), (-200, 100)],
-        "Île-de-France": [(-50, 200), (100, 200), (100, 100), (-50, 100)],
-        "Grand Est": [(-200, 100), (-50, 100), (-50, 0), (-200, 0)],
-        "Normandie": [(-50, 100), (100, 100), (100, 0), (-50, 0)],
-        "Bretagne": [(-200, 0), (-50, 0), (-50, -100), (-200, -100)],
-        "Pays de la Loire": [(-50, 0), (100, 0), (100, -100), (-50, -100)],
-        "Nouvelle-Aquitaine": [(-200, -100), (-50, -100), (-50, -200), (-200, -200)],
-        "Occitanie": [(-50, -100), (100, -100), (100, -200), (-50, -200)],
-        "Auvergne-Rhône-Alpes": [(-200, -200), (-50, -200), (-50, -300), (-200, -300)],
-        "Provence-Alpes-Côte d'Azur": [(-50, -200), (100, -200), (100, -300), (-50, -300)]
-    }
+# Paramètres de la fenêtre
+turtle.setup(largeur_fenetre, hauteur_fenetre)
+turtle.title("Carte du Togo")
 
-    for region, points in regions.items():
-        if "Nouvelle-Aquitaine" in region or "Occitanie" in region or "Auvergne-Rhône-Alpes" in region:
-            dessiner_region("green", points)
-        elif "Hauts-de-France" in region or "Bretagne" in region:
-            dessiner_region("red", points)
-        elif "Île-de-France" in region or "Normandie" in region or "Pays de la Loire" in region:
-            dessiner_region("yellow", points)
-        else:
-            dessiner_region("white", points)
+# Vitesse du dessin (optionnel)
+turtle.speed(2)
 
-    turtle.hideturtle()
-    turtle.done()
+# Dessiner la carte du Togo
+dessiner_togo()
 
-# Appeler la fonction pour dessiner la carte de la France
-dessiner_france()
+# Fermer la fenêtre en cliquant dessus
+turtle.exitonclick()
