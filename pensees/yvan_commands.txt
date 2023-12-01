@@ -1,0 +1,24 @@
+72  ipconfig 
+  273  nmap
+  274  sudo apt update 
+  275  sudo apt install net-tools 
+  276  sudo apt install nmap
+  277  sudo apt install -y
+  278  nmap -sn 127.0.0.1
+  279  nmap -sn 10.176.0.0
+  280  nmap -sn 10.176.0.254
+  281  nmap -sn 10.176.136.32
+  282  nmap --help
+  283  nmap -pn 10.176.0.1
+  284  nmap -Pn 10.176.0.1
+  285  nmap -P 43
+  286  nmap -PP 43
+  287  clear 
+  288  exit 
+  289  cd codes/CodeWin11/PycharmProjects/pythonNewProject/pygraphiz/
+  290  ls
+  291  echo "Hello World !" > index.html
+  292  pwd
+  293  ls
+  294  clear
+  295  history
