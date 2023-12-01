@@ -23,17 +23,24 @@ public class Authentication extends JFrame {
    /// Method to send the login
    JPanel login() {
       JPanel panel = new JPanel();
-      panel.setLayout(new GridLayout(1, 2, 10, 0));
+      panel.setLayout(new GridLayout(2, 4, 10, 10));
 
       /// TODO: the username
       JLabel usernameLabel = new JLabel("Username");
-      // We add the label username to the panel
+      // We add the labels to the panel
       panel.add(usernameLabel);
 
       JTextField usernameField = new JTextField();
 
       // We add the textField to the panel
       panel.add(usernameField);
+
+      /// TODO: the password
+      JLabel passwordLabel = new JLabel("Password");
+      panel.add(passwordLabel);
+
+      JPasswordField passwordField = new JPasswordField();
+      panel.add(passwordField);
       return panel;
    }
 }
