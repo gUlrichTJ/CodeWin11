@@ -23,7 +23,7 @@ public class Authentication extends JFrame {
    /// Method to send the login
    JPanel login() {
       JPanel panel = new JPanel();
-      panel.setLayout(new GridLayout(1, 2));
+      panel.setLayout(new GridLayout(1, 2, 10, 0));
 
       /// TODO: the username
       JLabel usernameLabel = new JLabel("Username");
