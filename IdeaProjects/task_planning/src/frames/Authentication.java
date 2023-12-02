@@ -12,6 +12,7 @@ public class Authentication extends JFrame {
       setSize(600, 400);
       setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       setLocationRelativeTo(null);
+      setResizable(false);
 
       // TODO the layout of the panel
       // mainPanel.setLayout(new BorderLayout());
@@ -20,7 +21,7 @@ public class Authentication extends JFrame {
 
       mainPanel.add(connect(), BorderLayout.SOUTH);
 
-      add(mainPanel, BorderLayout.CENTER);
+      add(mainPanel);
 
       setVisible(true);
    }
