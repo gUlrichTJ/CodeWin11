@@ -61,7 +61,7 @@ public class Authentication extends JFrame {
       panel.add(passwordLabel);
 
       passwordField = new JPasswordField();
-      
+
       panel.add(passwordField);
       return panel;
    }
@@ -84,8 +84,10 @@ public class Authentication extends JFrame {
       login.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            Authentication.this.dispose();
-            home = new Home();
+            if (usernameField.equals("admin") && passwordField.equals("admin123")) {
+               Authentication.this.dispose();
+               home = new Home();
+            }
          }
       });
 
