@@ -14,13 +14,13 @@ public class Authentication extends JFrame {
       setLocationRelativeTo(null);
 
       // TODO the layout of the panel
-      mainPanel.setLayout(new BorderLayout());
+      // mainPanel.setLayout(new BorderLayout());
 
       mainPanel.add(login(), BorderLayout.CENTER);
 
       mainPanel.add(connect(), BorderLayout.SOUTH);
 
-      add(mainPanel);
+      add(mainPanel, BorderLayout.CENTER);
 
       setVisible(true);
    }
@@ -53,9 +53,6 @@ public class Authentication extends JFrame {
 
    JPanel connect() {
       JPanel panel = new JPanel();
-
-      // Characteristics
-      panel.setLayout(new FlowLayout());
 
       // The button valid
       JButton login = new JButton("login".toUpperCase());
