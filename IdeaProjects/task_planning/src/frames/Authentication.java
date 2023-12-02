@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 
 public class Authentication extends JFrame {
 
+   // TODO: We create a Home's object
+   Home home;
    JPanel mainPanel = new JPanel();
    // Constructor
    public Authentication() {
@@ -16,6 +18,8 @@ public class Authentication extends JFrame {
       setLocationRelativeTo(null);
       setResizable(false);
       setLayout(new BorderLayout());
+      this.home = home;
+
 
       // TODO the layout of the panel
       mainPanel.setLayout(new BorderLayout());
@@ -71,14 +75,13 @@ public class Authentication extends JFrame {
       cancel.setFont(new Font("Serif", Font.BOLD, 13));
       cancel.setForeground(Color.WHITE);
 
-      // TODO: Action on the cancel button
-      cancel.addActionListener(new ActionListener() {
+      // TODO: Action to the login button
+      login.addActionListener(e -> home = new Home());
 
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            Authentication.this.dispose();
-         }
-      });
+      // TODO: Action on the cancel button
+      cancel.addActionListener(
+            e -> Authentication.this.dispose()
+      );
 
       // TODO: We add the login button to the panel
       panel.add(cancel, new FlowLayout(FlowLayout.RIGHT));
