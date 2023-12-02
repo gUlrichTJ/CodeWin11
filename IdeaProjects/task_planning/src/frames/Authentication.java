@@ -2,6 +2,8 @@ package frames;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Authentication extends JFrame {
 
@@ -68,6 +70,14 @@ public class Authentication extends JFrame {
       cancel.setBackground(Color.red);
       cancel.setFont(new Font("Serif", Font.BOLD, 13));
       cancel.setForeground(Color.WHITE);
+
+      // TODO: Action on the cancel button
+      cancel.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            
+         }
+      });
 
       // TODO: We add the login button to the panel
       panel.add(cancel, new FlowLayout(FlowLayout.RIGHT));
