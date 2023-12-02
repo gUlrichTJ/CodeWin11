@@ -73,9 +73,10 @@ public class Authentication extends JFrame {
 
       // TODO: Action on the cancel button
       cancel.addActionListener(new ActionListener() {
+
          @Override
          public void actionPerformed(ActionEvent e) {
-            
+            Authentication.this.dispose();
          }
       });
 
