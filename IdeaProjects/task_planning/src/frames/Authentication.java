@@ -58,13 +58,20 @@ public class Authentication extends JFrame {
    JPanel connect() {
       JPanel panel = new JPanel();
 
-      // The button valid
+      // The button login
       JButton login = new JButton("login".toUpperCase());
       login.setBackground(Color.cyan);
       login.setFont(new Font("Serif", Font.BOLD, 13));
 
+      // The button login
+      JButton cancel = new JButton("cancel".toUpperCase());
+      cancel.setBackground(Color.red);
+      cancel.setFont(new Font("Serif", Font.BOLD, 13));
+      cancel.setForeground(Color.WHITE);
+
       // TODO: We add the login button to the panel
-      panel.add(login, new FlowLayout(FlowLayout.RIGHT));
+      panel.add(cancel, new FlowLayout(FlowLayout.RIGHT));
+      panel.add(login, new FlowLayout(FlowLayout.LEFT));
       return panel;
    }
 
