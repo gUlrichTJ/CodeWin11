@@ -45,4 +45,8 @@ public class Authentication extends JFrame {
       panel.add(passwordField);
       return panel;
    }
+
+   JPanel connect() {
+      JPanel panel = 
+   }
 }
