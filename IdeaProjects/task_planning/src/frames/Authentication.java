@@ -13,6 +13,9 @@ public class Authentication extends JFrame {
       setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       setLocationRelativeTo(null);
 
+      // TODO the layout of the panel
+      mainPanel.setLayout(new BorderLayout());
+
       mainPanel.add(login(), BorderLayout.CENTER);
 
       mainPanel.add(connect(), BorderLayout.SOUTH);
