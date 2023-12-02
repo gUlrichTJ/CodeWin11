@@ -17,6 +17,8 @@ public class Authentication extends JFrame {
       // TODO the layout of the panel
       // mainPanel.setLayout(new BorderLayout());
 
+      mainPanel.add(lefAuthentication(), BorderLayout.WEST);
+
       mainPanel.add(login(), BorderLayout.CENTER);
 
       mainPanel.add(connect(), BorderLayout.SOUTH);
@@ -69,8 +71,8 @@ public class Authentication extends JFrame {
    private JPanel lefAuthentication() {
       JPanel panel = new JPanel();
       panel.setLayout(new BorderLayout());
-      panel.setBackground(Color.getColor("red"));
-      
+      panel.setBackground(Color.black);
+
       panel.setPreferredSize(new Dimension(100, 100));
       return panel;
    }
