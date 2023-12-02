@@ -53,9 +53,10 @@ public class Authentication extends JFrame {
       panel.setLayout(new FlowLayout());
 
       // The button valid
-      JButton login = new JButton("login");
+      JButton login = new JButton("login".toUpperCase());
       login.setBackground(Color.blue);
-      login.setFont()
+      login.setFont(new Font("Serif", Font.BOLD, 13));
+
       return panel;
    }
 }
