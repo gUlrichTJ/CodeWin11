@@ -47,6 +47,15 @@ public class Authentication extends JFrame {
    }
 
    JPanel connect() {
-      JPanel panel = 
+      JPanel panel = new JPanel();
+
+      // Characteristics
+      panel.setLayout(new FlowLayout());
+
+      // The button valid
+      JButton login = new JButton("login");
+      login.setBackground(Color.blue);
+      login.setFont()
+      return panel;
    }
 }
