@@ -64,4 +64,14 @@ public class Authentication extends JFrame {
       panel.add(login, new FlowLayout(FlowLayout.RIGHT));
       return panel;
    }
+
+   // TODO: We'll try to put something at left to see its behaviour
+   private JPanel lefAuthentication() {
+      JPanel panel = new JPanel();
+      panel.setLayout(new BorderLayout());
+      panel.setBackground(Color.getColor("red"));
+      
+      panel.setPreferredSize(new Dimension(100, 100));
+      return panel;
+   }
 }
