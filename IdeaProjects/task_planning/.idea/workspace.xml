@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76d1b893-35b0-41fd-b944-043c7217ae79" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/frames/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frames/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frames/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frames/Authentication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +77,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
-          <line>42</line>
+          <line>46</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
-          <line>24</line>
+          <line>28</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

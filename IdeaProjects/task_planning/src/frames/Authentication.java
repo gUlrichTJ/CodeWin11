@@ -10,6 +10,10 @@ public class Authentication extends JFrame {
    // TODO: We create a Home's object
    Home home;
    JPanel mainPanel = new JPanel();
+
+   // TODO: our global textFiled and passwordField
+   JTextField usernameField;
+   JPasswordField passwordField;
    // Constructor
    public Authentication() {
       super("Authentication");
@@ -47,7 +51,7 @@ public class Authentication extends JFrame {
       // We add the labels to the panel
       panel.add(usernameLabel);
 
-      JTextField usernameField = new JTextField();
+      usernameField = new JTextField();
 
       // We add the textField to the panel
       panel.add(usernameField);
@@ -56,7 +60,8 @@ public class Authentication extends JFrame {
       JLabel passwordLabel = new JLabel("Password");
       panel.add(passwordLabel);
 
-      JPasswordField passwordField = new JPasswordField();
+      passwordField = new JPasswordField();
+      
       panel.add(passwordField);
       return panel;
    }
