@@ -24,6 +24,7 @@ public class Authentication extends JFrame {
    JPanel login() {
       JPanel panel = new JPanel();
       panel.setLayout(new GridLayout(2, 4, 10, 10));
+      panel.setPreferredSize(new Dimension(350, 50));
 
       /// TODO: the username
       JLabel usernameLabel = new JLabel("Username");
