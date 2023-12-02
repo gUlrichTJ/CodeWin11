@@ -76,7 +76,13 @@ public class Authentication extends JFrame {
       cancel.setForeground(Color.WHITE);
 
       // TODO: Action to the login button
-      login.addActionListener(e -> home = new Home());
+      login.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            Authentication.this.dispose();
+            home = new Home();
+         }
+      });
 
       // TODO: Action on the cancel button
       cancel.addActionListener(
