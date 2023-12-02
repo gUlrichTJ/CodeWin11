@@ -11,7 +11,13 @@ public class Home extends JFrame {
    // TODO: Constructor
    public Home() {
       super("Task planning");
-      setSize(Window.WIDTH, Window.HEIGHT);
+
+      // TODO: We take the height and the width of the screen
+      int screenHeight = (int) screenSize.getHeight();
+      int screenWidth = (int) screenSize.getWidth();
+
+      setSize(screenWidth, screenHeight);
+
       setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       setLocationRelativeTo(null);
 

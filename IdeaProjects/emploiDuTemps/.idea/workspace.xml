@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9123cc1d-7f7e-4f10-9a5a-c11ae4e06b79" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../task_planning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task_planning/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task_planning/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task_planning/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../task_planning/src/frames/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task_planning/src/frames/Authentication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../task_planning/src/frames/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/../task_planning/src/frames/Home.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +31,10 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2Ylm0Fi7c2EBDzGhMsvq4NLZyID" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -46,11 +43,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "/home/gracianomathey/codes/CodeWin11/IdeaProjects/task_planning"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;/home/gracianomathey/codes/CodeWin11/IdeaProjects/task_planning&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
