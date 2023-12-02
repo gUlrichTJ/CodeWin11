@@ -5,6 +5,9 @@ import java.awt.*;
 
 public class Home extends JFrame {
 
+   // We take the size of the screen
+   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
    // TODO: Constructor
    public Home() {
       super("Task planning");
