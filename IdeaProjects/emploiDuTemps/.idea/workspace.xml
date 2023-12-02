@@ -4,43 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9123cc1d-7f7e-4f10-9a5a-c11ae4e06b79" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.2/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/7.2/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../taskPlanning/settings.gradle.kts" beforeDir="false" />
-    </list>
+    <list default="true" id="9123cc1d-7f7e-4f10-9a5a-c11ae4e06b79" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +29,10 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2Ylm0Fi7c2EBDzGhMsvq4NLZyID" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,6 +41,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "/home/gracianomathey/codes/CodeWin11/IdeaProjects/task_planning"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
