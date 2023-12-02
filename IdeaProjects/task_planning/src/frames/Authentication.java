@@ -32,9 +32,9 @@ public class Authentication extends JFrame {
    /// Method to send the login
    JPanel login() {
       JPanel panel = new JPanel();
-      panel.setLayout(new GridLayout(2, 4, 10, 10));
+      panel.setLayout(new GridLayout(4, 1, 10, 10));
       /// TODO: We did so that the panel has a preferred size
-      panel.setPreferredSize(new Dimension(350, 50));
+      //panel.setPreferredSize(new Dimension(350, 50));
 
       /// TODO: the username
       JLabel usernameLabel = new JLabel("Username");
@@ -60,7 +60,7 @@ public class Authentication extends JFrame {
 
       // The button valid
       JButton login = new JButton("login".toUpperCase());
-      login.setBackground(Color.blue);
+      login.setBackground(Color.cyan);
       login.setFont(new Font("Serif", Font.BOLD, 13));
 
       // TODO: We add the login button to the panel
@@ -72,7 +72,7 @@ public class Authentication extends JFrame {
    private JPanel lefAuthentication() {
       JPanel panel = new JPanel();
       panel.setLayout(new BorderLayout());
-      panel.setBackground(Color.black);
+      panel.setBackground(Color.darkGray);
 
       panel.setPreferredSize(new Dimension(100, 100));
       return panel;
