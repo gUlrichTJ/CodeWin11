@@ -16,6 +16,7 @@ public class Authentication extends JFrame {
       mainPanel.add(login(), BorderLayout.CENTER);
 
       add(mainPanel);
+      add(login(), BorderLayout.SOUTH);
 
       setVisible(true);
    }
@@ -57,6 +58,8 @@ public class Authentication extends JFrame {
       login.setBackground(Color.blue);
       login.setFont(new Font("Serif", Font.BOLD, 13));
 
+      // TODO: We add the login button to the panel
+      panel.add(login, FlowLayout.RIGHT);
       return panel;
    }
 }
