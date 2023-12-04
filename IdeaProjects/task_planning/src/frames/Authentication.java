@@ -81,15 +81,13 @@ public class Authentication extends JFrame {
       cancel.setForeground(Color.WHITE);
 
       // TODO: Action to the login button
-      login.addActionListener(new ActionListener() {
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            if (usernameField.getText().equals("admin")
-                  &&
-                  passwordField.getPassword().equals("admin123")) {
-               Authentication.this.dispose();
-               home = new Home();
-            }
+      login.addActionListener(e -> {
+         if (usernameField.getText().equals("admin")
+               &&
+               passwordField.getPassword().equals("admin123")) {
+            Authentication.this.dispose();
+            home = new Home();
+            System.out.println("lol");
          }
       });
 
