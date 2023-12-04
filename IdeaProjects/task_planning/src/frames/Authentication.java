@@ -93,6 +93,9 @@ public class Authentication extends JFrame {
          }
       });
 
+      System.out.println(passwordField.getText());
+      System.out.println(usernameField.getText());
+
       // TODO: Action on the cancel button
       cancel.addActionListener(
             e -> Authentication.this.dispose()
