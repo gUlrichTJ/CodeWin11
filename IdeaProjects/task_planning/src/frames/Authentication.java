@@ -84,7 +84,9 @@ public class Authentication extends JFrame {
       login.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            if (usernameField.equals("admin") && passwordField.equals("admin123")) {
+            if (usernameField.getText().equals("admin")
+                  &&
+                  passwordField.getPassword().equals("admin123")) {
                Authentication.this.dispose();
                home = new Home();
             }
