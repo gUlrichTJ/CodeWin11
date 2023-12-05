@@ -86,7 +86,7 @@ public class Authentication extends JFrame {
             home = new Home();
             System.out.println("lol");
          } else {
-            ;
+            JOptionPane.showMessageDialog(this,"Oh, Please, something is wrong.");
          }
       });
 
