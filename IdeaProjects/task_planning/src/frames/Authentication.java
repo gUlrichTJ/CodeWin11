@@ -83,7 +83,7 @@ public class Authentication extends JFrame {
       // TODO: Action to the login button
       login.addActionListener(e -> {
          if (usernameField.getText().equals("admin")
-               &&
+               ||
                passwordField.getPassword().equals("admin123")) {
             Authentication.this.dispose();
             home = new Home();
