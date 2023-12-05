@@ -59,6 +59,7 @@ G.add_edge("X", "A31", len="7")
 G.add_edge("X", "A32", len="7")
 G.add_edge("X", "A33", len="7")
 G.add_edge("X", "A34", len="7")
+
 # Let's draw the graph
 G.layout()
 G.draw("../../images/dix_villes.jpeg")
