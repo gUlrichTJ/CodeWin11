@@ -6,3 +6,7 @@ birthday = {
    'Me': '22 jan',
    'Gadiela': '31 may'
    }
+
+while True:
+   
+   pass
