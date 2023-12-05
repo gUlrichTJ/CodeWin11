@@ -77,17 +77,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
-          <line>46</line>
+          <line>43</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
-          <line>28</line>
+          <line>25</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
-          <line>62</line>
+          <line>59</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

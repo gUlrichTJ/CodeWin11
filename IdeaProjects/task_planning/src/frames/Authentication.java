@@ -2,8 +2,6 @@ package frames;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Authentication extends JFrame {
 
@@ -22,7 +20,6 @@ public class Authentication extends JFrame {
       setLocationRelativeTo(null);
       setResizable(false);
       setLayout(new BorderLayout());
-      this.home = home;
 
 
       // TODO the layout of the panel
@@ -88,11 +85,10 @@ public class Authentication extends JFrame {
             Authentication.this.dispose();
             home = new Home();
             System.out.println("lol");
+         } else {
+            ;
          }
       });
-
-      System.out.println(passwordField.getText());
-      System.out.println(usernameField.getText());
 
       // TODO: Action on the cancel button
       cancel.addActionListener(
