@@ -47,9 +47,9 @@ public class Authentification extends JFrame {
 
       panelMail.add(mail);
 
-      // We add the label of mail to the panel
+      // We add the label of mail to the panel here
       panel.add(enterMail);
-      // We add the textArea to the panel
+      // We add the textArea to the panel here
       panel.add(panelMail);
 
       return panel;
