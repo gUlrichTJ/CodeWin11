@@ -26,7 +26,7 @@ G.add_node("J")
 
 # TODO: Other graph
 # TODO: The edges
-G.add_edge("X", "A1")
+G.add_edge("X", "A1", weigth="4")
 G.add_edge("X", "A2")
 G.add_edge("X", "A3")
 G.add_edge("X", "A4")
