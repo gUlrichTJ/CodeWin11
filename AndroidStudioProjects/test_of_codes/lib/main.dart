@@ -23,6 +23,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String note = "Tip A";
 
+  int _selectedIndex = 0;
+
+  /// The things that will appear in the code
+  static const List<Widget> 
+
   /// On pressed method
   void _onPressed() {
     setState(() {
