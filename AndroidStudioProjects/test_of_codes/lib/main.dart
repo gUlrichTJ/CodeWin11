@@ -62,7 +62,11 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: <Widget>[
-          _widgetOption.elementAt(_selectedIndex)
+          _widgetOption.elementAt(_selectedIndex),
+          Theme(
+              data: data,
+              child: child,
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
