@@ -7,11 +7,5 @@ birthday = {
    'Gadiela': '31 may'
    }
 
-name = ""
-while True:
-   print("Enter a name")
-   name = str(input())
-   break
-
 # TODO: The use of range
 print(range(-10, 11))
