@@ -17,3 +17,13 @@ print(l)
 l.sort()
 print(l)
 print(l.count("a"))
+
+# TODO: Insertion
+l.insert(0, "i")
+l.insert(1, "s")
+l.insert(2, "e")
+l.insert(3, "r")
+l.insert(4, "t")
+l.insert(5, "i")
+l.insert(6, "o")
+l.insert(7, "n")
