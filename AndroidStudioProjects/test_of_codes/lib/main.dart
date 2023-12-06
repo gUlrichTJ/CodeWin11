@@ -26,7 +26,14 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   /// The things that will appear in the code
-  static const List<Widget> 
+  static const List<Widget> _widgetOption = <Widget>[
+    Text("God is great"),
+    Text("We'll stay with Him forever"),
+    Text("We're His family"),
+    Text("We're for Him forever"),
+    Text("We're His offsprings"),
+    Text("God do we love"),
+  ];
 
   /// On pressed method
   void _onPressed() {
