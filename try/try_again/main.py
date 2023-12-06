@@ -8,5 +8,6 @@ birthday = {
    }
 
 while True:
-   
-   pass
+   print("Enter a name")
+   name = input()
+   break
