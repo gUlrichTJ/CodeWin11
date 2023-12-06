@@ -11,7 +11,8 @@ birthday = {
 print(range(-10, 11))
 
 # Let's sort the list
-l = "lambda"
+s = "lambda"
+l = list(s)
 print(l)
 l.sort()
 print(l)
