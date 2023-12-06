@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        canvasColor: Colors.lightGreen.shade100,
+        primarySwatch: Colors.lightGreen,
+        canvasColor: Colors.lightGreen.shade200,
         platform: TargetPlatform.android
       ),
       home: const HomePage(),
@@ -93,5 +94,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
