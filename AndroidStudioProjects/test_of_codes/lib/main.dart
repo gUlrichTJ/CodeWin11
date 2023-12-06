@@ -64,8 +64,10 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           _widgetOption.elementAt(_selectedIndex),
           Theme(
-              data: data,
-              child: child,
+              data: Theme.of(context).copyWith(cardColor: Colors.deepOrange),
+              child: Card(
+                child: Text("Unique theme"),
+              ),
           ),
         ],
       ),
