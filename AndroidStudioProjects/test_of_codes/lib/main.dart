@@ -35,6 +35,13 @@ class _HomePageState extends State<HomePage> {
     Text("God do we love"),
   ];
 
+  ///
+  void _onItemTaped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   /// On pressed method
   void _onPressed() {
     setState(() {
