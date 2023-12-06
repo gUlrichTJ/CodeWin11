@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   void _onPressed() {
     setState(() {
       note = "Tip B";
-      print(note);
+      debugPrint(note);
     });
   }
   @override
