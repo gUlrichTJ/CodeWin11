@@ -41,7 +41,9 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [],
+        items: [
+          Icon(Icons.line_weight),
+        ],
       ),
     );
   }
