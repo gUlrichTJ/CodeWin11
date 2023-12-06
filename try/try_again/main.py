@@ -27,3 +27,8 @@ l.insert(4, "t")
 l.insert(5, "i")
 l.insert(6, "o")
 l.insert(7, "n")
+
+print(l)
+
+# Remove from a list
+l.remove("a")
