@@ -36,4 +36,6 @@ print(l)
 l.remove("a")
 l.remove(l[3])
 
+print(l * 2)
+
 print(l)
