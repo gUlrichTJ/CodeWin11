@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        canvasColor: Colors.lightGreen.shade100
+        canvasColor: Colors.brown.shade100
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
