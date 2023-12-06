@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        canvasColor: Colors.brown.shade100
+        canvasColor: Colors.lightGreen.shade100,
+        platform: TargetPlatform.android
       ),
       home: const HomePage(),
     );
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _selectedIndex,
         showUnselectedLabels: true,
         showSelectedLabels: true,
-        backgroundColor: Colors.cyan,
+        // backgroundColor: Colors.cyan,
         selectedItemColor: Colors.deepOrange,
         onTap: _onItemTaped,
       ),
