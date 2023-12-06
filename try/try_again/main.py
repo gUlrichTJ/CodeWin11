@@ -7,6 +7,7 @@ birthday = {
    'Gadiela': '31 may'
    }
 
+name = ""
 while True:
    print("Enter a name")
    name = str(input())
