@@ -32,3 +32,6 @@ print(l)
 
 # Remove from a list
 l.remove("a")
+l.remove(l[3])
+
+print(l)
