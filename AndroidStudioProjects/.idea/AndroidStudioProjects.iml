@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/app_widgets/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/app_widgets/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/app_widgets/build" />
+      <excludeFolder url="file://$MODULE_DIR$/books_reader/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/books_reader/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/books_reader/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bottom_nav_drawer/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bottom_nav_drawer/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bottom_nav_drawer/build" />
+      <excludeFolder url="file://$MODULE_DIR$/chrome_clone/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/chrome_clone/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/chrome_clone/build" />
+      <excludeFolder url="file://$MODULE_DIR$/file_manager/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/file_manager/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/file_manager/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flower/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flower/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flower/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter1/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter1/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter1/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_widgets1/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_widgets1/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_widgets1/build" />
+      <excludeFolder url="file://$MODULE_DIR$/github_find_users/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/github_find_users/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/github_find_users/build" />
+      <excludeFolder url="file://$MODULE_DIR$/let_us_code/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/let_us_code/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/let_us_code/build" />
+      <excludeFolder url="file://$MODULE_DIR$/namer_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/namer_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/namer_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/redoTheBasicCode/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/redoTheBasicCode/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/redoTheBasicCode/build" />
+      <excludeFolder url="file://$MODULE_DIR$/redoTheCarsProject/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/redoTheCarsProject/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/redoTheCarsProject/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shop_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shop_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shop_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/permission_handler_windows/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/permission_handler_windows/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/permission_handler_windows/build" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/permission_handler_windows/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/permission_handler_windows/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/test_of_codes/windows/flutter/ephemeral/.plugin_symlinks/permission_handler_windows/example/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
