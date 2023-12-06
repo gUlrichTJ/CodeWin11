@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      color: Colors.black12,
       home: HomePage(),
     );
   }
@@ -52,7 +53,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.black38,
+      ),
       body: Column(
         children: <Widget>[
           _widgetOption.elementAt(_selectedIndex)
