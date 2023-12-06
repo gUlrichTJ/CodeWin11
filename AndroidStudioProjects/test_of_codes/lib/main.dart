@@ -41,9 +41,14 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.height)),
+          BottomNavigationBarItem(icon: Icon(Icons.line_weight)),
+          BottomNavigationBarItem(icon: Icon(Icons.format_size_outlined)),
+          BottomNavigationBarItem(icon: Icon(Icons.format_align_left)),
         ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTaped,
       ),
     );
   }
