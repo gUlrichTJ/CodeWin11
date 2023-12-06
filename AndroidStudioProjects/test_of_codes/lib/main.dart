@@ -55,16 +55,27 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(),
       body: Column(
         children: <Widget>[
-          IconButton(onPressed: _onPressed,
-              icon: const Icon(Icons.height))
+          _widgetOption.elementAt(_selectedIndex)
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.height)),
-          BottomNavigationBarItem(icon: Icon(Icons.line_weight)),
-          BottomNavigationBarItem(icon: Icon(Icons.format_size_outlined)),
-          BottomNavigationBarItem(icon: Icon(Icons.format_align_left)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.height),
+            label: "Hello",
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.line_weight),
+              label: "Hello",
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.format_size_outlined),
+              label: "Hello",
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.format_align_left),
+              label: "Hello",
+          ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTaped,
