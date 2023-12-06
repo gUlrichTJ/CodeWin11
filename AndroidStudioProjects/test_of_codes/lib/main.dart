@@ -27,18 +27,16 @@ class _HomePageState extends State<HomePage> {
   void _onPressed() {
     setState(() {
       note = "Tip B";
+      print(note);
     });
   }
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: <Widget>[
-          Icon(Icons.height),
-          Text("Height"),
-          FlatButton(
-            onPressed: _onPressed();
-          ),
+          IconButton(onPressed: _onPressed,
+              icon: const Icon(Icons.height))
         ],
       ),
     );
