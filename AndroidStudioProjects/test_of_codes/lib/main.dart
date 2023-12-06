@@ -191,4 +191,3 @@ class TabBarExample extends StatelessWidget {
     );
   }
 }
-
