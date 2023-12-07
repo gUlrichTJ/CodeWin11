@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
 }
 
  */
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -128,7 +128,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightGreen,
         canvasColor: Colors.lightGreen.shade200,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -158,7 +158,7 @@ class _HomePageState extends State<HomePage> {
                       width: 40.0,
                       height: 40.0,
                     ),
-                    const Padding(padding: const EdgeInsets.all(16.0)),
+                    const Padding(padding: EdgeInsets.all(16.0)),
                     Expanded(
                       child: Container(
                         color: Colors.amber,
@@ -169,6 +169,12 @@ class _HomePageState extends State<HomePage> {
                     const Padding(padding: EdgeInsets.all(16.0),),
                     Container(
                       color: Colors.brown,
+                      width: 40.0,
+                      height: 40.0,
+                    ),
+                    const Padding(padding: EdgeInsets.all(16.0)),
+                    Container(
+                      color: Colors.deepOrange,
                       width: 40.0,
                       height: 40.0,
                     ),
