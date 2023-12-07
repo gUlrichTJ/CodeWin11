@@ -254,11 +254,15 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
           ),
         ),
         const Padding(padding: EdgeInsets.all(10)),
-        const Text("Column 1"),
-        const Text("Column 1"),
+        const Divider(),
         const Text("Column 1"),
         const Divider(),
         const Text("Column 1"),
+        const Divider(),
+        const Text("Column 1"),
+        const Divider(),
+        const Text("Column 1"),
+        const Divider(),
       ],
     );
   }
