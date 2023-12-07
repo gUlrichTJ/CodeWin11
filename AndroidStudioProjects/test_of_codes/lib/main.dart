@@ -234,6 +234,8 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                 "Container",
               style: TextStyle(
                 color: Colors.white,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.deepPurpleAccent,
                 fontFamily: "arial",
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.bold,
