@@ -207,6 +207,9 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      
       children: <Widget>[
         Container(
           height: 175.0,
@@ -230,35 +233,6 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
             ],
           ),
           child: const Center(
-            /*
-            child: RichText(
-            text: const TextSpan(
-              text: 'Flutter World',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  color: Colors.deepPurple,
-                  decoration: TextDecoration.underline,
-                  decorationColor: Colors.deepPurpleAccent,
-                  decorationStyle: TextDecorationStyle.dotted,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.normal,
-                ),
-              children: <TextSpan>[
-                TextSpan(
-                  text: ' for',
-                ),
-                TextSpan(
-                  text: ' Mobile',
-                  style: TextStyle(
-                  color: Colors.deepOrange,
-                      fontStyle: FontStyle.normal,
-                      fontWeight: FontWeight.bold
-                  ),
-                ),
-              ],
-            ),
-          ),
-          */
           child: Center(
             child: Text(
                 "Container",
