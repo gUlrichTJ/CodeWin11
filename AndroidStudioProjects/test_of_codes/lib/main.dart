@@ -167,17 +167,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const Padding(padding: EdgeInsets.all(16.0),),
-                    Container(
-                      color: Colors.brown,
-                      width: 40.0,
-                      height: 40.0,
-                    ),
+                    _container(Colors.brown, 40.0, 40.0),
                     const Padding(padding: EdgeInsets.all(16.0)),
-                    Container(
-                      color: Colors.deepOrange,
-                      width: 40.0,
-                      height: 40.0,
-                    ),
+                    _container(Colors.deepOrange, 40.0, 40.0),
                   ],
                 ),
                 /// We add a space before adding the next row
@@ -187,11 +179,6 @@ class _HomePageState extends State<HomePage> {
                     Column(
                       children: <Widget>[
                         _container(Colors.lime.shade200, 60.0, 60.0),
-                        Container(
-                          color: Colors.lime.shade200,
-                          width: 60.0,
-                          height: 60.0,
-                        ),
                         const Padding(padding: EdgeInsets.all(16.0)),
                         // We add another container
                         _container(Colors.lime.shade900, 40.0, 40.0),
