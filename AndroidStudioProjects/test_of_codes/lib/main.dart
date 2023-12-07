@@ -75,9 +75,10 @@ class _HomePageState extends State<HomePage> {
           Theme(
               data: Theme.of(context).copyWith(cardColor: Colors.deepOrange),
               child: const Card(
-                child: Text("Unique theme"),
+                child: Text("Unique theme price"),
               ),
           ),
+          Text("$price"),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
