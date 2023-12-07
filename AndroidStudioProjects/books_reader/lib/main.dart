@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       ),
       title: "Read your books quickly",
       debugShowCheckedModeBanner: false,
-      home: OurHomePage(),
+      home: const OurHomePage(),
     );
   }
 }
