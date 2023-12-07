@@ -151,11 +151,16 @@ class _HomePageState extends State<HomePage> {
           icon: const Icon(Icons.menu),
         ),
         title: const Text("Title"),
-        actions: [
+        actions: <Widget>[
           IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.help),
+              icon: const Icon(Icons.search),
           ),
+          // More vert
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.more_vert),
+          )
         ],
       ),
       body: SafeArea(
