@@ -229,8 +229,9 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
               ),
             ],
           ),
-          child: Center(
-          child: RichText(
+          child: const Center(
+            /*
+            child: RichText(
             text: const TextSpan(
               text: 'Flutter World',
                 style: TextStyle(
@@ -256,16 +257,17 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                 ),
               ],
             ),
-
-          /*const Center(
+          ),
+          */
+          child: Center(
             child: Text(
                 "Container",
               style: TextStyle(
                 color: Colors.white,
                 decoration: TextDecoration.underline,
                 decorationColor: Colors.deepPurpleAccent,
-                decorationStyle: TextDecorationStyle.dotted,
-                decorationThickness: 3,
+                decorationStyle: TextDecorationStyle.dashed,
+                decorationThickness: 1,
                 fontFamily: "arial",
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.bold,
@@ -273,9 +275,7 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
               ),
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
-
             ),
-          ),*/
           ),
           ),
         ),
