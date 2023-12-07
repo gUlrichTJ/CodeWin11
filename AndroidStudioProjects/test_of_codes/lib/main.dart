@@ -162,11 +162,18 @@ class _HomePageState extends State<HomePage> {
             icon: const Icon(Icons.more_vert),
           )
         ],
+        /// A flexible space in the appBar
         flexibleSpace: const SafeArea(
           child: Icon(
             Icons.photo_camera,
             size: 55.0,
             color: Colors.white38,
+          ),
+        ),
+        /// Bottom in the appBar
+        bottom: PreferredSize(
+          child: Container(
+            color: Colors.lightGreen,
           ),
         ),
       ),
