@@ -188,8 +188,8 @@ class _HomePageState extends State<HomePage> {
                       children: <Widget>[
                         Container(
                           color: Colors.lime.shade200,
-                          width: 40.0,
-                          height: 40.0,
+                          width: 60.0,
+                          height: 60.0,
                         ),
                         const Padding(padding: EdgeInsets.all(16.0)),
                         // We add another container
@@ -201,8 +201,8 @@ class _HomePageState extends State<HomePage> {
                         const Padding(padding: EdgeInsets.all(16.0)),
                         Container(
                           color: Colors.amber.shade700,
-                          width: 40.0,
-                          height: 40.0,
+                          width: 30.0,
+                          height: 30.0,
                         ),
                         const Padding(padding: EdgeInsets.all(16.0)),
                       ],
