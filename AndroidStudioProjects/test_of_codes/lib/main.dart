@@ -183,7 +183,17 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: const BodyWidget(),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[],
+              
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
