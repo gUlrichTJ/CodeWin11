@@ -181,10 +181,17 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 /// We add a space before adding the next row
+                const Padding(padding: EdgeInsets.all(16.0)),
                 Row(
                   children: <Widget>[
                     Column(
-                      children: [],
+                      children: <Widget>[
+                        Container(
+                          color: Colors.lime,
+                          width: 40.0,
+                          height: 40.0,
+                        ),
+                      ],
                     ),
                   ],
                 ),
