@@ -180,6 +180,14 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
+                /// We add a space before adding the next row
+                Row(
+                  children: <Widget>[
+                    Column(
+                      children: [],
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
