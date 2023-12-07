@@ -165,7 +165,8 @@ class _HomePageState extends State<HomePage> {
                         width: 40.0,
                         height: 40.0,
                       ),
-                    )
+                    ),
+                    const Padding(padding: EdgeInsets.all(16.0),)
                   ],
                 ),
               ],
