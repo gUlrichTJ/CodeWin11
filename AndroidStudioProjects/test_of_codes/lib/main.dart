@@ -206,76 +206,78 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      mainAxisSize: MainAxisSize.max,
-      children: <Widget>[
-        Container(
-          height: 175.0,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(100.0),
-              topRight: Radius.circular(100.0),
-            ),
-            gradient: LinearGradient(
-                colors: [
-                  Colors.lightBlue,
-                  Colors.green,
-                ],
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black,
-                blurRadius: 10.0,
-                offset: Offset(0.0, 1.0),
+    return SafeArea(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          Container(
+            height: 175.0,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(100.0),
+                topRight: Radius.circular(100.0),
               ),
+              gradient: LinearGradient(
+                  colors: [
+                    Colors.lightBlue,
+                    Colors.green,
+                  ],
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 10.0,
+                  offset: Offset(0.0, 1.0),
+                ),
+              ],
+            ),
+            child: const Center(
+            child: Center(
+              child: Text(
+                  "Container",
+                style: TextStyle(
+                  color: Colors.white,
+                  decoration: TextDecoration.underline,
+                  decorationColor: Colors.deepPurpleAccent,
+                  decorationStyle: TextDecorationStyle.dashed,
+                  decorationThickness: 1,
+                  fontFamily: "arial",
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30.0,
+                ),
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            ),
+          ),
+          const Padding(padding: EdgeInsets.all(10)),
+          const Divider(),
+          const Text("Column 1"),
+          const Divider(),
+          const Text("Column 1"),
+          const Divider(),
+          const Text("Column 1"),
+          const Divider(),
+          const Text("Column 1"),
+          const Divider(),
+
+          /// We add a row
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+              Text("Row 1"),
+              Text("Row 2"),
+              Text("Row 3"),
             ],
           ),
-          child: const Center(
-          child: Center(
-            child: Text(
-                "Container",
-              style: TextStyle(
-                color: Colors.white,
-                decoration: TextDecoration.underline,
-                decorationColor: Colors.deepPurpleAccent,
-                decorationStyle: TextDecorationStyle.dashed,
-                decorationThickness: 1,
-                fontFamily: "arial",
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.bold,
-                fontSize: 30.0,
-              ),
-              maxLines: 4,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-          ),
-        ),
-        const Padding(padding: EdgeInsets.all(10)),
-        const Divider(),
-        const Text("Column 1"),
-        const Divider(),
-        const Text("Column 1"),
-        const Divider(),
-        const Text("Column 1"),
-        const Divider(),
-        const Text("Column 1"),
-        const Divider(),
-
-        /// We add a row
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: <Widget>[
-            Text("Row 1"),
-            Text("Row 2"),
-            Text("Row 3"),
-          ],
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
