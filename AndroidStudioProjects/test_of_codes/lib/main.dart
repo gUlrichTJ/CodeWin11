@@ -183,14 +183,14 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
                 /// We will create the class ContainerWithBoxDecoration
-                const ContainerWithBoxDecorationWidget(),
+                ContainerWithBoxDecorationWidget(),
               ],
             ),
           ),
@@ -206,7 +206,11 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ();
+    return Column(
+      children: <Widget>[
+        Container()
+      ],
+    );
   }
 }
 
