@@ -45,7 +45,6 @@ class _HomePageState extends State<HomePage> {
   /// We will create a method that will increase the price of the object
   void _increasePrice() {
     setState(() {
-      
      price += 50.0;
     });
   }
