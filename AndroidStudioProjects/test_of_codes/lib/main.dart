@@ -227,7 +227,18 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                 blurRadius: 10.0,
                 offset: Offset(0.0, 1.0),
               ),
-            ]
+            ],
+          ),
+          child: const Center(
+            child: Text(
+                "Container",
+              style: TextStyle(
+                color: Colors.teal,
+                fontFamily: "Roboto",
+                fontStyle: FontStyle.normal,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
       ],
