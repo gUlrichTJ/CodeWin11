@@ -106,6 +106,10 @@ class _HomePageState extends State<HomePage> {
         selectedItemColor: Colors.deepOrange,
         onTap: _onItemTaped,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _increasePrice,
+        child: const Icon(Icons.speaker_rounded),
+      ),
     );
   }
 }
