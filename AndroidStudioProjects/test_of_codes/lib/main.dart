@@ -200,6 +200,17 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+// A new class
+class ContainerWithBoxDecorationWidget extends StatelessWidget {
+  const ContainerWithBoxDecorationWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ();
+  }
+}
+
+
 class BodyWidget extends StatelessWidget {
   const BodyWidget({
     super.key,
