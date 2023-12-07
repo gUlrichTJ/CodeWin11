@@ -233,10 +233,11 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
             child: Text(
                 "Container",
               style: TextStyle(
-                color: Colors.teal,
-                fontFamily: "Roboto",
+                color: Colors.white,
+                fontFamily: "arial",
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.bold,
+                fontSize: 30.0,
               ),
             ),
           ),
