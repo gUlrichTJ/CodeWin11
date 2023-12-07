@@ -209,7 +209,7 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      
+      mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         Container(
           height: 175.0,
@@ -253,6 +253,12 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
           ),
           ),
         ),
+        const Padding(padding: EdgeInsets.all(10)),
+        const Text("Column 1"),
+        const Text("Column 1"),
+        const Text("Column 1"),
+        const Divider(),
+        const Text("Column 1"),
       ],
     );
   }
