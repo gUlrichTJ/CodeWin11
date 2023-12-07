@@ -268,3 +268,10 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+Container _container(Color color_, double width_, double height_) {
+  return Container(
+    color: color_,
+    width: width_,
+    height: height_,
+  );
+}
