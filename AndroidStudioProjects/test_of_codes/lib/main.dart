@@ -188,8 +188,10 @@ class _HomePageState extends State<HomePage> {
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
-              children: <Widget>[],
-              
+              children: <Widget>[
+                /// We will create the class ContainerWithBoxDecoration
+                const ContainerWithBoxDecorationWidget(),
+              ],
             ),
           ),
         ),
