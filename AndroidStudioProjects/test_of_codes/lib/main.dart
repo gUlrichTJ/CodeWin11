@@ -210,9 +210,10 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
       children: <Widget>[
         Container(
           height: 175.0,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(radius)
+              bottomLeft: Radius.circular(100.0),
+              bottomRight: Radius.circular(10.0),
             ),
           ),
         ),
