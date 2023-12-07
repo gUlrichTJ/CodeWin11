@@ -263,6 +263,18 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
         const Divider(),
         const Text("Column 1"),
         const Divider(),
+
+        /// We add a row
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            Text("Row 1"),
+            Text("Row 2"),
+            Text("Row 3"),
+          ],
+        ),
       ],
     );
   }
