@@ -173,8 +173,14 @@ class _HomePageState extends State<HomePage> {
         /// Bottom in the appBar
         bottom: PreferredSize(
           child: Container(
-            color: Colors.lightGreen,
+            color: Colors.lightGreen.shade100,
+            height: 75.0,
+            width: double.infinity,
+            child: const Center(
+              child: Text("Bottom"),
+            ),
           ),
+          preferredSize: Size.fromHeight(55.0),
         ),
       ),
       body: SafeArea(
