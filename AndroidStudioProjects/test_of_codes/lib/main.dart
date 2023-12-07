@@ -218,7 +218,7 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   children: <Widget>[
                     CircleAvatar(
-                      backgroundColor: Colors.blue.shade100,
+                      backgroundColor: Colors.blue.shade700,
                       radius: 100.0,
                       child: Stack(
                         children: <Widget>[
