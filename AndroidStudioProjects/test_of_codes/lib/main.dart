@@ -217,8 +217,8 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
             ),
             gradient: LinearGradient(
                 colors: [
-                  Colors.white,
-                  Colors.lime,
+                  Colors.white38,
+                  Colors.lightGreen,
                 ],
             ),
           ),
