@@ -213,7 +213,8 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(100.0),
-              bottomRight: Radius.circular(10.0),
+              bottomRight: Radius.circular(-10.0),
+              topRight: Radius.circular(100.0),
             ),
             gradient: LinearGradient(
                 colors: [
