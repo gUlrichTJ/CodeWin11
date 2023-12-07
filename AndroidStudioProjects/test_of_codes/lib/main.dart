@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
                 Row(
@@ -157,7 +157,8 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.yellow,
                       width: 40.0,
                       height: 40.0,
-                    )
+                    ),
+                    Padding(padding: const EdgeInsets.all(16.0)),
                   ],
                 ),
               ],
