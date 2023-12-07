@@ -215,6 +215,12 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
               bottomLeft: Radius.circular(100.0),
               bottomRight: Radius.circular(10.0),
             ),
+            gradient: LinearGradient(
+                colors: [
+                  Colors.white,
+                  Colors.lime,
+                ],
+            ),
           ),
         ),
       ],
