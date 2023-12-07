@@ -231,29 +231,12 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.cyan.shade100,
                             width: 80.0,
                             height: 80.0,
-                          ),Container(
-                            color: Colors.cyan.shade200,
-                            width: 70.0,
-                            height: 70.0,
-                          ),Container(
-                            color: Colors.cyan.shade300,
-                            width: 60.0,
-                            height: 60.0,
-                          ),Container(
-                            color: Colors.cyan.shade400,
-                            width: 50.0,
-                            height: 50.0,
                           ),
-                          Container(
-                            color: Colors.cyan.shade800,
-                            width: 40.0,
-                            height: 40.0,
-                          ),
-                          Container(
-                            color: Colors.cyan.shade900,
-                            width: 30.0,
-                            height: 30.0,
-                          )
+                          _container(Colors.cyan.shade200, 70.0, 70.0),
+                          _container(Colors.cyan.shade300, 60.0, 60.0),
+                          _container(Colors.cyan.shade400, 50.0, 50.0),
+                          _container(Colors.cyan.shade800, 40.0, 40.0),
+                          _container(Colors.cyan.shade900, 30.0, 30.0),
                         ],
                       ),
                     ),
