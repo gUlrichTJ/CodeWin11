@@ -147,7 +147,22 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
-          
+          child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Container(
+                      color: Colors.yellow,
+                      width: 40.0,
+                      height: 40.0,
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
