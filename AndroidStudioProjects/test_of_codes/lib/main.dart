@@ -165,8 +165,8 @@ class _HomePageState extends State<HomePage> {
         flexibleSpace: const SafeArea(
           child: Icon(
             Icons.photo_camera,
-            size: 75.0,
-            color: Colors.white70,
+            size: 55.0,
+            color: Colors.white38,
           ),
         ),
       ),
