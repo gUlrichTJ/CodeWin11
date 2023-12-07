@@ -191,6 +191,11 @@ class _HomePageState extends State<HomePage> {
                           width: 40.0,
                           height: 40.0,
                         ),
+                        const Divider(
+                          height: 4.0,
+                          color: Colors.white,
+                          thickness: 5.0,
+                        ),
                         const Padding(padding: EdgeInsets.all(16.0)),
                         // We add another container
                         Container(
@@ -205,11 +210,6 @@ class _HomePageState extends State<HomePage> {
                           height: 40.0,
                         ),
                         const Padding(padding: EdgeInsets.all(16.0)),
-                        const Divider(
-                          height: 4.0,
-                          color: Colors.black38,
-                        ),
-
                       ],
                     ),
                   ],
