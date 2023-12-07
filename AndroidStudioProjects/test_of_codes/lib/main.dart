@@ -186,6 +186,7 @@ class _HomePageState extends State<HomePage> {
                   children: <Widget>[
                     Column(
                       children: <Widget>[
+                        _container(Colors.lime.shade200, 60.0, 60.0),
                         Container(
                           color: Colors.lime.shade200,
                           width: 60.0,
@@ -193,17 +194,9 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const Padding(padding: EdgeInsets.all(16.0)),
                         // We add another container
-                        Container(
-                          color: Colors.lime.shade900,
-                          width: 40.0,
-                          height: 40.0,
-                        ),
+                        _container(Colors.lime.shade900, 40.0, 40.0),
                         const Padding(padding: EdgeInsets.all(16.0)),
-                        Container(
-                          color: Colors.amber.shade700,
-                          width: 30.0,
-                          height: 30.0,
-                        ),
+                        _container(Colors.amber.shade700, 30.0, 30.0),
                         const Padding(padding: EdgeInsets.all(16.0)),
                       ],
                     ),
@@ -222,11 +215,7 @@ class _HomePageState extends State<HomePage> {
                       radius: 100.0,
                       child: Stack(
                         children: <Widget>[
-                          Container(
-                            color: Colors.cyan.shade50,
-                            width: 100.0,
-                            height: 100.0,
-                          ),
+                          _container(Colors.cyan.shade50, 100.0, 100.0),
                           _container(Colors.cyan.shade100, 80.0, 80.0),
                           _container(Colors.cyan.shade300, 70.0, 70.0),
                           _container(Colors.cyan.shade500, 60.0, 60.0),
