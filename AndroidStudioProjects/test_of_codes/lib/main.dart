@@ -153,18 +153,10 @@ class _HomePageState extends State<HomePage> {
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    Container(
-                      color: Colors.yellow,
-                      width: 40.0,
-                      height: 40.0,
-                    ),
+                    _container(Colors.yellow.shade900, 40.0, 40.0),
                     const Padding(padding: EdgeInsets.all(16.0)),
                     Expanded(
-                      child: Container(
-                        color: Colors.amber,
-                        width: 40.0,
-                        height: 40.0,
-                      ),
+                      child: _container(Colors.yellow.shade700, 40.0, 40.0),
                     ),
                     const Padding(padding: EdgeInsets.all(16.0),),
                     _container(Colors.brown, 40.0, 40.0),
