@@ -162,9 +162,11 @@ class _HomePageState extends State<HomePage> {
             icon: const Icon(Icons.more_vert),
           )
         ],
-        flexibleSpace: SafeArea(
+        flexibleSpace: const SafeArea(
           child: Icon(
-            
+            Icons.photo_camera,
+            size: 75.0,
+            color: Colors.white70,
           ),
         ),
       ),
