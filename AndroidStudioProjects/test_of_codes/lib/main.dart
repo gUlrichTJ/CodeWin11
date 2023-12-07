@@ -191,6 +191,20 @@ class _HomePageState extends State<HomePage> {
                           width: 40.0,
                           height: 40.0,
                         ),
+                        const Padding(padding: EdgeInsets.all(16.0)),
+                        // We add another container
+                        Container(
+                          color: Colors.lime,
+                          width: 40.0,
+                          height: 40.0,
+                        ),
+                        const Padding(padding: EdgeInsets.all(16.0)),
+                        Container(
+                          color: Colors.lime,
+                          width: 40.0,
+                          height: 40.0,
+                        ),
+                        const Padding(padding: EdgeInsets.all(16.0)),
                       ],
                     ),
                   ],
