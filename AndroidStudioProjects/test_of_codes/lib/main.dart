@@ -30,6 +30,8 @@ class _HomePageState extends State<HomePage> {
 
   int _selectedIndex = 0;
 
+  double price = 0.0;
+
   /// The things that will appear in the code
   static const List<Widget> _widgetOption = <Widget>[
     Text("God is great"),
@@ -39,6 +41,13 @@ class _HomePageState extends State<HomePage> {
     Text("We're His offsprings"),
     Text("God do we love"),
   ];
+
+  /// We will create a method that will increase the price of the object
+  void _increasePrice() {
+    setState(() {
+      price += 50.0;
+    });
+  }
 
   ///
   void _onItemTaped(int index) {
