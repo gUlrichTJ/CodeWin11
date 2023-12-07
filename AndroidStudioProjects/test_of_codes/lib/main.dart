@@ -214,6 +214,14 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   thickness: 5.0,
                 ),
+                const Padding(padding: EdgeInsets.all(16.0)),
+                Row(
+                  children: <Widget>[
+                    CircleAvatar(
+                      backgroundColor: Colors.blue.shade100,
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
