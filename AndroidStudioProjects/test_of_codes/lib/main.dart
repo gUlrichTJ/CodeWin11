@@ -221,6 +221,12 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                   Colors.lightGreen,
                 ],
             ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.white,
+                blurRadius: 10.0,
+              ),
+            ]
           ),
         ),
       ],
