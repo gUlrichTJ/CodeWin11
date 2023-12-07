@@ -162,6 +162,11 @@ class _HomePageState extends State<HomePage> {
             icon: const Icon(Icons.more_vert),
           )
         ],
+        flexibleSpace: SafeArea(
+          child: Icon(
+            
+          ),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
