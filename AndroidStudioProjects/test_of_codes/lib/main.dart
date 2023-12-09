@@ -121,6 +121,9 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  // Quand on tourne vers Lui les regards, on est rayonnant de
+  // joie et le visage ne se couvre pas de honte.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
