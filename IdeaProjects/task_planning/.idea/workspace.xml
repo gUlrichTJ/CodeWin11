@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76d1b893-35b0-41fd-b944-043c7217ae79" name="Changes" comment="" />
+    <list default="true" id="76d1b893-35b0-41fd-b944-043c7217ae79" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/frames/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frames/Authentication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,12 +78,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
-          <line>99</line>
+          <line>100</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
