@@ -69,6 +69,10 @@ public class Authentication extends JFrame {
       // We add the textField to the panel
       usernameAndField.add(usernameField);
 
+      // TODO : The panel of the username and it's textfield
+      JPanel passwordAndField = new JPanel(
+            new FlowLayout(FlowLayout.CENTER)
+      );
       /// TODO: the password
       JLabel passwordLabel = new JLabel();
       CustomLabel.setLabel(
@@ -78,11 +82,18 @@ public class Authentication extends JFrame {
             18,
             Color.white
             );
-      panel.add(passwordLabel);
+      passwordAndField.add(passwordLabel);
 
       passwordField = new JPasswordField();
 
-      panel.add(passwordField);
+      passwordAndField.add(passwordField);
+
+      JPanel usernameAndPassword = new JPanel();
+      usernameAndPassword.add(usernameAndField);
+      usernameAndPassword.add(passwordAndField);
+
+      // TODO: We add the username and password to the principal panel
+      panel.add(usernameAndPassword, FlowLayout.CENTER);
       return panel;
    }
 
