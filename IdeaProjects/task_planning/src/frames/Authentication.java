@@ -5,6 +5,7 @@ import labels.CustomLabel;
 
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.border.Border;
 
 public class Authentication extends JFrame implements JTotal {
 
