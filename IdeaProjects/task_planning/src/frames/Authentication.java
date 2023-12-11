@@ -86,7 +86,7 @@ public class Authentication extends JFrame {
       passwordAndField.add(passwordLabel);
 
       passwordField = new JPasswordField();
-      passwordAndField.setPreferredSize(new Dimension(getWidth(), getHeight()));
+      passwordAndField.setPreferredSize(new Dimension(300, 30));
 
       passwordAndField.add(passwordField);
 
