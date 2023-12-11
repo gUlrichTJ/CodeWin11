@@ -70,7 +70,14 @@ public class Authentication extends JFrame {
       usernameAndField.add(usernameField);
 
       /// TODO: the password
-      JLabel passwordLabel = new JLabel("Password");
+      JLabel passwordLabel = new JLabel();
+      CustomLabel.setLabel(
+            passwordLabel,
+            "Password",
+            "Serif",
+            18,
+            Color.white
+            );
       panel.add(passwordLabel);
 
       passwordField = new JPasswordField();
