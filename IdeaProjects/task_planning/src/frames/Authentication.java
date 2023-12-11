@@ -44,6 +44,7 @@ public class Authentication extends JFrame {
    /// Method to send the login
    JPanel login() {
       JPanel panel = new JPanel();
+      panel.setLayout(new FlowLayout());
 
       // TODO : The panel of the username and it's textfield
       JPanel usernameAndField = new JPanel(
@@ -57,7 +58,7 @@ public class Authentication extends JFrame {
             "Username",
             "Comic Sans MS",
             18,
-            Color.white
+            Color.black
       );
 
       // We add the label of the username to their panel
@@ -80,7 +81,7 @@ public class Authentication extends JFrame {
             "Password",
             "Serif",
             18,
-            Color.white
+            Color.black
             );
       passwordAndField.add(passwordLabel);
 
@@ -93,7 +94,7 @@ public class Authentication extends JFrame {
       usernameAndPassword.add(passwordAndField);
 
       // TODO: We add the username and password to the principal panel
-      panel.add(usernameAndPassword, FlowLayout.CENTER);
+      panel.add(usernameAndPassword);
       return panel;
    }
 
