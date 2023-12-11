@@ -27,6 +27,8 @@ public class Authentication extends JFrame {
       // TODO the layout of the panel
       mainPanel.setLayout(new BorderLayout());
 
+      mainPanel.setBackground(new Color(200, 200, 20));
+
       /// We add the panel of the north (borderLayout)
       mainPanel.add(highAuthentication(), BorderLayout.NORTH);
 
