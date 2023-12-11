@@ -27,7 +27,7 @@ public class Authentication extends JFrame {
       // TODO the layout of the panel
       mainPanel.setLayout(new BorderLayout());
 
-      mainPanel.setBackground(new Color(200, 200, 20));
+      mainPanel.setBackground(new Color(163, 159, 159));
 
       /// We add the panel of the north (borderLayout)
       mainPanel.add(highAuthentication(), BorderLayout.NORTH);
@@ -47,11 +47,15 @@ public class Authentication extends JFrame {
    JPanel login() {
       JPanel panel = new JPanel();
       panel.setLayout(new FlowLayout(FlowLayout.CENTER));
+      ////////////////////////////////////////////////////
+      panel.setBackground(new Color(163, 159, 159));
 
       // TODO : The panel of the username and it's textfield
       JPanel usernameAndField = new JPanel(
             new GridLayout(1, 2, 10, 10)
       );
+      usernameAndField.setBackground(new Color(163, 159, 159));
+
       /// TODO: ********* THE USERNAME *********
       // TODO: The label of the username
       JLabel usernameLabel = new JLabel();
@@ -76,6 +80,8 @@ public class Authentication extends JFrame {
       JPanel passwordAndField = new JPanel(
             new GridLayout(1, 2, 10, 10)
       );
+      passwordAndField.setBackground(new Color(163, 159, 159));
+
       /// TODO: the password
       JLabel passwordLabel = new JLabel();
       CustomLabel.setLabel(
@@ -96,6 +102,8 @@ public class Authentication extends JFrame {
       JPanel usernameAndPassword = new JPanel(
             new GridLayout(2, 1, 50, 50)
       );
+      usernameAndPassword.setBackground(new Color(163, 159, 159));
+
       usernameAndPassword.add(usernameAndField);
       usernameAndPassword.add(passwordAndField);
 
@@ -106,6 +114,7 @@ public class Authentication extends JFrame {
 
    JPanel connect() {
       JPanel panel = new JPanel();
+      panel.setBackground(new Color(163, 159, 159));
 
       // The button login
       JButton login = new JButton("login".toUpperCase());
