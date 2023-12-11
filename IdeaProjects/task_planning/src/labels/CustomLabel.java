@@ -11,6 +11,11 @@ public class CustomLabel extends JLabel {
 
    // Custom constructor
    public CustomLabel() {
+      super();
+      label.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+   }
+
+   public void setLabel(Label label) {
       label.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
    }
 }
