@@ -118,13 +118,14 @@ public class Authentication extends JFrame {
 
       // The button login
       JButton login = new JButton("login".toUpperCase());
-      login.setBackground(new Color(30, 100, 156));
-      login.setFont(new Font("Serif", Font.BOLD, 13));
+      login.setBackground(new Color(30, 150, 200));
+      login.setFont(new Font("Comic Sans MS", Font.BOLD, 23));
+      login.setForeground(Color.WHITE);
 
       // The button login
       JButton cancel = new JButton("cancel".toUpperCase());
       cancel.setBackground(new Color(201, 14, 14, 253));
-      cancel.setFont(new Font("Serif", Font.BOLD, 13));
+      cancel.setFont(new Font("Comic Sans MS", Font.BOLD, 23));
       cancel.setForeground(Color.WHITE);
 
       // TODO: Action to the login button
