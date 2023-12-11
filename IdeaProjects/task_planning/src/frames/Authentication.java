@@ -135,7 +135,7 @@ public class Authentication extends JFrame implements JTotal {
       cancel.setBackground(new Color(201, 14, 14, 253));
       cancel.setFont(new Font("Comic Sans MS", Font.BOLD, totalSize + 3));
       cancel.setForeground(Color.WHITE);
-      cancel.setBo
+      cancel.setBorder(new Rounde);
 
       // TODO: Action to the login button
       login.addActionListener(e -> {
