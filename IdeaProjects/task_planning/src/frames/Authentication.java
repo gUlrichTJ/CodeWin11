@@ -45,7 +45,11 @@ public class Authentication extends JFrame {
    JPanel login() {
       JPanel panel = new JPanel();
 
-      /// TODO: ********* the username *********
+      // TODO : The panel of the username and it's textfield
+      JPanel usernameAndField = new JPanel(
+            new FlowLayout(FlowLayout.CENTER)
+      );
+      /// TODO: ********* THE USERNAME *********
       // TODO: The label of the username
       JLabel usernameLabel = new JLabel();
       CustomLabel.setLabel(
@@ -55,7 +59,10 @@ public class Authentication extends JFrame {
             18,
             Color.white
       );
-      setOurLabel(usernameLabel);
+
+      // We add the label of the username to their panel
+      // TODO : After, we will set it to left or right
+      usernameAndField.add(usernameLabel);
       // We add the labels to the panel
       panel.add(usernameLabel);
 
@@ -140,9 +147,4 @@ public class Authentication extends JFrame {
       return panel;
    }
 
-   /// TODO: Method to change the font of the label
-   public void setOurLabel(JLabel label) {
-      label.setForeground(Color.white);
-      label.setFont(new Font("Comic Sans MS", Font.BOLD, 17));
-   }
 }
