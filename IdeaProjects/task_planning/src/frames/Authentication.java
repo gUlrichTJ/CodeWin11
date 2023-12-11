@@ -117,6 +117,8 @@ public class Authentication extends JFrame {
       JPanel panel = new JPanel();
       /// Characteristics of the panel of North
       panel.setLayout(new BorderLayout());
+      panel.setPreferredSize(new Dimension(100, 30));
+      panel.setBackground(new Color(30, 34, 70));
 
       /// The label of the auth
       JLabel labelAuthentication = new JLabel("Authentication");
