@@ -130,8 +130,7 @@ public class Authentication extends JFrame {
    }
 
    /// TODO: Method to change the font of the label
-   public void setOurLabel() {
-      JLabel label = new JLabel();
+   public void setOurLabel(JLabel label) {
       label.setForeground(Color.white);
       label.setFont(new Font("Comic Sans MS", Font.BOLD, 17));
    }
