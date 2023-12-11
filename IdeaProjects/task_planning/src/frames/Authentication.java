@@ -4,7 +4,6 @@ import interfaces.JTotal;
 import labels.CustomLabel;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import java.awt.*;
 
 public class Authentication extends JFrame implements JTotal {
@@ -99,7 +98,7 @@ public class Authentication extends JFrame implements JTotal {
       passwordAndField.add(passwordLabel);
 
       passwordField = new JPasswordField();
-      // TODO : Size of the passwordfield
+      // TODO : Size of the password field
       passwordField.setFont(new Font("Arial", Font.PLAIN, totalSize));
 
       passwordField.setBorder(BorderFactory.createLineBorder(Color.blue));
@@ -188,5 +187,4 @@ public class Authentication extends JFrame implements JTotal {
       panel.add(labelAuthentication, BorderLayout.WEST);
       return panel;
    }
-
 }
