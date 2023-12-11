@@ -1,12 +1,13 @@
 package frames;
 
+import interfaces.JTotal;
 import labels.CustomLabel;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import java.awt.*;
 
-public class Authentication extends JFrame {
+public class Authentication extends JFrame implements JTotal {
 
    // TODO: We create a Home's object
    Home home;
@@ -53,7 +54,7 @@ public class Authentication extends JFrame {
 
       // TODO : The panel of the username and it's textfield
       JPanel usernameAndField = new JPanel(
-            new GridLayout(1, 2, 10, 10)
+            new GridLayout(1, 2, totalSize / 2, totalSize / 2)
       );
       usernameAndField.setBackground(new Color(163, 159, 159));
 
@@ -64,7 +65,7 @@ public class Authentication extends JFrame {
             usernameLabel,
             "Username",
             "Comic Sans MS",
-            22,
+            totalSize + 2,
             Color.black
       );
 
@@ -79,7 +80,7 @@ public class Authentication extends JFrame {
 
       // TODO : The panel of the username and it's textfield
       JPanel passwordAndField = new JPanel(
-            new GridLayout(1, 2, 10, 10)
+            new GridLayout(1, 2, totalSize / 2, totalSize / 2)
       );
       passwordAndField.setBackground(new Color(163, 159, 159));
 
@@ -102,7 +103,7 @@ public class Authentication extends JFrame {
 
       // TODO: The panel for the username and the password
       JPanel usernameAndPassword = new JPanel(
-            new GridLayout(2, 1, 50, 50)
+            new GridLayout(2, 1, totalSize * 2, totalSize * 2)
       );
       usernameAndPassword.setBackground(new Color(163, 159, 159));
 
@@ -121,13 +122,13 @@ public class Authentication extends JFrame {
       // The button login
       JButton login = new JButton("login".toUpperCase());
       login.setBackground(new Color(40, 170, 220));
-      login.setFont(new Font("Comic Sans MS", Font.BOLD, 23));
+      login.setFont(new Font("Comic Sans MS", Font.BOLD, totalSize + 3));
       login.setForeground(Color.WHITE);
 
       // The button login
       JButton cancel = new JButton("cancel".toUpperCase());
       cancel.setBackground(new Color(201, 14, 14, 253));
-      cancel.setFont(new Font("Comic Sans MS", Font.BOLD, 23));
+      cancel.setFont(new Font("Comic Sans MS", Font.BOLD, totalSize + 3));
       cancel.setForeground(Color.WHITE);
 
       // TODO: Action to the login button
@@ -174,7 +175,7 @@ public class Authentication extends JFrame {
 
       /// The label of the auth
       JLabel labelAuthentication = new JLabel("Authentication".toUpperCase());
-      labelAuthentication.setFont(new Font("Arial", Font.BOLD, 26));
+      labelAuthentication.setFont(new Font("Arial", Font.BOLD, totalSize + 6));
       labelAuthentication.setForeground(Color.white);
 
       /// We add the label to the panel
