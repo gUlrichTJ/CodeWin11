@@ -25,6 +25,9 @@ public class Authentication extends JFrame {
       // TODO the layout of the panel
       mainPanel.setLayout(new BorderLayout());
 
+      /// We add the panel of the north (borderLayout)
+      mainPanel.add(highAuthentication(), BorderLayout.NORTH);
+
       mainPanel.add(lefAuthentication(), BorderLayout.WEST);
 
       mainPanel.add(login(), BorderLayout.CENTER);
@@ -104,8 +107,24 @@ public class Authentication extends JFrame {
       JPanel panel = new JPanel();
       panel.setLayout(new BorderLayout());
       panel.setBackground(Color.darkGray);
+      System.out.println();
 
       panel.setPreferredSize(new Dimension(100, 100));
+      return panel;
+   }
+   /// TODO: Le border layout de haut
+   JPanel highAuthentication() {
+      JPanel panel = new JPanel();
+      /// Characteristics of the panel of North
+      panel.setLayout(new BorderLayout());
+
+      /// The label of the auth
+      JLabel labelAuthentication = new JLabel("Authentication");
+      labelAuthentication.setFont(new Font("Arial", Font.BOLD, 16));
+      labelAuthentication.setForeground(Color.black);
+
+      /// We add the label to the panel
+      panel.add(labelAuthentication, BorderLayout.WEST);
       return panel;
    }
 }
