@@ -118,7 +118,7 @@ public class Authentication extends JFrame {
 
       // The button login
       JButton login = new JButton("login".toUpperCase());
-      login.setBackground(new Color(30, 150, 200));
+      login.setBackground(new Color(40, 170, 220));
       login.setFont(new Font("Comic Sans MS", Font.BOLD, 23));
       login.setForeground(Color.WHITE);
 
@@ -171,8 +171,8 @@ public class Authentication extends JFrame {
       panel.setBackground(new Color(30, 100, 200));
 
       /// The label of the auth
-      JLabel labelAuthentication = new JLabel("Authentication");
-      labelAuthentication.setFont(new Font("Arial", Font.BOLD, 16));
+      JLabel labelAuthentication = new JLabel("Authentication".toUpperCase());
+      labelAuthentication.setFont(new Font("Arial", Font.BOLD, 26));
       labelAuthentication.setForeground(Color.white);
 
       /// We add the label to the panel
