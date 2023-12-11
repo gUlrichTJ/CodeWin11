@@ -57,7 +57,7 @@ public class Authentication extends JFrame {
             usernameLabel,
             "Username",
             "Comic Sans MS",
-            18,
+            22,
             Color.black
       );
 
@@ -79,14 +79,14 @@ public class Authentication extends JFrame {
       CustomLabel.setLabel(
             passwordLabel,
             "Password",
-            "Serif",
-            18,
+            "Comic Sans MS",
+            22,
             Color.black
             );
       passwordAndField.add(passwordLabel);
 
       passwordField = new JPasswordField();
-      passwordAndField.setPreferredSize(new Dimension(500, 30));
+      passwordAndField.setPreferredSize(new Dimension((int) (getWidth() * 0.7), 30));
 
       passwordAndField.add(passwordField);
 
