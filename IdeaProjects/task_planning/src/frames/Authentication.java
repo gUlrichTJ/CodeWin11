@@ -45,6 +45,7 @@ public class Authentication extends JFrame {
 
       /// TODO: the username
       JLabel usernameLabel = new JLabel("Username");
+      setOurLabel(usernameLabel);
       // We add the labels to the panel
       panel.add(usernameLabel);
 
