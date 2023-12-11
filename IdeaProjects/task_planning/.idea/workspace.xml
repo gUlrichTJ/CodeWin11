@@ -83,7 +83,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/frames/Authentication.java</url>
-          <line>97</line>
+          <line>100</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
