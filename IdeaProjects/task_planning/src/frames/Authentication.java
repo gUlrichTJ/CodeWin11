@@ -1,5 +1,7 @@
 package frames;
 
+import labels.CustomLabel;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -44,6 +46,7 @@ public class Authentication extends JFrame {
       JPanel panel = new JPanel();
 
       /// TODO: the username
+      CustomLabel userCustomNameLabel;
       JLabel usernameLabel = new JLabel("Username");
       setOurLabel(usernameLabel);
       // We add the labels to the panel
