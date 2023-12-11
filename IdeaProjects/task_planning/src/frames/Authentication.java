@@ -95,7 +95,7 @@ public class Authentication extends JFrame {
       passwordAndField.add(passwordLabel);
 
       passwordField = new JPasswordField();
-      passwordField.setBorder(BorderFactory.createLineBorder(Color.blue));
+      passwordField.setBorder(BorderFactory.createEmptyBorder(10, 30, 20, 30));
       passwordAndField.setPreferredSize(new Dimension((int) (getWidth() * 0.7), 30));
 
       passwordAndField.add(passwordField);
