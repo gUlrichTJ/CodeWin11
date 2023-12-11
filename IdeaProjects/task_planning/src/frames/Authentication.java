@@ -51,7 +51,8 @@ public class Authentication extends JFrame {
             usernameLabel,
             "Username",
             "Comic Sans MS",
-            18
+            18,
+            Color.white
       );
       setOurLabel(usernameLabel);
       // We add the labels to the panel

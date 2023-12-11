@@ -19,8 +19,10 @@ public class CustomLabel extends JLabel {
          JLabel label,
          String text,
          String fontFamily,
-         int labelSize) {
+         int labelSize,
+         Color color) {
       label.setText(text);
       label.setFont(new Font(fontFamily, Font.BOLD, labelSize));
+      label.setForeground(color);
    }
 }
