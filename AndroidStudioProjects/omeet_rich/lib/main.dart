@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:omeet/Pages/FirstPage.dart';
-import 'package:omeet/Utils/GeneralUtils.dart';
+import 'package:omeet_rich/Pages/FirstPage.dart';
+import 'package:omeet_rich/Utils/GeneralUtils.dart';
 
 import 'Pages/HomePage.dart';
 
