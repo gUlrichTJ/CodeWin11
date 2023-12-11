@@ -15,7 +15,8 @@ public class CustomLabel extends JLabel {
       label.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
    }
 
-   public static void setLabel(JLabel label, String text, int labelSize) {
-      label.setFont(new Font("Comic Sans MS", Font.BOLD, labelSize));
+   public static void setLabel(JLabel label, String text, String fontFamily, int labelSize) {
+      label.setText(text);
+      label.setFont(new Font(fontFamily, Font.BOLD, labelSize));
    }
 }
