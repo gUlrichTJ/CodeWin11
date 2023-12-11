@@ -3,6 +3,7 @@ package frames;
 import labels.CustomLabel;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import java.awt.*;
 
 public class Authentication extends JFrame {
@@ -94,6 +95,7 @@ public class Authentication extends JFrame {
       passwordAndField.add(passwordLabel);
 
       passwordField = new JPasswordField();
+      passwordAndField.setBorder(new BevelBorder(10, Color.black, Color.BLUE));
       passwordAndField.setPreferredSize(new Dimension((int) (getWidth() * 0.7), 30));
 
       passwordAndField.add(passwordField);
