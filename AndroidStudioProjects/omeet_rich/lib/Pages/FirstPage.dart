@@ -1,13 +1,11 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:omeet/Datas_model/GuideInfo.dart';
-import 'package:omeet/Resources/App_Colors.dart';
-import 'package:omeet/Utils/GeneralUtils.dart';
-import 'package:omeet/View_model/Presentation_Model.dart';
-import 'package:omeet/View_model/Registration_Model.dart';
-import 'package:omeet/View_model/Usage_Condition_Model.dart';
+import 'package:omeet_rich/Datas_model/GuideInfo.dart';
+import 'package:omeet_rich/Resources/App_Colors.dart';
+import 'package:omeet_rich/Utils/GeneralUtils.dart';
+import 'package:omeet_rich/View_model/Presentation_Model.dart';
+import 'package:omeet_rich/View_model/Registration_Model.dart';
+import 'package:omeet_rich/View_model/Usage_Condition_Model.dart';
 
 class FirstPage extends StatefulWidget {
 

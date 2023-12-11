@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:omeet/Datas_model/GuideInfo.dart';
-import 'package:omeet/Resources/App_Colors.dart';
+import 'package:omeet_rich/Datas_model/GuideInfo.dart';
+import 'package:omeet_rich/Resources/App_Colors.dart';
 
 class UsageCondition extends StatefulWidget {
 

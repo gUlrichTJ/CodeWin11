@@ -2,8 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:omeet/Resources/App_Colors.dart';
-import 'package:omeet/Utils/GeneralUtils.dart';
+import 'package:omeet_rich/Resources/App_Colors.dart';
+import 'package:omeet_rich/Utils/GeneralUtils.dart';
 
 class HomePage extends StatefulWidget {
 
