@@ -63,13 +63,11 @@ public class Authentication extends JFrame {
       // We add the label of the username to their panel
       // TODO : After, we will set it to left or right
       usernameAndField.add(usernameLabel);
-      // We add the labels to the panel
-      panel.add(usernameLabel);
 
       usernameField = new JTextField();
 
       // We add the textField to the panel
-      panel.add(usernameField);
+      usernameAndField.add(usernameField);
 
       /// TODO: the password
       JLabel passwordLabel = new JLabel("Password");
