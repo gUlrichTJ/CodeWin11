@@ -48,7 +48,7 @@ public class Authentication extends JFrame {
 
       // TODO : The panel of the username and it's textfield
       JPanel usernameAndField = new JPanel(
-            new FlowLayout(FlowLayout.CENTER)
+            new GridLayout(1, 2, 10, 10)
       );
       /// TODO: ********* THE USERNAME *********
       // TODO: The label of the username
@@ -72,7 +72,7 @@ public class Authentication extends JFrame {
 
       // TODO : The panel of the username and it's textfield
       JPanel passwordAndField = new JPanel(
-            new FlowLayout(FlowLayout.CENTER)
+            new GridLayout(1, 2, 10, 10)
       );
       /// TODO: the password
       JLabel passwordLabel = new JLabel();
