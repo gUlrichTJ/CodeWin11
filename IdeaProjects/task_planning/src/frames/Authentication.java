@@ -39,7 +39,7 @@ public class Authentication extends JFrame {
    /// Method to send the login
    JPanel login() {
       JPanel panel = new JPanel();
-      panel.setLayout(new GridLayout(4, 1, 10, 10));
+      panel.setLayout(new GridLayout(2, 2, 10, 10));
 
       /// TODO: the username
       JLabel usernameLabel = new JLabel("Username");
