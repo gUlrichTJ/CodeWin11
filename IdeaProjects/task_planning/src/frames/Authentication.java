@@ -44,7 +44,7 @@ public class Authentication extends JFrame {
    /// Method to send the login
    JPanel login() {
       JPanel panel = new JPanel();
-      panel.setLayout(new FlowLayout());
+      panel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
       // TODO : The panel of the username and it's textfield
       JPanel usernameAndField = new JPanel(
