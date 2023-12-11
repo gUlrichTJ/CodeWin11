@@ -140,7 +140,7 @@ public class Authentication extends JFrame implements JTotal {
       Border roundedBorder = new Border() {
          @Override
          public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
-            
+
          }
 
          @Override
@@ -152,8 +152,7 @@ public class Authentication extends JFrame implements JTotal {
          public boolean isBorderOpaque() {
             return false;
          }
-      }
-      cancel.
+      };
 
       // TODO: Action to the login button
       login.addActionListener(e -> {
