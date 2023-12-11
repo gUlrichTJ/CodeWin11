@@ -123,7 +123,7 @@ public class Authentication extends JFrame {
 
       // The button login
       JButton cancel = new JButton("cancel".toUpperCase());
-      cancel.setBackground(Color.red);
+      cancel.setBackground(new Color(187, 25, 25));
       cancel.setFont(new Font("Serif", Font.BOLD, 13));
       cancel.setForeground(Color.WHITE);
 
