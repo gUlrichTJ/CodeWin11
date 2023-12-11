@@ -89,7 +89,10 @@ public class Authentication extends JFrame {
 
       passwordAndField.add(passwordField);
 
-      JPanel usernameAndPassword = new JPanel();
+      // TODO: The panel for the username and the password
+      JPanel usernameAndPassword = new JPanel(
+            new GridLayout(2, 1, 50, 50)
+      );
       usernameAndPassword.add(usernameAndField);
       usernameAndPassword.add(passwordAndField);
 
