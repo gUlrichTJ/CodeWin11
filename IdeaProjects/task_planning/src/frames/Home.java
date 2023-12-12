@@ -29,7 +29,8 @@ public class Home extends JFrame {
       JPanel northHome2 = new JPanel(new BorderLayout());
 
       // We create another panel that will have a flowlayout like
-      
+      // default layout
+      JPanel northHome3 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 
       return northHome2;
    };
