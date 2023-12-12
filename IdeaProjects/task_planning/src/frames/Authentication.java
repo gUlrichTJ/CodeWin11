@@ -142,7 +142,7 @@ public class Authentication extends JFrame implements JTotal {
 
       // TODO: The code of stackoverflow
       AbstractBorder borderLeft = new TextBubbleBorder(
-            Color.black, 2, 0, 16
+            Color.black, 2, 10, 6
       );
       cancel.setBorder(borderLeft);
       Border roundedBorder = new Border() {
