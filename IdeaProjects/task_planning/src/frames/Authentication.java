@@ -137,7 +137,7 @@ public class Authentication extends JFrame implements JTotal {
       cancel.setBackground(new Color(201, 14, 14, 253));
       cancel.setFont(new Font("Comic Sans MS", Font.BOLD, totalSize + 3));
       cancel.setForeground(Color.WHITE);
-      cancel.setBorder(new RoundedBorder(10));
+      // cancel.setBorder(new RoundedBorder(10));
       Border roundedBorder = new Border() {
          @Override
          public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
