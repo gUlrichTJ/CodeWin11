@@ -31,7 +31,6 @@ public class Authentication extends JFrame implements JTotal {
       setResizable(false);
       setLayout(new BorderLayout());
 
-
       // TODO the layout of the panel
       mainPanel.setLayout(new BorderLayout());
 
@@ -199,16 +198,6 @@ public class Authentication extends JFrame implements JTotal {
       return panel;
    }
 
-   // TODO: We'll try to put something at left to see its behaviour
-   private JPanel lefAuthentication() {
-      JPanel panel = new JPanel();
-      panel.setLayout(new BorderLayout());
-      panel.setBackground(Color.darkGray);
-      System.out.println();
-
-      panel.setPreferredSize(new Dimension(100, 100));
-      return panel;
-   }
    /// TODO: Le border layout de haut
    JPanel highAuthentication() {
       JPanel panel = new JPanel();
