@@ -21,6 +21,7 @@ public class Home extends JFrame {
       setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       setLocationRelativeTo(null);
       // add(new JLabel("Jesus-Christ is Great").setForeground(Color.);
+      add(northHome(), BorderLayout.NORTH);
       setVisible(true);
    }
 
@@ -36,8 +37,12 @@ public class Home extends JFrame {
       northHome3.add(new JLabel("Home"));
       northHome3.add(new JLabel("About"));
       northHome3.add(new JLabel("Contact"));
+      northHome3.add(new JLabel("login"));
       northHome3.add(new JLabel("About"));
-      northHome3.add(new JLabel("About"));
+
+      northHome2.add(northHome3);
+
+      add(northHome2, BorderLayout.NORTH);
 
       return northHome2;
    };
