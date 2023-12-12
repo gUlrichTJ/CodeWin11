@@ -6,11 +6,14 @@ import stackoverflow.TextBubbleBorder;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.RoundRectangle2D;
 import javax.swing.border.AbstractBorder;
-import javax.swing.border.Border;
 
 public class Authentication extends JFrame implements JTotal {
+
+   // TODO: The code of stackoverflow
+   AbstractBorder generalBorder = new TextBubbleBorder(
+         Color.white, 2, 10, 1
+   );
 
    // TODO: We create a Home's object
    Home home;
@@ -80,6 +83,7 @@ public class Authentication extends JFrame implements JTotal {
 
       // TODO : The size of the text in the textfield
       usernameField.setFont(new Font("Arial", Font.PLAIN, totalSize));
+      usernameField.setBorder(generalBorder);
 
       // We add the textField to the panel
       usernameAndField.add(usernameField);
@@ -104,8 +108,8 @@ public class Authentication extends JFrame implements JTotal {
       passwordField = new JPasswordField();
       // TODO : Size of the password field
       passwordField.setFont(new Font("Arial", Font.PLAIN, totalSize));
+      passwordField.setBorder(generalBorder);
 
-      passwordField.setBorder(BorderFactory.createLineBorder(Color.blue));
       passwordAndField.setPreferredSize(new Dimension((int) (getWidth() * 0.7), 30));
 
       passwordAndField.add(passwordField);
@@ -133,6 +137,7 @@ public class Authentication extends JFrame implements JTotal {
       login.setBackground(new Color(40, 170, 220));
       login.setFont(new Font("Comic Sans MS", Font.BOLD, totalSize + 3));
       login.setForeground(Color.WHITE);
+      login.setBorder(generalBorder);
 
       // The button login
       JButton cancel = new JButton("cancel".toUpperCase());
@@ -140,11 +145,8 @@ public class Authentication extends JFrame implements JTotal {
       cancel.setFont(new Font("Comic Sans MS", Font.BOLD, totalSize + 3));
       cancel.setForeground(Color.WHITE);
 
-      // TODO: The code of stackoverflow
-      AbstractBorder borderLeft = new TextBubbleBorder(
-            Color.white, 2, 10, 1
-      );
-      cancel.setBorder(borderLeft);
+
+      cancel.setBorder(generalBorder);
 
       // TODO: Action to the login button
       login.addActionListener(e -> {
