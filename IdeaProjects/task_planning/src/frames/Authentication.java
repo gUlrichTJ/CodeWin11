@@ -71,7 +71,7 @@ public class Authentication extends JFrame implements JTotal {
 
       JLabel greatLoginLabel = new JLabel("Login");
       greatLoginLabel.setFont(
-            new Font("Arial", Font.BOLD, totalSize * 4)
+            new Font("Verdana", Font.BOLD, totalSize * 4)
       );
       
       tellUserLogin.add(greatLoginLabel);
