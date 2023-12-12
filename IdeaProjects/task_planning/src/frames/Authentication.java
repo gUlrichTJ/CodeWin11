@@ -2,10 +2,12 @@ package frames;
 
 import interfaces.JTotal;
 import labels.CustomLabel;
+import stackoverflow.TextBubbleBorder;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
+import javax.swing.border.AbstractBorder;
 import javax.swing.border.Border;
 
 public class Authentication extends JFrame implements JTotal {
@@ -137,7 +139,12 @@ public class Authentication extends JFrame implements JTotal {
       cancel.setBackground(new Color(201, 14, 14, 253));
       cancel.setFont(new Font("Comic Sans MS", Font.BOLD, totalSize + 3));
       cancel.setForeground(Color.WHITE);
-      // cancel.setBorder(new RoundedBorder(10));
+
+      // TODO: The code of stackoverflow
+      AbstractBorder borderLeft = new TextBubbleBorder(
+            Color.black, 1, 16, 16
+      );
+      cancel.setBorder(borderLeft);
       Border roundedBorder = new Border() {
          @Override
          public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {

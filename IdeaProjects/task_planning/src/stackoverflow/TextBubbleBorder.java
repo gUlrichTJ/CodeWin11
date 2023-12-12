@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.geom.Area;
 import java.awt.geom.RoundRectangle2D;
 
-class TextBubbleBorder extends AbstractBorder {
+public class TextBubbleBorder extends AbstractBorder {
 
    private Color color;
    private int thickness = 4;
@@ -23,7 +23,7 @@ class TextBubbleBorder extends AbstractBorder {
       this(color, 4, 8, 7);
    }
 
-   TextBubbleBorder(
+   public TextBubbleBorder(
          Color color, int thickness, int radii, int pointerSize) {
       this.thickness = thickness;
       this.radii = radii;
