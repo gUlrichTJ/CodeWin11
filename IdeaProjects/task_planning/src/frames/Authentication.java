@@ -93,7 +93,7 @@ public class Authentication extends JFrame implements JTotal {
             usernameLabel,
             "Username",
             "Comic Sans MS",
-            totalSize + 8,
+            totalSize * 2,
             Color.black
       );
 
@@ -122,7 +122,7 @@ public class Authentication extends JFrame implements JTotal {
             passwordLabel,
             "Password",
             "Comic Sans MS",
-            totalSize + 8,
+            totalSize * 2,
             Color.black
             );
       passwordAndField.add(passwordLabel);
