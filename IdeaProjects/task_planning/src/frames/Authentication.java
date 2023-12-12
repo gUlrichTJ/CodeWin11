@@ -65,13 +65,13 @@ public class Authentication extends JFrame implements JTotal {
 
       // TODO: Panel to tell the user to login
       JPanel tellUserLogin = new JPanel();
-      tellUserLogin.setLayout(new FlowLayout());
+      tellUserLogin.setLayout(new FlowLayout(FlowLayout.CENTER));
       JLabel greatLoginLabel = new JLabel("Login");
       greatLoginLabel.setFont(
-            new Font("Arial", Font.BOLD, 30)
+            new Font("Arial", Font.BOLD, 100)
       );
       
-      tellUserLogin.add(greatLoginLabel, FlowLayout.CENTER);
+      tellUserLogin.add(greatLoginLabel);
 
       // TODO: We are going to add a label to tell the user to login
       panelG.add(tellUserLogin, BorderLayout.NORTH);
