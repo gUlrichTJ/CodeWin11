@@ -93,7 +93,7 @@ public class Authentication extends JFrame implements JTotal {
             usernameLabel,
             "Username",
             "Comic Sans MS",
-            totalSize * 2,
+            totalSize + 8,
             Color.black
       );
 
@@ -104,7 +104,7 @@ public class Authentication extends JFrame implements JTotal {
       usernameField = new JTextField();
 
       // TODO : The size of the text in the textfield
-      usernameField.setFont(new Font("Arial", Font.PLAIN, totalSize));
+      usernameField.setFont(new Font("Arial", Font.PLAIN, totalSize + 5));
       usernameField.setBorder(generalBorder);
 
       // We add the textField to the panel
@@ -122,14 +122,14 @@ public class Authentication extends JFrame implements JTotal {
             passwordLabel,
             "Password",
             "Comic Sans MS",
-            totalSize * 2,
+            totalSize + 8,
             Color.black
             );
       passwordAndField.add(passwordLabel);
 
       passwordField = new JPasswordField();
       // TODO : Size of the password field
-      passwordField.setFont(new Font("Arial", Font.PLAIN, totalSize));
+      passwordField.setFont(new Font("Arial", Font.PLAIN, totalSize + 5));
       passwordField.setBorder(generalBorder);
 
       passwordAndField.setPreferredSize(new Dimension((int) (getWidth() * 0.7), 30));
