@@ -20,7 +20,7 @@ public class Home extends JFrame {
 
       setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       setLocationRelativeTo(null);
-
+      // add(new JLabel("Jesus-Christ is Great").setForeground(Color.);
       setVisible(true);
    }
 }
