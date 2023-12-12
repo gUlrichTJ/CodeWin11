@@ -53,6 +53,7 @@ public class Authentication extends JFrame implements JTotal {
 
    /// Method to send the login
    JPanel login() {
+      // TODO: The greatest panel
       JPanel panelG = new JPanel();
       panelG.setLayout(new BorderLayout());
 
@@ -64,10 +65,13 @@ public class Authentication extends JFrame implements JTotal {
 
       // TODO: Panel to tell the user to login
       JPanel tellUserLogin = new JPanel();
-      tellUserLogin.setLayout(new BorderLayout());
+      tellUserLogin.setLayout(new FlowLayout());
       JLabel greatLoginLabel = new JLabel("Login");
+      greatLoginLabel.setFont(
+            new Font("Arial", Font.BOLD, 30)
+      );
       
-      tellUserLogin.add(greatLoginLabel, BorderLayout.NORTH);
+      tellUserLogin.add(greatLoginLabel, FlowLayout.CENTER);
 
       // TODO: We are going to add a label to tell the user to login
       panelG.add(tellUserLogin, BorderLayout.NORTH);
