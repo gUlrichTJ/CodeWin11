@@ -40,7 +40,7 @@ public class Authentication extends JFrame implements JTotal {
       /// We add the panel of the north (borderLayout)
       mainPanel.add(highAuthentication(), BorderLayout.NORTH);
 
-      mainPanel.add(lefAuthentication(), BorderLayout.WEST);
+      // mainPanel.add(lefAuthentication(), BorderLayout.WEST);
 
       mainPanel.add(login(), BorderLayout.CENTER);
 
