@@ -66,12 +66,12 @@ public class Authentication extends JFrame implements JTotal {
       // TODO: Panel to tell the user to login
       JPanel tellUserLogin = new JPanel();
       tellUserLogin.setLayout(new FlowLayout(FlowLayout.CENTER));
-      tellUserLogin.setBorder(generalBorder);
+      // tellUserLogin.setBorder(generalBorder);
       tellUserLogin.setBackground(new Color(163, 159, 159));
 
       JLabel greatLoginLabel = new JLabel("Login");
       greatLoginLabel.setFont(
-            new Font("Arial", Font.BOLD, totalSize * 5)
+            new Font("Arial", Font.BOLD, totalSize * 4)
       );
       
       tellUserLogin.add(greatLoginLabel);
@@ -93,7 +93,7 @@ public class Authentication extends JFrame implements JTotal {
             usernameLabel,
             "Username",
             "Comic Sans MS",
-            totalSize + 5,
+            totalSize + 8,
             Color.black
       );
 
@@ -122,7 +122,7 @@ public class Authentication extends JFrame implements JTotal {
             passwordLabel,
             "Password",
             "Comic Sans MS",
-            totalSize + 5,
+            totalSize + 8,
             Color.black
             );
       passwordAndField.add(passwordLabel);
