@@ -32,6 +32,13 @@ public class Home extends JFrame {
       // default layout
       JPanel northHome3 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 
+      // We add the labels to the panel
+      northHome3.add(new JLabel("Home"));
+      northHome3.add(new JLabel("About"));
+      northHome3.add(new JLabel("Contact"));
+      northHome3.add(new JLabel("About"));
+      northHome3.add(new JLabel("About"));
+
       return northHome2;
    };
 }
