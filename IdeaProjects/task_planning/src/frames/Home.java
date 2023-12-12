@@ -23,4 +23,14 @@ public class Home extends JFrame {
       // add(new JLabel("Jesus-Christ is Great").setForeground(Color.);
       setVisible(true);
    }
+
+   // TODO: We create the border layout for the north
+   JPanel northHome() {
+      JPanel northHome2 = new JPanel(new BorderLayout());
+
+      // We create another panel that will have a flowlayout like
+      
+
+      return northHome2;
+   };
 }
