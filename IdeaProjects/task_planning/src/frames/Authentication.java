@@ -58,6 +58,12 @@ public class Authentication extends JFrame implements JTotal {
       ////////////////////////////////////////////////////
       panel.setBackground(new Color(163, 159, 159));
 
+      // TODO: Panel to tell the user to login
+      JPanel tellUserLogin = new JPanel();
+      JLabel greatLoginLabel = new JLabel("Login");
+
+      tellUserLogin.add(greatLoginLabel);
+
       // TODO : The panel of the username and it's textfield
       JPanel usernameAndField = new JPanel(
             new GridLayout(1, 2, totalSize / 2, totalSize / 2)
@@ -122,6 +128,9 @@ public class Authentication extends JFrame implements JTotal {
 
       usernameAndPassword.add(usernameAndField);
       usernameAndPassword.add(passwordAndField);
+
+      // TODO: We are going to add a label to tell the user to login
+      panel.add(tellUserLogin);
 
       // TODO: We add the username and password to the principal panel
       panel.add(usernameAndPassword);
