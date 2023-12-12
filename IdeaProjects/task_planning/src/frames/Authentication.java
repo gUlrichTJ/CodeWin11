@@ -63,18 +63,7 @@ public class Authentication extends JFrame implements JTotal {
       panel.setBackground(new Color(163, 159, 159));
 
       // TODO: Panel to tell the user to login
-      JPanel tellUserLogin = new JPanel();
-      tellUserLogin.setLayout(new FlowLayout(FlowLayout.CENTER));
-      // tellUserLogin.setBorder(generalBorder);
-      tellUserLogin.setBackground(new Color(163, 159, 159));
-
-      JLabel greatLoginLabel = new JLabel("Login");
-      greatLoginLabel.setFont(
-            new Font("Verdana", Font.BOLD, totalSize * 4)
-      );
-      greatLoginLabel.setForeground(Color.darkGray);
-      
-      tellUserLogin.add(greatLoginLabel);
+      JPanel tellUserLogin = getPanelTold();
 
       // TODO: We are going to add a label to tell the user to login
       panelG.add(tellUserLogin, BorderLayout.NORTH);
@@ -145,13 +134,27 @@ public class Authentication extends JFrame implements JTotal {
       usernameAndPassword.add(usernameAndField);
       usernameAndPassword.add(passwordAndField);
 
-
-
       // TODO: We add the username and password to the principal panel
       panel.add(usernameAndPassword);
 
       panelG.add(panel, BorderLayout.CENTER);
       return panelG;
+   }
+
+   private static JPanel getPanelTold() {
+      JPanel tellUserLogin = new JPanel();
+      tellUserLogin.setLayout(new FlowLayout(FlowLayout.CENTER));
+      // tellUserLogin.setBorder(generalBorder);
+      tellUserLogin.setBackground(new Color(163, 159, 159));
+
+      JLabel greatLoginLabel = new JLabel("Login");
+      greatLoginLabel.setFont(
+            new Font("Verdana", Font.BOLD, totalSize * 4)
+      );
+      greatLoginLabel.setForeground(Color.darkGray);
+
+      tellUserLogin.add(greatLoginLabel);
+      return tellUserLogin;
    }
 
    JPanel connect() {
@@ -170,7 +173,6 @@ public class Authentication extends JFrame implements JTotal {
       cancel.setBackground(new Color(201, 14, 14, 253));
       cancel.setFont(new Font("Comic Sans MS", Font.BOLD, totalSize + 3));
       cancel.setForeground(Color.WHITE);
-
 
       cancel.setBorder(generalBorder);
 

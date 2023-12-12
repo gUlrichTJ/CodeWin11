@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 
 public class AuthenticationPage extends JFrame {
 
-   private JTextField usernameField;
-   private JPasswordField passwordField;
+   private final JTextField usernameField;
+   private final JPasswordField passwordField;
 
    public AuthenticationPage() {
       setTitle("Login Page");
@@ -24,24 +24,7 @@ public class AuthenticationPage extends JFrame {
       usernameField = new JTextField();
       passwordField = new JPasswordField();
 
-      JButton loginButton = new JButton("Login");
-      loginButton.addActionListener(new ActionListener() {
-         @Override
-         public void actionPerformed(ActionEvent e) {
-            String username = usernameField.getText();
-            char[] password = passwordField.getPassword();
-
-            // Perform authentication logic here
-            if (authenticate(username, password)) {
-               JOptionPane.showMessageDialog(AuthenticationPage.this, "Authentication successful!");
-            } else {
-               JOptionPane.showMessageDialog(AuthenticationPage.this, "Authentication failed. Try again.");
-            }
-
-            // Clear the password field for security
-            passwordField.setText("");
-         }
-      });
+      JButton loginButton = getjButton();
 
       panel.add(usernameLabel);
       panel.add(usernameField);
@@ -54,6 +37,25 @@ public class AuthenticationPage extends JFrame {
       setVisible(true);
    }
 
+   private JButton getjButton() {
+      JButton loginButton = new JButton("Login");
+      loginButton.addActionListener(e -> {
+         String username = usernameField.getText();
+         char[] password = passwordField.getPassword();
+
+         // Perform authentication logic here
+         if (authenticate(username, password)) {
+            JOptionPane.showMessageDialog(AuthenticationPage.this, "Authentication successful!");
+         } else {
+            JOptionPane.showMessageDialog(AuthenticationPage.this, "Authentication failed. Try again.");
+         }
+
+         // Clear the password field for security
+         passwordField.setText("");
+      });
+      return loginButton;
+   }
+
    private boolean authenticate(String username, char[] password) {
       // Replace this with your actual authentication logic
       String validUsername = "admin";
@@ -63,11 +65,6 @@ public class AuthenticationPage extends JFrame {
    }
 
    public static void main(String[] args) {
-      SwingUtilities.invokeLater(new Runnable() {
-         @Override
-         public void run() {
-            new AuthenticationPage();
-         }
-      });
+      SwingUtilities.invokeLater(() -> new AuthenticationPage());
    }
 }
