@@ -2,8 +2,6 @@ package helps;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class AuthenticationPage extends JFrame {
 
@@ -24,7 +22,7 @@ public class AuthenticationPage extends JFrame {
       usernameField = new JTextField();
       passwordField = new JPasswordField();
 
-      JButton loginButton = getjButton();
+      JButton loginButton = getLoginButton();
 
       panel.add(usernameLabel);
       panel.add(usernameField);
@@ -37,7 +35,7 @@ public class AuthenticationPage extends JFrame {
       setVisible(true);
    }
 
-   private JButton getjButton() {
+   private JButton getLoginButton() {
       JButton loginButton = new JButton("Login");
       loginButton.addActionListener(e -> {
          String username = usernameField.getText();
@@ -65,6 +63,6 @@ public class AuthenticationPage extends JFrame {
    }
 
    public static void main(String[] args) {
-      SwingUtilities.invokeLater(() -> new AuthenticationPage());
+      SwingUtilities.invokeLater(AuthenticationPage::new);
    }
 }
