@@ -1,0 +1,16 @@
+create database users;
+
+create table if not exists etudiants (
+	id int unsigned not null auto_increment,
+	nom varchar(30) not null,
+	prenom varchar(30) not null,
+	age smallint unsigned not null,
+	parcours text,
+	primary key(id)
+);
+
+-- Insertions
+insert into etudiants (id, nom, prenom, age, parcours)
+values ('ali', 'meguizani', 21, 'licence'),
+	('awouno', 'kossi winner', 20, 'licence'),
+	('mathey-apossan', 'mate ulrich graciano', 20, 'licence');
