@@ -207,8 +207,10 @@ class _HomePageState extends State<HomePage> {
       ),
 
       // TODO: We use a bottomNavigationBar
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: const BottomAppBar(
+        hasNotch: true,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Icon(Icons.pause),
             Icon(Icons.stop),
