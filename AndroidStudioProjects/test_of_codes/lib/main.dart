@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage> {
             Icon(Icons.stop),
             Icon(Icons.access_time),
             Padding(
-                padding: EdgeInsets.all(32),
+                padding: EdgeInsets.all(30.0),
             ),
           ],
         ),
