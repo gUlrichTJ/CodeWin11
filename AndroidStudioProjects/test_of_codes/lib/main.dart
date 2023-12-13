@@ -205,6 +205,17 @@ class _HomePageState extends State<HomePage> {
         icon: const Icon(Icons.play_arrow),
         label: const Text("Play"),
       ),
+
+      // TODO: We use a bottomNavigationBar
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          children: <Widget>[
+            Icon(Icons.pause),
+            Icon(Icons.stop),
+            Icon(Icons.access_time),
+          ],
+        ),
+      ),
     );
   }
 }
