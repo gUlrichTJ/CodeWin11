@@ -331,6 +331,8 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.resolveWith((states) {
                     if (states.contains(MaterialState.selected)) {
                       return Colors.white12;
+                    } else if (states.contains(MaterialState.pressed)) {
+                      return Colors.purple;
                     }
                   }),
                 ),
