@@ -320,8 +320,8 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                         return Colors.green;
                       } if (states.contains(MaterialState.selected)) {
                         return Colors.green;
-                      } if (states.contains(MaterialState.focused)) {
-                        return Colors.deepPurpleAccent.shade100;
+                      } if (states.contains(MaterialState.pressed)) {
+                        return Colors.deepPurple.shade900;
                       } if (states.contains(MaterialState.hovered)) {
                         return Colors.black;
                       }
