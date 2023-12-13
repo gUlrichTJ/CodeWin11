@@ -317,9 +317,9 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                 style: ButtonStyle(
                   foregroundColor: MaterialStateProperty.resolveWith((states) {
                       if (states.contains(MaterialState.dragged)) {
-                        return Colors.green;
+                        return Colors.black;
                       } if (states.contains(MaterialState.selected)) {
-                        return Colors.green;
+                        return Colors.green.shade900;
                       } if (states.contains(MaterialState.pressed)) {
                         return Colors.deepPurple.shade900;
                       } if (states.contains(MaterialState.hovered)) {
