@@ -306,8 +306,7 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
           // TODO: Let's put the flatButton
           TextButton(
               onPressed: () {},
-              child: const Icon(Icons.flag),
-            
+            child: const Text("Flag"),
           ),
         ],
       ),
