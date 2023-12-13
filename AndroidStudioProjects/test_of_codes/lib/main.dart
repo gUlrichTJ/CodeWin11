@@ -311,6 +311,13 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                     onPressed: () {},
                     child: const Text("Text button"),
                 ),
+              TextButton(
+                  onPressed: () {},
+                  child: const Icon(Icons.handshake),
+                style: ButtonStyle(
+                  backgroundColor: 
+                ),
+              ),
             ],
           ),
           TextButton(
