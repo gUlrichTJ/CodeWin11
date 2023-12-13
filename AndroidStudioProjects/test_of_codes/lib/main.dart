@@ -279,6 +279,7 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
               Text("Row 3"),
             ],
           ),
+          const Divider(),
         ],
       ),
     );
