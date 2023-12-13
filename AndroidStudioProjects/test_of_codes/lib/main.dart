@@ -204,20 +204,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: getFloatingActionButton(),
 
       // TODO: We use a bottomNavigationBar
-      bottomNavigationBar: const BottomAppBar(
-        color: Colors.lightGreen,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Icon(Icons.pause),
-            Icon(Icons.stop),
-            Icon(Icons.access_time),
-            Padding(
-                padding: EdgeInsets.all(30.0),
-            ),
-          ],
-        ),
-      ),
+      bottomNavigationBar: const BottomAppBarWidget(),
     );
   }
 
@@ -226,6 +213,30 @@ class _HomePageState extends State<HomePage> {
       onPressed: () {},
       icon: const Icon(Icons.play_arrow),
       label: const Text("Play"),
+    );
+  }
+}
+
+class BottomAppBarWidget extends StatelessWidget {
+  const BottomAppBarWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const BottomAppBar(
+      color: Colors.lightGreen,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Icon(Icons.pause),
+          Icon(Icons.stop),
+          Icon(Icons.access_time),
+          Padding(
+              padding: EdgeInsets.all(30.0),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -338,6 +349,7 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                     } if (states.contains(MaterialState.pressed)) {
                       return Colors.lightGreen.shade700;
                     }
+                    return Colors.lightGreen.shade300;
                   }),
                 ),
                   child: const Text("Hello you !"),
