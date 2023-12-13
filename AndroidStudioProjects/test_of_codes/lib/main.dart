@@ -302,6 +302,9 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
             ],
           ),
           const Divider(),
+
+          // TODO: Let's put the flatButton
+          FlatButton()
         ],
       ),
     );
