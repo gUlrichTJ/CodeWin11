@@ -318,21 +318,21 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                   foregroundColor: MaterialStateProperty.resolveWith((states) {
                       if (states.contains(MaterialState.dragged)) {
                         return Colors.green;
-                      } else if (states.contains(MaterialState.selected)) {
+                      } if (states.contains(MaterialState.selected)) {
                         return Colors.green;
-                      } else if (states.contains(MaterialState.focused)) {
+                      } if (states.contains(MaterialState.focused)) {
                         return Colors.deepPurpleAccent.shade100;
-                      } else if (states.contains(MaterialState.hovered)) {
+                      } if (states.contains(MaterialState.hovered)) {
                         return Colors.black;
                       }
-                      return Colors.white;
+                      return Colors.black;
                     },
                   ),
                   backgroundColor: MaterialStateProperty.resolveWith((states) {
                     if (states.contains(MaterialState.selected)) {
                       return Colors.white12;
-                    } else if (states.contains(MaterialState.pressed)) {
-                      return Colors.purple;
+                    } if (states.contains(MaterialState.pressed)) {
+                      return Colors.lightGreen.shade700;
                     }
                   }),
                 ),
