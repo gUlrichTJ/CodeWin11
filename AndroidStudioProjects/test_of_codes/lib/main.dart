@@ -349,7 +349,7 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                     } if (states.contains(MaterialState.pressed)) {
                       return Colors.lightGreen.shade700;
                     }
-                    return Colors.lightGreen.shade300;
+                    return Colors.lightGreen.shade100;
                   }),
                 ),
                   child: const Text("Hello you !"),
