@@ -286,7 +286,6 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
   }
 }
 
-
 class BodyWidget extends StatelessWidget {
   const BodyWidget({
     super.key,
