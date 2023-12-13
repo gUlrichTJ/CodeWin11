@@ -315,10 +315,10 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                   onPressed: () {},
                 style: ButtonStyle(
                   foregroundColor: MaterialStateProperty.resolveWith((states) {
-                      if (states.contains(MaterialState.dragged)) {
-                        return Colors.green;
-                      }
-                    },
+                    if (states.contains(MaterialState.dragged)) {
+                      Co
+                    }
+                  },
                   ),
                 ),
                   child: const Icon(Icons.handshake),
