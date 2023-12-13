@@ -208,7 +208,7 @@ class _HomePageState extends State<HomePage> {
 
       // TODO: We use a bottomNavigationBar
       bottomNavigationBar: const BottomAppBar(
-        hasNotch: true,
+        color: Colors.lightGreen,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
