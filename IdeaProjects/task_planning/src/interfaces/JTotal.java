@@ -1,5 +1,5 @@
 package interfaces;
 
 public interface JTotal {
-   int totalSize = 20;
+   public int totalSize = 20;
 }
