@@ -199,10 +199,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-          onPressed: onPressed,
-          label: label,
-      ),
+      floatingActionButton: FloatingActionButton.endD,
     );
   }
 }
