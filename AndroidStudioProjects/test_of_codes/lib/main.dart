@@ -201,11 +201,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
-        icon: const Icon(Icons.play_arrow),
-        label: const Text("Play"),
-      ),
+      floatingActionButton: getFloatingActionButton(),
 
       // TODO: We use a bottomNavigationBar
       bottomNavigationBar: const BottomAppBar(
@@ -222,6 +218,14 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+    );
+  }
+
+  FloatingActionButton getFloatingActionButton() {
+    return FloatingActionButton.extended(
+      onPressed: () {},
+      icon: const Icon(Icons.play_arrow),
+      label: const Text("Play"),
     );
   }
 }
