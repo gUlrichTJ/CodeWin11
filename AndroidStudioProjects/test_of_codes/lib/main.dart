@@ -304,6 +304,15 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
           const Divider(),
 
           // TODO: Let's put the flatButton
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+                TextButton(
+                    onPressed: () {},
+                    child: const Text("Text button"),
+                ),
+            ],
+          ),
           TextButton(
               onPressed: () {},
             child: const Text("Flag"),
