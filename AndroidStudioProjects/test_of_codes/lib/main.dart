@@ -304,9 +304,11 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
           const Divider(),
 
           // TODO: Let's put the flatButton
-          Center(
-            child: FlatB,
-          )
+          TextButton(
+              onPressed: () {},
+              child: const Icon(Icons.flag),
+            
+          ),
         ],
       ),
     );
