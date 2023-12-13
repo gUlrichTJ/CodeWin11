@@ -314,7 +314,12 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
               TextButton(
                   onPressed: () {},
                 style: ButtonStyle(
-                  foregroundColor: 
+                  foregroundColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.dragged)) {
+                      Co
+                    }
+                  },
+                  ),
                 ),
                   child: const Icon(Icons.handshake),
               ),
