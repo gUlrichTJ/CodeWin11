@@ -200,9 +200,10 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: () {},
-        child: ,
+        icon: const Icon(Icons.play_arrow),
+        label: const Text("Play"),
       ),
     );
   }
