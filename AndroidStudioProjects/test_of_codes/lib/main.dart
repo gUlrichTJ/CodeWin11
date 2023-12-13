@@ -318,15 +318,20 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
                       if (states.contains(MaterialState.dragged)) {
                         return Colors.green;
                       } else if (states.contains(MaterialState.selected)) {
-                        return Colors.green.shade200;
+                        return Colors.green;
                       } else if (states.contains(MaterialState.focused)) {
                         return Colors.deepPurpleAccent.shade100;
                       } else if (states.contains(MaterialState.hovered)) {
                         return Colors.black;
                       }
-                      return Colors.white12;
+                      return Colors.white;
                     },
                   ),
+                  backgroundColor: MaterialStateProperty.resolveWith((states) {
+                    if (states.contains(MaterialState.selected)) {
+                      return Colors.white12;
+                    }
+                  }),
                 ),
                   child: const Text("Hello you !"),
               ),
