@@ -4,7 +4,7 @@ G = pgv.AGraph()
 
 G.add_node("A", color="red")
 G.add_node("B", color="blue")
-G.add_node("D", color="yellow")
+G.add_node("D")
 G.add_node("E")
 
 # TODO: The edges
