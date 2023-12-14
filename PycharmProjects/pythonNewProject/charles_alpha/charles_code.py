@@ -2,7 +2,7 @@
 def conversionUTF8versISO(texte):
     # Vérifions que le texte passé en paramètre est en utf-8
     try:
-        texte.encode('iso-8859-1').encode('utf-8')
+        texte.encode('utf-8')
     except UnicodeError:
         print("Le texte n'est pas en format UTF-8. Merci")
         return
