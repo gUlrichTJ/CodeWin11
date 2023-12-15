@@ -38,11 +38,11 @@ def conversionISOversUTF8(texte_iso):
 
 
 # Nous testons le code.
-texte_iso_test = "Your iso-8859-1 text is here."  # "\xC4pple"
+texte_iso_test = "Café et crème brulée. Your iso-8859-1 text is here."  # "\xC4pple"
 resultat = conversionISOversUTF8(texte_iso_test)
 
 if resultat is not None:
-    print("Texte converti en UTF-8 :")
+    print("\nTexte converti en UTF-8 :")
     print(f"{resultat}")
 
 print("Hello World !")
