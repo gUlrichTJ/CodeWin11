@@ -38,7 +38,7 @@ def conversionISOversUTF8(texte_iso):
 
 
 # Nous testons le code.
-texte_iso_test = "Nous ne sommes pas des enfants illégitimes, nous sommes des enfants de la maison."
+texte_iso_test = "fc Nous ne sommes pas des enfants illégitimes, nous sommes des enfants de la maison."
 resultat = conversionISOversUTF8(texte_iso_test)
 
 if resultat:
