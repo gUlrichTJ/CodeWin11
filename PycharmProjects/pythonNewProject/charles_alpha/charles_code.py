@@ -14,8 +14,6 @@ def conversionUTF8versISO(texte):   # Ici, nous prenons un string en paramètre
     return texte_iso
 
 # Nous testons le code.
-
-
 texte_test = "%^~¢	Nous ne sommes pas des enfants illégitimes, nous sommes des enfants de la maison"
 resultat = conversionUTF8versISO(texte_test)
 
@@ -43,4 +41,4 @@ if resultat is not None:
     print("\nTexte converti en UTF-8 :")
     print(f"{resultat}")
 
-print("Hello World !")
+# Nous disons juste merci à Dieu.
