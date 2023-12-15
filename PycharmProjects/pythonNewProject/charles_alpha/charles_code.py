@@ -43,4 +43,7 @@ if resultat is not None:
     print("\nTexte converti en UTF-8 :")
     print(f"{resultat}")
 
-# Nous disons juste merci à Dieu.
+# J'espère que vous avez compris. N'hésitez pas à pauser des questions. Le code
+# marche bien. Si vous recopiez intégralement ce que j'ai écrit et vous le compiliez,
+# ça marche bien. Please, mettez les tabulations là où j'ai mis les tabulations et
+# respectez l'indentation.
