@@ -13,8 +13,6 @@ def conversionUTF8versISO(texte):   # Ici, nous prenons un string en paramètre
     # Nous mettons le texte codé dans une nouvelle variable
     return texte_iso
 
-    # Maintenant, convertissons en ISO
-
 # Nous testons le code.
 
 
@@ -27,15 +25,14 @@ if resultat:
 
 
 def conversionISOversUTF8(texte_iso):
-    # Vérifions que le texte passé en paramètre est en ISO-8859-1
     try:
-        # Convertissons en UTF-8
+        # Convertissons en UTF-8 et passons la valeur à la variable texte_utf8
         texte_utf8 = texte_iso.encode("iso-8859-1").decode("utf-8")
-    except UnicodeError:
+    except UnicodeError:    # Une exception est levée si le texte n'est pas au format iso
         print("Le texte n'est pas au format ISO-8859-1. Merci")
         return None
 
-    return texte_utf8
+    return texte_utf8   # Si tout se passe bien, nous retournons le texte codé en utf-8
 
 
 # Nous testons le code.
