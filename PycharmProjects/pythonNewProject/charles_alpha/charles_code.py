@@ -1,4 +1,5 @@
 # Nous allons essayer de convertir le texte UTF-8 vers ISO
+
 def conversionUTF8versISO(texte):
     # Vérifions que le texte passé en paramètre est en utf-8
     try:
@@ -38,7 +39,7 @@ def conversionISOversUTF8(texte_iso):
 
 
 # Nous testons le code.
-texte_iso_test = b"\xC4pple"
+texte_iso_test = "\xC4pple"
 resultat = conversionISOversUTF8(texte_iso_test)
 
 if resultat:
