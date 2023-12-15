@@ -16,7 +16,7 @@ def conversionUTF8versISO(texte):
 # Nous testons le code.
 
 
-texte_test = "%^~Nous ne sommes pas des enfants illégitimes, nous sommes des enfants de la maison"
+texte_test = "%^~¢	Nous ne sommes pas des enfants illégitimes, nous sommes des enfants de la maison"
 resultat = conversionUTF8versISO(texte_test)
 
 if resultat:
