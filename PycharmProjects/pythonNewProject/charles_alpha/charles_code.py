@@ -39,7 +39,7 @@ def conversionISOversUTF8(texte_iso):
 
 
 # Nous testons le code.
-texte_iso_test = "\xC4pple"
+texte_iso_test = "2023-12-15T14:30:00" # "\xC4pple"
 resultat = conversionISOversUTF8(texte_iso_test)
 
 if resultat:
