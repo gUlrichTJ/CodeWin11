@@ -28,18 +28,17 @@ if resultat:
 def conversionISOversUTF8(texte_iso):
     # Vérifions que le texte passé en paramètre est en ISO-8859-1
     try:
-        texte_iso.encode('iso-8859-1').decode('utf-8')
+        # Convertissons en UTF-8
+        texte_utf8 = texte_iso.encode("iso-8859-1").decode("utf-8")
     except UnicodeError:
         print("Le texte n'est pas au format ISO-8859-1. Merci")
-        return
+        return None
 
-    # Convertissons en UTF-8
-    texte_utf8 = texte_iso.encode("iso-8859-1").decode("utf-8")
     return texte_utf8
 
 
 # Nous testons le code.
-texte_iso_test = "2023-12-15T14:30:00" # "\xC4pple"
+texte_iso_test = "2023-12-15T14:30:00"  # "\xC4pple"
 resultat = conversionISOversUTF8(texte_iso_test)
 
 if resultat:
