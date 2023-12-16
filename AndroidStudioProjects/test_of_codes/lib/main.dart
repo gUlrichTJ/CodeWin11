@@ -422,7 +422,7 @@ class BodyWidget extends StatelessWidget {
                     radius: 100.0,
                     child: Stack(
                       children: <Widget>[
-                        _container(Colors.cyan.shade50, 100.0, 100.0),
+                        _container(Colors.cyan.shade50, 100.0, 100.1),
                         _container(Colors.cyan.shade100, 80.0, 80.0),
                         _container(Colors.cyan.shade300, 70.0, 70.0),
                         _container(Colors.cyan.shade500, 60.0, 60.0),
