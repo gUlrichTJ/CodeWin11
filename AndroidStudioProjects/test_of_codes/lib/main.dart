@@ -412,7 +412,7 @@ class BodyWidget extends StatelessWidget {
               const Divider(
                 height: 4.0,
                 color: Colors.white,
-                thickness: 5.0,
+                thickness: 4.0,
               ),
               const Padding(padding: EdgeInsets.all(16.0)),
               Row(
