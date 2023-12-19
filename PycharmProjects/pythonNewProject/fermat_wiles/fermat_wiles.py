@@ -6,6 +6,7 @@ def returnNumbers(n, max_n):
         for y in range(1, max_n):
             if y in temp[:]:
                 continue
+            print(y)
             for z in range(1, max_n):
                 if x**n + y**n == z**n:
                     temp.append(x)
