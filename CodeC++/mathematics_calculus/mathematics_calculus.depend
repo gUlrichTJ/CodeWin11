@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1703006438 source:/home/gracianomathey/codes/CodeWin11/CodeC++/mathematics_calculus/main.cpp
+	<iostream>
+	<cmath>
+	<ctime>
+

@@ -12,6 +12,7 @@ using namespace std;
         clock_t start_program = clock();
 
         int total_number = 0, x = 0, y = 0, z = 0;
+        double time_took = 0;
 
         /// loop
         for (x = 1; x < max_terms; x++) {
@@ -38,6 +39,6 @@ int main()
     cout << "Hello world!" << endl;
 
     /// We call the function
-    return_n_numbers(2, 1000);
+    return_n_numbers(2, 200);
     return 0;
 }
