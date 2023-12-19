@@ -3,9 +3,7 @@
 
 using namespace std;
 
-int main()
-{
-    /// We create the function quickly
+/// We create the function quickly
     void return_n_numbers(int n, int max_terms) {
         int total_number = 0, x = 0, y = 0, z = 0;
 
@@ -24,6 +22,13 @@ int main()
         /// We print the total numbers
         cout << total_number << endl;
     }
+
+int main()
+{
+
     cout << "Hello world!" << endl;
+
+    /// We call the function
+    return_n_numbers(2, 100);
     return 0;
 }
