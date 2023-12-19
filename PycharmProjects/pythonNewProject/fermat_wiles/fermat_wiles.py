@@ -1,3 +1,6 @@
+import timeit
+
+
 # We are going to try to show out the integers
 # smaller than n that verify the equation x^2 + y^2 = z^2
 def returnNumbers(n, max_n):
