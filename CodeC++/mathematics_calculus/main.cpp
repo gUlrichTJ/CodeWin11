@@ -14,10 +14,15 @@ int main()
             for (y = 0, y < max_terms; y++) {
                 for (z = 0, z < max_terms; z++) {
                     /// Condition
-                    if ()
+                    if (pow(x, n) + pow(y, n) == pow(z, n)) {
+                        total_number++;
+                        cout << x << ", " << y << ", " << z << endl;
+                    }
                 }
             }
         }
+        /// We print the total numbers
+        cout << total_number << endl;
     }
     cout << "Hello world!" << endl;
     return 0;
