@@ -1,10 +1,10 @@
-import turtle as t
+import turtle
 
-window = t.Screen()
+window = turtle.Screen()
 window.setup(width=180, height=400)
 window.setworldcoordinates(-10, -10, 10, 100)
 
-pen = t.Turtle()
+pen = turtle.Turtle()
 pen.speed(3)
 pen.shape("turtle")
 
