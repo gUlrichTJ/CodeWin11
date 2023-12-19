@@ -39,6 +39,6 @@ int main()
     cout << "Hello world!" << endl;
 
     /// We call the function
-    return_n_numbers(2, 200);
+    return_n_numbers(2, 100);
     return 0;
 }
