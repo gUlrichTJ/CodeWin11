@@ -31,6 +31,11 @@ using namespace std;
 
         /// We end the clock at the end of the program
         clock_t end_program = clock();
+
+        /// We calculate the time made by the program
+        time_took = (end_program - start_program) / (double)CLOCKS_PER_SEC;
+
+        cout << time_took << endl;
     }
 
 int main()
@@ -39,6 +44,6 @@ int main()
     cout << "Hello world!" << endl;
 
     /// We call the function
-    return_n_numbers(2, 1000);
+    return_n_numbers(2, 100);
     return 0;
 }
