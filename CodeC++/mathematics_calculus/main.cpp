@@ -1,9 +1,24 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
+    /// We create the function quickly
+    void return_n_numbers(int n, int max_terms) {
+        int total_number = 0, x = 0, y = 0, z = 0;
+
+        /// loop
+        for (x = 0, x < max_terms; x++) {
+            for (y = 0, y < max_terms; y++) {
+                for (z = 0, z < max_terms; z++) {
+                    /// Condition
+                    if ()
+                }
+            }
+        }
+    }
     cout << "Hello world!" << endl;
     return 0;
 }
