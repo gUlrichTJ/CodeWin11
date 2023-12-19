@@ -21,7 +21,7 @@ using namespace std;
                     /// Condition
                     if (pow(x, n) + pow(y, n) == pow(z, n)) {
                         total_number++;
-                        cout << x << ", " << y << ", " << z << endl;
+                        /// cout << x << ", " << y << ", " << z << endl;
                     }
                 }
             }
