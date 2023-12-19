@@ -12,4 +12,4 @@ def returnNumbers(n, max_n):
 
 
 # Now, we try it with n = 100
-returnNumbers(2, 1000)
+returnNumbers(2, 100)
