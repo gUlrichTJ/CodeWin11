@@ -10,7 +10,7 @@ def returnNumbers(n, max_n):
                 if x**n + y**n == z**n:
                     temp.append(x)
                     print(x, y, z)
-                    
+
     print(len(temp) * 2)
 
 
