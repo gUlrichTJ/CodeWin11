@@ -8,9 +8,9 @@ using namespace std;
         int total_number = 0, x = 0, y = 0, z = 0;
 
         /// loop
-        for (x = 0, x < max_terms, x++) {
-            for (y = 0, y < max_terms, y++) {
-                for (z = 0, z < max_terms, z++) {
+        for (x = 1, x < max_terms, x++) {
+            for (y = 1, y < max_terms, y++) {
+                for (z = 1, z < max_terms, z++) {
                     /// Condition
                     if (pow(x, n) + pow(y, n) == pow(z, n)) {
                         total_number++;
