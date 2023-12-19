@@ -16,6 +16,8 @@ def returnNumbers(n, max_n):
 
     print(len(temp) * 2)
 
+    execution_time = timeit.timeit(returnNumbers())
+
 
 # Now, we try it with n = 100
 returnNumbers(2, 100)
