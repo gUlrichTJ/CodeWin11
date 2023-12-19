@@ -20,10 +20,10 @@ def returnNumbers(n, max_n):
     print(len(temp) * 2)
     end_time = t.time()
 
-    execution_time = start_time - end_time
-    
+    execution_time = end_time - start_time
+    print(execution_time)
 # execution_time = timeit.timeit(returnNumbers(2, 100), number=1)
 
 
 # Now, we try it with n = 100
-returnNumbers(2, 100)
+returnNumbers(2, 300)
