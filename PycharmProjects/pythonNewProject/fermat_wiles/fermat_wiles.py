@@ -1,7 +1,7 @@
 # We are going to try to show out the integers
 # smaller than n that verify the equation x^2 + y^2 = z^2
 def returnNumbers(n, max_n):
-    temp = [0]
+    temp = list()
     for x in range(1, max_n):
         for y in range(1, max_n):
             if y in temp:
