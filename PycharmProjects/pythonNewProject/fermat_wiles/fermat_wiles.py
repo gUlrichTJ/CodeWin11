@@ -4,8 +4,8 @@ def returnNumbers(n, max_n):
     temp = list()
     for x in range(1, max_n):
         for y in range(1, max_n):
-            if y in temp:
-                break
+            if y in temp[:]:
+                continue
             for z in range(1, max_n):
                 if x**n + y**n == z**n:
                     temp.append(x)
