@@ -7,7 +7,7 @@ def returnNumbers(n, max_n):
             for z in range(1, max_n):
                 if x**n + y**n == z**n:
                     i += 1
-                    #print(x, y, z)
+                    print(x, y, z)
     print(i)
 
 
