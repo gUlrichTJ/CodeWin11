@@ -16,7 +16,7 @@ using namespace std;
 
         /// loop
         for (x = 1; x < max_terms; x++) {
-            for (y = x; y < max_terms; y++) {
+            for (y = 1; y < max_terms; y++) {
                 for (z = 1; z < max_terms; z++) {
                     /// Condition
                     if (pow(x, n) + pow(y, n) == pow(z, n)) {
