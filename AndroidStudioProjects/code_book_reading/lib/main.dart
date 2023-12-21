@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
 
-  final List<TodoMenuItem> food
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -56,4 +55,9 @@ class TodoMenuItem {
 
   // Constructor
   TodoMenuItem({required this.title, required this.icon});
+
+  final List<TodoMenuItem> foodMenuList = [
+    
+  ];
+
 }
