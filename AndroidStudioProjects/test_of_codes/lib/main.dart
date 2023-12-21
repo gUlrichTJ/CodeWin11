@@ -419,8 +419,7 @@ class BodyWidget extends StatelessWidget {
                 children: <Widget>[
                   CircleAvatar(
                     backgroundColor: Colors.blue.shade700,
-                    radius: 100.01,
-                    child: Stack(
+                    radius: 100.01,                    child: Stack(
                       children: <Widget>[
                         _container(Colors.cyan.shade50, 100.0, 100.1),
                         _container(Colors.cyan.shade100, 80.0, 80.0),
