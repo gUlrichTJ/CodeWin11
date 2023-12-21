@@ -28,6 +28,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,4 +43,13 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+
+class TodoMenuItem {
+  String title = "";
+  Icon icon;
+
+  // Constructor
+  TodoMenuItem({required this.title, required this.icon});
 }
