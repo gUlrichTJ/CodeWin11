@@ -41,7 +41,16 @@ class HomePage extends StatelessWidget {
             }),
             itemBuilder: (BuildContext context) {
               return foodMenuList.asNameMap((TodoMenuItem todoMenuItem) {
-                return PopupMenuItem(child: child)
+                return PopupMenuItem<TodoMenuItem>(
+                  value: todoMenuItem,
+                    child: Row(
+                      children: <Widget>[
+                        Icon(todoMenuItem.icon.icon),
+                        Padding(padding: EdgeInsets.all(8.0)),
+                        T
+                      ],
+                    ),
+                );
               }) ;
             },
           ),
