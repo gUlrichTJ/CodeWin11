@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
           PopupMenuButton<TodoMenuItem>(
             icon: const Icon(Icons.view_list),
             onSelected: ((valueSelected) {
-              print('valueSelected: ')
+              print('valueSelected: ${valueSelected.title}');
             }),
             itemBuilder: (BuildContext context) {
               return ;
