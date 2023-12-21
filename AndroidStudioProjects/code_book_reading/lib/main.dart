@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                       children: <Widget>[
                         Icon(todoMenuItem.icon.icon),
                         Padding(padding: EdgeInsets.all(8.0)),
-                        T
+                        Text(todoMenuItem.title),
                       ],
                     ),
                 );
@@ -67,7 +67,7 @@ class TodoMenuItem {
   // Constructor
   TodoMenuItem({required this.title, required this.icon});
 
-  final List<TodoMenuItem> foodMenuList = [
+  List<TodoMenuItem> foodMenuList = [
     TodoMenuItem(title: 'Fast Food', icon: const Icon(Icons.fastfood)),
     TodoMenuItem(title: 'Remind Me', icon: const Icon(Icons.add_alarm)),
     TodoMenuItem(title: 'Flight', icon: const Icon(Icons.flight)),
