@@ -451,5 +451,8 @@ Container _container(Color color_, double width_, double height_) {
 
 class TodoMenuItem {
   String title = "";
-  String 
+  Icon icon;
+
+  // Constructor
+  TodoMenuItem({required this.title, required this.icon});
 }
