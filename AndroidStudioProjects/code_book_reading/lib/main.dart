@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
 
+  final List<TodoMenuItem> food
   const HomePage({Key? key}) : super(key: key);
 
   @override
