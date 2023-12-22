@@ -23,7 +23,7 @@ using namespace std;
         /// loop
         for (x = 1; x < max_terms; x++) {
             for (y = 1; y < max_terms; y++) {
-                if (count(x_values.begin(), x_values.end(), y)) {
+                if (count(x_values.begin(), x_values.end(), y) || x > y) {
                         continue;
                 }
                 for (z = 1; z < max_terms; z++) {
