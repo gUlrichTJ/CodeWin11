@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <ctime>
+#include <vector>
 
 using namespace std;
 
@@ -13,6 +14,10 @@ using namespace std;
 
         int total_number = 0, x = 0, y = 0, z = 0;
         double time_took = 0;
+        /// We are strong by God's grace
+        /// We create a vector of integers to contain the values of x that
+        /// are not needed to be printed for y
+        vector<int> x_values
 
         /// loop
         for (x = 1; x < max_terms; x++) {
