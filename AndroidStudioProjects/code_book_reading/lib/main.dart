@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
               debugPrint('valueSelected: ${valueSelected.title}');
             }),
             itemBuilder: (BuildContext context) {
-              return foodMenuList.asNameMap((TodoMenuItem todoMenuItem) {
+              return TodoMenuItem.foodMenuList.map((TodoMenuItem todoMenuItem) {
                 return PopupMenuItem<TodoMenuItem>(
                   value: todoMenuItem,
                     child: Row(
