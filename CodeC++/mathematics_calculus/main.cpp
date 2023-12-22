@@ -44,7 +44,7 @@ using namespace std;
         /// We end the clock at the end of the program
         clock_t end_program = clock();
 
-        /// We calculate the time made by the program
+        /// We calculate the time took by the program
         time_took = (end_program - start_program) / (double)CLOCKS_PER_SEC;
 
         cout << time_took << endl;
