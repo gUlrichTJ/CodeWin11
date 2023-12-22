@@ -64,6 +64,11 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Container(
+              height: 100,
+              width: 100,
+              child: Image.network("src"),
+            ),
+            Container(
               child: ButtonBar(
                 alignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
