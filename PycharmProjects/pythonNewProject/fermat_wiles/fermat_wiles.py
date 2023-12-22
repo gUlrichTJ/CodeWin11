@@ -25,5 +25,5 @@ def returnNumbers(n, max_n):
 # execution_time = timeit.timeit(returnNumbers(2, 100), number=1)
 
 
-# Now, we try it with n = 100
+# Now, we try it with n = 300
 returnNumbers(2, 300)
