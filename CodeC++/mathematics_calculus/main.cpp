@@ -51,6 +51,6 @@ using namespace std;
 int main()
 {
     /// We call the function
-    return_n_numbers(2, 1000);
+    return_n_numbers(1, 1000);
     return 0;
 }
