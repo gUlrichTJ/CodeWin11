@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
           PopupMenuButton<TodoMenuItem>(
             icon: const Icon(Icons.view_list),
             onSelected: ((valueSelected) {
-              print('valueSelected: ${valueSelected.title}');
+              debugPrint('valueSelected: ${valueSelected.title}');
             }),
             itemBuilder: (BuildContext context) {
               return foodMenuList.asNameMap((TodoMenuItem todoMenuItem) {
@@ -67,7 +67,7 @@ class TodoMenuItem {
   // Constructor
   TodoMenuItem({required this.title, required this.icon});
 
-  List<TodoMenuItem> foodMenuList = [
+  static List<TodoMenuItem> foodMenuList = [
     TodoMenuItem(title: 'Fast Food', icon: const Icon(Icons.fastfood)),
     TodoMenuItem(title: 'Remind Me', icon: const Icon(Icons.add_alarm)),
     TodoMenuItem(title: 'Flight', icon: const Icon(Icons.flight)),
