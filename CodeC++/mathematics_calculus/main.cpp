@@ -17,7 +17,7 @@ using namespace std;
         /// We are strong by God's grace
         /// We create a vector of integers to contain the values of x that
         /// are not needed to be printed for y
-        vector<int> x_values = x_values<int>;
+        vector<int> x_values;
 
         /// loop
         for (x = 1; x < max_terms; x++) {
