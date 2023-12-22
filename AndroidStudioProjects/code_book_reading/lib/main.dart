@@ -66,7 +66,15 @@ class HomePage extends StatelessWidget {
             Container(
               child: ButtonBar(
                 alignment: MainAxisAlignment.spaceEvenly,
-                
+                  children: <Widget>[
+                    IconButton(
+                      icon: const Icon(Icons.map),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.)
+                    )
+                ],
               ),
             ),
           ],
