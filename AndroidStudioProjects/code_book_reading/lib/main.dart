@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightGreen,
         canvasColor: Colors.lightGreen.shade200,
       ),
-
+      debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
   }
@@ -36,7 +36,10 @@ class HomePage extends StatelessWidget {
           ),
           PopupMenuButton<TodoMenuItem>(
             color: Colors.lightGreen.shade200,
-            icon: const Icon(Icons.view_list),
+            icon: const Icon(
+                Icons.view_list,
+              color: Colors.black,
+            ),
             onSelected: ((valueSelected) {
               debugPrint('valueSelected: ${valueSelected.title}');
             }),
