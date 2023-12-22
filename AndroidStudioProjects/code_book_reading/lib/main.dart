@@ -60,10 +60,15 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Column(
           children: <Widget>[
-            
+            Container(
+              child: ButtonBar(
+                alignment: MainAxisAlignment.spaceEvenly,
+                
+              ),
+            ),
           ],
         ),
       ),
