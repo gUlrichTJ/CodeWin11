@@ -72,7 +72,12 @@ class HomePage extends StatelessWidget {
                       onPressed: () {},
                     ),
                     IconButton(
-                      icon: Icon(Icons.)
+                      icon: const Icon(Icons.airport_shuttle),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.brush),
+                      onPressed: () {},
                     )
                 ],
               ),
