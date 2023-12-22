@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <cmath>
 #include <ctime>
 #include <vector>
@@ -22,7 +23,7 @@ using namespace std;
         /// loop
         for (x = 1; x < max_terms; x++) {
             for (y = 1; y < max_terms; y++) {
-                        if (y in x_values) {
+                        if (std::count(x_values.begin(), x_values.end(), y)) {
                                 continue;
                         }
                 for (z = 1; z < max_terms; z++) {
