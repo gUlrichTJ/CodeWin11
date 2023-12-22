@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                 );
-              }) ;
+              }).toList() ;
             },
           ),
         ],
