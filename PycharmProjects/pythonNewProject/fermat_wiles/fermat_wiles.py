@@ -17,6 +17,7 @@ def returnNumbers(n, max_n):
                     temp.append(x)
                     print(x, y, z)
 
+    # We print the number of equations that verify function
     print(len(temp) * 2)
     end_time = t.time()
 
