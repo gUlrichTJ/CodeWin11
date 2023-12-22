@@ -35,6 +35,7 @@ class HomePage extends StatelessWidget {
               icon: const Icon(Icons.more_vert),
           ),
           PopupMenuButton<TodoMenuItem>(
+            color: Colors.lightGreen.shade200,
             icon: const Icon(Icons.view_list),
             onSelected: ((valueSelected) {
               debugPrint('valueSelected: ${valueSelected.title}');
@@ -51,7 +52,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                 );
-              }).toList() ;
+              }).toList();
             },
           ),
         ],
