@@ -37,7 +37,7 @@ using namespace std;
             }
         }
         /// We print the total numbers
-        cout << total_number << endl;
+        cout << x_values.size() * 2 << endl;
 
         /// We end the clock at the end of the program
         clock_t end_program = clock();
