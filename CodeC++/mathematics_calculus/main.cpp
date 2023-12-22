@@ -23,6 +23,8 @@ using namespace std;
         /// loop
         for (x = 1; x < max_terms; x++) {
             for (y = 1; y < max_terms; y++) {
+                /// If y is in the list of the values of x or the value of x is greater
+                /// than the value of y, we move to the next iteration
                 if (count(x_values.begin(), x_values.end(), y) || x > y) {
                         continue;
                 }
