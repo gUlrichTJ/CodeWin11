@@ -23,9 +23,9 @@ using namespace std;
         /// loop
         for (x = 1; x < max_terms; x++) {
             for (y = 1; y < max_terms; y++) {
-                        if (std::count(x_values.begin(), x_values.end(), y)) {
-                                continue;
-                        }
+                if (std::count(x_values.begin(), x_values.end(), y)) {
+                        continue;
+                }
                 for (z = 1; z < max_terms; z++) {
                     /// Condition
                     if (pow(x, n) + pow(y, n) == pow(z, n)) {
