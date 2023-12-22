@@ -22,11 +22,15 @@ using namespace std;
         /// loop
         for (x = 1; x < max_terms; x++) {
             for (y = 1; y < max_terms; y++) {
+                        if (y in x_values) {
+                                continue;
+                        }
                 for (z = 1; z < max_terms; z++) {
                     /// Condition
                     if (pow(x, n) + pow(y, n) == pow(z, n)) {
                         total_number++;
                         cout << x << ", " << y << ", " << z << endl;
+                        x_values.push_back(x);
                     }
                 }
             }
