@@ -10,7 +10,7 @@ def returnNumbers(n, max_n):
     temp = list()
     for x in range(1, max_n):
         for y in range(x, max_n):
-            if y in temp[:] or x >:
+            if y in temp[:] or x > y:
                 continue
             for z in range(1, max_n):
                 if x**n + y**n == z**n:
