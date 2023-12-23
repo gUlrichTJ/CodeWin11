@@ -64,6 +64,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Container(
+              /// We will stay with God forever. Yes, we will !
+              /// Merci Père, car je suis intelligent.
               height: 100,
               width: 100,
               child: Image.network("https://assets-global.website-files.com/61c1a8251c7c762bdbadf2a0/6490346b08036a5581167d84_comp.webp"),
