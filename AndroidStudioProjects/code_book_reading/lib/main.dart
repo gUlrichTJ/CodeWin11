@@ -66,7 +66,7 @@ class HomePage extends StatelessWidget {
             Container(
               /// We will stay with God forever. Yes, we will !
               /// Merci Père, car je suis intelligent.
-              /// Nous allons coder en java cet après midi...
+              /// 
               height: 100.0,
               width: 100,
               child: Image.network("https://assets-global.website-files.com/61c1a8251c7c762bdbadf2a0/6490346b08036a5581167d84_comp.webp"),
