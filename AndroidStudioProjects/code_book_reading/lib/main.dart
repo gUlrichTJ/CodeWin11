@@ -65,6 +65,7 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Container(
               /// La puissance de la pensée.
+              /// Dieu nous mèrera jusqu'au bout par Sa grace.
               /// We will stay with God forever. Yes, we will !
               /// Merci Père, car je suis intelligent.
               ///
