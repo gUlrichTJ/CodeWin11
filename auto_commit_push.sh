@@ -12,4 +12,4 @@ commit_message="Auto commit at $(date + '%Y-%m-%d %H:%M:%S')"
 git commit -am "$commit_message"
 
 # We push to the remote repository
-#git push
+git push
