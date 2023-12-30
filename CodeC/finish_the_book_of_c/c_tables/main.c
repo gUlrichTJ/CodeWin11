@@ -5,6 +5,7 @@
 void sum_product_average(int N) {
 
     double sum = 0, product = 1;
+
     if (N < 2 || N > 100) {
         printf("The number you put in the function is not correct !");
     } else {
@@ -19,9 +20,7 @@ void sum_product_average(int N) {
         printf("Product : %lf\n", product);
         printf("Average : %lf\n", sum / N);
     }
-    do {
-        printf()
-    } while(N < 2 || N > 100);
+
 }
 int main()
 {
@@ -34,5 +33,6 @@ int main()
         C %= I;
         I /= 2;
     }
+    sum_product_average(1);
     return 0;
 }
