@@ -27,4 +27,5 @@ def returnNumbers(n, max_n):
 
 
 # Now, we try it with n = 300
-returnNumbers(2, 300)
+# returnNumbers(2, 300)
+
