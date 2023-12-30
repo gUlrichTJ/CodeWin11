@@ -16,6 +16,7 @@ void sum_product_average(int N) {
             product *= i;
         }
 
+        putchar('\n');
         printf("Sum : %lf\n", sum);
         printf("Product : %lf\n", product);
         printf("Average : %lf\n", sum / N);
