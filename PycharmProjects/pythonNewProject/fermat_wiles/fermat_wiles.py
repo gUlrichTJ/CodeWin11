@@ -39,9 +39,8 @@ print(produit)
 
 
 def factorielle(n):
-    _produit = 1
-    for _i in range(1, n):
-        _produit += n * factorielle(n - 1)
+    if n == 0 or n == 1:
+        return 1
     return _produit
 
 
