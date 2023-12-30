@@ -30,7 +30,7 @@ def returnNumbers(n, max_n):
 # returnNumbers(2, 300)
 # We test someting
 produit = 1
-for i in range(1, 100):
+for i in range(1, 11):
     produit *= i
 
 print(produit)
