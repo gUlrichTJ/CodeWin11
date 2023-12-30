@@ -33,6 +33,6 @@ int main()
         C %= I;
         I /= 2;
     }
-    sum_product_average(1);
+    sum_product_average(7);
     return 0;
 }
