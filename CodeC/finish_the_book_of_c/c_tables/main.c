@@ -7,18 +7,18 @@ void sum_product_average(int N) {
     double sum = 0, product = 1;
     if (N < 2 || N > 100) {
         printf("The number you put in the function is not correct !");
+    } else {
+
+        /// Let's calculate the product
+        for (int i = 1; i < N + 1; i++) {
+            sum += i;
+            product *= i;
+        }
+
+        printf("Sum : %lf\n", sum);
+        printf("Product : %lf\n", product);
+        printf("Average : %lf\n", sum / N);
     }
-
-    /// Let's calculate the product
-    for (int i = 1; i < N + 1; i++) {
-        sum += i;
-        product *= i;
-    }
-
-    printf("Sum : %lf\n", sum);
-    printf("Product : %lf\n", product);
-    printf("Average : %lf\n", sum / N);
-
     do {
         printf()
     } while(N < 2 || N > 100);
