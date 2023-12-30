@@ -14,6 +14,7 @@ void sum_product_average(int N) {
         for (int i = 1; i < N + 1; i++) {
             sum += i;
             product *= i;
+            putchar('\a');
         }
 
         putchar('\n');
@@ -35,5 +36,6 @@ int main()
         I /= 2;
     }
     sum_product_average(170);
+    putchar('\a');
     return 0;
 }
