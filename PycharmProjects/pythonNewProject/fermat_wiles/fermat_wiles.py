@@ -36,11 +36,12 @@ for i in range(1, 9):
 print(produit)
 
 
-_produit = 0
+
 def factorielle(n):
+    _produit = 1
     for _i in range(1, n):
-        _produit = factorielle(n) * factorielle(n - 1)
+        _produit += n * factorielle(n - 1)
     return _produit
 
 
-print(factorielle(4))
+print(factorielle(2))
