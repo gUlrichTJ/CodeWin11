@@ -3,6 +3,7 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    int C, I;
+    C = getchar();
     return 0;
 }
