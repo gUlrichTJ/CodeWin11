@@ -28,4 +28,9 @@ def returnNumbers(n, max_n):
 
 # Now, we try it with n = 300
 # returnNumbers(2, 300)
+# We test someting
+produit = 1
+for i in range(1, 100):
+    produit *= i
 
+print(produit)
