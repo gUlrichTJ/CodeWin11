@@ -34,6 +34,6 @@ int main()
         C %= I;
         I /= 2;
     }
-    sum_product_average(500);
+    sum_product_average(170);
     return 0;
 }
