@@ -3,6 +3,8 @@
 
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
+
+    double sum = 0, product = 1;
     if (N < 2 || N > 100) {
         printf("The number you put in the function is not correct !");
     }
