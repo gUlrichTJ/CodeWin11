@@ -35,6 +35,6 @@ int main()
         I /= 2;
     }
     sum_product_average(170);
-    putchar('\a');
+
     return 0;
 }
