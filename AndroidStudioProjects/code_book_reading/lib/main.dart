@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Icon(todoMenuItem.icon.icon),
-                        Padding(padding: EdgeInsets.all(8.0)),
+                        const Padding(padding: EdgeInsets.all(8.0)),
                         Text(todoMenuItem.title),
                       ],
                     ),
