@@ -34,3 +34,10 @@ for i in range(1, 9):
     produit *= i
 
 print(produit)
+
+
+def factorielle(n):
+    return factorielle(n) * factorielle(n - 1)
+
+
+print(factorielle(4))
