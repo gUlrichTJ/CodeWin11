@@ -1,3 +1,4 @@
+import math
 import time as t
 
 
@@ -38,10 +39,11 @@ print(produit)
 
 
 def factorielle(n):
-    _produit = 1
+    _produit = 0
     for _i in range(1, n):
         _produit += n * factorielle(n - 1)
     return _produit
 
 
 print(factorielle(2))
+print(math.factorial(3))
