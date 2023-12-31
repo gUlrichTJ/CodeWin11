@@ -29,7 +29,7 @@ def returnNumbers(n, max_n):
 
 # Now, we try it with n = 300
 # returnNumbers(2, 300)
-# We test someting
+# We test something
 produit = 1
 for i in range(1, 9):
     produit *= i
