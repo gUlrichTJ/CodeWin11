@@ -7,7 +7,7 @@ void remove_zero_and_tasser(int *tab, int N) {
     /// We fill the table
     for (int i = 0; i < N; i++) {
         printf("Enter element %i : ", i);
-        scanf("%i", tab[i]);
+        scanf("%i", &tab[i]);
     }
 }
 /// Function that calculates the sum, product and average of numbers
@@ -34,7 +34,8 @@ void sum_product_average(int N) {
 }
 int main()
 {
-    int C, I;
+    int C, I, N = 50, n = 4;
+    int tab[N];
     C = getchar();
     I = 128;
 
@@ -44,6 +45,8 @@ int main()
         I /= 2;
     }
     sum_product_average(170);
+
+    remove_zero_and_tasser(tab, n);
 
     return 0;
 }
