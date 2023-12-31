@@ -4,6 +4,7 @@ import time as t
 
 # We are going to try to show out the integers
 # smaller than n that verify the equation x^2 + y^2 = z^2
+# I love my family forever.
 def returnNumbers(n, max_n):
     """We initialize the time"""
     start_time = t.time()
