@@ -7,7 +7,7 @@ void remove_zero_and_tasser(int *tab, int N) {
     /// We fill the table
     for (int i = 0; i < N; i++) {
         printf("Enter element %i : ", i);
-        scanf("%i", tab);
+        scanf("%i", tab[i]);
     }
 }
 /// Function that calculates the sum, product and average of numbers
