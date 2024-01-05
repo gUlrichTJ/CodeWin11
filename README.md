@@ -1,4 +1,5 @@
 # CodeWin11
+Let's stay focused.
 A global code in many languages
 We code different things in many languages.
 We've used dart, C++, php, html, python, java.
