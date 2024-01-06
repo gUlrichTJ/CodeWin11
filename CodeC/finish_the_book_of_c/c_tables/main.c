@@ -24,6 +24,8 @@ void remove_zero_and_tasser(int *tab) {
         if (tab[i] == 0) {
             /// We count the number of 0 in the table
             zero_counter++;
+            /// We tasser the elements
+            for ()
         }
         printf("%i ", tab[i]);
     }
