@@ -19,6 +19,7 @@ int array_size() {
 /// We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
     int N = 0, N_C = 0, zero_counter = 0;
+    int i = 0, j = 0;
     __new_line
 
     /*
@@ -51,7 +52,7 @@ void remove_zero_and_tasser(int *tab) {
     }
 
     /// From the correction
-    for (int i = 0, j = 0; i < N ; i++) {
+    for (i = 0, j = 0; i < N ; i++) {
         tab[j] = tab[i];
         if (tab[i])   j++;
     }
