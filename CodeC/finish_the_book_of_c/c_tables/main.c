@@ -14,8 +14,11 @@ void remove_zero_and_tasser(int *tab, int N) {
     }
 
     /// We display the table after going to a new line
-    new_line
-    for (int i = 0; i < N; i++)
+    __new_line
+    for (int i = 0; i < N; i++) {
+        printf("%i ", tab[i]);
+    }
+    __new_line
 }
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
