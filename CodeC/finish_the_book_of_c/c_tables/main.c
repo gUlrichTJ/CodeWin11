@@ -3,6 +3,13 @@
 
 #define __new_line putchar('\n');
 
+/// A function to return the size of the array
+int array_size() {
+    int array_size = 0;
+
+    /// We shall
+}
+
 /// We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
     int N = 0, zero_counter = 0;
