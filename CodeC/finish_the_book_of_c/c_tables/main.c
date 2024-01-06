@@ -31,9 +31,7 @@ void remove_zero_and_tasser(int *tab) {
             /// We diminish the size of the table
             --N;
         }
-
         __new_line
-
         /// printf("%i ", tab[i]);
     }
 
