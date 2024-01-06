@@ -29,10 +29,6 @@ void remove_zero_and_tasser(int *tab) {
     int i = 0, j = 0;
     __new_line
 
-    /*
-    printf("Size of the table : ");
-    scanf("%i", &N);
-    */
     /// The size of the array
     N_C = N = array_size();
     /// We fill the table
@@ -93,7 +89,8 @@ void sum_product_average(int N) {
             product *= i;
         }
 
-        putchar('\n');
+        __new_line
+
         printf("Sum : %lf\n", sum);
         printf("Product : %lf\n", product);
         printf("Average : %lf\n", sum / N);
