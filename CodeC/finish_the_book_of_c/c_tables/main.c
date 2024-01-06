@@ -31,9 +31,9 @@ void remove_zero_and_tasser(int *tab) {
             /// We diminish the size of the table
             --N;
         }
-        __new_line
         /// printf("%i ", tab[i]);
     }
+    __new_line
 
     /// If there was no 0 in the table, we print a message
     if (zero_counter == 0) {
