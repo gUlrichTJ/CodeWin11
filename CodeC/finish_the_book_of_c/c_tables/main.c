@@ -9,7 +9,7 @@ int array_size() {
 
     /// We shall prevent the size to be less than 2 or to exceed 50
     do {
-        printf("Size of the array 2 <= size <= 50 : ");
+        printf("Size of the array (2 <= size <= 50) : ");
         scanf("%i", &array_size);
     } while (array_size < 2 || array_size > 50);
 
@@ -21,9 +21,12 @@ void remove_zero_and_tasser(int *tab) {
     int N = 0, zero_counter = 0;
     __new_line
 
+    /*
     printf("Size of the table : ");
     scanf("%i", &N);
-
+    */
+    /// The size of the array
+    N = array_size();
     /// We fill the table
     for (int i = 0; i < N; i++) {
         printf("Enter element %i : ", i);
