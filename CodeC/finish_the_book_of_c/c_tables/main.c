@@ -4,6 +4,7 @@
 /// We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab, int N) {
     putchar('\n');
+
     /// We fill the table
     for (int i = 0; i < N; i++) {
         printf("Enter element %i : ", i);
