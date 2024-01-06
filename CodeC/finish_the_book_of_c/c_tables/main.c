@@ -8,6 +8,8 @@ void remove_zero_and_tasser(int *tab) {
     int N = 0;
     __new_line
 
+    printf("Size of the table : ");
+    scanf("%i", &N);
 
     /// We fill the table
     for (int i = 0; i < N; i++) {
@@ -51,7 +53,7 @@ int main()
 
     // sum_product_average(170);
 
-    remove_zero_and_tasser(tab, n);
+    remove_zero_and_tasser(tab);
 
     return 0;
 }
