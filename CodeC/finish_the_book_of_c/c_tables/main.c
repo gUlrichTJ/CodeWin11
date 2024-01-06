@@ -16,6 +16,7 @@ int array_size() {
     return array_size;
 }
 
+/// Function to display the
 /// We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
     int N = 0, N_C = 0, zero_counter = 0;
