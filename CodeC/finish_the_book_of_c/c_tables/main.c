@@ -20,7 +20,7 @@ int array_size() {
 void display_table_elements(int *tab, int N) {
     /// We display the elements of the table
     for (int i = 0; i < N; i++) {
-        printf("%d", )
+        printf("%d ", tab[i]);
     }
 }
 /// We shall remove all the zeros and tasser the rest of the elements
