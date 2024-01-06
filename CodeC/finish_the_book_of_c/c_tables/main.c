@@ -8,6 +8,12 @@ int array_size() {
     int array_size = 0;
 
     /// We shall prevent the size to be less than 2 or to exceed 50
+    do {
+        printf("Size of the array 2 <= size <= 50 : ");
+        scanf("%i", &array_size);
+    } while (array_size < 2 || array_size > 50);
+
+    return array_size;
 }
 
 /// We shall remove all the zeros and tasser the rest of the elements
