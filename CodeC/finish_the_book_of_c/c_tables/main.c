@@ -49,6 +49,12 @@ void remove_zero_and_tasser(int *tab) {
         }
         /// printf("%i ", tab[i]);
     }
+
+    /// From the correction
+    for (int i = 0, j = 0; ; i++) {
+        T[j] = T[i];
+        if (T[i])   j++;
+    }
     __new_line
 
     /// If there was no 0 in the table, we print a message
