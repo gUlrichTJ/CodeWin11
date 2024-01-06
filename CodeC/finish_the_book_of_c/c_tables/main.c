@@ -25,7 +25,9 @@ void remove_zero_and_tasser(int *tab) {
             /// We count the number of 0 in the table
             zero_counter++;
             /// We tasser the elements
-            for ()
+            for (j = i; j < N; j++) {
+                tab[j] = tab[j+1];
+            }
         }
         printf("%i ", tab[i]);
     }
