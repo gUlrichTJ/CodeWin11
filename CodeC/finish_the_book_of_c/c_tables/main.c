@@ -7,7 +7,7 @@
 int array_size() {
     int array_size = 0;
 
-    /// We shall
+    /// We shall prevent the size to be less than 2 or to exceed 50
 }
 
 /// We shall remove all the zeros and tasser the rest of the elements
