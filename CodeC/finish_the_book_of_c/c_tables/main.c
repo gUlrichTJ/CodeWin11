@@ -23,7 +23,7 @@ void display_table_elements(int *tab, int N) {
         printf("%d ", tab[i]);
     }
 }
-/// We shall remove all the zeros and tasser the rest of the elements
+/// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
     int N = 0, N_C = 0, zero_counter = 0;
     int i = 0, j = 0;
@@ -74,6 +74,10 @@ void remove_zero_and_tasser(int *tab) {
     }
     __new_line
 }
+
+/// 7.3 Inverse order
+
+
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
 
