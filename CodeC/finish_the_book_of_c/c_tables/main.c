@@ -71,10 +71,10 @@ void remove_zero_and_tasser(int *tab) {
     if (zero_counter == 0) {
         printf("There was no 0 in the table");
     } else {
+        /// We go to a new line
         __new_line
-        for (int i = 0; i < N; i++) {
-            printf("%i ", tab[i]);
-        }
+        /// We display the elements of the table
+        display_table_elements(tab, N);
     }
     __new_line
 }
@@ -98,14 +98,12 @@ void sum_product_average(int N) {
         printf("Product : %lf\n", product);
         printf("Average : %lf\n", sum / N);
     }
-
 }
+
 int main()
 {
     int N = 50;
     int tab[N];
-
-    // sum_product_average(170);
 
     remove_zero_and_tasser(tab);
 
