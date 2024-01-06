@@ -55,6 +55,8 @@ void remove_zero_and_tasser(int *tab) {
         T[j] = T[i];
         if (T[i])   j++;
     }
+    /// New dimension of the array
+    N_C = j;
     __new_line
 
     /// If there was no 0 in the table, we print a message
