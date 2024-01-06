@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define new_line putchar('\n');
+
 /// We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab, int N) {
-    putchar('\n');
+    new_line
 
     /// We fill the table
     for (int i = 0; i < N; i++) {
         printf("Enter element %i : ", i);
         scanf("%i", &tab[i]);
     }
+
+    /// We display the table
 }
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
