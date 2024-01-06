@@ -26,7 +26,7 @@ void remove_zero_and_tasser(int *tab) {
     scanf("%i", &N);
     */
     /// The size of the array
-    N = array_size();
+    N_C = N = array_size();
     /// We fill the table
     for (int i = 0; i < N; i++) {
         printf("Enter element %i : ", i);
@@ -51,9 +51,9 @@ void remove_zero_and_tasser(int *tab) {
     }
 
     /// From the correction
-    for (int i = 0, j = 0; ; i++) {
-        T[j] = T[i];
-        if (T[i])   j++;
+    for (int i = 0, j = 0; i < N ; i++) {
+        tab[j] = tab[i];
+        if (tab[i])   j++;
     }
     /// New dimension of the array;
     N_C = j;
