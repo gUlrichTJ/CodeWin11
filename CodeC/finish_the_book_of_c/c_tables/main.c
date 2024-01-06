@@ -4,8 +4,10 @@
 #define __new_line putchar('\n');
 
 /// We shall remove all the zeros and tasser the rest of the elements
-void remove_zero_and_tasser(int *tab, int N) {
+void remove_zero_and_tasser(int *tab) {
+    int N = 0;
     __new_line
+
 
     /// We fill the table
     for (int i = 0; i < N; i++) {
