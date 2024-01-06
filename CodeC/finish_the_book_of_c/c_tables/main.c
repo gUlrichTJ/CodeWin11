@@ -33,11 +33,13 @@ void remove_zero_and_tasser(int *tab) {
         }
 
         __new_line
-        /// If there was no 0 in the table, we print a message
-        if (zero_counter == 0) {
-            printf("There was no 0 in the table");
-        }
+
         /// printf("%i ", tab[i]);
+    }
+
+    /// If there was no 0 in the table, we print a message
+    if (zero_counter == 0) {
+        printf("There was no 0 in the table");
     }
     __new_line
 }
