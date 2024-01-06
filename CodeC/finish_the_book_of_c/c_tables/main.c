@@ -25,11 +25,17 @@ void remove_zero_and_tasser(int *tab) {
             /// We count the number of 0 in the table
             zero_counter++;
             /// We tasser the elements
-            for (j = i; j < N; j++) {
+            for (int j = i; j < N; j++) {
                 tab[j] = tab[j+1];
             }
             /// We diminish the size of the table
             --N;
+        }
+
+        __new_line
+        /// If there was no 0 in the table, we print a message
+        if (zero_counter == 0) {
+            printf("There was no 0 in the table");
         }
         /// printf("%i ", tab[i]);
     }
@@ -59,7 +65,7 @@ void sum_product_average(int N) {
 }
 int main()
 {
-    int N = 50, n = 4;
+    int N = 50;
     int tab[N];
 
     // sum_product_average(170);
