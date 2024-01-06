@@ -28,8 +28,10 @@ void remove_zero_and_tasser(int *tab) {
             for (j = i; j < N; j++) {
                 tab[j] = tab[j+1];
             }
+            /// We diminish the size of the table
+            --N;
         }
-        printf("%i ", tab[i]);
+        /// printf("%i ", tab[i]);
     }
     __new_line
 }
