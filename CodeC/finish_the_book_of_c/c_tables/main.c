@@ -34,17 +34,10 @@ void sum_product_average(int N) {
 }
 int main()
 {
-    int C, I, N = 50, n = 4;
+    int N = 50, n = 4;
     int tab[N];
-    C = getchar();
-    I = 128;
 
-    while (I >= 1) {
-        printf("%i", C/I);
-        C %= I;
-        I /= 2;
-    }
-    sum_product_average(170);
+    // sum_product_average(170);
 
     remove_zero_and_tasser(tab, n);
 
