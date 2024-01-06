@@ -5,7 +5,7 @@
 
 /// We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
-    int N = 0;
+    int N = 0, zero_counter = 0;
     __new_line
 
     printf("Size of the table : ");
@@ -17,9 +17,14 @@ void remove_zero_and_tasser(int *tab) {
         scanf("%i", &tab[i]);
     }
 
+    /// If there isn't 0 in the table, we print a message
     /// We display the table after going to a new line
     __new_line
     for (int i = 0; i < N; i++) {
+        if (tab[i] == 0) {
+            /// We count the number of 0 in the table
+            zero_counter++;
+        }
         printf("%i ", tab[i]);
     }
     __new_line
