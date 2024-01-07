@@ -19,9 +19,10 @@ int array_size() {
 /// Function to display the elements of a table
 void display_table_elements(int *tab, int N) {
     /// We display the elements of the table
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
         printf("%d ", tab[i]);
-    }
+
+    return 0;
 }
 /// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
