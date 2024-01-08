@@ -142,18 +142,16 @@ void positives_vs_negatives(int *tab) {
     display_table_elements(tab, N);
 
     // Now, we start verifying if there are positives or negatives values in the
-    // table entered
-    // while () {
-        for (i = 0; i < N; i++) {
-            if (tab[i] >= 0) {
-                TPOS[i_pos] = tab[i];
-                i_pos++;
-            } else {
-                TNEG[i_neg] = tab[i];
-                i_neg++;
-            }
+    // We put every element to its place
+    for (i = 0; i < N; i++) {
+        if (tab[i] >= 0) {
+            TPOS[i_pos] = tab[i];
+            i_pos++;
+        } else {
+            TNEG[i_neg] = tab[i];
+            i_neg++;
         }
-    // }
+    }
 
     // We display the both tables
     if (i_pos) {    // if i_pos is not null
