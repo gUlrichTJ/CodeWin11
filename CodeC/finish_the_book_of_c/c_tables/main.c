@@ -144,7 +144,15 @@ void positives_vs_negatives(int *tab) {
     // Now, we start verifying if there are positives or negatives values in the
     // table entered
     while () {
-        for (i = 0;)
+        for (i = 0; i < N; i++) {
+            if (tab[i] > 0) {
+                TPOS[i_pos] = tab[i];
+                i_pos++;
+            } else {
+                TNEG[i_neg] = tab[i];
+                i_neg++;
+            }
+        }
     }
 }
 
