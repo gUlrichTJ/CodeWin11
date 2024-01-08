@@ -197,6 +197,10 @@ int main()
 
     printf("Entrez un entier : ");
     scanf("%d", &x);
+    printf("Entrez un entier : ");
+    scanf("%d", &y);
+
+    printf("%d - %d = %d", x, y, x - y);
     // remove_zero_and_tasser(tab);
     // inverse_table_without_help(tab);
     // positives_vs_negatives(tab);
