@@ -129,6 +129,8 @@ void inverse_table_without_help(int *tab) {
 /// Exercice 7.4
 /// Put positive values int TPOS and negative values in TNEG
 void positives_vs_negatives(int *tab) {
+    int TPOS[50], TNEG[50];
+    int i = 0, i_pos = 0, i_neg = 0;
 
     N = array_size();
 
@@ -138,6 +140,12 @@ void positives_vs_negatives(int *tab) {
     // We display the table filled
     puts("Table entered");
     display_table_elements(tab, N);
+
+    // Now, we start verifying if there are positives or negatives values in the
+    // table entered
+    while () {
+        for (i = 0;)
+    }
 }
 
 /// Function that calculates the sum, product and average of numbers
