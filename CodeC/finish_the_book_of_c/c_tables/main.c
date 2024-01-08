@@ -105,6 +105,8 @@ void inverse_table_without_help(int *tab) {
 
     puts("Table entered : ");
 
+    display_table_elements(tab, N);
+
     // We inverse the table
     for (i = 0, j = N-1; i < j; i++, j--) {
         help = tab[i];
@@ -113,6 +115,7 @@ void inverse_table_without_help(int *tab) {
     }
 
     // We display the inverse table
+    puts("Table inversed");
     display_table_elements(tab, N);
 }
 
@@ -145,7 +148,8 @@ int main()
     int N = 50;
     int tab[N];
 
-    remove_zero_and_tasser(tab);
+    // remove_zero_and_tasser(tab);
+    inverse_table_without_help(tab);
 
     return 0;
 }
