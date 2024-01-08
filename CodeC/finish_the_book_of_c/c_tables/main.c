@@ -154,6 +154,17 @@ void positives_vs_negatives(int *tab) {
             }
         }
     // }
+
+    // We display the both tables
+    if (i_pos) {    // if i_pos is not null
+        puts("Positive values");
+        display_table_elements(TPOS, i_pos);
+    }
+
+    if (i_neg) {
+        puts("Negative values");
+        display_table_elements(TNEG, i_neg);
+    }
 }
 
 /// Function that calculates the sum, product and average of numbers
