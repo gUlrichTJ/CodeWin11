@@ -76,7 +76,19 @@ void remove_zero_and_tasser(int *tab) {
     __new_line
 }
 
-/// 7.3 Inverse order
+/// 7.3 We shall write a function that iverses the elements of a table
+/// without using another table for help
+void inverse_table_without_help(int *tab) {
+    // Variables
+    int N = 0, i = 0, j = 0; // This is the size of the array
+    N = array_size();
+
+    for (i = 0, j = N-1; i < j; i++, j--) {
+        help = tab[i];
+        tab[i] = tab[j];
+        tab[j] = help;
+    }
+}
 
 
 /// Function that calculates the sum, product and average of numbers
