@@ -3,6 +3,8 @@
 
 #define __new_line putchar('\n');
 
+int N = 0;
+
 /// A function to return the size of the array
 int array_size() {
     int array_size = 0;
@@ -124,6 +126,19 @@ void inverse_table_without_help(int *tab) {
     display_table_elements(tab, N);
 }
 
+/// Exercice 7.4
+/// Put positive values int TPOS and negative values in TNEG
+void positives_vs_negatives(int *tab) {
+
+    N = array_size();
+
+    // We have to fill the table
+    fill_table(tab, N);
+
+    // We display the table filled
+    puts("Table entered");
+    display_table_elements(tab, N);
+}
 
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
@@ -154,7 +169,7 @@ int main()
     int tab[N];
 
     // remove_zero_and_tasser(tab);
-    inverse_table_without_help(tab);
-
+    // inverse_table_without_help(tab);
+    positives_vs_negatives(tab);
     return 0;
 }
