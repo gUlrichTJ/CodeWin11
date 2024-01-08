@@ -89,13 +89,21 @@ void remove_zero_and_tasser(int *tab) {
 void inverse_table_without_help(int *tab) {
     // Variables
     int N = 0, i = 0, j = 0, help = 0; // This is the size of the array
+    // We recieve the size of the table
     N = array_size();
 
+    // We have to fill the table
+    fill_table(tab, N);
+
+    // We inverse the table
     for (i = 0, j = N-1; i < j; i++, j--) {
         help = tab[i];
         tab[i] = tab[j];
         tab[j] = help;
     }
+
+    // We display the inverse table
+    display_table_elements(tab, N);
 }
 
 
