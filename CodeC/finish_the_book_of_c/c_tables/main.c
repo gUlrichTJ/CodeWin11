@@ -13,6 +13,8 @@ int array_size() {
         scanf("%i", &array_size);
     } while (array_size < 2 || array_size > 50);
 
+    __new_line
+
     return array_size;
 }
 
@@ -22,6 +24,9 @@ void fill_table(int *tab, int N) {
         printf("Enter element %d : ", i+1);
         scanf("%i", &tab[i]);
     }
+
+    __new_line
+
     return EXIT_SUCCESS;
 }
 
