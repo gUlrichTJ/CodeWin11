@@ -80,7 +80,7 @@ void remove_zero_and_tasser(int *tab) {
 /// without using another table for help
 void inverse_table_without_help(int *tab) {
     // Variables
-    int N = 0, i = 0, j = 0; // This is the size of the array
+    int N = 0, i = 0, j = 0, help = 0; // This is the size of the array
     N = array_size();
 
     for (i = 0, j = N-1; i < j; i++, j--) {
