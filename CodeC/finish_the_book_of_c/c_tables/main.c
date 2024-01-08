@@ -16,6 +16,14 @@ int array_size() {
     return array_size;
 }
 
+/// Function to fill the table
+void fill_table(int *tab, int N) {
+    for (int i = 0; i < N; i++) {
+        printf("Enter element %d : ", i+1);
+        scanf("%i", &tab[i]);
+    }
+}
+
 /// Function to display the elements of a table
 void display_table_elements(int *tab, int N) {
     /// We display the elements of the table
