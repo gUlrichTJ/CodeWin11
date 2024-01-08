@@ -29,7 +29,7 @@ void fill_table(int *tab, int N) {
 void display_table_elements(int *tab, int N) {
     /// We display the elements of the table
     __new_line
-    puts("Elements of the table : ");
+
     for (int i = 0; i < N; i++)
         printf("%d ", tab[i]);
 
@@ -97,7 +97,13 @@ void inverse_table_without_help(int *tab) {
     N = array_size();
 
     // We have to fill the table
+    puts("Fill please");
+
+    __new_line
+
     fill_table(tab, N);
+
+    puts("Table entered : ");
 
     // We inverse the table
     for (i = 0, j = N-1; i < j; i++, j--) {
