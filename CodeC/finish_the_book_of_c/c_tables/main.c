@@ -261,14 +261,17 @@ void sum_of_lines_and_columns() {
     printf("Sum of lines : ");
     __new_line
 
-    for (i = 0; i < L; i++) {
+    for (i = 0; i < C; i++) {
         sum = 0;
-        for (j = 0; j < C; j++)
+        for (j = 0; j < L; j++)
             sum += tab[i][j];
         printf("Sum of line %d : %5ld", i, sum);
         __new_line
     }
     __new_line
+
+    // Sum of columns
+    // for (; ; ;)
 }
 
 /// Function that calculates the sum, product and average of numbers
