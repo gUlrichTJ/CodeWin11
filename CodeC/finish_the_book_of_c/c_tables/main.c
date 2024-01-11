@@ -56,6 +56,12 @@ int number_of_lines(int tab[L][C]) {
         scanf("%i", &L);
     } while(L < 2 || L > 50);
 
+    // The number of columns
+    do {
+        printf("Enter the number of columns : ");
+        scanf("%i", &C);
+    }
+
     __new_line
 
     return L;
