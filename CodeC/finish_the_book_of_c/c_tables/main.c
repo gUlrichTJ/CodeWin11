@@ -255,6 +255,12 @@ void sum_of_lines_and_columns() {
         __new_line
     }
 
+    // We display the sum of lines
+    for (i = 0; i < L; i++) {
+        for (j = 0; j < C; j++) {
+            sum += tab[i][j];
+        }
+    }
     __new_line
 }
 
