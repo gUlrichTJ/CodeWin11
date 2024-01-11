@@ -225,7 +225,7 @@ void sum_of_lines_and_columns(int tab[L][C]) {
     // We parcours and print the sum
     for (int i = 0; i < L; i++) {
         for (int j = 0; j < C; j++) {
-            printf("%d", tab[i][j]);
+            printf("%d ", tab[i][j]);
         }
         __new_line
     }
