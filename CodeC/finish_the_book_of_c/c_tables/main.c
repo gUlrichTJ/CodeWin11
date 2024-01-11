@@ -54,13 +54,13 @@ int number_of_lines(int tab[L][C]) {
     do {
         printf("Enter the number of lines of the array : ");
         scanf("%i", &L);
-    } while(L < 2 || L > 50);
+    } while (L < 2 || L > 50);
 
     // The number of columns
     do {
         printf("Enter the number of columns : ");
         scanf("%i", &C);
-    }
+    } while (C < 2 || C > 20);
 
     __new_line
 
@@ -224,6 +224,12 @@ void sum_of_lines_and_columns() {
     long sum = 0;
 
     __new_line
+
+    // The number of lines
+    do {
+        printf("Number of lines : ");
+        scanf("%i", &L);
+    } while(L < 2 || L > 20);
 
     // The number of lines
     do {
