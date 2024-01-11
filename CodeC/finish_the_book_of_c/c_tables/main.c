@@ -324,6 +324,13 @@ void two_dim_array_transfert_to_one_dim() {
             printf("%5d", M[i][j]);
         __new_line
     }
+
+    // We start the transfert
+    for (i = 0; i < L; i++) {
+        for (j = 0; j < C; j++) {
+
+        }
+    }
 }
 
 /// Function that calculates the sum, product and average of numbers
