@@ -76,7 +76,7 @@ int number_of_columns(int tab[L][C]) {
 }
 
 /// Fill the array of two dimensions
-void fill_array_of_two_dim(int tab[L][C]) {
+void fill_array_of_two_dim(int tab[L][C], int L, int C) {
     L = number_of_lines(tab);
     C = number_of_columns(tab);
 
