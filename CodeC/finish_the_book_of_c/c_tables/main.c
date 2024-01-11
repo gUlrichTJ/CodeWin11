@@ -345,7 +345,7 @@ void two_dim_array_transfert_to_one_dim() {
 }
 
 /// Exercice 7.8 multiplication of two vectors of the same dim
-void vector1_multiply_vector2(int *U, *V) {
+void vector1_multiply_vector2(int *U, int *V) {
     __new_line
     N = array_size();
 
@@ -356,6 +356,12 @@ void vector1_multiply_vector2(int *U, *V) {
 
     printf("Fill the second array please \n\n");
     fill_table(V, N);
+
+    puts("Vector U entered\n");
+    display_table_elements(U, N);
+
+    puts("Vector V entered\n");
+    display_table_elements(V, N);
 }
 
 /// Function that calculates the sum, product and average of numbers
