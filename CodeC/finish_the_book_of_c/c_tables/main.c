@@ -305,10 +305,12 @@ void two_dim_array_transfert_to_one_dim() {
         scanf("%i", &C);
     } while (C < 2 || C > 10);
 
+    __new_line
     // We fill the array
     for (i = 0; i < L; i++) {
         for (j = 0; j < C; j++) {
-
+            printf("Element [%d][%d] : ", i, j);
+            scanf("%i", &M[i][j]);
         }
     }
 }
