@@ -213,6 +213,10 @@ void positives_vs_negatives(int *tab) {
     }
 }
 
+void sum_of_lines_and_columns(int tab[L][C]) {
+
+}
+
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
 
