@@ -304,6 +304,13 @@ void two_dim_array_transfert_to_one_dim() {
         printf("Enter the number of columns : ");
         scanf("%i", &C);
     } while (C < 2 || C > 10);
+
+    // We fill the array
+    for (i = 0; i < L; i++) {
+        for (j = 0; j < C; j++) {
+
+        }
+    }
 }
 
 /// Function that calculates the sum, product and average of numbers
