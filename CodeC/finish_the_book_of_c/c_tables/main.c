@@ -344,6 +344,8 @@ void two_dim_array_transfert_to_one_dim() {
     __new_line
 }
 
+/// Exercice 7.8 multiplication of two vectors
+
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
 
