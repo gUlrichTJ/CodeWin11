@@ -44,7 +44,7 @@ void display_table_elements(int *tab, int N) {
 }
 
 /// Function to take the number of lines of an array of two dimensions
-int number_of_lines(int tab[][C]) {
+int number_of_lines(int tab[L][C]) {
     L = 0;
 
     __new_line
@@ -60,7 +60,7 @@ int number_of_lines(int tab[][C]) {
 }
 
 /// Function to take the number of columns of an array of two dimensions
-int number_of_columns(int tab[][C]) {
+int number_of_columns(int tab[L][C]) {
     C = 0;
 
     __new_line
@@ -76,7 +76,7 @@ int number_of_columns(int tab[][C]) {
 }
 
 /// Fill the array of two dimensions
-void fill_array_of_two_dim(int tab[][C]) {
+void fill_array_of_two_dim(int tab[L][C]) {
     L = number_of_lines(tab);
     C = number_of_columns(tab);
 
