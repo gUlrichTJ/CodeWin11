@@ -81,6 +81,15 @@ int number_of_columns(int *tab) {
 void fill_array_of_two_dim(int *tab) {
     L = number_of_lines(tab);
     C = number_of_columns(tab);
+
+    __new_line
+
+    /// Let's fill the array
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < C; j++) {
+            printf("Enter ")
+        }
+    }
 }
 /// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
