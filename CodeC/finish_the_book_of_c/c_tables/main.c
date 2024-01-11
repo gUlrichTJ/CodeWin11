@@ -79,7 +79,6 @@ int number_of_columns(int tab[L][C]) {
 /// Fill the array of two dimensions
 void fill_array_of_two_dim(int tab[L][C], int L, int C) {
 
-
     __new_line
 
     /// Let's fill the array
@@ -214,11 +213,13 @@ void positives_vs_negatives(int *tab) {
 }
 
 /// Exercice 7.6 sum of lines and columns of a two dim array
-void sum_of_lines_and_columns(int tab[L][C]) {
+void sum_of_lines_and_columns() {
     long sum = 0;
 
-    L = 5;
-    C = 5;
+    do {
+        printf("Number of lines : ");
+        scanf("%i", &L);
+    } while(L < 2 || L > 20);
 
     for (i = 0; i < L; i++) {
         for (j = 0; j < C; j++) {
@@ -271,6 +272,6 @@ int main()
     // inverse_table_without_help(tab);
     // positives_vs_negatives(tab);
 
-    sum_of_lines_and_columns(tab2);
+    sum_of_lines_and_columns();
     return 0;
 }
