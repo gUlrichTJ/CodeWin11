@@ -239,10 +239,14 @@ void sum_product_average(int N) {
 int main()
 {
     int N = 50;
+    int L = 20, C = 20;
     int tab[N];
+    int tab2[L][C];
 
     // remove_zero_and_tasser(tab);
     // inverse_table_without_help(tab);
-    positives_vs_negatives(tab);
+    // positives_vs_negatives(tab);
+
+    fill_array_of_two_dim(tab2);
     return 0;
 }
