@@ -77,8 +77,7 @@ int number_of_columns(int tab[L][C]) {
 
 /// Fill the array of two dimensions
 void fill_array_of_two_dim(int tab[L][C], int L, int C) {
-    L = number_of_lines(tab);
-    C = number_of_columns(tab);
+
 
     __new_line
 
@@ -217,8 +216,11 @@ void positives_vs_negatives(int *tab) {
 void sum_of_lines_and_columns(int tab[L][C]) {
     long sum = 0;
 
+    L = number_of_lines(tab);
+    C = number_of_columns(tab);
+
     // We fill the table
-    fill_array_of_two_dim(tab);
+    fill_array_of_two_dim(tab, L, C);
 
     __new_line
 
