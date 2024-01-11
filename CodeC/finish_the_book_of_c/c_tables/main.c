@@ -258,6 +258,9 @@ void sum_of_lines_and_columns() {
     // We display the sum of lines
     __new_line
 
+    printf("Sum of lines : ");
+    __new_line
+
     for (i = 0; i < L; i++) {
         sum = 0;
         for (j = 0; j < C; j++)
