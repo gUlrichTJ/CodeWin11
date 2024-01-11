@@ -333,6 +333,10 @@ void two_dim_array_transfert_to_one_dim() {
             }
         }
     }
+
+    __new_line
+
+    printf("")
 }
 
 /// Function that calculates the sum, product and average of numbers
