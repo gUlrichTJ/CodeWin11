@@ -273,6 +273,9 @@ void sum_of_lines_and_columns() {
     // Sum of columns
     /// Only God understands this code
 
+    printf("Sum of columns : ");
+    __new_line
+
     for (i = 0; i < C; i++) {
         sum = 0;
         for (j = 0; j < L; j++)
