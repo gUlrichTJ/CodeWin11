@@ -216,21 +216,11 @@ void positives_vs_negatives(int *tab) {
 void sum_of_lines_and_columns(int tab[L][C]) {
     long sum = 0;
 
-    L = number_of_lines(tab);
-    C = number_of_columns(tab);
+    L = 0;
+    C = 0;
 
-    // We fill the table
-    fill_array_of_two_dim(tab, L, C);
 
     __new_line
-
-    // We parcours and print the sum
-    for (int i = 0; i < L; i++) {
-        for (int j = 0; j < C; j++) {
-            printf("%7d ", tab[i][j]);
-        }
-        __new_line
-    }
 }
 
 /// Function that calculates the sum, product and average of numbers
