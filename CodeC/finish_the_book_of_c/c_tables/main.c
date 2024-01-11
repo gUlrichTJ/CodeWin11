@@ -216,9 +216,15 @@ void positives_vs_negatives(int *tab) {
 void sum_of_lines_and_columns(int tab[L][C]) {
     long sum = 0;
 
-    L = 0;
-    C = 0;
+    L = 5;
+    C = 5;
 
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < C; j++) {
+            printf("Element [%d][%d] : ", i, j);
+            scanf("%i", &tab[i][j]);
+        }
+    }
 
     __new_line
 }
