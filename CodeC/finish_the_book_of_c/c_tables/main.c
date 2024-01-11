@@ -287,6 +287,11 @@ void sum_of_lines_and_columns() {
     }
 }
 
+/// Exercice 7.7 tranfert of two dim array to a one dim array
+void two_dim_array_transfert_to_one_dim() {
+
+}
+
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
 
