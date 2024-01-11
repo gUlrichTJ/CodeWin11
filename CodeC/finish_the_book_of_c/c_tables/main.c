@@ -78,7 +78,7 @@ int number_of_columns(int *tab) {
 }
 
 /// Fill the array of two dimensions
-void fill_array_of_two_dim(int *tab) {
+void fill_array_of_two_dim(int **tab) {
     L = number_of_lines(tab);
     C = number_of_columns(tab);
 
@@ -88,7 +88,7 @@ void fill_array_of_two_dim(int *tab) {
     for (int i = 0; i < L; i++) {
         for (int j = 0; j < C; j++) {
             printf("Enter element [%d][%d] : ", i, j);
-            scanf("")
+            scanf("%i", &tab[i][j]);
         }
     }
 }
