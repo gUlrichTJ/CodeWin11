@@ -46,8 +46,17 @@ void display_table_elements(int *tab, int N) {
 }
 
 /// Function to take the size of an array of two dimensions
-void two_dim_array_size(int *tab) {
+void number_of_lines(int *tab) {
     L = 0;
+
+    __new_line
+
+    do {
+        printf("Enter the number of lines of the array : ");
+        scanf("%i", &L);
+    } while(L < 2 || L > 50);
+
+    __new_line
 }
 /// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
