@@ -4,6 +4,7 @@
 #define __new_line putchar('\n');
 
 int N = 0;
+int L = 0, C = 0;
 
 /// A function to return the size of the array
 int array_size() {
