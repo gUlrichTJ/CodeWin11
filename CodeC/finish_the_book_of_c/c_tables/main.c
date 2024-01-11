@@ -313,6 +313,13 @@ void two_dim_array_transfert_to_one_dim() {
             scanf("%i", &M[i][j]);
         }
     }
+
+    __new_line
+
+    // We display the array
+    printf("Table entered : \n\n");
+
+    for
 }
 
 /// Function that calculates the sum, product and average of numbers
