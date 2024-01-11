@@ -44,6 +44,11 @@ void display_table_elements(int *tab, int N) {
     __new_line
     return 0;
 }
+
+/// Function to take the size of an array of two dimensions
+void two_dim_array_size(int *tab) {
+    L = 0;
+}
 /// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
     int N = 0, N_C = 0, zero_counter = 0;
