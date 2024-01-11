@@ -271,11 +271,11 @@ void sum_of_lines_and_columns() {
     __new_line
 
     // Sum of columns
-    for (i = 0; i < L; i++) {
+    for (i = 0; i < C; i++) {
         sum = 0;
-        for (j = 0; j < C; j++)
-            sum += tab[i][j];
-        printf("Sum of column %d : %5ld", j, sum);
+        for (j = 0; j < L; j++)
+            sum += tab[j][i];
+        printf("Sum of column %d : %5ld", i, sum);
         __new_line
     }
 }
