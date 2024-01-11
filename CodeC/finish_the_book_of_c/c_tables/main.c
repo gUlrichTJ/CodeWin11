@@ -226,6 +226,13 @@ void sum_of_lines_and_columns(int tab[L][C]) {
         }
     }
 
+    /// Display
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < C; j++) {
+            printf("%d", tab[i][j]);
+        }
+        __new_line
+    }
     __new_line
 }
 
