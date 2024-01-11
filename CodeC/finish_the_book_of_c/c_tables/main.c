@@ -255,6 +255,6 @@ int main()
     // inverse_table_without_help(tab);
     // positives_vs_negatives(tab);
 
-    fill_array_of_two_dim(tab2);
+    sum_of_lines_and_columns(tab2);
     return 0;
 }
