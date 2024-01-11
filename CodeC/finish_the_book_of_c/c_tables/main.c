@@ -297,6 +297,13 @@ void two_dim_array_transfert_to_one_dim() {
         printf("Enter the number of lines : ");
         scanf("%i", &L);
     } while (L < 2 || L > 10);
+
+    __new_line
+
+    do {
+        printf("Enter the number of columns : ");
+        scanf("%i", &C);
+    } while (C < 2 || C > 10);
 }
 
 /// Function that calculates the sum, product and average of numbers
