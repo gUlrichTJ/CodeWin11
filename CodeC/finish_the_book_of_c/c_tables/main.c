@@ -328,15 +328,21 @@ void two_dim_array_transfert_to_one_dim() {
     // We start the transfert
     for (i = 0; i < L; i++) {
         for (j = 0; j < C; j++) {
-            for (int k = 0; k < L*C; k++) {
+            // for (int k = 0; k < L*C; k++) {
                 V[k] = M[i][j];
-            }
+            // }
         }
     }
 
     __new_line
 
-    printf("")
+    printf("Vector !");
+
+    for (i = 0; i < L * C; i++) {
+        printf("%d ", V[i]);
+    }
+
+    __new_line
 }
 
 /// Function that calculates the sum, product and average of numbers
