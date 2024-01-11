@@ -44,7 +44,7 @@ void display_table_elements(int *tab, int N) {
 }
 
 /// Function to take the number of lines of an array of two dimensions
-int number_of_lines(int *tab) {
+int number_of_lines(int **tab) {
     L = 0;
 
     __new_line
@@ -60,7 +60,7 @@ int number_of_lines(int *tab) {
 }
 
 /// Function to take the number of columns of an array of two dimensions
-int number_of_columns(int *tab) {
+int number_of_columns(int **tab) {
     C = 0;
 
     __new_line
