@@ -195,6 +195,6 @@ int main()
 
     // remove_zero_and_tasser(tab);
     // inverse_table_without_help(tab);
-    // positives_vs_negatives(tab);
+    positives_vs_negatives(tab);
     return 0;
 }
