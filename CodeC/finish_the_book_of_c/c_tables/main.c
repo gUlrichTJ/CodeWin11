@@ -215,9 +215,11 @@ void positives_vs_negatives(int *tab) {
 
 /// Exercice 7.6 sum of lines and columns of a two dim array
 void sum_of_lines_and_columns(int tab[L][C]) {
-    int sum = 0;
+    long sum = 0;
 
+    // We fill the table
     fill_array_of_two_dim(tab);
+
 
 }
 
