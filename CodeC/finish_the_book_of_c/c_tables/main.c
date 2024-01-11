@@ -243,6 +243,17 @@ void sum_of_lines_and_columns() {
     }
 
     // We display the table entered
+    __new_line
+
+    printf("Table entered");
+
+    __new_line
+
+    for (i = 0; i < L; i++) {
+        for (j = 0; j < C; j++)
+            printf("%7d", tab[i][j]);
+        __new_line
+    }
 
     /// Display
     for (i = 0; i < L; i++) {
