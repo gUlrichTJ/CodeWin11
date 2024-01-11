@@ -367,6 +367,8 @@ void vector1_multiply_vector2(int *U, int *V) {
     /// Let's procced to the multiplication of the two vectors
 }
 
+void u_mult_v(int *U, int *V, int N) {}
+
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
 
