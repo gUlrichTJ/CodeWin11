@@ -397,9 +397,6 @@ void following_ones_counter(int *tab) {
          if (max < k) max = k;
          if (tab[i + 1] == 0)
             k = 0;
-         else {
-            k++;
-         }
       }
    }
 }
