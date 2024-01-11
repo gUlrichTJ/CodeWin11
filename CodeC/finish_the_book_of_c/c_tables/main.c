@@ -344,6 +344,7 @@ void two_dim_array_transfert_to_one_dim() {
     __new_line
 }
 
+
 /// Exercice 7.8 multiplication of two vectors of the same dim
 void vector1_multiply_vector2(int *U, int *V) {
     __new_line
