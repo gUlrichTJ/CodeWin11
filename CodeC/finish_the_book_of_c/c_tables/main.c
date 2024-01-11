@@ -87,7 +87,8 @@ void fill_array_of_two_dim(int *tab) {
     /// Let's fill the array
     for (int i = 0; i < L; i++) {
         for (int j = 0; j < C; j++) {
-            printf("Enter ")
+            printf("Enter element [%d][%d] : ", i, j);
+            scanf("")
         }
     }
 }
