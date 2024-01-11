@@ -45,8 +45,8 @@ void display_table_elements(int *tab, int N) {
     return 0;
 }
 
-/// Function to take the size of an array of two dimensions
-void number_of_lines(int *tab) {
+/// Function to take the number of lines of an array of two dimensions
+int number_of_lines(int *tab) {
     L = 0;
 
     __new_line
@@ -57,6 +57,24 @@ void number_of_lines(int *tab) {
     } while(L < 2 || L > 50);
 
     __new_line
+
+    return L;
+}
+
+/// Function to take the number of columns of an array of two dimensions
+int number_of_lines(int *tab) {
+    L = 0;
+
+    __new_line
+
+    do {
+        printf("Enter the number of lines of the array : ");
+        scanf("%i", &L);
+    } while(L < 2 || L > 50);
+
+    __new_line
+
+    return L;
 }
 /// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
