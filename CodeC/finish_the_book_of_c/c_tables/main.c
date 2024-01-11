@@ -362,6 +362,8 @@ void vector1_multiply_vector2(int *U, int *V) {
 
     puts("Vector V entered\n");
     display_table_elements(V, N);
+
+    /// Let's procced to the multiplication of the two vectors
 }
 
 /// Function that calculates the sum, product and average of numbers
