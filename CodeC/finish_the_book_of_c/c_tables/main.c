@@ -289,7 +289,14 @@ void sum_of_lines_and_columns() {
 
 /// Exercice 7.7 tranfert of two dim array to a one dim array
 void two_dim_array_transfert_to_one_dim() {
+    // Variables
+    int M[10][10], V[100];
 
+    // We receive the size of the two dim array
+    do {
+        printf("Enter the number of lines : ");
+        scanf("%i", &L);
+    } while (L < 2 || L > 10);
 }
 
 /// Function that calculates the sum, product and average of numbers
