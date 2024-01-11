@@ -220,7 +220,9 @@ void sum_of_lines_and_columns(int tab[L][C]) {
     // We fill the table
     fill_array_of_two_dim(tab);
 
+    __new_line
 
+    // We parcours and
 }
 
 /// Function that calculates the sum, product and average of numbers
