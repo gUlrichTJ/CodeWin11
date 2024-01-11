@@ -255,13 +255,6 @@ void sum_of_lines_and_columns() {
         __new_line
     }
 
-    /// Display
-    for (i = 0; i < L; i++) {
-        for (j = 0; j < C; j++) {
-            printf("%d", tab[i][j]);
-        }
-        __new_line
-    }
     __new_line
 }
 
