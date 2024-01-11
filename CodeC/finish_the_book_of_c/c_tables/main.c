@@ -364,15 +364,18 @@ void vector1_multiply_vector2(int *U, int *V) {
     puts("Vector V entered\n");
     display_table_elements(V, N);
 
+    __new_line
     /// Let's procced to the multiplication of the two vectors
+    printf("The first vector multiplied by the second is %ld", u_mult_v(U, V, N));
 }
 
-void u_mult_v(int *U, int *V, int N) {
+long u_mult_v(int *U, int *V, int N) {
     long product = 0;
 
     for (i = 0; i < N; i++) {
         product += U[i] * V[i];
     }
+    return product;
 }
 
 /// Function that calculates the sum, product and average of numbers
