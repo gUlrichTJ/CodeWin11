@@ -366,11 +366,11 @@ void vector1_multiply_vector2(int *U, int *V) {
 
     __new_line
     /// Let's procced to the multiplication of the two vectors
-    printf("The first vector multiplied by the second is %ld", u_mult_v(U, V, N));
+    printf("The first vector multiplied by the second is %lf", u_mult_v(U, V, N));
 }
 
-long u_mult_v(int *U, int *V, int N) {
-    long product = 0;
+double u_mult_v(int *U, int *V, int N) {
+    double product = 0;
 
     for (i = 0; i < N; i++) {
         product += U[i] * V[i];
