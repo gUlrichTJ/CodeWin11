@@ -50,6 +50,7 @@ int number_of_lines(int tab[L][C]) {
 
     __new_line
 
+    // The number of lines
     do {
         printf("Enter the number of lines of the array : ");
         scanf("%i", &L);
