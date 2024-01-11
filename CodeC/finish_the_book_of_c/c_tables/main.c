@@ -257,9 +257,10 @@ void sum_of_lines_and_columns() {
 
     // We display the sum of lines
     for (i = 0; i < L; i++) {
-        for (j = 0; j < C; j++) {
+        for (j = 0; j < C; j++)
             sum += tab[i][j];
-        }
+        printf("Sum of line %d : %ld", i, sum);
+        __new_line
     }
     __new_line
 }
