@@ -344,7 +344,17 @@ void two_dim_array_transfert_to_one_dim() {
     __new_line
 }
 
-/// Exercice 7.8 multiplication of two vectors
+/// Exercice 7.8 multiplication of two vectors of the same dim
+void vector1_multiply_vector2(int *tab) {
+    __new_line
+    N = array_size();
+
+    __new_line
+
+    for (i = 0; i < N; i++) {
+        printf("Enter")
+    }
+}
 
 /// Function that calculates the sum, product and average of numbers
 void sum_product_average(int N) {
