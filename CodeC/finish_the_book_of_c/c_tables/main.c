@@ -271,7 +271,10 @@ void sum_of_lines_and_columns() {
     __new_line
 
     // Sum of columns
-    for (; ; ;)
+    for (j = 0; j < L; j++) {
+        sum = 0;
+        for (i = 0; i < C; i++)
+    }
 }
 
 /// Function that calculates the sum, product and average of numbers
