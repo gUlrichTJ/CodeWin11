@@ -351,8 +351,10 @@ void vector1_multiply_vector2(int *tab) {
 
     __new_line
 
+    printf("Fill the first array please\n\n");
     for (i = 0; i < N; i++) {
-        printf("Enter")
+        printf("Enter element %d : ", i);
+        scanf("%i", &tab[i])
     }
 }
 
