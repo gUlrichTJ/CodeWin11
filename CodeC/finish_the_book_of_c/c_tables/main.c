@@ -216,6 +216,8 @@ void positives_vs_negatives(int *tab) {
 void sum_of_lines_and_columns() {
     long sum = 0;
 
+    __new_line
+
     do {
         printf("Number of lines : ");
         scanf("%i", &L);
