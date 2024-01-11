@@ -327,16 +327,17 @@ void two_dim_array_transfert_to_one_dim() {
 
     // We start the transfert
     for (i = 0; i < L; i++) {
-        for (j = 0; j < C; j++) {
+        for (int k = 0, j = 0; j < C; j++) {
             // for (int k = 0; k < L*C; k++) {
                 V[k] = M[i][j];
+                k++;
             // }
         }
     }
 
     __new_line
 
-    printf("Vector !");
+    printf("Vector !\n");
 
     for (i = 0; i < L * C; i++) {
         printf("%d ", V[i]);
