@@ -5,6 +5,7 @@
 
 int N = 0;
 int L = 0, C = 0;
+int i = 0, j = 0;
 
 /// A function to return the size of the array
 int array_size() {
@@ -219,16 +220,16 @@ void sum_of_lines_and_columns(int tab[L][C]) {
     L = 5;
     C = 5;
 
-    for (int i = 0; i < L; i++) {
-        for (int j = 0; j < C; j++) {
+    for (i = 0; i < L; i++) {
+        for (j = 0; j < C; j++) {
             printf("Element [%d][%d] : ", i, j);
             scanf("%i", &tab[i][j]);
         }
     }
 
     /// Display
-    for (int i = 0; i < L; i++) {
-        for (int j = 0; j < C; j++) {
+    for (i = 0; i < L; i++) {
+        for (j = 0; j < C; j++) {
             printf("%d", tab[i][j]);
         }
         __new_line
