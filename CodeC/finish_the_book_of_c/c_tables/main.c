@@ -271,13 +271,12 @@ void sum_of_lines_and_columns() {
     __new_line
 
     // Sum of columns
-    printf("Only God understands this code \n");
-
+    /// Only God understands this code
 
     for (i = 0; i < C; i++) {
         sum = 0;
         for (j = 0; j < L; j++)
-            sum += tab[j][i];
+            sum += tab[j][i];   // I don't even don't wanna mind to understand oooo
         printf("Sum of column %d : %5ld", i, sum);
         __new_line
     }
