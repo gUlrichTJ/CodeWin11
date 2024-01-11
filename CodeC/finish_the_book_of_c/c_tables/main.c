@@ -273,7 +273,7 @@ void sum_of_lines_and_columns() {
     // Sum of columns
     printf("Only God understands this code \n");
 
-    print("H")
+
     for (i = 0; i < C; i++) {
         sum = 0;
         for (j = 0; j < L; j++)
