@@ -30,7 +30,6 @@ void fill_table(int *tab, int N) {
 
     __new_line
 
-    return EXIT_SUCCESS;
 }
 
 /// Function to display the elements of a table
@@ -42,7 +41,6 @@ void display_table_elements(int *tab, int N) {
         printf("%d ", tab[i]);
 
     __new_line
-    return 0;
 }
 
 /// Function to take the number of lines of an array of two dimensions
