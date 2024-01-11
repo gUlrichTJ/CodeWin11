@@ -90,6 +90,7 @@ void fill_array_of_two_dim(int **tab) {
         }
     }
 }
+
 /// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
     int N = 0, N_C = 0, zero_counter = 0;
