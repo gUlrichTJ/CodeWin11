@@ -215,6 +215,7 @@ void positives_vs_negatives(int *tab) {
 
 /// Exercice 7.6 sum of lines and columns of a two dim array
 void sum_of_lines_and_columns() {
+    int tab[20][20];
     long sum = 0;
 
     __new_line
@@ -240,6 +241,8 @@ void sum_of_lines_and_columns() {
             scanf("%i", &tab[i][j]);
         }
     }
+
+    // We display the table entered
 
     /// Display
     for (i = 0; i < L; i++) {
