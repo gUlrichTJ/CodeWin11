@@ -319,7 +319,11 @@ void two_dim_array_transfert_to_one_dim() {
     // We display the array
     printf("Table entered : \n\n");
 
-    for
+    for (i = 0; i < L; i++) {
+        for (j = 0; j < C; j++)
+            printf("%5d", M[i][j]);
+        __new_line
+    }
 }
 
 /// Function that calculates the sum, product and average of numbers
