@@ -218,6 +218,7 @@ void sum_of_lines_and_columns() {
 
     __new_line
 
+    // The number of lines
     do {
         printf("Number of lines : ");
         scanf("%i", &L);
