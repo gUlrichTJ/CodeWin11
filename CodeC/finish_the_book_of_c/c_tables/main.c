@@ -234,6 +234,8 @@ void sum_of_lines_and_columns() {
         scanf("%i", &C);
     } while(C < 2 || C > 20);
 
+    __new_line
+
     // We fill the array
     for (i = 0; i < L; i++) {
         for (j = 0; j < C; j++) {
@@ -259,7 +261,7 @@ void sum_of_lines_and_columns() {
     __new_line
 
     printf("Sum of lines : ");
-    __new_line
+    __new_line __new_line
 
     for (i = 0; i < L; i++) {
         sum = 0;
@@ -274,7 +276,7 @@ void sum_of_lines_and_columns() {
     /// Only God understands this code
 
     printf("Sum of columns : ");
-    __new_line
+    __new_line __new_line
 
     for (i = 0; i < C; i++) {
         sum = 0;
