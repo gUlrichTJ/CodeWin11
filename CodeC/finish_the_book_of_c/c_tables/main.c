@@ -62,19 +62,25 @@ int number_of_lines(int *tab) {
 }
 
 /// Function to take the number of columns of an array of two dimensions
-int number_of_lines(int *tab) {
-    L = 0;
+int number_of_columns(int *tab) {
+    C = 0;
 
     __new_line
 
     do {
-        printf("Enter the number of lines of the array : ");
-        scanf("%i", &L);
-    } while(L < 2 || L > 50);
+        printf("Enter the number of columns of the array : ");
+        scanf("%i", &C);
+    } while(C < 2 || C > 50);
 
     __new_line
 
-    return L;
+    return C;
+}
+
+/// Fill the array of two dimensions
+void fill_array_of_two_dim(int *tab) {
+    L = number_of_lines(tab);
+    C = number_of_columns(tab);
 }
 /// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
