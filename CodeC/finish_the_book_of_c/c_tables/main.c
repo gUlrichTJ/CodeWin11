@@ -379,15 +379,6 @@ void vector1_multiply_vector2(int *U, int *V) {
     printf("The first vector multiplied by the second is ld");
 }
 
-double u_mult_v(int *U, int *V, int N) {
-    double product = 0;
-
-    for (i = 0; i < N; i++) {
-        product += U[i] * V[i];
-    }
-    return product;
-}
-
 // I'm going to count the number of following ones in the array
 void following_ones_counter(int *tab) {
    int max = 0, k = 0;
