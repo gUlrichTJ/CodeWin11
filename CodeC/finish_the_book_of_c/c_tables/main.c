@@ -380,7 +380,7 @@ void vector1_multiply_vector2(int *U, int *V) {
 }
 
 // I'm going to count the number of following ones in the array
-int following_ones_counter(int *tab, int N) {
+int following_ones_counter(int *tab) {
    int max = 0, k = 0;
    for (i = 0; i < N; i++) {
         if (tab[i] == 1) {
@@ -418,22 +418,16 @@ void sum_product_average(int N) {
 
 int main()
 {
-    int N = 50, size = 18;
+    int N = 50;
     int L = 20, C = 20;
     int tab[N];
     int tab2[L][C];
-
-    int tab3[] = {1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1};
-
-    int b = following_ones_counter(tab3, size);
-
-    printf("%d", b);
 
     // remove_zero_and_tasser(tab);
     // inverse_table_without_help(tab);
     // positives_vs_negatives(tab);
 
     // sum_of_lines_and_columns();
-    // two_dim_array_transfert_to_one_dim();
+    two_dim_array_transfert_to_one_dim();
     return 0;
 }
