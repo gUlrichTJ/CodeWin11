@@ -380,22 +380,17 @@ void vector1_multiply_vector2(int *U, int *V) {
 }
 
 // I'm going to count the number of following ones in the array
-void following_ones_counter(int *tab) {
+int following_ones_counter(int *tab) {
    int max = 0, k = 0;
    for (i = 0; i < N; i++) {
-      if (tab[i] == 1) {
-         k++;
-         if (max < k) max = k;
-      } else {
-         k = 0;
-      }
-      if (tab[i] == 1) {
-        k++;
+        if (tab[i] == 1) {
+            k++;
         if (max < k) max = k;
-        if (tab[i + 1] == 0)
+        } else {
             k = 0;
-      }
+        }
    }
+   return (max);
 }
 
 /// Function that calculates the sum, product and average of numbers
