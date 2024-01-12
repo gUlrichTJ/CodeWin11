@@ -393,6 +393,12 @@ void following_ones_counter(int *tab) {
    int max = 0, k = 0;
    for (i = 0; i < N - 1; i++) {
       if (tab[i] == 1) {
+         k++
+         if (max < k) max = k;
+      } else {
+         k = 0;
+      }
+      if (tab[i] == 1) {
          k++;
          if (max < k) max = k;
          if (tab[i + 1] == 0)
@@ -439,4 +445,3 @@ int main()
     two_dim_array_transfert_to_one_dim();
     return 0;
 }
-                                                                                                            
