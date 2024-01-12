@@ -423,7 +423,7 @@ int main()
     int tab[N];
     int tab2[L][C];
 
-    int tab3[] = {1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1};
+    int tab3[] = {1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1};
 
     int b = following_ones_counter(tab3, size);
 
