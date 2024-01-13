@@ -382,8 +382,11 @@ void vector1_multiply_vector2(int *U, int *V) {
 
 /// Exercice 7.10 Maximum and minimum of values in an array
 void max_and_min_in_array(int *tab) {
-
+    int max = 0, min = 0, max_pos = 0, min_pos = 0;
     N = array_size();
+
+    fill_table(tab, N);
+
 
 }
 // I'm going to count the number of following ones in the array
@@ -436,5 +439,6 @@ int main()
 
     // sum_of_lines_and_columns();
     // two_dim_array_transfert_to_one_dim();
+    max_and_min_in_array(tab);
     return 0;
 }
