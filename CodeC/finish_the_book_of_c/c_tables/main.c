@@ -379,8 +379,7 @@ void vector1_multiply_vector2(int *U, int *V) {
     printf("The first vector multiplied by the second is ld");
 }
 
-// I'm going to count the number of following ones in the array
-int following_ones_counter(int *tab) {
+// I'm going to count the number of following ones in the arrayí¼¡í¸Šint following_ones_counter(int *tab, int N) {
    int max = 0, k = 0;
    for (i = 0; i < N; i++) {
         if (tab[i] == 1) {
