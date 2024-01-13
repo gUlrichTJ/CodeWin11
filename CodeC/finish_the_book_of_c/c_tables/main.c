@@ -379,6 +379,13 @@ void vector1_multiply_vector2(int *U, int *V) {
     printf("The first vector multiplied by the second is ld");
 }
 
+
+/// Exercice 7.10 Maximum and minimum of values in an array
+void max_and_min_in_array(int *tab) {
+
+    N = array_size();
+
+}
 // I'm going to count the number of following ones in the array
 int following_ones_counter(int *tab, int N) {
    int max = 0, k = 0;
@@ -428,6 +435,6 @@ int main()
     // positives_vs_negatives(tab);
 
     // sum_of_lines_and_columns();
-    two_dim_array_transfert_to_one_dim();
+    // two_dim_array_transfert_to_one_dim();
     return 0;
 }
