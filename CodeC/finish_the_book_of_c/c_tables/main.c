@@ -427,12 +427,13 @@ void insert_value_in_a_sorted_list(int *tab) {
 
     /// We search where the number will be put
     /// We increase the size of the array
-    N++;
+    ++N;
     for (i = 0; i < N; i++) {
         if (val <= tab[i]) {
-            for (j = N - 1; j >= i; j--) {
+            for (j = N - 1; j > i; j--) {
                 tab[j] = tab[j-1];
             }
+            tab[i] = val;
         }
         break;
     }
