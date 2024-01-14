@@ -389,6 +389,8 @@ void max_and_min_in_array(int *tab) {
 
 
 }
+
+/// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
 int following_ones_counter(int *tab, int N) {
    int max = 0, k = 0;
