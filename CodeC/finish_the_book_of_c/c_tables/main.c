@@ -430,8 +430,8 @@ void insert_value_in_a_sorted_list(int *tab) {
     ++N;
     for (i = 0; i < N; i++) {
         if (val <= tab[i]) {
-            for (j = N - 1; j > i; j--) {
-                tab[j] = tab[j-1];
+            for (j = i; j < N; j++) {
+                tab[j] = tab[j+1];
             }
             tab[i] = val;
         }
