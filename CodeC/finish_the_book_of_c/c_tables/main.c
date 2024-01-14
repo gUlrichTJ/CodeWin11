@@ -429,11 +429,12 @@ void insert_value_in_a_sorted_list(int *tab) {
     /// We increase the size of the array
     N++;
     for (i = 0; i < N; i++) {
-        if (val >= tab[i]) {
+        if (val <= tab[i]) {
             for (j = N - 1; j > i; j--) {
                 tab[j] = tab[j-1];
             }
         }
+        break;
     }
 
     display_table_elements(tab, N);
