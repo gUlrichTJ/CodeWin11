@@ -389,8 +389,10 @@ void max_and_min_in_array(int *tab) {
 
     display_table_elements(tab, N);
 
+    max = min = tab[0];
+
     /// We research the maximum
-    for (i = 0; i < N; i++) {
+    for (i = 1; i < N; i++) {
         if (max < tab[i]) {
             max = tab[i];
             max_pos = i;
@@ -400,6 +402,7 @@ void max_and_min_in_array(int *tab) {
             min_pos = i;
         }
     }
+    printf("%i %i", max, min);
 }
 
 /// We will test if a number is a prime number of not
