@@ -410,6 +410,7 @@ void max_and_min_in_array(int *tab) {
 
 /// Exercice 7.11 Insert a value in a sorted list
 void insert_value_in_a_sorted_list(int *tab) {
+    int val = 0;
     N = array_size();
 
     N++;
@@ -425,6 +426,8 @@ void insert_value_in_a_sorted_list(int *tab) {
     scanf("%i", &val);
 
     __new_line
+
+
 }
 
 /// We will test if a number is a prime number of not
