@@ -430,7 +430,7 @@ void insert_value_in_a_sorted_list(int *tab) {
     N++;
     for (i = 0; i < N; i++) {
         if (val <= tab[i]) {
-            for (j = N - 1; j > i; j--) {
+            for (j = N - 1; j >= i; j--) {
                 tab[j] = tab[j-1];
             }
         }
@@ -492,5 +492,6 @@ int main()
     // sum_of_lines_and_columns();
     // two_dim_array_transfert_to_one_dim();
     // max_and_min_in_array(tab);
+    insert_value_in_a_sorted_list(tab);
     return 0;
 }
