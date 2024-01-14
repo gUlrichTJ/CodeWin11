@@ -418,7 +418,10 @@ void insert_value_in_a_sorted_list(int *tab) {
 
     display_table_elements(tab, N);
 
-    /// We receive
+    /// We receive the value that will be inserted
+    __new_line
+    printf("Please, insert the value that will be inserted : ");
+    scanf("%i", &val);
 }
 
 /// We will test if a number is a prime number of not
