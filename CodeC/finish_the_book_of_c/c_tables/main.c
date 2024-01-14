@@ -402,7 +402,8 @@ void max_and_min_in_array(int *tab) {
             min_pos = i;
         }
     }
-    printf("%i %i", max, min);
+    printf("max : %d, min : %d, max pos : %d, min pos : %d",
+        max, min, max_pos, min_pos);
 }
 
 /// We will test if a number is a prime number of not
