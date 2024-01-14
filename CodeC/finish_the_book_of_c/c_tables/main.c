@@ -388,6 +388,8 @@ void max_and_min_in_array(int *tab) {
     fill_table(tab, N);
 
     display_table_elements(tab, N);
+
+    /// We research the maximum
 }
 
 /// We will test if a number is a prime number of not
