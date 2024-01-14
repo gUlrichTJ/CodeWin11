@@ -404,7 +404,12 @@ void max_and_min_in_array(int *tab) {
     }
     printf("max : %d, min : %d, max pos : %d, min pos : %d",
         max, min, max_pos, min_pos);
+
+    __new_line
 }
+
+/// Exercice 7.11 Insert a value in a sorted list
+
 
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
@@ -457,6 +462,6 @@ int main()
 
     // sum_of_lines_and_columns();
     // two_dim_array_transfert_to_one_dim();
-    max_and_min_in_array(tab);
+    // max_and_min_in_array(tab);
     return 0;
 }
