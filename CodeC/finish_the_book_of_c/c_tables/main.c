@@ -409,7 +409,9 @@ void max_and_min_in_array(int *tab) {
 }
 
 /// Exercice 7.11 Insert a value in a sorted list
+void insert_value_in_a_sorted_list(int *tab) {
 
+}
 
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
