@@ -390,6 +390,16 @@ void max_and_min_in_array(int *tab) {
     display_table_elements(tab, N);
 
     /// We research the maximum
+    for (i = 0; i < N; i++) {
+        if (max < tab[i]) {
+            max = tab[i];
+            max_pos = i;
+        }
+        if (min > tab[i]) {
+            min = tab[i];
+            min_pos = i;
+        }
+    }
 }
 
 /// We will test if a number is a prime number of not
