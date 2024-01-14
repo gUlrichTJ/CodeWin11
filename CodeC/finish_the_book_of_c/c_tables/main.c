@@ -413,8 +413,6 @@ void insert_value_in_a_sorted_list(int *tab) {
     int val = 0;
     N = array_size();
 
-    N++;
-
     fill_table(tab, N);
 
     display_table_elements(tab, N);
@@ -427,7 +425,14 @@ void insert_value_in_a_sorted_list(int *tab) {
 
     __new_line
 
+    /// We search where the number will be put
+    /// We increase the size of the array
+    N++;
+    for (i = 0; i < N; i++) {
+        if (val >= tab[i]) {
 
+        }
+    }
 }
 
 /// We will test if a number is a prime number of not
