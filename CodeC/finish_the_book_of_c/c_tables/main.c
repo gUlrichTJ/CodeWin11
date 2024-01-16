@@ -445,6 +445,10 @@ void insert_value_in_a_sorted_list(int *tab) {
 
 void values_in_sorted_array(int *tab) {
     N = array_size();
+
+    fill_table(tab, N);
+
+    display_table_elements(tab, N);
 }
 
 /// We will test if a number is a prime number of not
