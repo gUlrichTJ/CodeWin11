@@ -441,7 +441,7 @@ void insert_value_in_a_sorted_list(int *tab) {
     display_table_elements(tab, N);
 }
 
-/// Exercice 7.12 Research of a value in a sorted array
+/// Exercice 7.12 Research of a value in a sorted array (binary search)
 
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
