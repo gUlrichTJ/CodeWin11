@@ -443,6 +443,10 @@ void insert_value_in_a_sorted_list(int *tab) {
 
 /// Exercice 7.12 Research of a value in a sorted array (binary search)
 
+void values_in_sorted_array(int *tab) {
+    N = array_size();
+}
+
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
 int following_ones_counter(int *tab, int N) {
