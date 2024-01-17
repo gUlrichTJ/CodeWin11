@@ -449,6 +449,8 @@ void values_in_sorted_array(int *tab) {
     fill_table(tab, N);
 
     display_table_elements(tab, N);
+
+    //
 }
 
 /// We will test if a number is a prime number of not
