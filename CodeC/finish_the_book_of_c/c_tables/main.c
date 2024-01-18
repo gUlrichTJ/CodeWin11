@@ -444,6 +444,7 @@ void insert_value_in_a_sorted_list(int *tab) {
 /// Exercice 7.12 Research of a value in a sorted array (binary search)
 void values_in_sorted_array(int *tab) {
     int middle = 0, val = 0;
+    int left = 0; right = 0;
     N = array_size();
 
     fill_table(tab, N);
@@ -451,10 +452,7 @@ void values_in_sorted_array(int *tab) {
     display_table_elements(tab, N);
 
     /// We start searching.
-    middle = (int) N / 2;
-    if (val == tab[middle]) {
-        printf("The value is present and is at possition %i", );
-    }
+
 }
 
 /// We will test if a number is a prime number of not
