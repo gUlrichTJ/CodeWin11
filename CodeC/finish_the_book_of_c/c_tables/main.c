@@ -445,7 +445,9 @@ void insert_value_in_a_sorted_list(int *tab) {
 void values_in_sorted_array(int *tab) {
     int middle = 0, val = 0;
     int left = 0; right = 0;
-    N = array_size();
+    right = N = array_size();
+
+    right = N - 1;
 
     fill_table(tab, N);
 
