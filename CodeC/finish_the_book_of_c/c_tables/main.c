@@ -467,9 +467,10 @@ void check_value_in_sorted_array(int *tab) {
         }
         middle = floor ((left + right) / 2);
 
-        if (tab[middle] < value && tab[middle] != value) {
+        if (tab[middle] < value) {
             left = middle + 1;
-        } else {
+        }
+        if (tab[middle] > value) {
             right = middle - 1;
         }
 
