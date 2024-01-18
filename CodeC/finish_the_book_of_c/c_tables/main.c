@@ -454,6 +454,11 @@ void values_in_sorted_array(int *tab) {
 
     display_table_elements(tab, N);
 
+    __new_line
+
+    printf("Enter searched value : ");
+    scanf("%i", &value);
+
     /// We start searching.
     do {
         if (left > right) {
