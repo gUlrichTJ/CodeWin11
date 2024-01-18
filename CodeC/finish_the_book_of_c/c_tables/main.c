@@ -458,6 +458,7 @@ void values_in_sorted_array(int *tab) {
     do {
         if (left > right) {
             printf("Impossible !");
+            break;
         }
         middle = floor ((left + right) / 2);
 
@@ -466,6 +467,10 @@ void values_in_sorted_array(int *tab) {
         }
         if (tab[middle] > value) {
             right = middle - 1;
+        }
+        if (tab[middle] == value) {
+            printf("Done ! %d", middle);
+            break;
         }
     } while ();
 }
