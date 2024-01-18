@@ -461,7 +461,7 @@ void check_value_in_sorted_array(int *tab) {
 
     /// We start searching.
     do {
-        if (left >= right) {
+        if (left > right) {
             printf("Impossible !");
             break;
         }
