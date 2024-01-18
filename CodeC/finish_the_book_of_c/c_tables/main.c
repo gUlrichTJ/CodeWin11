@@ -467,12 +467,12 @@ void check_value_in_sorted_array(int *tab) {
         }
         middle = floor ((left + right) / 2);
 
-        if (tab[middle] < value) {
+        if (tab[middle] < value && tab[middle] != value) {
             left = middle + 1;
-        }
-        if (tab[middle] > value) {
+        } else {
             right = middle - 1;
         }
+
         if (tab[middle] == value) {
             printf("Done ! %d", middle);
             break;
