@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1705272818 source:/home/gracianomathey/codes/CodeWin11/CodeC/finish_the_book_of_c/c_tables/main.c
+1705602373 source:/home/gracianomathey/codes/CodeWin11/CodeC/finish_the_book_of_c/c_tables/main.c
 	<stdio.h>
 	<stdlib.h>
+	<math.h>
 
