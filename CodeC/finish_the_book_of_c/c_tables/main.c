@@ -455,14 +455,19 @@ void values_in_sorted_array(int *tab) {
     display_table_elements(tab, N);
 
     /// We start searching.
-    if (left > right) {
-        printf("Impossible !");
-    }
-    middle = floor ((left + right) / 2);
+    do {
+        if (left > right) {
+            printf("Impossible !");
+        }
+        middle = floor ((left + right) / 2);
 
-    if (tab[middle] < value) {
-        left = middle + 1;
-    }
+        if (tab[middle] < value) {
+            left = middle + 1;
+        }
+        if (tab[middle] > value) {
+            right = middle - 1;
+        }
+    } while ();
 }
 
 /// We will test if a number is a prime number of not
