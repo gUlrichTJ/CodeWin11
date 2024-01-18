@@ -445,7 +445,7 @@ void insert_value_in_a_sorted_list(int *tab) {
 /// Exercice 7.12 Research of a value in a sorted array (binary search)
 void values_in_sorted_array(int *tab) {
     int middle = 0, value = 0;
-    int left = 0; right = 0;
+    int left = 0, right = 0;
     right = N = array_size();
 
     right = N - 1;
@@ -472,7 +472,7 @@ void values_in_sorted_array(int *tab) {
             printf("Done ! %d", middle);
             break;
         }
-    } while ();
+    } while (left > right);
 }
 
 /// We will test if a number is a prime number of not
