@@ -453,7 +453,7 @@ void values_in_sorted_array(int *tab) {
     /// We start searching.
     middle = (int) N / 2;
     if (val == tab[middle]) {
-        printf("The value is present and is at possition %i", )
+        printf("The value is present and is at possition %i", );
     }
 }
 
