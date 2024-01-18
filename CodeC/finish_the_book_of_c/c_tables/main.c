@@ -508,9 +508,7 @@ int main()
     // sum_of_lines_and_columns();
     // two_dim_array_transfert_to_one_dim();
     // max_and_min_in_array(tab);
-    for (i = 0; i < 500; i++) {
-        printf("%i - Non. Gloria, tu n'as pas a pleurer. D'ailleurs, je plaisantais\n", i+1);
-    }
+
     insert_value_in_a_sorted_list(tab);
     return 0;
 }
