@@ -460,7 +460,9 @@ void values_in_sorted_array(int *tab) {
     }
     middle = floor ((left + right) / 2);
 
-    if ()
+    if (tab[middle] < value) {
+        left = middle + 1;
+    }
 }
 
 /// We will test if a number is a prime number of not
