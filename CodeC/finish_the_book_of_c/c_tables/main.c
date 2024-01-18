@@ -451,7 +451,9 @@ void values_in_sorted_array(int *tab) {
     display_table_elements(tab, N);
 
     /// We start searching.
-    for ()
+    for (i = 0; i < N; i++) {
+
+    }
 }
 
 /// We will test if a number is a prime number of not
