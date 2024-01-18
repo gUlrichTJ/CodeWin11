@@ -477,7 +477,9 @@ void check_value_in_sorted_array(int *tab) {
             printf("Done ! %d", middle);
             break;
         }
-    } while (left > right);
+    } while (left < right);
+
+    __new_line
 }
 
 /// We will test if a number is a prime number of not
