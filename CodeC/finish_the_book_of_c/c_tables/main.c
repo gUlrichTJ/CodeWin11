@@ -443,7 +443,7 @@ void insert_value_in_a_sorted_list(int *tab) {
 }
 
 /// Exercice 7.12 Research of a value in a sorted array (binary search)
-void values_in_sorted_array(int *tab) {
+void check_value_in_sorted_array(int *tab) {
     int middle = 0, value = 0;
     int left = 0, right = 0;
     N = array_size();
@@ -533,6 +533,7 @@ int main()
     // two_dim_array_transfert_to_one_dim();
     // max_and_min_in_array(tab);
 
-    insert_value_in_a_sorted_list(tab);
+    // insert_value_in_a_sorted_list(tab);
+    check_value_in_sorted_array(tab);
     return 0;
 }
