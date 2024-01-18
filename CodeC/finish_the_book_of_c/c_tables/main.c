@@ -443,7 +443,7 @@ void insert_value_in_a_sorted_list(int *tab) {
 
 /// Exercice 7.12 Research of a value in a sorted array (binary search)
 void values_in_sorted_array(int *tab) {
-    int middle = 0;
+    int middle = 0, val = 0;
     N = array_size();
 
     fill_table(tab, N);
@@ -451,9 +451,9 @@ void values_in_sorted_array(int *tab) {
     display_table_elements(tab, N);
 
     /// We start searching.
-    for (i = 0; i < N; i++) {
-        middle = (int) N / 2;
-        /// We compare the value to the value that is in the middle of the array
+    middle = (int) N / 2;
+    if (val == tab[middle]) {
+        printf("The value is present and is at possition %i", )
     }
 }
 
