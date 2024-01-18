@@ -444,7 +444,7 @@ void insert_value_in_a_sorted_list(int *tab) {
 
 /// Exercice 7.12 Research of a value in a sorted array (binary search)
 void values_in_sorted_array(int *tab) {
-    int middle = 0, val = 0;
+    int middle = 0, value = 0;
     int left = 0; right = 0;
     right = N = array_size();
 
