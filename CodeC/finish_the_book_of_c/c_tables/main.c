@@ -452,7 +452,7 @@ void values_in_sorted_array(int *tab) {
 
     /// We start searching.
     for (i = 0; i < N; i++) {
-
+        middle = N / 2;
     }
 }
 
