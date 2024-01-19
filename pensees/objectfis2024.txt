@@ -62,3 +62,7 @@ Créer une app ou un logiciel qui me permet de faire des transferts entre mon pc
 Je n'aurai besoin que du hospot.
 
 Ou bien, je fais en sorte que mon pc et mon appareil soient dans le même réseau, puis je fais les partages en local.
+
+Créer un site pour que les gens du port puissent vendre en ligne.
+
+Avec l'argent que je vais gagner, je vais réparer mon PC puis je vais le vendre et 
