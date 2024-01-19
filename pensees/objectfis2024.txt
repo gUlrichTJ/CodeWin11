@@ -60,3 +60,5 @@ Merci Père.
 Créer une app ou un logiciel qui me permet de faire des transferts entre mon pc et ma machine sans être connecté.
 
 Je n'aurai besoin que du hospot.
+
+Ou bien, je fais en sorte que mon pc et mon appareil soient dans le même réseau, puis je fais les partages en local.
