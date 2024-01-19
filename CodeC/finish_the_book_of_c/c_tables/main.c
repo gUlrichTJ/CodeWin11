@@ -489,14 +489,14 @@ void check_value_in_sorted_array(int *tab) {
 int following_ones_counter(int *tab, int N) {
    int max = 0, k = 0;
    for (i = 0; i < N; i++) {
-        if (tab[i] == 1 && max < k) {
+        if (tab[i] == 1) {
             k++;
-            max = k;
-        //if (max < k) max = k;
+            if (max < k) max = k;
         } else {
             k = 0;
         }
    }
+   printf("%i", max);
    return (max);
 }
 
