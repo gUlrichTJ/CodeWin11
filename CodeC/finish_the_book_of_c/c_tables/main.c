@@ -529,6 +529,7 @@ int main()
     int L = 20, C = 20;
     int tab[N];
     int tab2[L][C];
+    int tab3[] = {1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0};
 
     // remove_zero_and_tasser(tab);
     // inverse_table_without_help(tab);
@@ -539,6 +540,7 @@ int main()
     // max_and_min_in_array(tab);
 
     // insert_value_in_a_sorted_list(tab);
+    following_ones_counter(tab3, 14);
     check_value_in_sorted_array(tab);
     return 0;
 }
