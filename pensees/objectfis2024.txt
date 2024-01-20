@@ -78,3 +78,7 @@ Je vais essayer avant que ça ne marche pas.
 Je vais utiliser latex ou soit luatex.
 
 Faire une application qui me permettra de voir tout ce qui se passe sur mon portable si nous sommes dans le même réseau.
+
+I want to know what people have already done with rust.
+
+If they have coded rustrover with rust, 
