@@ -75,4 +75,6 @@ Un livre de mathematiques. Il va falloir expliquer les exercices, je devrai êtr
 
 Je vais essayer avant que ça ne marche pas.
 
-Je vais utiliser latex ou soit luatex
+Je vais utiliser latex ou soit luatex.
+
+Faire une application qui me permettra de voir tout ce qui se passe sur mon portable si nous sommes dans le même réseau.
