@@ -81,4 +81,4 @@ Faire une application qui me permettra de voir tout ce qui se passe sur mon port
 
 I want to know what people have already done with rust.
 
-If they have coded rustrover with rust, 
+If they have coded rustrover with rust, I'll be motivated to learn how to code in rust, learn how to do gui in rust and do desktop apps like rustrover in rust.
