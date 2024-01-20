@@ -1,0 +1,10 @@
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/libwayland_sys-5e4bcfc84ee6bdd1.rmeta: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/common.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/client.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/server.rs
+
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/libwayland_sys-5e4bcfc84ee6bdd1.rlib: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/common.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/client.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/server.rs
+
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/wayland_sys-5e4bcfc84ee6bdd1.d: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/common.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/client.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/server.rs
+
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/lib.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/common.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/client.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wayland-sys-0.28.6/src/server.rs:

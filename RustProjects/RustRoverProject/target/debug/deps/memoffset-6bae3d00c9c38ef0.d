@@ -1,0 +1,10 @@
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/libmemoffset-6bae3d00c9c38ef0.rmeta: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/raw_field.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/offset_of.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/span_of.rs
+
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/libmemoffset-6bae3d00c9c38ef0.rlib: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/raw_field.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/offset_of.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/span_of.rs
+
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/memoffset-6bae3d00c9c38ef0.d: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/raw_field.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/offset_of.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/span_of.rs
+
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/lib.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/raw_field.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/offset_of.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.6.5/src/span_of.rs:

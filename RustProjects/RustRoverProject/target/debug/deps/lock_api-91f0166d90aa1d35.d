@@ -1,0 +1,10 @@
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/liblock_api-91f0166d90aa1d35.rmeta: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/mutex.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/remutex.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/rwlock.rs
+
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/liblock_api-91f0166d90aa1d35.rlib: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/mutex.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/remutex.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/rwlock.rs
+
+/home/gracianomathey/codes/CodeWin11/RustProjects/RustRoverProject/target/debug/deps/lock_api-91f0166d90aa1d35.d: /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/lib.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/mutex.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/remutex.rs /home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/rwlock.rs
+
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/lib.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/mutex.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/remutex.rs:
+/home/gracianomathey/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/src/rwlock.rs:
