@@ -6,4 +6,8 @@ fn main() {
     x.push("foo");
 
     /// To avoid some errors, we can use these methods :
+    {
+        let _y = &x[0];
+    } /// Or
+    let _y = &x[0].clone();
 }
