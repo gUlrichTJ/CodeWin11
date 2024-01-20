@@ -12,5 +12,6 @@ fn main() {
      */
     let mut x = vec!["Hello World"];
     let _y = &x[0];
+    let _y = &x[0].clone();
     x.push("foo");
 }
