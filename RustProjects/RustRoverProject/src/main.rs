@@ -1,4 +1,30 @@
-extern crate conrod;
+
+use gtk::prelude::*;
+use gtk::{Label, Window, WindowType};
+
+fn main() {
+    gtk::init().expect("Failed to initialize GTK.");
+
+    let window = Window::new(WindowType::Toplevel);
+    window.set_title("Hello, GTK!");
+    window.set_default_size(300, 200);
+
+    let label = Label::new(Some("Hello, Rust!"));
+
+    window.add(&label);
+
+    window.connect_delete_event(|_, _| {
+        // Terminate the GTK main loop
+        gtk::main_quit();
+        Inhibit(false)
+    });
+
+    window.show_all();
+
+    gtk::main();
+}
+
+/* extern crate conrod;
 use conrod::backend::glium::glium::{self, glutin, Surface};
 use conrod::backend::glium::Renderer;
 use conrod::{widget, Colorable, Positionable, Widget, Sizeable};
@@ -38,6 +64,8 @@ fn main() {
         }
     }
 }
+
+ */
 
 // fn main() {
    // print!("\n\nHello, world!\n\n\n");
