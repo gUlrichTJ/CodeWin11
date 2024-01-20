@@ -1,0 +1,7 @@
+"Out of scope" is a term used to describe something that is beyond the boundaries or limits of a particular context, subject, or area of interest. It is often used in project management, software development, and other fields to indicate that a certain task, feature, or requirement falls outside the defined scope of a project or system.
+
+In simpler terms, "out of scope" means "not included" or "not relevant" to the current context. It is used to draw a clear boundary between what is included and what is excluded from consideration or discussion.
+
+For example, if a software development project has a defined scope that includes developing a mobile app for iOS and Android devices, any requests or discussions about developing a desktop version of the app would be considered "out of scope" for that particular project.
+
+Using the term "out of scope" helps to manage expectations, avoid confusion, and ensure that resources are focused on the most relevant and important tasks within the defined boundaries. It also allows for better planning and decision-making by clearly defining what is and what is not part of a particular project or endeavor.
