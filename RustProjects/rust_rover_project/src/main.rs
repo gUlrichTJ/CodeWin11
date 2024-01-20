@@ -8,6 +8,7 @@ fn main() {
         la résoudre. \nTu es donc l'un des langages que je ne comprends pas \
         facilement, ce qui me pousse à t'apprendre.")
     }
-    
+
      */
+    let mut x = vec!["Hello World"];
 }
