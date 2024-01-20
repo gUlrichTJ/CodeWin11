@@ -1,25 +1,12 @@
-use iced::{Sandbox, Element, Text};
+use gtk::prelude::*;
+use gtk::{glib, Application};
 
-struct HelloIced;
+const APP_ID: &str = "org.gtk_rs.HelloWorld1";
 
-impl Sandbox for HelloIced {
-    type Message = ();
+fn main() -> glib::ExitCode {
+    // Create a new application
+    let app = Application::builder().application_id(APP_ID).build();
 
-    fn new() -> Self {
-        HelloIced
-    }
-
-    fn title(&self) -> String {
-        String::from("Hello, Iced!")
-    }
-
-    fn update(&mut self, _message: ()) {}
-
-    fn view(&mut self) -> Element<()> {
-        Text::new("Hello, Rust!").into()
-    }
-}
-
-fn main() {
-    HelloIced::run(iced::Settings::default());
+    // Run the application
+    app.run()
 }
