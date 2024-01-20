@@ -82,3 +82,13 @@ Faire une application qui me permettra de voir tout ce qui se passe sur mon port
 I want to know what people have already done with rust.
 
 If they have coded rustrover with rust, I'll be motivated to learn how to code in rust, learn how to do gui in rust and do desktop apps like rustrover in rust.
+
+Je veux relever un nouveau défi.
+
+L'achat de ce PC là sera un tournant dans ma vie en tant qu'informaticien.
+
+Je veux faire un hackaton, relever un grand défi, quelque chose qui va me pousser à faire des recherches.
+
+Je rends grâce à Dieu, je suis motivé.
+
+Yes, je suis motivé, Dieu Merci.

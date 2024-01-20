@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "RustRoverProject"
+name = "rust_rover_project"
 version = "0.1.0"
