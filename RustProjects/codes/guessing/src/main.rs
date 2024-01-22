@@ -1,3 +1,6 @@
+use std::io;
+
 fn main() {
-    println!("Hello, world!");
+    println!("GUESSING GAME");
+    print!("Please, input your guess : ");
 }
