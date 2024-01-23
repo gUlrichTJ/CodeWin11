@@ -25,5 +25,5 @@ use rand::Rng;
  */
 
 fn main() {
-    let must guess
+    let mut guess = String::new();
 }
