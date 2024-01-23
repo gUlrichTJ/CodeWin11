@@ -26,4 +26,6 @@ use rand::Rng;
 
 fn main() {
     let mut guess = String::new();
+
+    io::stdin().read_line(&mut guess);
 }
