@@ -3,7 +3,7 @@ extern crate rand;
 use std::io;
 use rand::Rng;
 
-fn main() {
+/* fn main() {
     println!("GUESSING GAME");
     println!("Please, input your guess : ");
 
@@ -20,4 +20,10 @@ fn main() {
         .expect("Failed to read line");
 
     println!("You guessed {}", guess);
+}
+
+ */
+
+fn main() {
+    let must guess
 }
