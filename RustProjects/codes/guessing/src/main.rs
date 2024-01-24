@@ -20,7 +20,7 @@ fn main() {
         .ok()
         .expect("Failed to read line");
 
-    // We parse the string to an integer
+    // We parse the string to an integer whose value is u32
     let guess: u32 = guess.trim().parse()
         .ok()
         .expect("Please, type a number");
