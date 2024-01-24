@@ -101,6 +101,8 @@ Trouver un moyen pour accéder aux données sur un disque.
 
 Etudier le disque, sa composition.
 
+Connaître les fonctions variadiques.
+
 Merci Père.
 
 Changer,
