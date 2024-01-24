@@ -20,6 +20,11 @@ fn main() {
         .ok()
         .expect("Failed to read line");
 
+    // We parse the string to an integer
+    let guess: u32 = guess.trim().parse()
+        .ok()
+        .expect("Please, type a number");
+
     println!("You guessed {}", guess);
     
     match guess.cmp(&secret_number) {
