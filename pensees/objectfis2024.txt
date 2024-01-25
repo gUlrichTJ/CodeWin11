@@ -112,3 +112,7 @@ Rewriting the theorie des graphes's file for the teacher.
 Coding algo num for the others so that it helps them.
 
 Understand Win OS, master network, , make reasearch, know java, 
+
+Buy PC and borrow it to people and receive money.
+
+Know a frontend framework like reactjs, learn nodejs, spring boot, 
