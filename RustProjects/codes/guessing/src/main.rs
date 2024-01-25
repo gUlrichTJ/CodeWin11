@@ -25,6 +25,11 @@ fn main() {
         // We convert the variable guess to an integer
         let guess: u32 = guess.trim().parse()
             .ok()
-            .expect();
+            .expect("Please, type a number");
+
+        // We display what the user guessed
+        println!("You guessed : {}", guess);
+        
+        match  {  }
     }
 }
