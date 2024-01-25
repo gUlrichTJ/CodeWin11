@@ -107,4 +107,6 @@ Merci Père.
 
 Changer,
 
-Rewriting the theorie des graphes's file
+Rewriting the theorie des graphes's file for the teacher.
+
+Coding algo num for the others so that it helps them.
