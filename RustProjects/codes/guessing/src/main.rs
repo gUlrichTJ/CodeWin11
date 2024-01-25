@@ -21,5 +21,8 @@ fn main() {
         io::stdin().read_line(&mut guess)
             .ok()
             .expect("Failed to receive the number expected");
+
+        // We convert the variable guess to an integer
+        
     }
 }
