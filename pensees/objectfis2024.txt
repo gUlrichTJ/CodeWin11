@@ -101,7 +101,7 @@ Trouver un moyen pour accéder aux données sur un disque.
 
 Etudier le disque, sa composition.
 
-Connaître les fonctions variadiques.
+Connaître les fonctions variadiques en C.
 
 Merci Père.
 
