@@ -15,9 +15,11 @@ fn main() {
     loop {
         print!("Please, input your guess : ");
 
-        // He will print a String
+        // He creat a string variable
         let mut guess = String::new();
 
-        
+        io::stdin().read_line(&mut guess)
+            .ok()
+            .expect("Failed to receive the number expected");
     }
 }
