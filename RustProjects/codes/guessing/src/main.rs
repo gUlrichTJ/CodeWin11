@@ -8,7 +8,7 @@ fn main() {
     println!("GUESSING GAME");
 
     // Variable that will take the secret number
-    let secret_number: i32 = rand::thread_rng().gen_range(1, 101);
+    let secret_number: u32 = rand::thread_rng().gen_range(1, 101);
 
     println!("The secret number is : {}", secret_number);
 
@@ -31,7 +31,12 @@ fn main() {
         println!("You guessed : {}", guess);
         
         match guess.cmp(&secret_number) {
-            Ordering::Less => 
+            Ordering::Less    => println!("Too small"),
+            Ordering::Greater => println!("Too big"),
+            Ordering::Equal   => {
+                println!("You won");
+                break;
+            }
         }
     }
 }
