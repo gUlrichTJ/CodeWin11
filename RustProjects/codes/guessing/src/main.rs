@@ -16,13 +16,15 @@ fn main() {
         print!("Please, input your guess : ");
 
         // He creat a string variable
-        let mut guess = String::new();
+        let mut guess: String = String::new();
 
         io::stdin().read_line(&mut guess)
             .ok()
             .expect("Failed to receive the number expected");
 
         // We convert the variable guess to an integer
-        
+        let guess: u32 = guess.trim().parse()
+            .ok()
+            .expect();
     }
 }
