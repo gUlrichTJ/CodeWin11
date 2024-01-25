@@ -110,3 +110,5 @@ Changer,
 Rewriting the theorie des graphes's file for the teacher.
 
 Coding algo num for the others so that it helps them.
+
+Understand Win OS, master network, , make reasearch, know java, 
