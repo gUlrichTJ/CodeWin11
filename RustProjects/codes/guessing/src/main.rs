@@ -30,6 +30,8 @@ fn main() {
         // We display what the user guessed
         println!("You guessed : {}", guess);
         
-        match  {  }
+        match guess.cmp(&secret_number) {
+            Ordering::Less => 
+        }
     }
 }
