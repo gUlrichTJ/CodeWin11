@@ -13,7 +13,7 @@ fn main() {
     println!("The secret number is : {}", secret_number);
     println!();
 
-    // Humm with all these things, I have to succeed.
+    // Hum with all these things, I have to succeed.
 
     loop {
         print!("Please, input your guess : ");
