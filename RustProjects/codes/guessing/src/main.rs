@@ -5,7 +5,7 @@ use std::cmp::Ordering;
 use rand::Rng;
 
 fn main() {
-    println!("GUESSING GAME");
+    println!("***GUESSING GAME***");
 
     // Variable that will take the secret number
     let secret_number: u32 = rand::thread_rng().gen_range(1, 101);
