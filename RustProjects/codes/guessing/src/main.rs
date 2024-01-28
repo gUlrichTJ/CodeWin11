@@ -5,6 +5,7 @@ use std::cmp::Ordering;
 use rand::Rng;
 
 fn main() {
+    println!("********************");
     println!("***GUESSING GAME***");
 
     // Variable that will take the secret number
