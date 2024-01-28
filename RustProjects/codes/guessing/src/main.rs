@@ -32,7 +32,7 @@ fn main() {
             .expect("Please, type a number");
 
         // We display what the user guessed
-        println!("You guessed : {}\n", guess);
+        // println!("You guessed : {}\n", guess);
         
         match guess.cmp(&secret_number) {
             Ordering::Less    => println!("Too small"),
