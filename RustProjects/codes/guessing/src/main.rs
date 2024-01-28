@@ -17,7 +17,7 @@ fn main() {
     // Hum with all these things, I have to succeed.
 
     loop {
-        print!("Please, input your guess : ");
+        println!("Please, input your guess : ");
 
         // He creat a string variable
         let mut guess: String = String::new();
