@@ -26,7 +26,7 @@ fn main() {
             .ok()
             .expect("Failed to receive the number expected");
 
-        // We convert the variable guess to an integer
+        // We convert the variable guess to an integer and raise the error
         let guess: u32 = guess.trim().parse()
             .ok()
             .expect("Please, type a number");
