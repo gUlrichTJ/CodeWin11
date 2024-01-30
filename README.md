@@ -16,4 +16,4 @@ Let's code with The Lord...
 - Strong
 - With
 - God's
-- Strengh
+- Strengh.
