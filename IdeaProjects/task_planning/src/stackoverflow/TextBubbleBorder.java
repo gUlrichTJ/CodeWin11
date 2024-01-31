@@ -1,7 +1,7 @@
 package stackoverflow;
 
 // TODO: We're gonna understand this code and modify it by God's grace.
-// See you. I love you dear
+// See you. I love you dear GodS
 
 import javax.swing.border.AbstractBorder;
 import java.awt.*;
