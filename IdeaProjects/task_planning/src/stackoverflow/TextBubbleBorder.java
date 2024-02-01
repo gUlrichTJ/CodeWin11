@@ -1,7 +1,7 @@
 package stackoverflow;
 
 // TODO: We're gonna understand this code and modify it by God's grace.
-// See you. I love you dear GodS
+// See you. I love you dear God
 
 import javax.swing.border.AbstractBorder;
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.awt.geom.RoundRectangle2D;
 
 public class TextBubbleBorder extends AbstractBorder {
 
-   private Color color;
+   private final Color color;
    private int thickness = 4;
    private int radii = 8;
    private int pointerSize = 7;
