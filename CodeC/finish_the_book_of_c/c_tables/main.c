@@ -540,6 +540,7 @@ int main()
     // two_dim_array_transfert_to_one_dim();
     // max_and_min_in_array(tab);
     char ch1[] = "abalo", ch2[] = "abalO";
+    printf(ch1[4]);
         printf(strcmp(ch1, ch2));
     // insert_value_in_a_sorted_list(tab);
     following_ones_counter(tab3, 14);
