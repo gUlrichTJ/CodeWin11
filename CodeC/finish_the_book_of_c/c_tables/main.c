@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 #define __new_line putchar('\n');
 
@@ -538,10 +539,11 @@ int main()
     // sum_of_lines_and_columns();
     // two_dim_array_transfert_to_one_dim();
     // max_and_min_in_array(tab);
-
+    char ch1[] = "abalo", *ch2 = "abalO";
+        printf(strcmp(ch1, ch2));
     // insert_value_in_a_sorted_list(tab);
     following_ones_counter(tab3, 14);
     check_value_in_sorted_array(tab);
-    char *ch1 = "abalo", *ch2 = "abalO";
+
     return 0;
 }
