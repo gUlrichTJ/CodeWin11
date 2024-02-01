@@ -542,5 +542,6 @@ int main()
     // insert_value_in_a_sorted_list(tab);
     following_ones_counter(tab3, 14);
     check_value_in_sorted_array(tab);
+    char *ch1 = "abalo", *ch2 = "abalO";
     return 0;
 }
