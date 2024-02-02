@@ -476,7 +476,7 @@ void check_value_in_sorted_array(int *tab) {
         }
 
         if (tab[middle] == value) {
-            printf("Done ! %d", middle);
+            printf("Done ! Position = %d", middle);
             break;
         }
     } while (left < right);
