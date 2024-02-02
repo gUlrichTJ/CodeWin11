@@ -484,6 +484,9 @@ void check_value_in_sorted_array(int *tab) {
     __new_line
 }
 
+/// Exercice 7.13 Merge of two sorted arrays
+void
+
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
 int following_ones_counter(int *tab, int N) {
