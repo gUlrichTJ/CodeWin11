@@ -489,6 +489,8 @@ void merge_of_two_sorted_arrays(int *tab) {
     int A[50], B[50], FUS[100];
     int IA = 0, IB = 0, IFUS = 0;
     int N = 0, M = 0;
+
+    // I'll never sing those songs in Jesus' Mighty Name.
 }
 
 /// We will test if a number is a prime number of not
