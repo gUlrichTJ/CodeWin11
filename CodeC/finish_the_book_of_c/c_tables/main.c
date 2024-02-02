@@ -491,6 +491,8 @@ void merge_of_two_sorted_arrays(int *tab) {
     int N = 0, M = 0;
 
     // I'll never sing those songs in Jesus' Mighty Name.
+
+    // We
 }
 
 /// We will test if a number is a prime number of not
