@@ -487,6 +487,8 @@ void check_value_in_sorted_array(int *tab) {
 /// Exercice 7.13 Merge of two sorted arrays
 void merge_of_two_sorted_arrays(int *tab) {
     int A[50], B[50], FUS[100];
+    int IA = 0, IB = 0, IFUS = 0;
+    int N = 0, M = 0;
 }
 
 /// We will test if a number is a prime number of not
@@ -534,7 +536,7 @@ int main()
     int L = 20, C = 20;
     int tab[N];
     int tab2[L][C];
-    int tab3[] = {1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0};
+    // int tab3[] = {1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0};
 
     // remove_zero_and_tasser(tab);
     // inverse_table_without_help(tab);
