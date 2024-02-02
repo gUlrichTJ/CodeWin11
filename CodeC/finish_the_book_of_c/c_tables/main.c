@@ -492,7 +492,21 @@ void merge_of_two_sorted_arrays(int *tab) {
 
     // I'll never sing those songs in Jesus' Mighty Name.
 
-    // We
+    // We go throught the array while they exist
+    while (A[IA] && B[IB]) {
+        if (A[IA] < B[IB]) {
+            FUS[IFUS] = A[IA];
+            IA++;
+            IFUS++;
+        } else {
+            FUS[IFUS] = B[IB];
+            IB++;
+            IFUS++;
+        }
+    }
+
+    // If the tables are not at their end,
+    if ()
 }
 
 /// We will test if a number is a prime number of not
