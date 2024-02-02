@@ -540,7 +540,7 @@ int main()
     // max_and_min_in_array(tab);
 
     // insert_value_in_a_sorted_list(tab);
-    following_ones_counter(tab3, 14);
+    // following_ones_counter(tab3, 14);
     check_value_in_sorted_array(tab);
     return 0;
 }
