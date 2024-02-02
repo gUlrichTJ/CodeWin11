@@ -506,7 +506,17 @@ void merge_of_two_sorted_arrays(int *tab) {
     }
 
     // If the tables are not at their end,
-    if ()
+    if (IA < N) {
+        for (IFUS = IA; IFUS < N; IFUS++, IA++) {
+            FUS[IFUS] = A[IA];
+        }
+    }
+
+    if (IB < M) {
+        for (IFUS = IB; IFUS < M; IFUS++, IB++) {
+            FUS[IFUS] = B[IB];
+        }
+    }
 }
 
 /// We will test if a number is a prime number of not
