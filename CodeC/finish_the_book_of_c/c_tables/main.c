@@ -492,6 +492,22 @@ void merge_of_two_sorted_arrays(int *tab) {
 
     // I'll never sing those songs in Jesus' Mighty Name.
 
+    // Tables filling
+    puts("Table A : \n");
+
+    N = array_size();
+
+    puts("Fill array A by sorting elements\n");
+
+    for (IA = 0; IA < N; IA++) {
+        printf("A[%i] : ", IA);
+        scanf("%i", &A[IA]);
+    }
+
+    puts("Array A given : ");
+    __new_line
+    display_table_elements(A, N);
+
     // We go throught the array while they exist
     while (IA < N && IB < M) {
         if (A[IA] < B[IB]) {
