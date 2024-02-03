@@ -539,13 +539,13 @@ void merge_of_two_sorted_arrays() {
 
     // If the tables are not at their end,
     if (IA < N) {
-        for (IFUS = IA; IFUS < N; IFUS++, IA++) {
+        for (IA = IB; IA < N; IFUS++, IA++) {
             FUS[IFUS] = A[IA];
         }
     }
 
     if (IB < M) {
-        for (IFUS = IB; IFUS < M; IFUS++, IB++) {
+        for (IB = IA; IB < M; IFUS++, IB++) {
             FUS[IFUS] = B[IB];
         }
     }
