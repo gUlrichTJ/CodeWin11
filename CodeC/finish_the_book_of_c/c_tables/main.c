@@ -521,7 +521,7 @@ void merge_of_two_sorted_arrays() {
     } __new_line
 
     puts("Array B given : ");
-    display_table_elements(B, N);
+    display_table_elements(B, M);
 
     // We go throught the array while they exist
     IA = IB = 0;
