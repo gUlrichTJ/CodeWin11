@@ -485,7 +485,7 @@ void check_value_in_sorted_array(int *tab) {
 }
 
 /// Exercice 7.13 Merge of two sorted arrays
-void merge_of_two_sorted_arrays(int *tab) {
+void merge_of_two_sorted_arrays() {
     int A[50], B[50], FUS[100];
     int IA = 0, IB = 0, IFUS = 0;
     int N = 0, M = 0;
@@ -612,6 +612,7 @@ int main()
 
     // insert_value_in_a_sorted_list(tab);
     // following_ones_counter(tab3, 14);
-    check_value_in_sorted_array(tab);
+    // check_value_in_sorted_array(tab);
+    merge_of_two_sorted_arrays();
     return 0;
 }
