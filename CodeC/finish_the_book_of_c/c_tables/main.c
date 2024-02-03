@@ -493,7 +493,7 @@ void merge_of_two_sorted_arrays(int *tab) {
     // I'll never sing those songs in Jesus' Mighty Name.
 
     // We go throught the array while they exist
-    while (A[IA] && B[IB]) {
+    while (IA < N && IB < M) {
         if (A[IA] < B[IB]) {
             FUS[IFUS] = A[IA];
             IA++;
