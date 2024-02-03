@@ -509,7 +509,20 @@ void merge_of_two_sorted_arrays(int *tab) {
     display_table_elements(A, N);
 
     // Table B
+    puts("Table B : \n");
 
+    M = array_size();
+
+    puts("Fill array B by sorting elements\n");
+
+    for (IB = 0; IB < N; IB++) {
+        printf("B[%i] : ", IB);
+        scanf("%i", &B[IB]);
+    }
+
+    puts("Array B given : ");
+    __new_line
+    display_table_elements(B, N);
 
     // We go throught the array while they exist
     while (IA < N && IB < M) {
@@ -536,6 +549,10 @@ void merge_of_two_sorted_arrays(int *tab) {
             FUS[IFUS] = B[IB];
         }
     }
+
+    puts("Final sorted array...");
+
+    display_table_elements(FUS, IFUS);
 }
 
 /// We will test if a number is a prime number of not
