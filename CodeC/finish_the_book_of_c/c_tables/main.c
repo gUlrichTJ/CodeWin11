@@ -550,6 +550,8 @@ void merge_of_two_sorted_arrays() {
         }
     }
 
+    IFUS = IA + IB - 1;
+
     puts("Final sorted array...");
 
     display_table_elements(FUS, IFUS);
