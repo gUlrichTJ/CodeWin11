@@ -505,7 +505,7 @@ void merge_of_two_sorted_arrays() {
     }
 
     puts("Array A given : ");
-    __new_line
+
     display_table_elements(A, N);
 
     // Table B
@@ -515,16 +515,16 @@ void merge_of_two_sorted_arrays() {
 
     puts("Fill array B by sorting elements\n");
 
-    for (IB = 0; IB < N; IB++) {
+    for (IB = 0; IB < M; IB++) {
         printf("B[%i] : ", IB);
         scanf("%i", &B[IB]);
-    }
+    } __new_line
 
     puts("Array B given : ");
-    __new_line
     display_table_elements(B, N);
 
     // We go throught the array while they exist
+    IA = IB = 0;
     while (IA < N && IB < M) {
         if (A[IA] < B[IB]) {
             FUS[IFUS] = A[IA];
