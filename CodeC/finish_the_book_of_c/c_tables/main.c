@@ -508,6 +508,9 @@ void merge_of_two_sorted_arrays(int *tab) {
     __new_line
     display_table_elements(A, N);
 
+    // Table B
+
+
     // We go throught the array while they exist
     while (IA < N && IB < M) {
         if (A[IA] < B[IB]) {
