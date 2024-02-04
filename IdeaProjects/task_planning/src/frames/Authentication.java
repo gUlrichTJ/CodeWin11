@@ -6,6 +6,7 @@ import stackoverflow.TextBubbleBorder;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import javax.swing.border.AbstractBorder;
 
 public class Authentication extends JFrame implements JTotal {
@@ -177,17 +178,7 @@ public class Authentication extends JFrame implements JTotal {
       cancel.setBorder(generalBorder);
 
       // TODO: Action to the login button
-      login.addActionListener(e -> {
-         if (usernameField.getText().equals("admin")
-               &&
-               passwordField.getText().equals("admin123")) {
-            Authentication.this.dispose();
-            home = new Home();
-            System.out.println("lol");
-         } else {
-            JOptionPane.showMessageDialog(this,"Oh, Please, something is wrong.");
-         }
-      });
+      login.addActionListener(this::actionPerformed);
 
       // TODO: Action on the cancel button
       cancel.addActionListener(
@@ -216,5 +207,17 @@ public class Authentication extends JFrame implements JTotal {
       /// We add the label to the panel
       panel.add(labelAuthentication, BorderLayout.WEST);
       return panel;
+   }
+
+   private void actionPerformed(ActionEvent e) {
+      if (usernameField.getText().equals("admin")
+            &&
+            passwordField.getText().equals("admin123")) {
+         Authentication.this.dispose();
+         home = new Home();
+         System.out.println("lol");
+      } else {
+         JOptionPane.showMessageDialog(this, "Oh, Please, something is wrong.");
+      }
    }
 }
