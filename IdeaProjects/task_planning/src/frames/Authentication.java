@@ -204,7 +204,7 @@ public class Authentication extends JFrame implements JTotal {
       labelAuthentication.setFont(new Font("Arial", Font.BOLD, totalSize + 6));
       labelAuthentication.setForeground(Color.white);
 
-      /// We add the label to the panel
+      /// We add the label to the panel.
       panel.add(labelAuthentication, BorderLayout.WEST);
       return panel;
    }
