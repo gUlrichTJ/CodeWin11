@@ -213,7 +213,9 @@ I hope Gadiela's fine there.
 
 Cela donnera une mauvaise image à la banque.
 
-Création d'un réseau local étendu entre les banques de même type et entre les différentes banques qui existent au Togo... 
+Création d'un réseau local étendu entre les banques de même type et entre les différentes banques qui existent au Togo...
+
+Sur un écran, on pourrait avoir la position de chaque employé ainsi que son numéro matricule afin de lui envoyer un message ou le contacter sans avoir à l'appeller en criant.
 Il faut que je bénisse Dieu de m'avoir donné cette machine.
 
 When I see it, I realize that I don't deserve it.
