@@ -195,7 +195,7 @@ Plus tard, elles pourraient doter le site d'un moyen d'indiquer le déplacement 
 
 Premièrement, je ne savais pas que l'UTB ne permettait pas le retrait d'argent envoyé par small world. 
 
-(*L'UTB pourrait indiquer les retraits et dépôts qu'on peut faire chez eux ainsi que ceux qui ne sont pas possible.*) Cela nous empêcherait de perdre le temps.
+(***L'UTB pourrait indiquer les retraits et dépôts qu'on peut faire chez eux ainsi que ceux qui ne sont pas possible.****) Cela nous empêcherait de perdre le temps.
 
 _Mais, comment une si grande banque peut ne pas avoir certaines fonctionalités ?_
 
@@ -207,12 +207,13 @@ God has been with me and I've not spent a lot of money before coming here.
 
 I hope Gadiela's fine there.
 
-Il faut forcément que les banques soient dotées de sites web pour que nous ayons des informations sur elles. Il faut que je montre à ma famille ce que j'ai appris avec l'informatique.
+(*****Il faut forcément que les banques soient dotées de sites web pour que nous ayons des informations sur elles. Il faut que je montre à ma famille ce que j'ai appris avec l'informatique.*********)
+
 
 Il faut que je bénisse Dieu de m'avoir donné cette machine.
 
 When I see it, I realize that I don't deserve it.
 
-Start getting dressed well, changing my bag because I'm gong to places where people are well dressed,
+Start getting dressed well, changing my bag because I'm gong to places where people are well dressed.
 /*Lorsqu'une porte se gâte, on appelle un réparateur de cette porte pour la réparer.
 Il faut que ce réparateur en question soit capable de réparer la porte pour ne pas beuguer*/
