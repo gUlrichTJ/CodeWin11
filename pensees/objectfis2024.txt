@@ -209,7 +209,11 @@ I hope Gadiela's fine there.
 
 (*****Il faut forcément que les banques soient dotées de sites web pour que nous ayons des informations sur elles. Il faut que je montre à ma famille ce que j'ai appris avec l'informatique.*********)
 
---Dans les banques, on crie pour appeler les gens (Monsieur Bielkele, monsieur adrealala). On pourrait doter les banques d'un dispositif qui afficherait 
+--Dans les banques, on crie pour appeler les gens (Monsieur Bielkele, monsieur adrealala). On pourrait doter les banques d'un dispositif qui afficherait sur un écran le nom de celui qu'on appelle pour ne pas avoir à crier le nom des gens car, parfois, ils n'entendent pas. En plus, les caissiers peuvent être fatigués, nerveux et ils crieront sur les clients.
+
+Cela donnera une mauvaise image à la banque.
+
+Création d'un réseau local étendu entre les banques de même type et entre les différentes banques qui existent au Togo... 
 Il faut que je bénisse Dieu de m'avoir donné cette machine.
 
 When I see it, I realize that I don't deserve it.
