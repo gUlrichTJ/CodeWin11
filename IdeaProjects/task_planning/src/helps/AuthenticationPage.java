@@ -32,7 +32,7 @@ public class AuthenticationPage extends JFrame {
       panel.add(loginButton);
 
       add(panel);
-      setVisible(true);
+      setVisible(true);    /// Let's set the panel visible
    }
 
    private JButton getLoginButton() {
