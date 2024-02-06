@@ -193,7 +193,11 @@ Plus tard, elles pourraient doter le site d'un moyen d'indiquer le déplacement 
 
 *************IDENTIFICATION DES DIFFICULTÉS QUE J'AI EU POUR TROUVER LE LA BANQUE*********************
 
-Premièrement, je ne savais pas que l'UTB ne permettait pas le retrait d'argent envoyé par small world.
+Premièrement, je ne savais pas que l'UTB ne permettait pas le retrait d'argent envoyé par small world. 
+
+(*L'UTB pourrait indiquer les retraits et dépôts qu'on peut faire chez eux ainsi que ceux qui ne sont pas possible.*) Cela nous empêcherait de perdre le temps.
+
+_Mais, comment une si grande banque peut ne pas avoir certaines fonctionalités ?_
 
 /*Lorsqu'une porte se gâte, on appelle un réparateur de cette porte pour la réparer.
 Il faut que ce réparateur en question soit capable de réparer la porte pour ne pas beuguer*/
