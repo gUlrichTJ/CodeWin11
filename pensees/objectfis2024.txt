@@ -199,5 +199,6 @@ Premièrement, je ne savais pas que l'UTB ne permettait pas le retrait d'argent 
 
 _Mais, comment une si grande banque peut ne pas avoir certaines fonctionalités ?_
 
+J'étais obligé d'acheter le crédit, faire fortait mixte pour pouvoir être connecté afin de pouvoir 
 /*Lorsqu'une porte se gâte, on appelle un réparateur de cette porte pour la réparer.
 Il faut que ce réparateur en question soit capable de réparer la porte pour ne pas beuguer*/
