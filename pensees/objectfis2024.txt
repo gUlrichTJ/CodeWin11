@@ -187,4 +187,6 @@ Les banques peuvent par exemple donner des informations sur elles comme l'emplac
 
 Elles pouraient créer un grand site comme corix bank où on mettrait les informations sur toutes les banques annexes.
 
-Ainsi, lorsque je me trouve à un endroit, je consulter leur site pour trouver la banque coris la plus proche.
+Ainsi, lorsque je me trouve à un endroit, je consulter leur site pour trouver la banque coris la plus proche. 
+
+Plus tard, elles pourraient doter le site d'un moyen d'indiquer le déplacement pour qu'on connaisse le temps qu'on fera pour arriver à cet endroit préci
