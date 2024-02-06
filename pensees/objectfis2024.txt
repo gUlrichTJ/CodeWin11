@@ -189,4 +189,11 @@ Elles pouraient créer un grand site comme corix bank où on mettrait les inform
 
 Ainsi, lorsque je me trouve à un endroit, je consulter leur site pour trouver la banque coris la plus proche. 
 
-Plus tard, elles pourraient doter le site d'un moyen d'indiquer le déplacement pour qu'on connaisse le temps qu'on fera pour arriver à cet endroit préci
+Plus tard, elles pourraient doter le site d'un moyen d'indiquer le déplacement pour qu'on connaisse le temps qu'on fera pour arriver à cet endroit préci.
+
+*************IDENTIFICATION DES DIFFICULTÉS QUE J'AI EU POUR TROUVER LE LA BANQUE*********************
+
+Premièrement, je ne savais pas que l'UTB ne permettait pas le retrait d'argent envoyé par small world.
+
+/*Lorsqu'une porte se gâte, on appelle un réparateur de cette porte pour la réparer.
+Il faut que ce réparateur en question soit capable de réparer la porte pour ne pas beuguer*/
