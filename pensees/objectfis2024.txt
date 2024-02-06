@@ -219,7 +219,8 @@ Sur un écran, on pourrait avoir la position de chaque employé ainsi que son nu
 
 (*****On peut disposer la banque de calculatrices numériques où on pourrait faire les calculs puis les envoyer sur le numéro du client ayant fait le calcul.
 
-On pourrait aussi permettre de remplir la fiche de retrait ou d'envoi en ligne et ne l'impriquer qu'à un endroit à la banque
+On pourrait aussi, plutôt que d'imprimer les petits papiers puis ensuite perdre le temps pour les remplir, permettre de remplir la fiche de retrait ou d'envoi en ligne et ne l'impriquer qu'à un endroit à la banque. We mean that le site sera pourvu d'un bouton télécharger. Cela rapporterait de l'argent à la banque ainsi qu'à moi. ***********)
+
 Il faut que je bénisse Dieu de m'avoir donné cette machine.
 
 When I see it, I realize that I don't deserve it.
