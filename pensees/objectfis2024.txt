@@ -185,3 +185,6 @@ I have to be guided by God to know if I must learn react, laravel or spring boot
 
 Les banques peuvent par exemple donner des informations sur elles comme l'emplacement et la manière de recevoir l'argent lorsqu'on vient pour ne pas avoir à perdre le temps ni se troubler.
 
+Elles pouraient créer un grand site comme corix bank où on mettrait les informations sur toutes les banques annexes.
+
+Ainsi, lorsque je me trouve à un endroit, je consulter leur site pour trouver la banque coris la plus proche.
