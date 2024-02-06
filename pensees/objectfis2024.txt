@@ -222,6 +222,8 @@ Sur un écran, on pourrait avoir la position de chaque employé ainsi que son nu
 On pourrait aussi, plutôt que d'imprimer les petits papiers puis ensuite perdre le temps pour les remplir, permettre de remplir la fiche de retrait ou d'envoi en ligne et ne l'impriquer qu'à un endroit à la banque. We mean that le site sera pourvu d'un bouton télécharger. Cela rapporterait de l'argent à la banque ainsi qu'à moi. ***********)
 
 (******On pourrait aussi faire en sorte que l'envoi soit fait au caissier qui ouvrirait le fichier immédiatement sur sa machine.************)
+
+Pour gagner du temps, on peut vérifier et connaître le moyen de transfert et ou de retrait le plus élevé. Ensuite, on délègue un ou deux guichets (suivant l'importance du nombre) à ce moyen en question puis,
 Il faut que je bénisse Dieu de m'avoir donné cette machine.
 
 When I see it, I realize that I don't deserve it.
