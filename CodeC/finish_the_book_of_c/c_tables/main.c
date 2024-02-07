@@ -655,7 +655,14 @@ void statistics(int *points) {
         max_mark, min_mark, return_array_element_sum(points, N) / N);
 
     // Establishment of the second array called notes
+    // We're gonna use a for loop to ... the elements
+    for (i = 0; i < N; i++) {
+        if (points[i] >= 0 && point[i] < 10)
+            a++;
+    }
+    for (i = 0; i < 7; i++) {
 
+    }
 }
 
 /// We will test if a number is a prime number of not
