@@ -556,7 +556,6 @@ void merge_of_two_sorted_arrays() {
     display_table_elements(FUS, IFUS);
 }
 
-
 /// Exercice 7.14 Sort by selection of maximum
 void sorting_array_by_selecting_maximum(int *tab) {
     int max_p = 0, help = 0, max = 0, i = 0, N = 0;
@@ -676,6 +675,7 @@ int main()
     // following_ones_counter(tab3, 14);
     // check_value_in_sorted_array(tab);
     // merge_of_two_sorted_arrays();
-    sorting_array_by_selecting_maximum(tab);
+    // sorting_array_by_selecting_maximum(tab);
+    sort_by_propagation(tab);
     return 0;
 }
