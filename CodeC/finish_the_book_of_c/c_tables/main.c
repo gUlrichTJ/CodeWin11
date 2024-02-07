@@ -588,7 +588,7 @@ void sorting_array_by_selecting_maximum(int *tab) {
 
     // After that, we display the sorted table
     __new_line
-    puts("Sorted table\n");
+    puts("Sorted table");
 
     display_table_elements(tab, N);
 }
