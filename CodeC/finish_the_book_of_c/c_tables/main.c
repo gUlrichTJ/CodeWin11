@@ -606,6 +606,7 @@ void sort_by_propagation(int *tab) {
     display_table_elements(tab, N);
 
     // We start the coding
+    min = tab[0];
     for (i = 0; i < N; i++) {
 
     }
