@@ -684,11 +684,12 @@ void statistics(int *points) {
     // We display the array of marks
     printf("\nArray of marks\n");
     display_table_elements(notes, 7);
-    __new_line
+    __new_line __new_line
 
     // Let's do the graph
-    for (i = 0; i < max_average_mark; i++) {
-
+    max_average_mark = 6;
+    for (i = max_average_mark; i >= 0; i--) {
+        printf("");
     }
 }
 
