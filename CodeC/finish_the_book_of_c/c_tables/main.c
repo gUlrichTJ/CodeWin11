@@ -625,7 +625,11 @@ void sort_by_propagation(int *tab) {
 }
 
 /// Exercice 7.16 Marks statistics
+void statistics(int *points) {
 
+    N = array_size();
+
+}
 
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
