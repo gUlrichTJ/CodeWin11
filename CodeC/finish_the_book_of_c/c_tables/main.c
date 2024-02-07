@@ -551,13 +551,13 @@ void merge_of_two_sorted_arrays() {
         IFUS++;
     }
 
-    // IFUS = IA + IB - 1;
-
     puts("Final sorted array...");
 
     display_table_elements(FUS, IFUS);
 }
 
+
+///
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
 int following_ones_counter(int *tab, int N) {
