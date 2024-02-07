@@ -673,6 +673,11 @@ void statistics(int *points) {
             f++;
         if (points[i] == 60)
             g++;
+
+        // We put values in the second array of marks
+        for (i = 0; i < 7; i++) {
+
+        }
     }
 
     __new_line
