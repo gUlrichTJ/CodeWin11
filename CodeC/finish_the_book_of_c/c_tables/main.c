@@ -558,7 +558,11 @@ void merge_of_two_sorted_arrays() {
 
 
 /// Sort by selection of maximum
-void
+void sorting_array_by_selecting_maximum(int *tab) {
+    N = array_size();
+
+
+}
 
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
