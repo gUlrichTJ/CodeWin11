@@ -646,7 +646,7 @@ void statistics(int *points) {
     // We search the maximum mark and the minimum mark
     min_mark = max_mark = points[0];
     for (i = 0; i < N; i++) {
-        min_mark > points[i] ? min_mark = points[i] : C = 0 ;
+        min_mark = points[i] ? min_mark > points[i] : C = 0 ;
     }
     // Average of marks
     printf("\nThe average of marks is %lf\n", return_array_element_sum(points, N) / N);
