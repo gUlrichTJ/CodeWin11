@@ -571,8 +571,9 @@ void sorting_array_by_selecting_maximum(int *tab) {
 
     // We start sorting
     // We always search the maximum and change their positions
+    max_p = 0;
+
     for (i = 0; i < N; i++) {
-        max_p = 0;
         max = tab[i];
         for (j = i; j < N; j++) {
             if (max < tab[j]) {
