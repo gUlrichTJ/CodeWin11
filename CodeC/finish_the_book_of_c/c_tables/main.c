@@ -659,6 +659,16 @@ void statistics(int *points) {
     for (i = 0; i < N; i++) {
         if (points[i] >= 0 && point[i] < 10)
             a++;
+        if (points[i] >= 10 && point[i] < 20)
+            b++;
+        if (points[i] >= 20 && point[i] < 30)
+            c++;
+        if (points[i] >= 30 && point[i] < 40)
+            d++;
+        if (points[i] >= 50 && point[i] < 60)
+            e++;
+        if (points[i] == 60)
+            f++;
     }
     for (i = 0; i < 7; i++) {
 
