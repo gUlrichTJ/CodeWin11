@@ -634,7 +634,7 @@ void sort_by_propagation(int *tab) {
 
 /// Exercice 7.16 Marks statistics
 void statistics(int *points) {
-    double average = 0;
+    double max_mark = 0, min_mark = 0, average = 0;
     N = array_size();
 
     // Array filling
@@ -643,6 +643,11 @@ void statistics(int *points) {
     // Display table
     display_table_elements(points, N);
 
+    // We search the maximum mark and the minimum mark
+    min_mark = max_mark = points[0];
+    for (i = 0; i < N; i++) {
+
+    }
     // Average of marks
     printf("\nThe average of marks is %lf\n", return_array_element_sum(points, N) / N);
 }
