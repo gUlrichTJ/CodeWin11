@@ -564,6 +564,10 @@ void sorting_array_by_selecting_maximum(int *tab) {
     // Fill table
     fill_table(tab, N);
 
+    // We display the table
+    display_table_elements(tab, N);
+
+    // We start sorting
 
 }
 
