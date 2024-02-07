@@ -673,6 +673,11 @@ void statistics(int *points) {
             notes[g]++;
     }
 
+    __new_line
+    for (i = 0; i < 7; i++) {
+        printf("%d ", notes[i]);
+    }
+    __new_line
 }
 
 /// We will test if a number is a prime number of not
