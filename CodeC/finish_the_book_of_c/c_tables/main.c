@@ -650,7 +650,8 @@ void statistics(int *points) {
         max_mark = max_mark < points[i] ? points[i] : max_mark;
     }
     // Average of marks
-    printf("\nmax %lf, min %lf, The average of marks is %lf\n", max_mark, min_mark, return_array_element_sum(points, N) / N);
+    printf("\nmax %lf, min %lf, The average of marks is %lf\n",
+        max_mark, min_mark, return_array_element_sum(points, N) / N);
 }
 
 /// We will test if a number is a prime number of not
