@@ -637,9 +637,8 @@ void statistics(int *points) {
     double max_mark = 0, min_mark = 0, average = 0;
     N = array_size();
     int a, b, c, d, e, f;
-    int notes[7];
     a = b = c = d = e = f = 0;
-    int notes[] = {a, b, c, d, e, f};
+    int notes[7] = {a, b, c, d, e, f};
     // Array filling
     fill_table(points, N);
 
