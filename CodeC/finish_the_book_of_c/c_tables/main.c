@@ -597,6 +597,13 @@ void sorting_array_by_selecting_maximum(int *tab) {
 /// Exercice 7.15 Sort by propagation : bubble sort
 void sort_by_propagation(int *tab) {
 
+    N = array_size();
+
+    // We fill the table
+    fill_table(tab, N);
+
+    // We display the table
+    display_table_elements(tab, N);
 }
 
 /// We will test if a number is a prime number of not
