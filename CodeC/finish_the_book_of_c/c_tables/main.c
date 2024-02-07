@@ -642,6 +642,9 @@ void statistics(int *points) {
 
     // Display table
     display_table_elements(points, N);
+
+    // Average of marks
+    printf("The average of marks is %lf\n", return_array_element_sum(points, N) / N);
 }
 
 /// We will test if a number is a prime number of not
@@ -704,6 +707,7 @@ int main()
     // check_value_in_sorted_array(tab);
     // merge_of_two_sorted_arrays();
     // sorting_array_by_selecting_maximum(tab);
-    sort_by_propagation(tab);
+    // sort_by_propagation(tab);
+    statistics(tab);
     return 0;
 }
