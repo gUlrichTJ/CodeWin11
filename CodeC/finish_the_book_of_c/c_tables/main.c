@@ -557,7 +557,9 @@ void merge_of_two_sorted_arrays() {
 }
 
 
-///
+/// Sort by selection of maximum
+void
+
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
 int following_ones_counter(int *tab, int N) {
