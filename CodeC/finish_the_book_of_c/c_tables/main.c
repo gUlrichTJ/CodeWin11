@@ -636,6 +636,7 @@ void sort_by_propagation(int *tab) {
 void statistics(int *points) {
     double max_mark = 0, min_mark = 0, average = 0;
     N = array_size();
+    int notes[7];
 
     // Array filling
     fill_table(points, N);
@@ -652,6 +653,8 @@ void statistics(int *points) {
     // Average of marks
     printf("\nmax %lf, min %lf, The average of marks is %lf\n",
         max_mark, min_mark, return_array_element_sum(points, N) / N);
+
+    // Establishment of the second array called notes
 
 }
 
