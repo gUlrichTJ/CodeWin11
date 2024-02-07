@@ -580,8 +580,13 @@ void sorting_array_by_selecting_maximum(int *tab) {
             }
         }
         // Now, we change the places
-
+        help = tab[i];
+        tab[i] = max;
+        tab[max_p] = help;
     }
+
+    // After that, we display the sorted table
+
 }
 
 /// We will test if a number is a prime number of not
