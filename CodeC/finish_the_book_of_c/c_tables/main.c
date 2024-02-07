@@ -595,7 +595,7 @@ void sorting_array_by_selecting_maximum(int *tab) {
 
 /// Exercice 7.15 Sort by propagation : bubble sort
 void sort_by_propagation(int *tab) {
-    int min = 0, help = 0;
+    int min = 0, help = 0, _true = 0;
 
     N = array_size();
 
@@ -607,12 +607,15 @@ void sort_by_propagation(int *tab) {
 
     // We start the coding
     min = tab[0];
-    for (i = 0; i < N - 1; i++) {
-        if (tab[i] > tab[i+1]) {
-            help = tab[i];
-            tab[i] = tab[i+1];
-            tab[i+1] = help;
+    while (_true) {
+        for (i = 0; i < N - 1; i++) {
+            if (tab[i] > tab[i+1]) {
+                help = tab[i];
+                tab[i] = tab[i+1];
+                tab[i+1] = help;
+            }
         }
+        _true--;
     }
 
     // We display the sorted array
