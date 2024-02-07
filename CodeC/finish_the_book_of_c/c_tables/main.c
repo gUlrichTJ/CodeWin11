@@ -674,14 +674,15 @@ void statistics(int *points) {
         if (points[i] == 60)
             g++;
 
-        // We put values in the second array of marks
-        notes[0] = a; notes[1] = b; notes[2] = c; notes[3] = d; notes[4] = e;
-        notes[5] = f; notes[6] = g;
 
-        // We display the array of marks
-        printf("\nArray of marks\n");
-        display_table_elements(notes, 7);
     }
+// We put values in the second array of marks
+    notes[0] = a; notes[1] = b; notes[2] = c; notes[3] = d; notes[4] = e;
+    notes[5] = f; notes[6] = g;
+
+    // We display the array of marks
+    printf("\nArray of marks\n");
+    display_table_elements(notes, 7);
 
     __new_line
     for (i = 0; i < 7; i++) {
