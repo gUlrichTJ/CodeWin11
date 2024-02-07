@@ -637,7 +637,7 @@ void statistics(int *points) {
     double max_mark = 0, min_mark = 0, average = 0;
     N = array_size();
     int a = 0, b = 1, c = 2, d = 3, e = 4, f = 5, g = 6;
-    int notes[7];
+    int *notes;
     // Array filling
     fill_table(points, N);
 
@@ -670,7 +670,7 @@ void statistics(int *points) {
         if (points[i] >= 50 && points[i] < 60)
             notes[f]++;
         if (points[i] == 60)
-            notes[g]++;
+            *notes[g]++;
     }
 
     __new_line
