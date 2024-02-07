@@ -689,7 +689,7 @@ void statistics(int *points) {
     // Let's do the graph
     max_average_mark = 6;
     for (i = max_average_mark; i >= 0; i--) {
-        printf("");
+        printf("%i\t>\n");
     }
 }
 
