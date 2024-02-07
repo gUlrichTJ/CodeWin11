@@ -653,7 +653,7 @@ void statistics(int *points) {
         max_mark = max_mark < points[i] ? points[i] : max_mark;
     }
     // Average of marks
-    printf("\nmax %lf, min %lf, The average of marks is %lf\n",
+    printf("\nmax %.2lf, min %.2lf, The average of marks is %.2lf\n",
         max_mark, min_mark, return_array_element_sum(points, N) / N);
 
     // Establishment of the second array called notes
@@ -673,8 +673,6 @@ void statistics(int *points) {
             f++;
         if (points[i] == 60)
             g++;
-
-
     }
 // We put values in the second array of marks
     notes[0] = a; notes[1] = b; notes[2] = c; notes[3] = d; notes[4] = e;
@@ -683,11 +681,6 @@ void statistics(int *points) {
     // We display the array of marks
     printf("\nArray of marks\n");
     display_table_elements(notes, 7);
-
-    __new_line
-    for (i = 0; i < 7; i++) {
-        printf("%d ", notes[i]);
-    }
     __new_line
 }
 
