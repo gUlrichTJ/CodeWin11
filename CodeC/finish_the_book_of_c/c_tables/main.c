@@ -559,6 +559,7 @@ void merge_of_two_sorted_arrays() {
 
 /// Sort by selection of maximum
 void sorting_array_by_selecting_maximum(int *tab) {
+    int max_p = 0, help = 0;
     N = array_size();
 
     // Fill table
@@ -568,7 +569,10 @@ void sorting_array_by_selecting_maximum(int *tab) {
     display_table_elements(tab, N);
 
     // We start sorting
+    // We always search the maximum and change their positions
+    for (i = 0; i < N; i++) {
 
+    }
 }
 
 /// We will test if a number is a prime number of not
