@@ -644,7 +644,7 @@ void statistics(int *points) {
     display_table_elements(points, N);
 
     // Average of marks
-    printf("The average of marks is %lf\n", return_array_element_sum(points, N) / N);
+    printf("\nThe average of marks is %lf\n", return_array_element_sum(points, N) / N);
 }
 
 /// We will test if a number is a prime number of not
