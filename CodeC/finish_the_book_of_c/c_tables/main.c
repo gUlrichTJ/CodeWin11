@@ -631,6 +631,9 @@ void statistics(int *points) {
 
     // Array filling
     fill_table(points, N);
+
+    // Display table
+    display_table_elements(points, N);
 }
 
 /// We will test if a number is a prime number of not
