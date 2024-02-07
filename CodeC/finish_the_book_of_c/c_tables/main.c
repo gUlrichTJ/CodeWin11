@@ -538,6 +538,7 @@ void merge_of_two_sorted_arrays() {
     }
 
     // If the tables are not at their end,
+    // God's great for us
     if (IA < N) {
         for (IA = IB; IA < N; IFUS++, IA++) {
             FUS[IFUS] = A[IA];
