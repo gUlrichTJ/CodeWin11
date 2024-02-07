@@ -614,6 +614,10 @@ void sort_by_propagation(int *tab) {
             tab[i+1] = help;
         }
     }
+
+    // We display the sorted array
+    puts("Final sorted array");
+    display_table_elements(tab, N);
 }
 
 /// We will test if a number is a prime number of not
