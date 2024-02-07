@@ -597,7 +597,7 @@ void sorting_array_by_selecting_maximum(int *tab) {
 void sort_by_propagation(int *tab) {
     int min = 0, help = 0, _true = 0;
 
-    N = array_size();
+    _true = N = array_size();
 
     // We fill the table
     fill_table(tab, N);
@@ -621,6 +621,7 @@ void sort_by_propagation(int *tab) {
     // We display the sorted array
     puts("Final sorted array");
     display_table_elements(tab, N);
+    // Thank You Jesus
 }
 
 /// We will test if a number is a prime number of not
