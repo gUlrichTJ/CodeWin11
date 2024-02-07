@@ -638,8 +638,8 @@ void statistics(int *points) {
     N = array_size();
     int a, b, c, d, e, f;
     int notes[7];
-
     a = b = c = d = e = f = 0;
+    int notes[] = {a, b, c, d, e, f};
     // Array filling
     fill_table(points, N);
 
