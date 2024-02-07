@@ -595,6 +595,9 @@ void sorting_array_by_selecting_maximum(int *tab) {
 }
 
 /// Exercice 7.15 Sort by propagation : bubble sort
+void sort_by_propagation(int *tab) {
+
+}
 
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
