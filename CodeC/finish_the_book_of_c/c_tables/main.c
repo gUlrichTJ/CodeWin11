@@ -561,6 +561,9 @@ void merge_of_two_sorted_arrays() {
 void sorting_array_by_selecting_maximum(int *tab) {
     N = array_size();
 
+    // Fill table
+    fill_table(tab, N);
+
 
 }
 
