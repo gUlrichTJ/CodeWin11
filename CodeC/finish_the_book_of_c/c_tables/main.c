@@ -626,9 +626,11 @@ void sort_by_propagation(int *tab) {
 
 /// Exercice 7.16 Marks statistics
 void statistics(int *points) {
-
+    double average = 0;
     N = array_size();
 
+    // Array filling
+    fill_table(points, N);
 }
 
 /// We will test if a number is a prime number of not
