@@ -557,9 +557,9 @@ void merge_of_two_sorted_arrays() {
 }
 
 
-/// Sort by selection of maximum
+/// Exercice 7.14 Sort by selection of maximum
 void sorting_array_by_selecting_maximum(int *tab) {
-    int max_p = 0, help = 0, max = 0;
+    int max_p = 0, help = 0, max = 0, i = 0, N = 0;
 
     N = array_size();
 
@@ -593,6 +593,8 @@ void sorting_array_by_selecting_maximum(int *tab) {
 
     display_table_elements(tab, N);
 }
+
+/// Exercice 7.15 Sort by propagation : bubble sort
 
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
