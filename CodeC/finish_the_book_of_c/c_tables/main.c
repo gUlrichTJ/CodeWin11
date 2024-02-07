@@ -636,9 +636,8 @@ void sort_by_propagation(int *tab) {
 void statistics(int *points) {
     double max_mark = 0, min_mark = 0, average = 0;
     N = array_size();
-    int a, b, c, d, e, f;
-    a = b = c = d = e = f = 0;
-    int notes[7] = {a, b, c, d, e, f};
+    int a = 0, b = 1, c = 2, d = 3, e = 4, f = 5, g = 6;
+    int notes[7];
     // Array filling
     fill_table(points, N);
 
@@ -659,13 +658,13 @@ void statistics(int *points) {
     // We're gonna use a for loop to ... the elements
     for (i = 0; i < N; i++) {
         if (points[i] >= 0 && points[i] < 10)
-            a++;
+            notes[a]++;
         if (points[i] >= 10 && points[i] < 20)
-            b++;
+            notes[b]++;
         if (points[i] >= 20 && points[i] < 30)
-            c++;
+            notes[c]++;
         if (points[i] >= 30 && points[i] < 40)
-            d++;
+            notes[d]++;
         if (points[i] >= 50 && points[i] < 60)
             e++;
         if (points[i] == 60)
