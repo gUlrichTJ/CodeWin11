@@ -573,11 +573,14 @@ void sorting_array_by_selecting_maximum(int *tab) {
     for (i = 0; i < N; i++) {
         max_p = 0;
         max = tab[i];
-        for (j = 0; j < N; j++) {
+        for (j = i; j < N; j++) {
             if (max < tab[j]) {
-
+                max_p = j;
+                max = tab[j];
             }
         }
+        // Now, we change the places
+
     }
 }
 
