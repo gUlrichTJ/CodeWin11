@@ -559,7 +559,8 @@ void merge_of_two_sorted_arrays() {
 
 /// Sort by selection of maximum
 void sorting_array_by_selecting_maximum(int *tab) {
-    int max_p = 0, help = 0;
+    int max_p = 0, help = 0, max = 0;
+
     N = array_size();
 
     // Fill table
@@ -586,7 +587,10 @@ void sorting_array_by_selecting_maximum(int *tab) {
     }
 
     // After that, we display the sorted table
+    __new_line
+    puts("Sorted table\n");
 
+    display_table_elements(tab, N);
 }
 
 /// We will test if a number is a prime number of not
@@ -647,6 +651,7 @@ int main()
     // insert_value_in_a_sorted_list(tab);
     // following_ones_counter(tab3, 14);
     // check_value_in_sorted_array(tab);
-    merge_of_two_sorted_arrays();
+    // merge_of_two_sorted_arrays();
+    sorting_array_by_selecting_maximum(tab);
     return 0;
 }
