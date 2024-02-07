@@ -635,11 +635,14 @@ void sort_by_propagation(int *tab) {
 /// Exercice 7.16 Marks statistics
 void statistics(int *points) {
     double max_mark = 0, min_mark = 0, average = 0;
-    N = array_size();
     int a, b, c, d, e, f, g;
+    int max_average_mark = 0;
     int notes[7];
 
     a = b = c = d = e = f = g = 0;
+
+    N = array_size();
+
     // Array filling
     fill_table(points, N);
 
@@ -682,6 +685,11 @@ void statistics(int *points) {
     printf("\nArray of marks\n");
     display_table_elements(notes, 7);
     __new_line
+
+    // Let's do the graph
+    for (i = 0; i < max_average_mark; i++) {
+
+    }
 }
 
 /// We will test if a number is a prime number of not
