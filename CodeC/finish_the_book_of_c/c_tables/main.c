@@ -624,6 +624,9 @@ void sort_by_propagation(int *tab) {
     // Thank You Jesus
 }
 
+/// Exercice 7.16 Marks statistics
+
+
 /// We will test if a number is a prime number of not
 // I'm going to count the number of following ones in the array
 int following_ones_counter(int *tab, int N) {
