@@ -45,6 +45,11 @@ void display_table_elements(int *tab, int N) {
     __new_line
 }
 
+/// Function to return the sum of elements of an array
+double return_array_element_sum(int *tab, int N) {
+
+}
+
 /// Function to take the number of lines of an array of two dimensions
 int number_of_lines(int tab[L][C]) {
     L = 0;
