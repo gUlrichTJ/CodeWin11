@@ -665,14 +665,14 @@ void statistics(int *points) {
             notes[c]++;
         if (points[i] >= 30 && points[i] < 40)
             notes[d]++;
+        if (points[i] >= 40 && points[i] < 50)
+            notes[e]++;
         if (points[i] >= 50 && points[i] < 60)
-            e++;
+            notes[f]++;
         if (points[i] == 60)
-            f++;
+            notes[g]++;
     }
-    for (i = 0; i < 7; i++) {
 
-    }
 }
 
 /// We will test if a number is a prime number of not
