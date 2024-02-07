@@ -646,7 +646,7 @@ void statistics(int *points) {
     // We search the maximum mark and the minimum mark
     min_mark = max_mark = points[0];
     for (i = 0; i < N; i++) {
-        min_mark = min_mark > points[i] ? points[i] : points[0];
+        min_mark = min_mark > points[i] ? points[i] : min_mark;
         max_mark = max_mark < points[i] ? points[i] : max_mark;
     }
     // Average of marks
