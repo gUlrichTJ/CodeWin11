@@ -604,6 +604,11 @@ void sort_by_propagation(int *tab) {
 
     // We display the table
     display_table_elements(tab, N);
+
+    // We start the coding
+    for (i = 0; i < N; i++) {
+
+    }
 }
 
 /// We will test if a number is a prime number of not
