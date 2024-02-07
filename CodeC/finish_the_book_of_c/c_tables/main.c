@@ -47,7 +47,10 @@ void display_table_elements(int *tab, int N) {
 
 /// Function to return the sum of elements of an array
 double return_array_element_sum(int *tab, int N) {
-
+    double sum = 0;
+    for (i = 0; i < N; i++)
+        sum +=tab[i];
+    return sum;
 }
 
 /// Function to take the number of lines of an array of two dimensions
