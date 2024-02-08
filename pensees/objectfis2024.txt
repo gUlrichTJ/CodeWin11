@@ -231,3 +231,5 @@ When I see it, I realize that I don't deserve it.
 Start getting dressed well, changing my bag because I'm gong to places where people are well dressed.
 /*Lorsqu'une porte se gâte, on appelle un réparateur de cette porte pour la réparer.
 Il faut que ce réparateur en question soit capable de réparer la porte pour ne pas beuguer*/
+
+08-02-24 
