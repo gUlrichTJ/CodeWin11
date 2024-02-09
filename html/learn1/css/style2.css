@@ -62,4 +62,11 @@ figcaption {
     font-weight: bold;
 }
 
-.gymnasts
+.greatest-females {
+    width: 48%;
+}
+
+.greatest-males {
+    width: 48%;
+    inline
+}
