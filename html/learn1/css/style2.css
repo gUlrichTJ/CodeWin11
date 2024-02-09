@@ -61,13 +61,3 @@ figcaption {
     font-style: italic;
     font-weight: bold;
 }
-
-.greatest-females {
-    width: 48%;
-    display: inline-block;
-}
-
-.greatest-males {
-    width: 48%;
-    float: right;
-}
