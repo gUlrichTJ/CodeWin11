@@ -64,9 +64,10 @@ figcaption {
 
 .greatest-females {
     width: 48%;
+    display: inline-block;
 }
 
 .greatest-males {
     width: 48%;
-    inline
+    float: right;
 }

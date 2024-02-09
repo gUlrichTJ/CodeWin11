@@ -80,3 +80,13 @@
     background-color: rgb(233, 38, 38);
     color: white;
 }
+
+.greatest-females {
+    width: 48%;
+    display: inline-block;
+}
+
+.greatest-males {
+    width: 48%;
+    float: right;
+}
