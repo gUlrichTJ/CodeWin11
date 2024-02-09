@@ -690,6 +690,7 @@ void statistics(int *points) {
     max_average_mark = 6;
     for (i = max_average_mark; i >= 0; i--) {
         // Thank You Jesus
+        // We have to do this.
         printf("%i\t>\n");
     }
 }
