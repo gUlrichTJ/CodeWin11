@@ -84,7 +84,8 @@
 .gymnastics-one {
     text-align: center;
     font-style: italic;
-    background-color: blue;
+    background-color: rgb(18, 18, 120);
+    color: yellow;
 }
 .greatest-females {
     width: 48%;
