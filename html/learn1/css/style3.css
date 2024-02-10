@@ -117,4 +117,10 @@
 
 .color-blue {
     color: darkblue;
+    font-weight: bold;
+}
+
+.color-purple {
+    color: purple;
+    font-weight: bold;
 }
