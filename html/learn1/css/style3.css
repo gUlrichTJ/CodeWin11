@@ -107,9 +107,10 @@
 .bottom-page {
     float: right;
     position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 24px;
-  text-decoration: none;
-  color: #0101017bff;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: grey;
+    text-shadow: 5;
 }
