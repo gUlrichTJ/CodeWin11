@@ -128,11 +128,10 @@
 .ten-percent {
     background-color: rgb(243, 243, 192);
     width: 15%;
-
 }
 
 .ninety-percent {
-    float: right;
+    float: right; 
     width: 80%;
     display: inline-block;
 }
