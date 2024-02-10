@@ -130,3 +130,9 @@
     width: 15%;
 
 }
+
+.ninety-percent {
+    float: right;
+    width: 80%;
+    display: inline-block;
+}
