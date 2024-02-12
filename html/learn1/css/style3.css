@@ -127,7 +127,8 @@
 }
 
 .ten-percent {
-    background-color: rgb(243, 243, 192);
+    /* background-color: rgb(243, 243, 192); */
+    background-color: lemonchiffon;
     width: 15%;
     height: 100%;
 }
