@@ -98,6 +98,10 @@
     float: right;
 }
 
+div a {
+    color: burlywood;
+}
+
 .simone-biles {
     width: 98%;
     height: 45%;
