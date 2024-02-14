@@ -109,11 +109,15 @@ class ImageAndIconWidget extends StatelessWidget {
           ],
         ),
         const Divider(),
-        TextField(
+        const TextField(
           keyboardType: TextInputType.text,
           style: TextStyle(
             color: Colors.black,
             fontSize: 16.0,
+          ),
+          decoration: InputDecoration(
+            labelText: "Notes",
+            labelStyle: TextStyle(color: Colors.purple)
           ),
         ),
       ],
