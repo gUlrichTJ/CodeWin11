@@ -20,6 +20,10 @@ class LoginPage extends StatelessWidget {
               ),
 
               SizedBox(height: 50,),
+
+              Text("You are welcome ! You've been missed !",
+                style: TextStyle(color: Colors.black),
+              ),
             ],
             // logo
 
