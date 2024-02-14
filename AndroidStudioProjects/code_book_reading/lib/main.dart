@@ -65,13 +65,14 @@ class ImageAndIconWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double sizeOfImg1 = MediaQuery.of(context).size.width / 3;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Image(
             image: const AssetImage("assets/images/build.png"),
           fit: BoxFit.cover,
-          width: MediaQuery.of(context).size.width / 3,
+          width: sizeOfImg1,
         ),
         Image.network("src"),
       ],
