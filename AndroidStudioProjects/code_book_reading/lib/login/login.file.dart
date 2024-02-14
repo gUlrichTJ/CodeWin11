@@ -34,13 +34,14 @@ class LoginPage extends StatelessWidget {
 
             // username textfield
             TextField(
-              decoration: InputDecoration(
+              cursorColor: Colors.black,
+              decoration: InputDecoration( 
                 enabledBorder: const OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.white),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey.shade500),
-                )
+                ),
               ),
             ),
 
