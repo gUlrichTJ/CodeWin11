@@ -96,6 +96,7 @@ class ImageAndIconWidget extends StatelessWidget {
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(20.0)),
               ),
+              color: Colors.green,
             ),
           ],
         ),
