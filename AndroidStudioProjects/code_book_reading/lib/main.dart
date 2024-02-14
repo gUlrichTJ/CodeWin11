@@ -117,7 +117,8 @@ class ImageAndIconWidget extends StatelessWidget {
           ),
           decoration: InputDecoration(
             labelText: "Notes",
-            labelStyle: TextStyle(color: Colors.purple)
+            labelStyle: TextStyle(color: Colors.deepPurple),
+            border: UnderlineInputBorder(),
           ),
         ),
       ],
