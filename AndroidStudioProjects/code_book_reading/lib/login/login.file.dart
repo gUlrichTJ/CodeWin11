@@ -14,6 +14,10 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: 50,
               ),
+              Icon(
+                  Icons.lock,
+                size: 100,
+              ),
             ],
             // logo
 
