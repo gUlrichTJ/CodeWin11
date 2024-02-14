@@ -21,18 +21,18 @@ class LoginPage extends StatelessWidget {
 
               SizedBox(height: 50,),
 
+              // welcome back you've been missed !
               Text("You are welcome ! You've been missed !",
                 style: TextStyle(
                     color: Colors.black,
                   fontSize: 16,
                 ),
               ),
-            ],
+            
             // logo
 
-            // welcome back you've been missed !
-
             // username textfield
+            TextField(),
 
             // password textfield
 
@@ -46,7 +46,7 @@ class LoginPage extends StatelessWidget {
 
             // not a member ? register now
 
-
+            ],
           ),
         ),
       ),
