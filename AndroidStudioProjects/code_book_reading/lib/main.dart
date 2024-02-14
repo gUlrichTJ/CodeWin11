@@ -71,7 +71,7 @@ class ImageAndIconWidget extends StatelessWidget {
         const Image(
             image: AssetImage("assets/images/build.png"),
           fit: BoxFit.cover,
-          
+          width: MediaQuery.of(context).size.width / 3,
         ),
         Image.network("src"),
       ],
