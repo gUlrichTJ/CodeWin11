@@ -108,6 +108,14 @@ class ImageAndIconWidget extends StatelessWidget {
             ),
           ],
         ),
+        const Divider(),
+        TextField(
+          keyboardType: TextInputType.text,
+          style: TextStyle(
+            color: Colors.grey.shade800,
+            fontSize: 
+          ),
+        ),
       ],
     );
   }
