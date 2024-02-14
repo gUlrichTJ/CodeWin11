@@ -91,13 +91,17 @@ class ImageAndIconWidget extends StatelessWidget {
         Row(
           children: [
             Container(
-              height: 50,
-              width: 50,
+              height: 100,
+              width: 100,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(20.0)),
                 color: Colors.green,
                 boxShadow: [
-                  BoxShadow()
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 14.0,
+                    offset: Offset(0.0, 10.0,),
+                  ),
                 ],
               ),
             ),
