@@ -5,6 +5,13 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      backgroundColor: Colors.grey,
+      body: Column(
+        // logo
+
+        // welcome back you've been missed !
+      ),
+    );
   }
 }
