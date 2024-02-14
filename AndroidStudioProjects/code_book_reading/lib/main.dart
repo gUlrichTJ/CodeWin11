@@ -88,6 +88,7 @@ class ImageAndIconWidget extends StatelessWidget {
             ),
           ],
         ),
+        const Divider(),
         Row(
           children: [
             Container(
@@ -100,7 +101,7 @@ class ImageAndIconWidget extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black38,
                     blurRadius: 14.0,
-                    offset: Offset(0.0, 10.0,),
+                    offset: Offset(5.0, 130.0,),
                   ),
                 ],
               ),
