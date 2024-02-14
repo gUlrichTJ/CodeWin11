@@ -43,6 +43,15 @@ class _OurHomePageState extends State<OurHomePage> {
           ),
         ],
       ),
+
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(),
+            child: Column(),
+          ),
+        ),
+      ),
     );
   }
 }
