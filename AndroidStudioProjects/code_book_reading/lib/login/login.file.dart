@@ -11,14 +11,15 @@ class LoginPage extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              SizedBox(
-                height: 50,
-              ),
+              SizedBox(height: 50,),
+
               Icon(
                   Icons.lock,
                 size: 100,
                 color: Colors.black,
               ),
+
+              SizedBox(height: 50,),
             ],
             // logo
 
