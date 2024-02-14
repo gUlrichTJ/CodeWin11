@@ -33,11 +33,13 @@ class LoginPage extends StatelessWidget {
 
               SizedBox(height: 50,),
 
-            // username textfield
-            MyTextField(),
-
-            // password textfield
+              // username textfield
               MyTextField(),
+
+              SizedBox(height: 50,),
+
+                // password textfield
+              MyTextField(), 
 
             // forgot password
 
