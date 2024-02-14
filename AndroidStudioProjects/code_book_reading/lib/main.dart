@@ -74,8 +74,9 @@ class ImageAndIconWidget extends StatelessWidget {
           fit: BoxFit.cover,
           width: sizeOfImg1,
         ),
-        Image.network(
-            "https://en.wikipedia.org/wiki/File:Andrew_wiles1-3.jpg",
+        Image(
+          image: const AssetImage("assets/images/"),
+          fit: BoxFit.cover,
           width: sizeOfImg1,
         ),
       ],
