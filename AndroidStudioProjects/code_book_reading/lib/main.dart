@@ -109,6 +109,8 @@ class ImageAndIconWidget extends StatelessWidget {
           ],
         ),
         const Divider(),
+
+        // Inputting a text form
         const TextField(
           keyboardType: TextInputType.text,
           style: TextStyle(
