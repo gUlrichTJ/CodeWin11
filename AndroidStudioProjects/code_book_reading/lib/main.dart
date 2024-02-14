@@ -33,6 +33,12 @@ class _OurHomePageState extends State<OurHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Application"),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.menu)
+          ),
+        ],
       ),
     );
   }
