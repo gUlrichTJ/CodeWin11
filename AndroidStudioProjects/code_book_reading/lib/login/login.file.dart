@@ -11,6 +11,22 @@ class LoginPage extends StatelessWidget {
         // logo
 
         // welcome back you've been missed !
+
+        // username textfield
+
+        // password textfield
+
+        // forgot password
+
+        // sign in button
+
+        // or continue with
+
+        // google + apple sign in button
+
+        // not a member ? register now
+
+        
       ),
     );
   }
