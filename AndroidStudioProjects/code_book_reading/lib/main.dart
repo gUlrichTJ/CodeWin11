@@ -50,7 +50,7 @@ class _OurHomePageState extends State<OurHomePage> {
             padding: EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
-                const ImageAndIconWidget(),
+                ImageAndIconWidget(),
               ],
             ),
           ),
@@ -65,7 +65,7 @@ class ImageAndIconWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double sizeOfImg1 = MediaQuery.of(context).size.width / 10;
+    double sizeOfImg1 = MediaQuery.of(context).size.width / 3;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -75,7 +75,7 @@ class ImageAndIconWidget extends StatelessWidget {
           width: sizeOfImg1,
         ),
         Image(
-          image: const AssetImage("assets/images/"),
+          image: const AssetImage("assets/images/close.png"),
           fit: BoxFit.cover,
           width: sizeOfImg1,
         ),
