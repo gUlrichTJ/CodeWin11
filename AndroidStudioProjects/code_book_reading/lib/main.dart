@@ -74,7 +74,10 @@ class ImageAndIconWidget extends StatelessWidget {
           fit: BoxFit.cover,
           width: sizeOfImg1,
         ),
-        Image.network("src"),
+        Image.network(
+            "https://flutter.io/images/catalog-widget-placeholder.png",
+          width: sizeOfImg1,
+        ),
       ],
     );
   }
