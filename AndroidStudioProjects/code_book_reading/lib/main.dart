@@ -112,8 +112,8 @@ class ImageAndIconWidget extends StatelessWidget {
         TextField(
           keyboardType: TextInputType.text,
           style: TextStyle(
-            color: Colors.grey.shade800,
-            fontSize: 
+            color: Colors.black,
+            fontSize: 16.0,
           ),
         ),
       ],
