@@ -121,6 +121,12 @@ class ImageAndIconWidget extends StatelessWidget {
             border: UnderlineInputBorder(),
           ),
         ),
+        const Divider(),
+        TextFormField(
+          decoration: const InputDecoration(
+            labelText: "Input your notes",
+          ),
+        ),
       ],
     );
   }
