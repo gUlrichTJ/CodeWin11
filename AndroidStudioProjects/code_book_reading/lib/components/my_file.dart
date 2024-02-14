@@ -20,6 +20,7 @@ class MyTextField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
       child: TextField(
         controller: controller,
+        obscureText: obscureText,
         cursorColor: Colors.black,
         decoration: InputDecoration(
           enabledBorder: const OutlineInputBorder(
@@ -30,7 +31,7 @@ class MyTextField extends StatelessWidget {
           ),
           fillColor: Colors.grey.shade200,
           filled: true,
-          hintText: hintText, 
+          hintText: hintText,
         ),
       ),
     );

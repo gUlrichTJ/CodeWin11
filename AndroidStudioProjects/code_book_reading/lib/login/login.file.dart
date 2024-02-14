@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  // text editing for controller
+  final usernameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
