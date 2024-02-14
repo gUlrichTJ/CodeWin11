@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
 }
 
 class OurHomePage extends StatefulWidget {
-  const OurHomePage({Key? key}) : super(key: key);
+   OurHomePage({Key? key}) : super(key: key);
 
   @override
   State<OurHomePage> createState() => _OurHomePageState();
@@ -48,7 +48,7 @@ class _OurHomePageState extends State<OurHomePage> {
         ],
       ),
 
-      body: const SafeArea(
+      body:  SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(16.0),
@@ -65,7 +65,7 @@ class _OurHomePageState extends State<OurHomePage> {
 }
 
 class ImageAndIconWidget extends StatelessWidget {
-  const ImageAndIconWidget({Key? key}) : super(key: key);
+   ImageAndIconWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
