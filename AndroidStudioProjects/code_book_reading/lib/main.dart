@@ -44,10 +44,10 @@ class _OurHomePageState extends State<OurHomePage> {
         ],
       ),
 
-      body: SafeArea(
+      body: const SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(),
+            padding: EdgeInsets.all(16.0),
             child: Column(),
           ),
         ),
