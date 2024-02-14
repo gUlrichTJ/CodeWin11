@@ -89,7 +89,13 @@ class ImageAndIconWidget extends StatelessWidget {
           ],
         ),
         const Row(
-          children: [],
+          children: [
+            Container(
+              height: 50,
+              width: 50,
+              child: ,
+            ),
+          ],
         ),
       ],
     );
