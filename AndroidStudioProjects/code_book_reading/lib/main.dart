@@ -88,12 +88,14 @@ class ImageAndIconWidget extends StatelessWidget {
             ),
           ],
         ),
-        const Row(
+        Row(
           children: [
             Container(
               height: 50,
               width: 50,
-              child: ,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              ),
             ),
           ],
         ),
