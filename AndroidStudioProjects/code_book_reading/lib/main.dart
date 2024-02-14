@@ -68,7 +68,7 @@ class ImageAndIconWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        Image(image: "assets/images/"),
+        Image(image: "assets/images/build.png"),
         Image.network("src"),
       ],
     );
