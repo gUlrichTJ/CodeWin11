@@ -95,8 +95,11 @@ class ImageAndIconWidget extends StatelessWidget {
               width: 50,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                color: Colors.green,
+                boxShadow: [
+                  BoxShadow()
+                ],
               ),
-              color: Colors.green,
             ),
           ],
         ),
