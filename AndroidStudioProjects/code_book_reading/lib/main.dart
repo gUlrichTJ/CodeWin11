@@ -65,9 +65,12 @@ class ImageAndIconWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[],
+      children: <Widget>[
+        Image(image: "assets/images"),
+        Image.network("src"),
+      ],
     );
   }
 }
