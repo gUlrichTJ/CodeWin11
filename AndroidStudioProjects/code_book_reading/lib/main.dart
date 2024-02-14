@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-        canvasColor: Colors.lightGreen.shade400,
+        primarySwatch: Colors.lightBlue,
+        canvasColor: Colors.white,
       ),
       // The home
       home: const OurHomePage(),
