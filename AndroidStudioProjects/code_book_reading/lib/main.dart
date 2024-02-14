@@ -98,7 +98,7 @@ class ImageAndIconWidget extends StatelessWidget {
                 color: Colors.green,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black,
+                    color: Colors.black38,
                     blurRadius: 14.0,
                     offset: Offset(0.0, 10.0,),
                   ),
