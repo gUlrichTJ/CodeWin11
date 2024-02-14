@@ -13,6 +13,7 @@ class LoginPage extends StatelessWidget {
             children: [
               SizedBox(height: 50,),
 
+              // logo
               Icon(
                   Icons.lock,
                 size: 100,
@@ -28,11 +29,15 @@ class LoginPage extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-            
-            // logo
+
+              SizedBox(height: 50,),
 
             // username textfield
-            TextField(),
+            TextField(
+              decoration: InputDecoration(
+                enabledBorder: 
+              ),
+            ),
 
             // password textfield
 
