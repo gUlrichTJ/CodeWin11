@@ -65,7 +65,7 @@ class ImageAndIconWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double sizeOfImg1 = MediaQuery.of(context).size.width / 3;
+    double sizeOfImg1 = MediaQuery.of(context).size.width / 10;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -75,7 +75,7 @@ class ImageAndIconWidget extends StatelessWidget {
           width: sizeOfImg1,
         ),
         Image.network(
-            "https://flutter.io/images/catalog-widget-placeholder.png",
+            "https://en.wikipedia.org/wiki/File:Andrew_wiles1-3.jpg",
           width: sizeOfImg1,
         ),
       ],
