@@ -79,6 +79,11 @@ class ImageAndIconWidget extends StatelessWidget {
           fit: BoxFit.cover,
           width: sizeOfImg1,
         ),
+        const Icon(
+          Icons.brush,
+          color: Colors.lightBlue,
+          size: 100,
+        ),
       ],
     );
   }
