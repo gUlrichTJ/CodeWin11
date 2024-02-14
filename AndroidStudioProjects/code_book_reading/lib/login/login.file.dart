@@ -2,10 +2,11 @@ import 'package:code_book_reading/components/my_file.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
 
   // text editing for controller
   final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +38,18 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 50,),
 
               // username textfield
-              MyTextField(),
+              MyTextField(
+                controller: usernameController,
+                hintText: "Username",
+              ),
 
               SizedBox(height: 10,),
 
                 // password textfield
-              MyTextField(),
+              MyTextField(
+                controller: passwordController,
+                hintText: "Password",
+              ),
 
             // forgot password
 
