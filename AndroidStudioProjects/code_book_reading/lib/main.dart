@@ -50,7 +50,7 @@ class _OurHomePageState extends State<OurHomePage> {
             padding: EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
-
+                const ImageAndIconWidget(),
               ],
             ),
           ),
