@@ -33,14 +33,18 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50,),
 
             // username textfield
-            TextField(
-              cursorColor: Colors.black,
-              decoration: InputDecoration( 
-                enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey.shade500),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: TextField(
+                cursorColor: Colors.black,
+                decoration: InputDecoration(
+                  enabledBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey.shade500),
+                  ),
+                  fillColor: Colors.grey.shade200,
                 ),
               ),
             ),
