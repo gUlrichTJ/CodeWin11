@@ -60,3 +60,15 @@ class _OurHomePageState extends State<OurHomePage> {
   }
 }
 
+class ImageAndIconWidget extends StatelessWidget {
+  const ImageAndIconWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[],
+    );
+  }
+}
+
