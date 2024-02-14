@@ -34,6 +34,9 @@ class _OurHomePageState extends State<OurHomePage> {
       appBar: AppBar(
         title: const Text("Application"),
         actions: [
+          IconButton(onPressed: () {},
+              icon: const Icon(Icons.more_vert),
+          ),
           IconButton(
               onPressed: () {},
               icon: const Icon(Icons.menu)
