@@ -45,6 +45,7 @@ class LoginPage extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.grey.shade500),
                   ),
                   fillColor: Colors.grey.shade200,
+                  filled: true,
                 ),
               ),
             ),
