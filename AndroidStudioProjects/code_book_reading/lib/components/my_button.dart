@@ -6,6 +6,7 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(25.0),
       decoration: const BoxDecoration(
         color: Colors.black,
       ),
