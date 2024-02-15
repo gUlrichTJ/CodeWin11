@@ -23,6 +23,10 @@ public class Exo2HearWindow extends JFrame implements MouseListener {
       this.numberOfWindows = numberOfWindows;
    }
 
+   public Exo2HearWindow() {
+
+   }
+
    @Override
    public void mouseClicked(MouseEvent e) {
       System.out.println(new StringBuilder()
