@@ -53,21 +53,26 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
               ),
 
-              const SizedBox(height: 50,),
+              const SizedBox(height: 10,),
 
               // forgot password
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                      "Forgot password ?",
-                    style: TextStyle(color: Colors.grey.shade600),
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                        "Forgot password ?",
+                      style: TextStyle(color: Colors.grey.shade600),
+                    ),
+                  ],
+                ),
               ),
 
-            // sign in button
+              const SizedBox(height: 25,),
 
+            // sign in button
+            
             // or continue with
 
             // google + apple sign in button
