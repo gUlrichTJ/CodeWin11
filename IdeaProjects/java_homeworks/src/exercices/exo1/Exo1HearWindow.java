@@ -11,7 +11,47 @@ public class Exo1HearWindow extends JFrame implements MouseListener {
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
       // The window will hear
-      this.add
+      this.addMouseListener(this);
       this.setVisible(true);
+   }
+
+   /**
+    * @param e the event to be processed
+    */
+   @Override
+   public void mouseClicked(MouseEvent e) {
+
+   }
+
+   /**
+    * @param e the event to be processed
+    */
+   @Override
+   public void mousePressed(MouseEvent e) {
+
+   }
+
+   /**
+    * @param e the event to be processed
+    */
+   @Override
+   public void mouseReleased(MouseEvent e) {
+
+   }
+
+   /**
+    * @param e the event to be processed
+    */
+   @Override
+   public void mouseEntered(MouseEvent e) {
+
+   }
+
+   /**
+    * @param e the event to be processed
+    */
+   @Override
+   public void mouseExited(MouseEvent e) {
+
    }
 }
