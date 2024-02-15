@@ -6,6 +6,7 @@ import java.awt.event.MouseListener;
 
 public class Exo2HearWindow extends JFrame implements MouseListener {
 
+   public int numberOfWindows = 0;
    // Constructor
    public Exo2HearWindow(int numberOfWindows) {
       if (numberOfWindows < 3) {
@@ -19,11 +20,13 @@ public class Exo2HearWindow extends JFrame implements MouseListener {
 
             this.setVisible(true);
          }
-      }
+      this.numberOfWindows = numberOfWindows;
+   }
 
    @Override
    public void mouseClicked(MouseEvent e) {
-
+      System.out.println(new StringBuilder()
+            .append("Window ").append(numberOfWindows).append(" clicked ").append(getX()).append(" and ").append(getY()));
    }
 
    @Override
