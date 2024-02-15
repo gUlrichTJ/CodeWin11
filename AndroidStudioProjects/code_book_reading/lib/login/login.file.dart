@@ -72,7 +72,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 25,),
 
             // sign in button
-            
+
             // or continue with
 
             // google + apple sign in button
