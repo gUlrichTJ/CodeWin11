@@ -39,7 +39,8 @@ public class Exo1HearWindow extends JFrame implements MouseListener {
     */
    @Override
    public void mouseReleased(MouseEvent e) {
-
+      System.out.println(new StringBuilder()
+            .append("You released ").append(e.getX()).append(" and ").append(e.getY()));
    }
 
    /**
@@ -50,9 +51,6 @@ public class Exo1HearWindow extends JFrame implements MouseListener {
 
    }
 
-   /**
-    * @param e the event to be processed
-    */
    @Override
    public void mouseExited(MouseEvent e) {
 
