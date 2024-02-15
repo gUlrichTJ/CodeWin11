@@ -1,3 +1,4 @@
+import 'package:code_book_reading/components/my_button.dart';
 import 'package:code_book_reading/components/my_file.dart';
 import 'package:flutter/material.dart';
 
@@ -72,7 +73,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 25,),
 
             // sign in button
-
+            const MyButton(),
             // or continue with
 
             // google + apple sign in button
