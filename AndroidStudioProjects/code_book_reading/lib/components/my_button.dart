@@ -6,8 +6,16 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: const BoxDecoration(
+        color: Colors.black,
+      ),
       child: const Center(
-        child: Text("Sign in"),
+        child: Text(
+            "Sign in",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }
