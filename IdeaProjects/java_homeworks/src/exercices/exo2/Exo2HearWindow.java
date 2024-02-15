@@ -8,7 +8,13 @@ public class Exo2HearWindow extends JFrame implements MouseListener {
 
    // Constructor
    public Exo2HearWindow(int numberOfWindows) {
-      if (numberOfWindows )
+      if (numberOfWindows < 3) {
+         System.out.println(new StringBuilder()
+               .append("You cannot create less than three windows"));
+      } else {
+         this.setTitle("Window " + numberOfWindows);
+         
+      }
    }
    @Override
    public void mouseClicked(MouseEvent e) {
