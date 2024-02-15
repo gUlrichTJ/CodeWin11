@@ -6,6 +6,6 @@ import javax.swing.*;
 public class Main {
    public static void main(String[] args) {
       System.out.println("Hello world!");
-      Exo2HearWindow e = new Exo2HearWindow(2);
+      Exo2HearWindow e = new Exo2HearWindow(3);
    }
 }
