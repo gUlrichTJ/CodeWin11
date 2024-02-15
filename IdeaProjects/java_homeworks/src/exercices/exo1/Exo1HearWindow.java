@@ -20,7 +20,8 @@ public class Exo1HearWindow extends JFrame implements MouseListener {
     */
    @Override
    public void mouseClicked(MouseEvent e) {
-      System.out.println("You clicked " + e.getY() + " and " + e.getY());
+      System.out.println(new StringBuilder()
+            .append("You clicked ").append(e.getX()).append(" and ").append(e.getY()));
    }
 
    /**
