@@ -12,10 +12,15 @@ public class Exo2HearWindow extends JFrame implements MouseListener {
          System.out.println(new StringBuilder()
                .append("You cannot create less than three windows"));
       } else {
-         this.setTitle("Window " + numberOfWindows);
-         
+            this.setTitle("Window " + numberOfWindows);
+            this.setSize(400, 300);
+            this.setLocationRelativeTo(null);
+            this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+            this.setVisible(true);
+         }
       }
-   }
+
    @Override
    public void mouseClicked(MouseEvent e) {
 
