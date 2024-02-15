@@ -48,10 +48,10 @@ class _OurHomePageState extends State<OurHomePage> {
         ],
       ),
 
-      body:  SafeArea(
+      body:  const SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
                 ImageAndIconWidget(),
@@ -65,7 +65,7 @@ class _OurHomePageState extends State<OurHomePage> {
 }
 
 class ImageAndIconWidget extends StatelessWidget {
-   ImageAndIconWidget({Key? key}) : super(key: key);
+   const ImageAndIconWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

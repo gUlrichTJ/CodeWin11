@@ -16,7 +16,7 @@ class LoginPage extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: 50,),
+              const SizedBox(height: 50,),
 
               // logo
               const Icon(
