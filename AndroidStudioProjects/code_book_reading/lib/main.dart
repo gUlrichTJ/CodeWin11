@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
 }
 
 class OurHomePage extends StatefulWidget {
-   OurHomePage({Key? key}) : super(key: key);
+   const OurHomePage({Key? key}) : super(key: key);
 
   @override
   State<OurHomePage> createState() => _OurHomePageState();
@@ -51,7 +51,7 @@ class _OurHomePageState extends State<OurHomePage> {
       body:  SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
                 ImageAndIconWidget(),
