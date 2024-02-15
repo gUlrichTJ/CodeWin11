@@ -53,7 +53,10 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
               ),
 
-            // forgot password
+              const SizedBox(height: 50,),
+
+              // forgot password
+              const Text("Forgot password ?"),
 
             // sign in button
 
