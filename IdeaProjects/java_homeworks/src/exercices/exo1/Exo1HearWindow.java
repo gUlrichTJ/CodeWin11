@@ -8,7 +8,7 @@ public class Exo1HearWindow extends JFrame implements MouseListener {
       super("Exo1HearWindow");
       this.setSize(400, 400);
       this.setLocationRelativeTo(null);
-      this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
       // The window will hear
       this.addMouseListener(this);
@@ -28,7 +28,7 @@ public class Exo1HearWindow extends JFrame implements MouseListener {
     */
    @Override
    public void mousePressed(MouseEvent e) {
-
+      System.out.println("You pressed in " + e.getX() + " and " + e.getY());
    }
 
    /**
