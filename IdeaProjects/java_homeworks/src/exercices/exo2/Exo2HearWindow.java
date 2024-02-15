@@ -5,6 +5,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class Exo2HearWindow extends JFrame implements MouseListener {
+
+   // Constructor
+   public Exo2HearWindow(int numberOfWindows) {
+      if (numberOfWindows )
+   }
    @Override
    public void mouseClicked(MouseEvent e) {
 
