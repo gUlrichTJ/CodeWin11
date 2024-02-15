@@ -2,6 +2,8 @@ package exercices.exo1;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.text.MessageFormat;
+
 public class Exo1HearWindow extends JFrame implements MouseListener {
 
    public Exo1HearWindow() {
@@ -29,7 +31,7 @@ public class Exo1HearWindow extends JFrame implements MouseListener {
     */
    @Override
    public void mousePressed(MouseEvent e) {
-      System.out.println("You pressed in " + e.getX() + " and " + e.getY());
+      System.out.println(MessageFormat.format("You pressed in {0} and {1}", e.getX(), e.getY()));
    }
 
    /**
