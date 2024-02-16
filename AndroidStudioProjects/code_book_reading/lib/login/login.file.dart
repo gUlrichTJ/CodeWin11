@@ -9,6 +9,9 @@ class LoginPage extends StatelessWidget {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
+  // sign user in method
+  void signUserIn() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +76,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 25,),
 
             // sign in button
-            const MyButton(),
+            const MyButton(onTap: signUserIn,),
             // or continue with
 
             // google + apple sign in button
