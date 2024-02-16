@@ -51,6 +51,7 @@ public class AuthPage extends JFrame {
    public JPanel welcomeCenter() {
       JPanel panel = new JPanel();
       panel.setLayout(new BorderLayout());
+      panel.add(welcome(), BorderLayout.CENTER);
 
       return panel;
    }
