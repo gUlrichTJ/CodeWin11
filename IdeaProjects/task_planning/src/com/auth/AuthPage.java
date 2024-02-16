@@ -43,6 +43,7 @@ public class AuthPage extends JFrame {
       label.setFont(new Font("Arial", Font.BOLD, 50));
       label.setBackground(Color.black);
 
+      panel.add(new JPanel());
       panel.add(label);
 
       return panel;
