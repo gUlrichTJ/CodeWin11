@@ -81,8 +81,7 @@ class LoginPage extends StatelessWidget {
             // or continue with
             const SizedBox(height: 15,),
 
-            Expanded(
-              child: Row(
+            Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Expanded(
@@ -99,7 +98,6 @@ class LoginPage extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
             // google + apple sign in button
 
             // not a member ? register now
