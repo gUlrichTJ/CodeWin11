@@ -16,7 +16,19 @@ public class AuthPage extends JFrame {
       this.add(panel, BorderLayout.NORTH);
       this.setVisible(true);
    }
+
+   public JPanel highPanel() {
+      JPanel panel = new JPanel();
+      panel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+
+      JLabel label = new JLabel("?");
+
+      panel.add(label);
+      
+      return panel;
+   }
 }
+
 
 class HighPanel extends JPanel {
    public HighPanel() {
