@@ -7,8 +7,10 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(25.0),
-      decoration: const BoxDecoration(
+      margin: const EdgeInsets.symmetric(horizontal: 25.0),
+      decoration: BoxDecoration(
         color: Colors.black,
+        borderRadius: BorderRadius.circular(8),
       ),
       child: const Center(
         child: Text(
