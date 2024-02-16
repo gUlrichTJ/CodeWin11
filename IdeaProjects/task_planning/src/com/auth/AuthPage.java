@@ -14,8 +14,7 @@ public class AuthPage extends JFrame {
       this.setBackground(Color.white);
       this.setLayout(new BorderLayout());
 
-
-
+      this.add(welcome());
       this.add(highPanel(), BorderLayout.NORTH);
       this.setVisible(true);
    }
@@ -45,7 +44,7 @@ public class AuthPage extends JFrame {
       label.setBackground(Color.black);
 
       panel.add(label);
-      
+
       return panel;
    }
 }
