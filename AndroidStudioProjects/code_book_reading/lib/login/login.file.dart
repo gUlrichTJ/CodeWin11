@@ -113,6 +113,11 @@ class LoginPage extends StatelessWidget {
                 ),
             ),
             // google + apple sign in button
+            Row(
+              children: [
+                Image.asset("assets/images/google_image.png")
+              ],
+            ),
 
             // not a member ? register now
 
