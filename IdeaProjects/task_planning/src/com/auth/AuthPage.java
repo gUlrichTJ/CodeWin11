@@ -23,6 +23,8 @@ public class AuthPage extends JFrame {
    // the high panel
    public JPanel highPanel() {
       JPanel panel = new JPanel();
+      panel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+
       JButton button = new JButton();
       button.setLayout(new FlowLayout(FlowLayout.RIGHT));
       button.setSize(1, 1);
@@ -69,5 +71,3 @@ public class AuthPage extends JFrame {
       return panel;
    }
 }
-
-
