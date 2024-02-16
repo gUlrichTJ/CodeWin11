@@ -37,6 +37,7 @@ public class AuthPage extends JFrame {
    public JLabel welcome() {
       JLabel label = new JLabel("Welcome back");
       label.setFont(new Font("Arial", Font.BOLD, 50));
+      label.setBackground(Color.black);
 
       return label;
    }
