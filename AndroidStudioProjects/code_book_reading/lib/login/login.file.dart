@@ -82,6 +82,7 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 15,),
 
             Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
                   child: Divider(
