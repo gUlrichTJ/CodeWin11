@@ -23,7 +23,7 @@ public class AuthPage extends JFrame {
       button.setSize(1, 1);
 
       JLabel label = new JLabel("?");
-      label.setSize(10, 10);
+      label.setFont(new Font("Arial", Font.BOLD, 30));
 
       button.add(label);
 
