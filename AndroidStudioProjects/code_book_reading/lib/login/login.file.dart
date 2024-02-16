@@ -76,7 +76,8 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 25,),
 
             // sign in button
-            const MyButton(onTap: signUserIn,),
+            MyButton(onTap: signUserIn,),
+            
             // or continue with
 
             // google + apple sign in button
