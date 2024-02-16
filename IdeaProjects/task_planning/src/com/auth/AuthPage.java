@@ -1,6 +1,7 @@
 package com.auth;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class AuthPage extends JFrame {
@@ -43,7 +44,10 @@ public class AuthPage extends JFrame {
       label.setFont(new Font("Arial", Font.BOLD, 50));
       label.setBackground(Color.black);
 
-      panel.add(new JPanel());
+      JPanel panel1 = new JPanel();
+      panel1.setSize(400, 100);
+      panel1.setBorder(new LineBorder(Color.black, 1));
+      panel.add(panel1);
       panel.add(label);
 
       return panel;
