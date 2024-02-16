@@ -12,8 +12,9 @@ public class AuthPage extends JFrame {
       this.setSize(600, 400);
       this.setLocationRelativeTo(null);
       this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+      this.setBackground(Color.white);
 
-      this.add(highPanel(), BorderLayout.CENTER);
+      this.add(highPanel(), BorderLayout.NORTH);
       this.setVisible(true);
    }
 
