@@ -51,6 +51,7 @@ public class AuthPage extends JFrame {
 
       JPanel panel1 = new JPanel();
       panel1.setSize(400, 100);
+      panel.setBorder(new LineBorder(Color.black));
 
       JPanel panel2 = new JPanel();
       panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
