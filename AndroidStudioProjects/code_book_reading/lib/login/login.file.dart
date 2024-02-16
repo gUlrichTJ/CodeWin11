@@ -117,11 +117,15 @@ class LoginPage extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(4.0),
-                    topRight: Radius.circular(4.0),
+                    topLeft: Radius.circular(8.4),
+                    topRight: Radius.circular(8.4),
                   ),
 
-                    child: Image.asset("assets/images/google_image.png")
+                    child: Image.asset(
+                        "assets/images/google_image.png",
+                      width: 20,
+                        height: 20,
+                    )
                 ),
               ],
             ),
