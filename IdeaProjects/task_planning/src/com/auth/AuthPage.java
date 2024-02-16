@@ -13,7 +13,7 @@ public class AuthPage extends JFrame {
       this.setLocationRelativeTo(null);
       this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-      this.add(panel, BorderLayout.NORTH);
+      this.add(highPanel(), BorderLayout.CENTER);
       this.setVisible(true);
    }
 
@@ -24,7 +24,7 @@ public class AuthPage extends JFrame {
       JLabel label = new JLabel("?");
 
       panel.add(label);
-      
+
       return panel;
    }
 }
