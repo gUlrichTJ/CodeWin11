@@ -14,6 +14,8 @@ public class AuthPage extends JFrame {
       this.setBackground(Color.white);
       this.setLayout(new BorderLayout());
 
+      
+
       this.add(highPanel(), BorderLayout.NORTH);
       this.setVisible(true);
    }
