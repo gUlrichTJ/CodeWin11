@@ -81,7 +81,22 @@ class LoginPage extends StatelessWidget {
             // or continue with
             const SizedBox(height: 15,),
 
-            // const Divider(),
+            Row(
+              children: [
+                Expanded(
+                  child: Divider(
+                    thickness: 0.5,
+                    color: Colors.grey.shade400,
+                  ),
+                ),
+                Expanded(
+                  child: Divider(
+                    thickness: 0.5,
+                    color: Colors.grey.shade400,
+                  ),
+                ),
+              ],
+            ),
             // google + apple sign in button
 
             // not a member ? register now
