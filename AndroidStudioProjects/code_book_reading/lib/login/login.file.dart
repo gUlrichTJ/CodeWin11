@@ -93,7 +93,15 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
 
-                    const Text("or sign with"),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Text(
+                          "or sign with",
+                        style: TextStyle(
+                          color: Colors.grey.shade700,
+                        ),
+                      ),
+                    ),
 
                     Expanded(
                       child: Divider(
