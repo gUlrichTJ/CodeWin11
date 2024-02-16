@@ -5,7 +5,6 @@ import java.awt.*;
 
 public class AuthPage extends JFrame {
 
-   HighPanel panel = new HighPanel();
    // Constructor
    public AuthPage() {
       super("Pretty window");
@@ -19,6 +18,7 @@ public class AuthPage extends JFrame {
       this.setVisible(true);
    }
 
+   // the high panel
    public JButton highPanel() {
       JButton button = new JButton();
       button.setLayout(new FlowLayout(FlowLayout.RIGHT));
@@ -35,11 +35,3 @@ public class AuthPage extends JFrame {
 }
 
 
-class HighPanel extends JPanel {
-   public HighPanel() {
-      JLabel label = new JLabel("?");
-      JPanel panel = new JPanel();
-      panel.setLayout(new FlowLayout(FlowLayout.RIGHT));
-      panel.add(label);
-   }
-}
