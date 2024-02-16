@@ -12,7 +12,7 @@ public class AuthPage extends JFrame {
       this.setLocationRelativeTo(null);
       this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       this.setBackground(Color.white);
-       this.setLayout(new FlowLayout());
+      this.setLayout(new FlowLayout());
 
       this.add(highPanel(), new FlowLayout(FlowLayout.RIGHT));
       this.setVisible(true);
@@ -28,7 +28,7 @@ public class AuthPage extends JFrame {
       JLabel label = new JLabel("?");
       label.setFont(new Font("Arial", Font.BOLD, 30));
 
-      button.add(label);
+      button.add(label, new FlowLayout(FlowLayout.RIGHT));
 
       return button;
    }
