@@ -21,7 +21,8 @@ public class AuthPage extends JFrame {
    }
 
    // the high panel
-   public JButton highPanel() {
+   public JPanel highPanel() {
+      JPanel panel = new JPanel();
       JButton button = new JButton();
       button.setLayout(new FlowLayout(FlowLayout.RIGHT));
       button.setSize(1, 1);
@@ -32,7 +33,9 @@ public class AuthPage extends JFrame {
 
       button.add(label, new FlowLayout(FlowLayout.RIGHT));
 
-      return button;
+      panel.add(button);
+
+      return panel;
    }
 
    // The label to welcome
