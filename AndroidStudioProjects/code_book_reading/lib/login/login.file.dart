@@ -115,7 +115,14 @@ class LoginPage extends StatelessWidget {
             // google + apple sign in button
             Row(
               children: [
-                Image.asset("assets/images/google_image.png")
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+
+                    child: Image.asset("assets/images/google_image.png")
+                ),
               ],
             ),
 
