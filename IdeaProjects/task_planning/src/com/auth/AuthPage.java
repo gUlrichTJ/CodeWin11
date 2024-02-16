@@ -14,7 +14,7 @@ public class AuthPage extends JFrame {
       this.setBackground(Color.white);
       this.setLayout(new BorderLayout());
 
-      this.add(welcome(), new FlowLayout(15));
+      this.add(welcome());
       this.add(highPanel(), BorderLayout.NORTH);
       this.setVisible(true);
    }
@@ -37,7 +37,7 @@ public class AuthPage extends JFrame {
    // The label to welcome
    public JPanel welcome() {
       JPanel panel = new JPanel();
-      panel.setLayout(new FlowLayout(FlowLayout.CENTER));
+      panel.setLayout(new BorderLayout());
 
       JLabel label = new JLabel("Welcome back");
       label.setFont(new Font("Arial", Font.BOLD, 50));
