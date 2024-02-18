@@ -2,7 +2,6 @@ package com.auth;
 
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class AuthPage extends JFrame {
@@ -78,7 +77,7 @@ public class AuthPage extends JFrame {
 
 class RoundedBorder implements Border {
 
-   private int radius;
+   private final int radius;
 
    RoundedBorder(int radius) {
       this.radius = radius;
