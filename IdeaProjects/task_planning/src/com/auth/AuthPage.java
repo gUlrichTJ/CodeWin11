@@ -21,7 +21,7 @@ public class AuthPage extends JFrame {
    }
 
    // the high panel
-   // God has always protected us.
+   // God has always protected us. 
    public JPanel highPanel() {
       JPanel panel = new JPanel();
       panel.setLayout(new FlowLayout(FlowLayout.RIGHT));
