@@ -43,6 +43,7 @@ public class AuthPage extends JFrame {
 
    // The label to welcome
    public JPanel welcome() {
+      // God knows us all
       JPanel panel = new JPanel();
       panel.setLayout(new GridLayout(3, 1));
       panel.setBorder(new RoundedBorder(50));
