@@ -50,7 +50,11 @@ public class AuthPage extends JFrame {
       panel.setLayout(new GridLayout(3, 1));
       panel.setBorder(new RoundedBorder(50));
 
-      JLabel label = new JLabel("<html><u>Welcome back</u></html>");
+      JLabel label = new JLabel(
+            "<html>" +
+               "<u><style color='red';>Welcome back</style></u>" +
+            "</html>"
+      );
       label.setFont(new Font("Arial", Font.BOLD, 50));
       label.setBackground(Color.black);
 
