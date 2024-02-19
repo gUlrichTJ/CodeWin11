@@ -134,9 +134,11 @@ public class AuthPage extends JFrame {
 
       JLabel label = new JLabel("" +
             "<html>" +
-               "<span style='color:white''>Log in</span>" +
+               "<span style='color:white; text-align:center; font-size:3em;'>Log in</span>" +
             "</html>"
       );
+
+      label.setLayout(new BorderLayout());
 
       // The login button
       JButton loginButton = new JButton();
