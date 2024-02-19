@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "read book",
       theme: ThemeData(
-        primarySwatch: Colors.cyan,
-        canvasColor: Colors.cyan.shade400,
+        primarySwatch: Colors.grey,
+        canvasColor: Colors.grey.shade400,
       ),
       home: const OurHomePage(),
     );
@@ -33,6 +33,7 @@ class _OurHomePageState extends State<OurHomePage> {
       appBar: AppBar(
 
       ),
+      drawer: const Drawer(),
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(2.0),
         child: Column(
