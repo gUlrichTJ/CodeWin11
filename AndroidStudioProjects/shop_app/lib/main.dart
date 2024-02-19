@@ -8,7 +8,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      actions: ,
+      debugShowCheckedModeBanner: false,
+      home: OurHomePage(),
+    );
+  }
+}
+
+class OurHomePage extends StatefulWidget {
+  const OurHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<OurHomePage> createState() => _OurHomePageState();
+}
+
+class _OurHomePageState extends State<OurHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      
     );
   }
 }
