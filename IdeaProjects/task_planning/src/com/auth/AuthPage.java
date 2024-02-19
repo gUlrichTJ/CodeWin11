@@ -118,6 +118,15 @@ public class AuthPage extends JFrame {
       return panelwup;
    }
 
+   // panel for forgot password and login
+   public JPanel forgotPassoword() {
+      JPanel forgotPassword = new JPanel();
+
+      JLabel label = new JLabel("Forgot password?");
+      label.setFont(new Font("Arial", Font.));
+      return forgotPassword;
+   }
+
 }
 
 class RoundedBorder implements Border {
