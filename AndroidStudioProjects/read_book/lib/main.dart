@@ -148,7 +148,14 @@ class _OurHomePageState extends State<OurHomePage> {
                         ),
                       ),
                       Center(
-                        child: Container(),
+                        child: Container(
+                          height: 100,
+                          width: 100,
+                          color: Colors.yellow.shade400,
+                          child: const Center(
+                              child: Text("Portrait"),
+                          ),
+                        ),
                       ),
                     ],
                   ),
