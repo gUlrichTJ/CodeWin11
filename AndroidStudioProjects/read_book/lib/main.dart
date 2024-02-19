@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "read book",
       theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
-        canvasColor: Colors.lightBlue.shade600,
+        primarySwatch: Colors.cyan,
+        canvasColor: Colors.cyan.shade400,
       ),
       home: const OurHomePage(),
     );
