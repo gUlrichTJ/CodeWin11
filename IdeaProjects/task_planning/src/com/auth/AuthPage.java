@@ -50,7 +50,7 @@ public class AuthPage extends JFrame {
       panel.setLayout(new GridLayout(3, 1));
       panel.setBorder(new RoundedBorder(50));
 
-      JLabel label = new JLabel("Welcome back");
+      JLabel label = new JLabel("<html><u>Welcome back</u></html>");
       label.setFont(new Font("Arial", Font.BOLD, 50));
       label.setBackground(Color.black);
 
@@ -122,7 +122,7 @@ public class AuthPage extends JFrame {
    public JPanel forgotPassoword() {
       JPanel forgotPassword = new JPanel();
 
-      JLabel label = new JLabel("Forgot password?");
+      JLabel label = new JLabel("<html><u>Forgot password?</u></html>");
       label.setFont(new Font("Arial", Font.PLAIN, 30));
       return forgotPassword;
    }
