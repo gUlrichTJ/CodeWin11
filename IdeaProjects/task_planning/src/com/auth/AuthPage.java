@@ -110,6 +110,7 @@ public class AuthPage extends JFrame {
    public JPanel welcomeUsernamePassword() {
       JPanel panelwup = new JPanel();
       panelwup.setLayout(new GridLayout(2, 1, 30, 50));
+      panelwup.setBorder(new RoundedBorder(40));
 
       panelwup.add(welcomeCenter());
       panelwup.add(usernamePassword());
