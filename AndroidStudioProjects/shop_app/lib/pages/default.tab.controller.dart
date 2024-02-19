@@ -1,75 +1,17 @@
 import 'package:flutter/material.dart';
 
-// TODO: The things that will stay in the bottom of the tabbars
-// TODO: God is great.
+void main() {
+  runApp(const MyApp());
+}
 
-class CustomBodyTabBar extends StatelessWidget {
-  const CustomBodyTabBar({
-    super.key,
-  });
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const TabBarView(
-        children: <Widget>[
-          Center(
-            child: Text("It is cloudy here"),
-          ),
-          Center(
-            child: Text("It is cloudy here"),
-          ),
-          Center(
-            child: Text("It is cloudy here"),
-          ),
-          Center(
-            child: Text("It is cloudy here"),
-          )
-        ],
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      the
     );
   }
-}
-
-// TODO: The tabbar where we will write all, men, child...
-TabBar buildTabBar() {
-  return TabBar(
-    tabs: <Widget>[
-      const Text(
-        "ALL",
-        style: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      const Text(
-        "WOMEN",
-        style: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      const Text(
-        "MEN",
-        style: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      const Text(
-        "KIDS",
-        style: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      IconButton(
-        onPressed: () {},
-        icon: const Icon(
-          Icons.table_bar,
-          size: 20,
-          color: Colors.black,
-        ),
-      )
-    ],
-    isScrollable: true,
-  );
 }
