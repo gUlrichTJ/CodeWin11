@@ -134,7 +134,14 @@ public class AuthPage extends JFrame {
       JLabel label = new JLabel("" +
             "<html>" +
                "<span style='color:white''>Log in</span>" +
-            "</html>");
+            "</html>"
+      );
+
+      // The login button
+      JButton loginButton = new JButton();
+      loginButton.add(label);
+
+      panel.add(loginButton);
 
       return panel;
    }
@@ -142,13 +149,13 @@ public class AuthPage extends JFrame {
    // Panel of the usernamepassword and welcome
    public JPanel welcomeUsernamePassword() {
       JPanel panelwup = new JPanel();
-      panelwup.setLayout(new GridLayout(3, 1, 30, 50));
+      panelwup.setLayout(new GridLayout(4, 1, 30, 50));
       panelwup.setBorder(new RoundedBorder(40));
 
       panelwup.add(welcomeCenter());
       panelwup.add(usernamePassword());
       panelwup.add(forgotPassoword());
-
+      panelwup.add(login());
       return panelwup;
    }
 }
