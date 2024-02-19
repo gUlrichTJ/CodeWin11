@@ -29,8 +29,11 @@ class OurHomePage extends StatefulWidget {
 class _OurHomePageState extends State<OurHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+
+      ),
+      body: const SingleChildScrollView(
         padding: EdgeInsets.all(2.0),
         child: Column(
           children: <Widget>[],
