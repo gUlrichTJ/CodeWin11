@@ -180,7 +180,8 @@ class _OurHomePageState extends State<OurHomePage> {
                             height: height,
                             width: width,
                             child: TextButton(
-                              
+                              onPressed: increasedWidth,
+                              child: Text("Tap to "),
                             ),
                           ),
                         ],
