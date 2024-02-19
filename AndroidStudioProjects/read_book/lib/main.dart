@@ -171,7 +171,13 @@ class _OurHomePageState extends State<OurHomePage> {
                       ),
 
                       const Divider(height: 20,),
-                      buildRow(),
+                      SafeArea(
+                        child: Column(
+                          children: [
+                            buildRow(),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
