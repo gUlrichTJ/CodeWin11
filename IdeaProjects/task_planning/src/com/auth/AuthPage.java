@@ -15,9 +15,9 @@ public class AuthPage extends JFrame {
       this.setBackground(Color.white);
       this.setLayout(new BorderLayout());
 
-      this.add(welcomeCenter(), BorderLayout.CENTER);
+      this.add(welcomeUsernamePassword(), BorderLayout.CENTER);
       this.add(highPanel(), BorderLayout.NORTH);
-      this.add(usernamePassword(), BorderLayout.SOUTH);
+      //this.add(usernamePassword(), BorderLayout.SOUTH);
       this.setVisible(true);
    }
 
@@ -104,6 +104,17 @@ public class AuthPage extends JFrame {
 
       greatPanel.add(panel, BorderLayout.CENTER);
       return panel;
+   }
+
+   // Panel of the usernamepassword and welcome
+   public JPanel welcomeUsernamePassword() {
+      JPanel panelwup = new JPanel();
+      panelwup.setLayout(new GridLayout(2, 1, 30, 50));
+
+      panelwup.add(welcomeCenter());
+      panelwup.add(usernamePassword());
+
+      return panelwup;
    }
 
 }
