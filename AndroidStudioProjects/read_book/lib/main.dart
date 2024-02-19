@@ -127,23 +127,25 @@ class _OurHomePageState extends State<OurHomePage> {
                       const Divider(height: 30,),
 
                       // We put the gridview
-                      GridView.count(
-                        primary: false,
-                        padding: const EdgeInsets.all(20),
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 25,
-                        mainAxisSpacing: 2,
-                        shrinkWrap: true,
-                        children: const <Widget>[
-                          Text("Grid 0"),
-                          Text("Grid 1"),
-                          Text("Grid 2"),
-                          Text("Grid 3"),
-                          Text("Grid 4"),
-                          Text("Grid 5"),
-                          Text("Grid 6"),
-                          Text("Grid 7"),
-                        ],
+                      SafeArea(
+                        child: GridView.count(
+                          primary: false,
+                          padding: const EdgeInsets.all(20),
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 25,
+                          mainAxisSpacing: 2,
+                          shrinkWrap: true,
+                          children: const <Widget>[
+                            Text("Grid 0"),
+                            Text("Grid 1"),
+                            Text("Grid 2"),
+                            Text("Grid 3"),
+                            Text("Grid 4"),
+                            Text("Grid 5"),
+                            Text("Grid 6"),
+                            Text("Grid 7"),
+                          ],
+                        ),
                       ),
                     ],
                   ),
