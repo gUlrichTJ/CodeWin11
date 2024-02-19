@@ -114,6 +114,7 @@ public class AuthPage extends JFrame {
 
    public JPanel forgotPassoword() {
       JPanel forgotPassword = new JPanel();
+      forgotPassword.setLayout(new FlowLayout(FlowLayout.LEFT));
 
       JLabel label = new JLabel(
             "<html>" +
@@ -135,7 +136,7 @@ public class AuthPage extends JFrame {
 
       JLabel label = new JLabel("" +
             "<html>" +
-               "<span style='color:white; text-align:center; font-size:3em;'>Log in</span>" +
+               "<span style='color:white; text-align:center; font-size:4em;'>Log in</span>" +
             "</html>"
       );
 
