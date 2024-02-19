@@ -88,20 +88,20 @@ public class AuthPage extends JFrame {
 
       JPanel panel = new JPanel();
       // We set the layout of the panel of both password and username
-      panel.setLayout(new GridLayout(2, 1, 10, 80));
+      panel.setLayout(new GridLayout(2, 1, 1, 5));
 
       // Géovanie phys
       // The username
       JTextField usernameField = new JTextField();
       usernameField.setFont(new Font("Roboto", Font.BOLD, 30));
-      usernameField.setBorder(new RoundedBorder(20));
+      usernameField.setBorder(new RoundedBorder(5));
       // The panel of the username
       JPanel panelUsername = new JPanel();
       panelUsername.add(usernameField);
 
       JPasswordField passwordField = new JPasswordField();
       passwordField.setFont(new Font("Roboto", Font.PLAIN, 30));
-      passwordField.setBorder(new RoundedBorder(20));
+      passwordField.setBorder(new RoundedBorder(5));
       // The panel of the password
       JPanel panelPassword = new JPanel();
       panelPassword.add(passwordField);
