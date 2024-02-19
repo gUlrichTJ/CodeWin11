@@ -52,8 +52,7 @@ class _OurHomePageState extends State<OurHomePage> {
                 gradient: LinearGradient(
                   colors: [
                     Colors.orange,
-                    Colors.yellow,
-                    Colors.orange.shade50,
+                    Colors.yellow.shade100,
                   ],
                 )
               ),
