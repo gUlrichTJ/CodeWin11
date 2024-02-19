@@ -43,7 +43,15 @@ class _OurHomePageState extends State<OurHomePage> {
           child: Column(
             children: <Widget>[
               Center(
-                
+                child: Text(
+                    "Welcome back",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    
+                  ),
+                ),
               ),
             ],
           ),
