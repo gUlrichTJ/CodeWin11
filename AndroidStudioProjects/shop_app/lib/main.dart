@@ -42,6 +42,9 @@ class _OurHomePageState extends State<OurHomePage> {
         child: SafeArea(
           child: Column(
             children: <Widget>[
+              Container(
+                height: 20,
+              ),
               Center(
                 child: Text(
                     "Welcome back",
@@ -49,7 +52,7 @@ class _OurHomePageState extends State<OurHomePage> {
                     color: Colors.black,
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    
+
                   ),
                 ),
               ),
