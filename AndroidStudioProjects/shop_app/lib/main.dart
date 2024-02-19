@@ -27,6 +27,7 @@ class _OurHomePageState extends State<OurHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        elevation: 0.0,
         actions: [
           IconButton(onPressed: () {},
               icon: const Icon(
