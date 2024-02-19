@@ -120,7 +120,7 @@ class _OurHomePageState extends State<OurHomePage> {
                           height: 100,
                           width: 100,
                           color: Colors.yellow.shade400,
-                          child: const Text("Portrait"),
+                          child: const Center(child: Text("Portrait")),
                         ),
                       ),
 
@@ -148,7 +148,7 @@ class _OurHomePageState extends State<OurHomePage> {
                         ),
                       ),
                       Center(
-                        Container()
+                        child: Container(),
                       ),
                     ],
                   ),
