@@ -73,7 +73,12 @@ class _OurHomePageState extends State<OurHomePage> {
                   ),
                 ),
             ),
+
             const Divider(),
+
+            TextField(
+              keyboardType: TextInputType.text,
+            ),
           ],
         ),
       ),
