@@ -141,7 +141,7 @@ public class AuthPage extends JFrame {
       JButton loginButton = new JButton();
       loginButton.setBackground(new Color(75, 230, 210, 93));
       loginButton.setLayout(new BorderLayout());
-      loginButton.setSize();
+      loginButton.setCon();
       loginButton.add(label, BorderLayout.CENTER);
 
       panel.add(loginButton);
