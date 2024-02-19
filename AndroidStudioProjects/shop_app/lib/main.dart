@@ -29,7 +29,11 @@ class _OurHomePageState extends State<OurHomePage> {
         backgroundColor: Colors.white,
         actions: [
           IconButton(onPressed: () {},
-              icon: Icon(Icons.help),
+              icon: const Icon(
+                  Icons.help_outline,
+                color: Colors.black,
+                fill: 1,
+              ),
           ),
         ],
       ),
