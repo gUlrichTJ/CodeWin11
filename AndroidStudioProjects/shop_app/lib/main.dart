@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MyApp);
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -24,8 +24,16 @@ class OurHomePage extends StatefulWidget {
 class _OurHomePageState extends State<OurHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        actions: [
+          IconButton(onPressed: () {},
+              icon: Icon(Icons.help),
+          ),
+        ],
+      ),
+      body: const SafeArea(
         child: Column(
           children: <Widget>[],
         ),
