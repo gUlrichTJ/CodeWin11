@@ -47,12 +47,13 @@ public class AuthPage extends JFrame {
    public JPanel welcome() {
       // God knows us all
       JPanel panel = new JPanel();
+      panel.setBackground(new Color(3, 3, 3));
       panel.setLayout(new GridLayout(3, 1));
       panel.setBorder(new RoundedBorder(50));
 
       JLabel label = new JLabel(
             "<html>" +
-               "<u style=color:'red;'>Welcome back</u>" +
+               "<u style=color:'white;'>Welcome back</u>" +
             "</html>"
       );
       label.setFont(new Font("Arial", Font.BOLD, 50));
@@ -75,6 +76,7 @@ public class AuthPage extends JFrame {
 
    public JPanel welcomeCenter() {
       JPanel panel = new JPanel();
+      panel.setBackground(new Color(3, 3, 3));
       panel.setLayout(new BorderLayout());
       panel.add(welcome(), BorderLayout.NORTH);
 
@@ -156,6 +158,7 @@ public class AuthPage extends JFrame {
    // Panel of the usernamepassword and welcome
    public JPanel welcomeUsernamePassword() {
       JPanel panelwup = new JPanel();
+      panelwup.setBackground(new Color(1, 1, 1));
       panelwup.setLayout(new GridLayout(4, 1, 30, 50));
       panelwup.setBorder(new RoundedBorder(40));
 
