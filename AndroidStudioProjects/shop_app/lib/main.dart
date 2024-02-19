@@ -38,9 +38,15 @@ class _OurHomePageState extends State<OurHomePage> {
           ),
         ],
       ),
-      body: const SafeArea(
-        child: Column(
-          children: <Widget>[],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Center(
+                
+              ),
+            ],
+          ),
         ),
       ),
     );
