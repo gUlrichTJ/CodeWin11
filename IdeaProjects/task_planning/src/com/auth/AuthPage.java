@@ -94,6 +94,7 @@ public class AuthPage extends JFrame {
       // The username
       JTextField usernameField = new JTextField();
       usernameField.setFont(new Font("Roboto", Font.BOLD, 30));
+      usernameField.setBorder(new RoundedBorder(20));
       // The panel of the username
       JPanel panelUsername = new JPanel();
       panelUsername.add(usernameField);
