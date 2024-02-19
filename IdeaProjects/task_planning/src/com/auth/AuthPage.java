@@ -110,20 +110,8 @@ public class AuthPage extends JFrame {
       return panel;
    }
 
-   // Panel of the usernamepassword and welcome
-   public JPanel welcomeUsernamePassword() {
-      JPanel panelwup = new JPanel();
-      panelwup.setLayout(new GridLayout(3, 1, 30, 50));
-      panelwup.setBorder(new RoundedBorder(40));
-
-      panelwup.add(welcomeCenter());
-      panelwup.add(usernamePassword());
-      panelwup.add(forgotPassoword());
-
-      return panelwup;
-   }
-
    // panel for forgot password and login
+
    public JPanel forgotPassoword() {
       JPanel forgotPassword = new JPanel();
 
@@ -138,6 +126,29 @@ public class AuthPage extends JFrame {
       return forgotPassword;
    }
 
+   // The panel for login
+   public JPanel login() {
+      JPanel panel = new JPanel();
+      panel.setBackground(new Color(75, 230, 210, 93));
+
+      JLabel label = new JLabel("" +
+            "");
+
+      return panel;
+   }
+
+   // Panel of the usernamepassword and welcome
+   public JPanel welcomeUsernamePassword() {
+      JPanel panelwup = new JPanel();
+      panelwup.setLayout(new GridLayout(3, 1, 30, 50));
+      panelwup.setBorder(new RoundedBorder(40));
+
+      panelwup.add(welcomeCenter());
+      panelwup.add(usernamePassword());
+      panelwup.add(forgotPassoword());
+
+      return panelwup;
+   }
 }
 
 class RoundedBorder implements Border {
