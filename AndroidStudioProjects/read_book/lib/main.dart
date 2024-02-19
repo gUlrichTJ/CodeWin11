@@ -42,7 +42,7 @@ class _OurHomePageState extends State<OurHomePage> {
       ),
       drawer: const Drawer(),
       body:  SingleChildScrollView(
-        padding: EdgeInsets.all(2.0),
+        padding: const EdgeInsets.all(2.0),
         child: Column(
           children: <Widget>[
             Container(
@@ -56,9 +56,13 @@ class _OurHomePageState extends State<OurHomePage> {
                   ],
                 )
               ),
-                child: SizedBox(
-                  width: 20,
-                  height: 10,
+                child: const Expanded(
+                  child: Center(
+                    child: SizedBox(
+                      width: 100,
+                      height: 100,
+                    ),
+                  ),
                 ),
 
             ),
