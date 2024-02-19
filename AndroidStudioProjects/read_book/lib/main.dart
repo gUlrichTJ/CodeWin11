@@ -89,8 +89,10 @@ class _OurHomePageState extends State<OurHomePage> {
                   decoration: InputDecoration(
                     labelText: "Notes",
                     labelStyle: TextStyle(color: Colors.grey.shade900),
+                    border: const OutlineInputBorder(),
                   ),
                 ),
+                const Divider(),
                 // A formfield
                 TextFormField(
                   decoration: const InputDecoration(
