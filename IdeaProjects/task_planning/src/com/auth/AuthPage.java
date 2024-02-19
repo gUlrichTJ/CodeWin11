@@ -113,11 +113,12 @@ public class AuthPage extends JFrame {
    // Panel of the usernamepassword and welcome
    public JPanel welcomeUsernamePassword() {
       JPanel panelwup = new JPanel();
-      panelwup.setLayout(new GridLayout(2, 1, 30, 50));
+      panelwup.setLayout(new GridLayout(3, 1, 30, 50));
       panelwup.setBorder(new RoundedBorder(40));
 
       panelwup.add(welcomeCenter());
       panelwup.add(usernamePassword());
+      panelwup.add(forgotPassoword());
 
       return panelwup;
    }
@@ -133,6 +134,7 @@ public class AuthPage extends JFrame {
                      "</u>" +
                   "</html>");
       label.setFont(new Font("Arial", Font.PLAIN, 30));
+      forgotPassword.add(label);
       return forgotPassword;
    }
 
