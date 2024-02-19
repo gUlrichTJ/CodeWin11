@@ -52,7 +52,7 @@ public class AuthPage extends JFrame {
 
       JLabel label = new JLabel(
             "<html>" +
-               "<u style=color:'darkblue;'>Welcome back</u>" +
+               "<u style=color:'rgb(0,0,139);'>Welcome back</u>" +
             "</html>"
       );
       label.setFont(new Font("Arial", Font.BOLD, 50));
