@@ -32,7 +32,7 @@ class _OurHomePageState extends State<OurHomePage> {
 
   increasedWidth() {
     setState(() {
-      
+      width = width > 320.0 ? 100 : width += 50;
     });
   }
 
