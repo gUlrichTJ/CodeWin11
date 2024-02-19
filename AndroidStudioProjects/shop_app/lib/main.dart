@@ -58,9 +58,17 @@ class _OurHomePageState extends State<OurHomePage> {
               TextFormField(
                 decoration: const InputDecoration(
                   labelText: "",
-                  hintText: "Username"
+                  hintText: "Username",
+                  border: OutlineInputBorder(),
                 ),
               ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: "",
+                  hintText: "Password",
+                  border: OutlineInputBorder(),
+                ),
+              )
             ],
           ),
         ),
