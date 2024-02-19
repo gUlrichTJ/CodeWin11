@@ -126,11 +126,6 @@ class _OurHomePageState extends State<OurHomePage> {
 
                       const Divider(height: 30,),
 
-                      const Row(
-                        children: <Widget>[
-                          
-                        ],
-                      ),
                     ],
                   ),
                 ),
