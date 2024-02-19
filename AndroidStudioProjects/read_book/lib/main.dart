@@ -128,7 +128,9 @@ class _OurHomePageState extends State<OurHomePage> {
 
                       // We put the gridview
                       GridView.count(
-                          crossAxisCount: 2,
+                        primary: false,
+                        padding: const EdgeInsets.all(10),
+                        crossAxisCount: 2,
                         crossAxisSpacing: 5,
                         mainAxisSpacing: 3,
                         shrinkWrap: true,
