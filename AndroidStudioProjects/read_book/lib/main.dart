@@ -12,8 +12,26 @@ class MyApp extends StatelessWidget {
       title: "read book",
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
-        can
+        canvasColor: Colors.lightGreen.shade600,
       ),
+      home: OurHomePage(),
     );
   }
 }
+
+class OurHomePage extends StatefulWidget {
+  const OurHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<OurHomePage> createState() => _OurHomePageState();
+}
+
+class _OurHomePageState extends State<OurHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      
+    );
+  }
+}
+
