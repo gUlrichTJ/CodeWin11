@@ -132,7 +132,9 @@ public class AuthPage extends JFrame {
       panel.setBackground(new Color(75, 230, 210, 93));
 
       JLabel label = new JLabel("" +
-            "");
+            "<html>" +
+               "<span style='color:white''>Log in</span>" +
+            "</html>");
 
       return panel;
    }
