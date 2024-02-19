@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/pages/home.page.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(new MyApp);
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,15 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
-      theme: ThemeData(
-        brightness: Brightness.light,
-      // primarySwatch: Colors.white,
-        appBarTheme: const AppBarTheme(
-          centerTitle: true,
-        )
-      ),
+      actions: ,
     );
   }
 }
+
