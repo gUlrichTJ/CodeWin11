@@ -24,8 +24,12 @@ class OurHomePage extends StatefulWidget {
 class _OurHomePageState extends State<OurHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
+    return const Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[],
+        ),
+      ),
     );
   }
 }
