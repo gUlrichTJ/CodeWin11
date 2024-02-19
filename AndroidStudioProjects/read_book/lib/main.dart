@@ -27,6 +27,15 @@ class OurHomePage extends StatefulWidget {
 }
 
 class _OurHomePageState extends State<OurHomePage> {
+
+  double height = 100.0, width = 100.0;
+
+  increasedWidth() {
+    setState(() {
+      
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
