@@ -78,10 +78,14 @@ class _OurHomePageState extends State<OurHomePage> {
 
             TextField(
               keyboardType: TextInputType.text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 16,
-                fontFamily: "Roboto, Serif",
+                fontFamily: "`Roboto, Serif",
+              ),
+              decoration: InputDecoration(
+                labelText: "Notes",
+                labelStyle: TextStyle(color: Colors.grey.shade900),
               ),
             ),
           ],
