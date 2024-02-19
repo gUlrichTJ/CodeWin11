@@ -82,6 +82,7 @@ public class AuthPage extends JFrame {
 
       // The username
       JTextField username = new JTextField();
+      // Géovanie phys
       return panel;
    }
 
