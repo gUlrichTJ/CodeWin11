@@ -81,7 +81,7 @@ public class AuthPage extends JFrame {
       JPanel panel = new JPanel();
 
       // The username
-      
+      JTextField username = new JTextField();
       return panel;
    }
 
