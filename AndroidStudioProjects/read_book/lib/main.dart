@@ -31,7 +31,13 @@ class _OurHomePageState extends State<OurHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+        actions: <Widget>[
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.more_vert
+              ),
+          ),
+        ],
       ),
       drawer: const Drawer(),
       body: const SingleChildScrollView(
