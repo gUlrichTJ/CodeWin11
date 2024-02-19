@@ -171,7 +171,13 @@ class _OurHomePageState extends State<OurHomePage> {
                       ),
 
                       const Divider(height: 20,),
-                      
+                      Row(
+                        children: <Widget>[
+                          AnimatedContainer(
+                              duration: const Duration(milliseconds: 500),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
