@@ -75,6 +75,16 @@ public class AuthPage extends JFrame {
 
       return panel;
    }
+
+   // the method for the username and the password
+   public JPanel usernamePassword() {
+      JPanel panel = new JPanel();
+
+      // The username
+      
+      return panel;
+   }
+
 }
 
 class RoundedBorder implements Border {
