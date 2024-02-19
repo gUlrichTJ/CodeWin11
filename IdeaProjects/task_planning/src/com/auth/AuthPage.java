@@ -79,6 +79,9 @@ public class AuthPage extends JFrame {
 
    // the method for the username and the password
    public JPanel usernamePassword() {
+      JPanel greatPanel = new JPanel();
+      greatPanel.setLayout(new BorderLayout());
+
       JPanel panel = new JPanel();
       // We set the layout of the panel of both password and username
       panel.setLayout(new GridLayout(2, 1, 5, 8));
@@ -98,6 +101,8 @@ public class AuthPage extends JFrame {
       // We add the password and the username to the final panel
       panel.add(usernameField);
       panel.add(passwordField);
+
+      greatPanel.add(panel, BorderLayout.CENTER);
       return panel;
    }
 
