@@ -129,8 +129,9 @@ class _OurHomePageState extends State<OurHomePage> {
                       // We put the gridview
                       GridView.count(
                           crossAxisCount: 2,
-                        crossAxisSpacing: 10,
-                        mainAxisSpacing: 10,
+                        crossAxisSpacing: 5,
+                        mainAxisSpacing: 3,
+                        shrinkWrap: true,
                         children: const <Widget>[
                           Text("Grid 0"),
                           Text("Grid 1"),
@@ -138,6 +139,8 @@ class _OurHomePageState extends State<OurHomePage> {
                           Text("Grid 3"),
                           Text("Grid 4"),
                           Text("Grid 5"),
+                          Text("Grid 6"),
+                          Text("Grid 7"),
                         ],
                       ),
                     ],
