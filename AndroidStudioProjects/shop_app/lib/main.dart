@@ -40,36 +40,41 @@ class _OurHomePageState extends State<OurHomePage> {
       ),
       body: SingleChildScrollView(
         child: SafeArea(
-          child: Column(
-            children: <Widget>[
-              Container(height: 20,),
-              const Center(
-                child: Text(
-                    "Welcome back",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+          child: Padding(
+            padding: const EdgeInsets.all(13.0),
+            child: Column(
+              children: <Widget>[
+                Container(height: 20,),
+                const Center(
+                  child: Text(
+                      "Welcome back",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
 
+                    ),
                   ),
                 ),
-              ),
-              Container(height: 20,),
-              TextFormField(
-                decoration: const InputDecoration(
-                  labelText: "",
-                  hintText: "Username",
-                  border: OutlineInputBorder(),
+                Container(height: 20,),
+                TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: "Username",
+                    hintText: "Username",
+                    border: OutlineInputBorder(),
+                  ),
                 ),
-              ),
-              TextFormField(
-                decoration: const InputDecoration(
-                  labelText: "",
-                  hintText: "Password",
-                  border: OutlineInputBorder(),
-                ),
-              )
-            ],
+                Container(height: 20,),
+                TextFormField(
+                  
+                  decoration: const InputDecoration(
+                    labelText: "Password",
+                    hintText: "Password",
+                    border: OutlineInputBorder(),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
