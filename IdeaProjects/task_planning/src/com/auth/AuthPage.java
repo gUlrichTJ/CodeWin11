@@ -93,11 +93,13 @@ public class AuthPage extends JFrame {
       // Géovanie phys
       // The username
       JTextField usernameField = new JTextField();
+      usernameField.setFont(new Font("Arial", Font.BOLD, 30));
       // The panel of the username
       JPanel panelUsername = new JPanel();
       panelUsername.add(usernameField);
 
       JPasswordField passwordField = new JPasswordField();
+      passwordField.setFont(new Font("Arial", Font.BOLD, 30));
       // The panel of the password
       JPanel panelPassword = new JPanel();
       panelPassword.add(passwordField);
