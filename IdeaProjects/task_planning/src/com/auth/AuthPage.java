@@ -17,7 +17,7 @@ public class AuthPage extends JFrame {
 
       this.add(welcomeCenter(), BorderLayout.CENTER);
       this.add(highPanel(), BorderLayout.NORTH);
-      this.add(usernamePassword());
+      this.add(usernamePassword(), BorderLayout.SOUTH);
       this.setVisible(true);
    }
 
