@@ -175,6 +175,13 @@ class _OurHomePageState extends State<OurHomePage> {
                         children: <Widget>[
                           AnimatedContainer(
                               duration: const Duration(milliseconds: 500),
+                            curve: Curves.elasticOut,
+                            color: Colors.amber,
+                            height: height,
+                            width: width,
+                            child: TextButton(
+                              
+                            ),
                           ),
                         ],
                       ),
