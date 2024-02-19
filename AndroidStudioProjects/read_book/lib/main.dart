@@ -109,7 +109,11 @@ class _OurHomePageState extends State<OurHomePage> {
                 SafeArea(
                   child: Column(
                     children: <Widget>[
-                      Icon(Icons.)
+                      Icon(
+                          Icons.school,
+                        color: Colors.black,
+                        size: 80,
+                      ),
                     ],
                   ),
                 ),
