@@ -131,9 +131,9 @@ class _OurHomePageState extends State<OurHomePage> {
                         child: GridView.count(
                           primary: false,
                           padding: const EdgeInsets.all(5),
-                          crossAxisCount: 2,
+                          crossAxisCount: 4,
                           crossAxisSpacing: 25,
-                          mainAxisSpacing: 2,
+                          mainAxisSpacing: 0,
                           shrinkWrap: true,
                           children: const <Widget>[
                             Text("Grid 0"),
