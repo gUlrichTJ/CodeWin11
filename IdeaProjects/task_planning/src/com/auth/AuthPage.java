@@ -88,7 +88,7 @@ public class AuthPage extends JFrame {
 
       JPanel panel = new JPanel();
       // We set the layout of the panel of both password and username
-      panel.setLayout(new GridLayout(2, 1, 5, 8));
+      panel.setLayout(new GridLayout(2, 1, 10, 80));
 
       // Géovanie phys
       // The username
@@ -136,7 +136,6 @@ public class AuthPage extends JFrame {
       JPanel panel = new JPanel();
       panel.setBackground(new Color(7, 99, 230, 93));
       panel.setBorder(new RoundedBorder(5));
-      panel.setPreferredSize(new Dimension(0, 1));
       // panel.setBorder(new RoundedBorder(40));
       panel.setLayout(new BorderLayout());
 
