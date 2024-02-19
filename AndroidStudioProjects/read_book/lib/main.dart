@@ -92,8 +92,11 @@ class _OurHomePageState extends State<OurHomePage> {
                     border: const OutlineInputBorder(),
                   ),
                 ),
-                const Divider(),
-                // A formfield
+                const Divider(
+                  height: 30,
+                  color: Colors.grey,
+                ),
+                // A form-field
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: "Enter you notes",
