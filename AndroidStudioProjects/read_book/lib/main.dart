@@ -79,7 +79,9 @@ class _OurHomePageState extends State<OurHomePage> {
             TextField(
               keyboardType: TextInputType.text,
               style: TextStyle(
-                
+                color: Colors.black,
+                fontSize: 16,
+                fontFamily: "Roboto, Serif",
               ),
             ),
           ],
