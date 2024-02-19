@@ -126,6 +126,15 @@ class _OurHomePageState extends State<OurHomePage> {
 
                       const Divider(height: 30,),
 
+                      // We put the gridview
+                      GridView.count(
+                          crossAxisCount: 2,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        children: <Widget>[
+                          Text("")
+                        ],
+                      ),
                     ],
                   ),
                 ),
