@@ -135,7 +135,8 @@ public class AuthPage extends JFrame {
    public JPanel login() {
       JPanel panel = new JPanel();
       panel.setBackground(new Color(7, 99, 230, 93));
-      panel.setBorder(new RoundedBorder(20));
+      panel.setBorder(new RoundedBorder(5));
+      panel.setPreferredSize(new Dimension(0, 1));
       // panel.setBorder(new RoundedBorder(40));
       panel.setLayout(new BorderLayout());
 
@@ -151,7 +152,7 @@ public class AuthPage extends JFrame {
       JButton loginButton = new JButton();
       loginButton.setBackground(new Color(0, 0, 119));
       loginButton.setLayout(new FlowLayout(FlowLayout.CENTER));
-      loginButton.setBorder(new RoundedBorder(20));
+      loginButton.setBorder(new RoundedBorder(2));
       loginButton.add(label);
 
       panel.add(loginButton, BorderLayout.CENTER);
