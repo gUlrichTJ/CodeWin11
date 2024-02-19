@@ -42,9 +42,7 @@ class _OurHomePageState extends State<OurHomePage> {
         child: SafeArea(
           child: Column(
             children: <Widget>[
-              Container(
-                height: 20,
-              ),
+              Container(height: 20,),
               Center(
                 child: Text(
                     "Welcome back",
@@ -54,6 +52,13 @@ class _OurHomePageState extends State<OurHomePage> {
                     fontWeight: FontWeight.bold,
 
                   ),
+                ),
+              ),
+              Container(height: 20,),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: "",
+                  hintText: "Username"
                 ),
               ),
             ],
