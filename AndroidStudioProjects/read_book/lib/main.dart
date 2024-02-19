@@ -131,8 +131,8 @@ class _OurHomePageState extends State<OurHomePage> {
                         primary: false,
                         padding: const EdgeInsets.all(20),
                         crossAxisCount: 2,
-                        crossAxisSpacing: 30,
-                        mainAxisSpacing: 1,
+                        crossAxisSpacing: 20,
+                        mainAxisSpacing: 2,
                         shrinkWrap: true,
                         children: const <Widget>[
                           Text("Grid 0"),
