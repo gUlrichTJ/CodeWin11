@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: OurHomePage(),
     );
@@ -43,7 +43,7 @@ class _OurHomePageState extends State<OurHomePage> {
           child: Column(
             children: <Widget>[
               Container(height: 20,),
-              Center(
+              const Center(
                 child: Text(
                     "Welcome back",
                   style: TextStyle(
@@ -56,7 +56,7 @@ class _OurHomePageState extends State<OurHomePage> {
               ),
               Container(height: 20,),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "",
                   hintText: "Username"
                 ),
