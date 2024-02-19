@@ -66,8 +66,8 @@ public class AuthPage extends JFrame {
       panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
       panel2.add(label);
 
-      panel.add(panel1);
-      panel.add(panel1);
+      // panel.add(panel1); \
+      // panel.add(panel1);
       panel.add(panel2);
 
       return panel;
