@@ -47,14 +47,20 @@ class _OurHomePageState extends State<OurHomePage> {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
                 color: Colors.black,
                 gradient: LinearGradient(
                   colors: [
                     Colors.orange,
                     Colors.yellow.shade100,
                   ],
-                )
+                ),
+                boxShadow: const  [
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 2.0
+                  ),
+                ],
               ),
                 child: const Expanded(
                   child: Center(
