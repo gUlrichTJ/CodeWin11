@@ -41,54 +41,59 @@ class _OurHomePageState extends State<OurHomePage> {
         ],
       ),
       drawer: const Drawer(),
-      body:  SingleChildScrollView(
-        padding: const EdgeInsets.all(2.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(Radius.circular(10)),
-                color: Colors.black,
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.orange,
-                    Colors.yellow.shade100,
-                  ],
-                ),
-                boxShadow: const  [
-                  BoxShadow(
+      body:  SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(12.0),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
                     color: Colors.black,
-                    blurRadius: 2.0,
-                    offset: Offset(1, 1,),
-                  ),
-                ],
-              ),
-                child: const Expanded(
-                  child: Center(
-                    child: SizedBox(
-                      width: 100,
-                      height: 100,
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.orange,
+                        Colors.yellow.shade100,
+                      ],
                     ),
+                    boxShadow: const  [
+                      BoxShadow(
+                        color: Colors.black,
+                        blurRadius: 2.0,
+                        offset: Offset(1, 1,),
+                      ),
+                    ],
+                  ),
+                    child: const Expanded(
+                      child: Center(
+                        child: SizedBox(
+                          width: 100,
+                          height: 100,
+                        ),
+                      ),
+                    ),
+                ),
+
+                const Divider(),
+
+                TextField(
+                  keyboardType: TextInputType.text,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontFamily: "`Roboto, Serif",
+                  ),
+                  decoration: InputDecoration(
+                    labelText: "Notes",
+                    labelStyle: TextStyle(color: Colors.grey.shade900),
                   ),
                 ),
+              ],
             ),
-
-            const Divider(),
-
-            TextField(
-              keyboardType: TextInputType.text,
-              style: const TextStyle(
-                color: Colors.black,
-                fontSize: 16,
-                fontFamily: "`Roboto, Serif",
-              ),
-              decoration: InputDecoration(
-                labelText: "Notes",
-                labelStyle: TextStyle(color: Colors.grey.shade900),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
