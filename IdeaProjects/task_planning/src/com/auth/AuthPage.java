@@ -101,6 +101,7 @@ public class AuthPage extends JFrame {
 
       JPasswordField passwordField = new JPasswordField();
       passwordField.setFont(new Font("Roboto", Font.PLAIN, 30));
+      passwordField.setBorder(new RoundedBorder(20));
       // The panel of the password
       JPanel panelPassword = new JPanel();
       panelPassword.add(passwordField);
@@ -134,6 +135,7 @@ public class AuthPage extends JFrame {
    public JPanel login() {
       JPanel panel = new JPanel();
       panel.setBackground(new Color(7, 99, 230, 93));
+      panel.setBorder(new RoundedBorder(20));
       // panel.setBorder(new RoundedBorder(40));
       panel.setLayout(new BorderLayout());
 
@@ -149,6 +151,7 @@ public class AuthPage extends JFrame {
       JButton loginButton = new JButton();
       loginButton.setBackground(new Color(0, 0, 119));
       loginButton.setLayout(new FlowLayout(FlowLayout.CENTER));
+      loginButton.setBorder(new RoundedBorder(20));
       loginButton.add(label);
 
       panel.add(loginButton, BorderLayout.CENTER);
