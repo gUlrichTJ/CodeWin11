@@ -91,6 +91,13 @@ class _OurHomePageState extends State<OurHomePage> {
                     labelStyle: TextStyle(color: Colors.grey.shade900),
                   ),
                 ),
+                // A formfield
+                TextFormField(
+                  decoration: const InputDecoration(
+                    labelText: "Enter you notes",
+                    border: OutlineInputBorder(),
+                  ),
+                )
               ],
             ),
           ),
