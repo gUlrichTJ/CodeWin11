@@ -131,7 +131,7 @@ class _OurHomePageState extends State<OurHomePage> {
                         primary: false,
                         padding: const EdgeInsets.all(20),
                         crossAxisCount: 2,
-                        crossAxisSpacing: 20,
+                        crossAxisSpacing: 25,
                         mainAxisSpacing: 2,
                         shrinkWrap: true,
                         children: const <Widget>[
