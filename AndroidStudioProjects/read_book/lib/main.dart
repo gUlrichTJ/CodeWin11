@@ -106,7 +106,7 @@ class _OurHomePageState extends State<OurHomePage> {
 
                 const Divider(height: 20,),
 
-                SafeArea(
+                const SafeArea(
                   child: Column(
                     children: <Widget>[
                       Icon(
@@ -114,6 +114,11 @@ class _OurHomePageState extends State<OurHomePage> {
                         color: Colors.black,
                         size: 80,
                       ),
+                      Center(
+                        child: SizedBox(
+                          width: ,
+                        ),
+                      )
                     ],
                   ),
                 ),
