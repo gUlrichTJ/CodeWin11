@@ -11,7 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      the
+      actions: [
+        IconButton(
+          onPressed: () {},
+            icon: Icon(Icons.mark_as_unread),
+        ),
+
+      ],
     );
   }
 }
