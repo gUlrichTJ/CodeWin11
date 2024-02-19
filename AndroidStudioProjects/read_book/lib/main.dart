@@ -102,7 +102,13 @@ class _OurHomePageState extends State<OurHomePage> {
                     labelText: "Enter you notes",
                     border: OutlineInputBorder(),
                   ),
-                )
+                ),
+
+                const Divider(height: 20,),
+
+                SafeArea(
+                  child: ,
+                ),
               ],
             ),
           ),
