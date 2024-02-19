@@ -126,7 +126,7 @@ public class AuthPage extends JFrame {
    public JPanel forgotPassoword() {
       JPanel forgotPassword = new JPanel();
 
-      JLabel label = new JLabel("<html><u>Forgot password?</u></html>");
+      JLabel label = new JLabel("<html><u style=''>Forgot password?</u></html>");
       label.setFont(new Font("Arial", Font.PLAIN, 30));
       return forgotPassword;
    }
