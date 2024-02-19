@@ -44,7 +44,14 @@ class _OurHomePageState extends State<OurHomePage> {
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(2.0),
         child: Column(
-          children: <Widget>[],
+          children: <Widget>[
+            SizedBox(
+                child: SizedBox(
+                  width: 20,
+                  height: 10,
+                )
+            ),
+          ],
         ),
       ),
     );
