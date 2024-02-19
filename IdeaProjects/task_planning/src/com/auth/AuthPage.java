@@ -123,7 +123,7 @@ public class AuthPage extends JFrame {
       JPanel forgotPassword = new JPanel();
 
       JLabel label = new JLabel("Forgot password?");
-      label.setFont(new Font("Arial", Font.));
+      label.setFont(new Font("Arial", Font.PLAIN, 30));
       return forgotPassword;
    }
 
