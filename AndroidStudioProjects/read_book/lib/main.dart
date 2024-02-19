@@ -130,7 +130,7 @@ class _OurHomePageState extends State<OurHomePage> {
                       SafeArea(
                         child: GridView.count(
                           primary: false,
-                          padding: const EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(5),
                           crossAxisCount: 2,
                           crossAxisSpacing: 25,
                           mainAxisSpacing: 2,
@@ -147,6 +147,9 @@ class _OurHomePageState extends State<OurHomePage> {
                           ],
                         ),
                       ),
+
+                      const Divider(height: 20,),
+
                       Center(
                         child: Container(
                           height: 100,
