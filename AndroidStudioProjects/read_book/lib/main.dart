@@ -41,16 +41,26 @@ class _OurHomePageState extends State<OurHomePage> {
         ],
       ),
       drawer: const Drawer(),
-      body: const SingleChildScrollView(
+      body:  SingleChildScrollView(
         padding: EdgeInsets.all(2.0),
         child: Column(
           children: <Widget>[
-            SizedBox(
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                color: Colors.black,
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.orange,
+                    Colors.orange.shade200,
+                  ],
+                )
+              ),
                 child: SizedBox(
                   width: 20,
                   height: 10,
                 ),
-              
+
             ),
           ],
         ),
