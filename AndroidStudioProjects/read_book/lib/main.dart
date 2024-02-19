@@ -171,23 +171,7 @@ class _OurHomePageState extends State<OurHomePage> {
                       ),
 
                       const Divider(height: 20,),
-                      Row(
-                        children: <Widget>[
-                          AnimatedContainer(
-                              duration: const Duration(milliseconds: 500),
-                            curve: Curves.elasticOut,
-                            color: Colors.amber,
-                            height: height,
-                            width: width,
-                            child: IconButton(
-                              onPressed: increasedWidth,
-                              icon: Icon(Icons.add,
-                                size: 40,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      buildRow(),
                     ],
                   ),
                 ),
@@ -196,6 +180,26 @@ class _OurHomePageState extends State<OurHomePage> {
           ),
         ),
       ),
+    );
+  }
+
+  Row buildRow() {
+    return Row(
+      children: <Widget>[
+        AnimatedContainer(
+            duration: const Duration(milliseconds: 500),
+          curve: Curves.elasticOut,
+          color: Colors.amber,
+          height: height,
+          width: width,
+          child: IconButton(
+            onPressed: increasedWidth,
+            icon: const Icon(Icons.add,
+              size: 40,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
