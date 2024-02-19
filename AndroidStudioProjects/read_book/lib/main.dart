@@ -44,6 +44,7 @@ class _OurHomePageState extends State<OurHomePage> {
       body:  SingleChildScrollView(
         padding: const EdgeInsets.all(2.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
@@ -71,8 +72,8 @@ class _OurHomePageState extends State<OurHomePage> {
                     ),
                   ),
                 ),
-
             ),
+            const Divider(),
           ],
         ),
       ),
