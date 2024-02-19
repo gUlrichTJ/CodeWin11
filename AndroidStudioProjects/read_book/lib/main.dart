@@ -131,8 +131,13 @@ class _OurHomePageState extends State<OurHomePage> {
                           crossAxisCount: 2,
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10,
-                        children: <Widget>[
-                          Text("")
+                        children: const <Widget>[
+                          Text("Grid 0"),
+                          Text("Grid 1"),
+                          Text("Grid 2"),
+                          Text("Grid 3"),
+                          Text("Grid 4"),
+                          Text("Grid 5"),
                         ],
                       ),
                     ],
