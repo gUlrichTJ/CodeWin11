@@ -129,7 +129,8 @@ public class AuthPage extends JFrame {
    // The panel for login
    public JPanel login() {
       JPanel panel = new JPanel();
-      panel.setBackground(new Color(75, 230, 210, 93));
+      panel.setBackground(new Color(40, 192, 216, 93));
+      // panel.setBorder(new RoundedBorder(40));
       panel.setLayout(new BorderLayout());
 
       JLabel label = new JLabel("" +
