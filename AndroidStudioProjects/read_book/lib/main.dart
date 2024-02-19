@@ -179,9 +179,11 @@ class _OurHomePageState extends State<OurHomePage> {
                             color: Colors.amber,
                             height: height,
                             width: width,
-                            child: TextButton(
+                            child: IconButton(
                               onPressed: increasedWidth,
-                              child: Text("Tap to "),
+                              icon: Icon(Icons.add,
+                                size: 40,
+                              ),
                             ),
                           ),
                         ],
