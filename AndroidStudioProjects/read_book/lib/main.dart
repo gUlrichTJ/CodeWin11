@@ -34,7 +34,8 @@ class _OurHomePageState extends State<OurHomePage> {
         actions: <Widget>[
           IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.more_vert
+              icon: const Icon(
+                  Icons.more_vert,
               ),
           ),
         ],
