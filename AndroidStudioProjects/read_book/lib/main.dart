@@ -187,7 +187,7 @@ class _OurHomePageState extends State<OurHomePage> {
     return Row(
       children: <Widget>[
         AnimatedContainer(
-            duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 500),
           curve: Curves.elasticOut,
           color: Colors.amber,
           height: height,
