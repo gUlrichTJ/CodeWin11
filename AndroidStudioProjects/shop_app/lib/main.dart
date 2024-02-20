@@ -79,7 +79,10 @@ class _OurHomePageState extends State<OurHomePage> {
                   color: Colors.blueAccent,
                   child: TextButton(
                       onPressed: () {},
-                    child: const Text("Log in"),
+                    child: const Text(
+                      "Log in",
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ],
