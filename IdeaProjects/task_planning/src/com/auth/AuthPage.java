@@ -1,5 +1,7 @@
 package com.auth;
 
+import com.auth.databases.AuthDB;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -10,6 +12,8 @@ public class AuthPage extends JFrame {
 
    JTextField usernameField;
    JPasswordField passwordField;
+
+   AuthDB authDB = new AuthDB();
 
    // Constructor
    public AuthPage() {

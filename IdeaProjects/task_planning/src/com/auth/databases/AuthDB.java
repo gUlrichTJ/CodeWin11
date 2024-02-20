@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 public class AuthDB {
 
+   public AuthDB() {}
+
    public static boolean authenticate(
          String username, String password
    ) throws SQLException {
