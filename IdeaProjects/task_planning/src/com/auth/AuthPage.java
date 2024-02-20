@@ -7,6 +7,7 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class AuthPage extends JFrame {
 
@@ -168,7 +169,15 @@ public class AuthPage extends JFrame {
          public void actionPerformed(ActionEvent e) {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
-            
+
+            try {
+               boolean authenticated = AuthDB.authenticate(username, password);
+               if (authenticated) {
+                  JOptionPane.showMessageDialog();
+               }
+            } catch (SQLException ex) {
+               throw new RuntimeException(ex);
+            }
          }
       });
 
