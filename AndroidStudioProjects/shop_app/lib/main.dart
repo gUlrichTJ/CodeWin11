@@ -74,8 +74,9 @@ class _OurHomePageState extends State<OurHomePage> {
                 ),
                 Container(height: 20,),
                 Container(
-                  height: 30,
-                  width: MainAxisAlignment.,
+                  height: 40,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  color: Colors.blueAccent,
                   child: TextButton(
                       onPressed: () {},
                     child: const Text("Log in"),
