@@ -16,9 +16,13 @@ class _OverviewState extends State<Overview> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.settings),
+            icon: const Icon(
+                Icons.settings_outlined,
+              color: Colors.black54,
+            ),
           ),
         ],
+        backgroundColor: Colors.white,
       ),
     );
   }
