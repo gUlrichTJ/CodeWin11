@@ -11,6 +11,12 @@ public class CreateTables {
       Statement statement = connection.createStatement();
 
       // We create the table
-      String sql = "create table if not exists user(id integer primary key)";
+      String sql = "create table if not exists " +
+            "user(id integer primary key autoincrement, " +
+            "username text unique, password text)";
+      statement.executeUpdate(sql);
+
+      statement.close();
+      connection.close();
    }
 }
