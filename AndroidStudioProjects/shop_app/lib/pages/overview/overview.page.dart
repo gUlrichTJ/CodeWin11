@@ -42,7 +42,7 @@ class _OverviewState extends State<Overview> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      height: MediaQuery.of(context).size.width * 0.25,
+                      height: 101/*MediaQuery.of(context).size.width * 0.25*/,
                       width: MediaQuery.of(context).size.width * 0.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
