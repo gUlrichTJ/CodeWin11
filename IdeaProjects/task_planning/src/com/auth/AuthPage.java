@@ -3,6 +3,7 @@ package com.auth;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AuthPage extends JFrame {
@@ -155,7 +156,12 @@ public class AuthPage extends JFrame {
       loginButton.setBorder(new RoundedBorder(2));
       loginButton.add(label);
 
-      loginButton.
+      loginButton.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            
+         }
+      });
 
       panel.add(loginButton, BorderLayout.CENTER);
 
