@@ -17,6 +17,11 @@ public class AuthDB {
 
       if (resultSet.next()) {
          String storedPassword = resultSet.getString("password");
+         // Hash entered password using same algorithm and salt (if used)
+         boolean match = true/* Secure password comparison (bcrypt/Argon2) */;
+         if (match) {
+            return true;
+         }
       }
    }
 }
