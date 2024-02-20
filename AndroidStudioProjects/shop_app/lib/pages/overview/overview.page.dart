@@ -78,7 +78,7 @@ class _OverviewState extends State<Overview> {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade300,
                       ),
-                      child: childPadding(),
+                      child: childPadding("Total orders", "1,234"),
                     ),
                   ],
                 ),
@@ -92,7 +92,7 @@ class _OverviewState extends State<Overview> {
                   color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(10.0),
                 ),
-                child: childPadding(),
+                child: childPadding("Total items", "123"),
               ),
             ],
           ),
@@ -103,28 +103,28 @@ class _OverviewState extends State<Overview> {
 
   Padding childPadding(String string1, String string2) {
     return  Padding(
-                padding: const EdgeInsets.all(18.0),
-                child: Column(
-                  // Before I finish my formation at CIC, I'm already
-                  // asked work
-                  children: [
-                    const Text(
-                      string1,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Container(height: 10,),
-                    const Text(
-                      "1,234",
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+        padding: const EdgeInsets.all(18.0),
+              child: Column(
+                // Before I finish my formation at CIC, I'm already
+              // asked work
+              children: [
+                Text(
+                  string1,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              );
+                Container(height: 10,),
+                Text(
+                  string2,
+                  style: TextStyle(
+                fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
