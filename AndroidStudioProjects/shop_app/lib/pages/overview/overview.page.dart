@@ -67,18 +67,19 @@ class _OverviewState extends State<Overview> {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade200,
                       ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(18.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(18.0),
                         child: Column(
                           children: [
-                            Text(
+                            const Text(
                                 "Total orders",
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text(
+                            Container(height: 10,),
+                            const Text(
                                 "\$12,345",
                               style: TextStyle(
                                 fontSize: 25,
