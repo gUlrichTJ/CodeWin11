@@ -75,10 +75,10 @@ class _OurHomePageState extends State<OurHomePage> {
                 Container(height: 20,),
                 Container(
                   height: 40,
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  color: Colors.blueAccent,
+                  width: MediaQuery.of(context).size.width * 0.9,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5.0),
+                    color: Colors.blueAccent,
                   ),
                   child: TextButton(
                       onPressed: () {},
@@ -87,6 +87,10 @@ class _OurHomePageState extends State<OurHomePage> {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
+                ),
+                Container(height: 20,),
+                Center(
+                  child: Text("New user"),
                 ),
               ],
             ),
