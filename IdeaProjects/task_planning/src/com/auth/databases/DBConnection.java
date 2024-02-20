@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
+   /**I must succeed. It's the only option for me.*/
    public static Connection getConnection() throws SQLException {
       String url = "jdbc:sqlite:authdatabase.db";
       Connection connection = DriverManager.getConnection(url);
