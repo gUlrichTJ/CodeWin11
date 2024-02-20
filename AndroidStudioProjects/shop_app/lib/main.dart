@@ -89,8 +89,13 @@ class _OurHomePageState extends State<OurHomePage> {
                   ),
                 ),
                 Container(height: 20,),
-                Center(
-                  child: Text("New user"),
+                const Center(
+                  child: Text(
+                      "New user? Sign Up",
+                    style: TextStyle(
+                      font
+                    ),
+                  ),
                 ),
               ],
             ),
