@@ -46,9 +46,14 @@ class _OverviewState extends State<Overview> {
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: const Text(
                         "Total sales",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.grey.shade200
+                        color: Colors.grey.shade200,
+                        borderRadius: BorderRadius.circular(10.0),
                       )
                     ),
                     Container(
