@@ -173,10 +173,13 @@ public class AuthPage extends JFrame {
             try {
                boolean authenticated = AuthDB.authenticate(username, password);
                if (authenticated) {
-                  JOptionPane.showMessageDialog();
+                  JOptionPane.showMessageDialog(AuthPage.this, "Auth successful");
+               } else {
+                  JOptionPane.showMessageDialog(AuthPage.this, "invalid username or password");
                }
             } catch (SQLException ex) {
                throw new RuntimeException(ex);
+               JOptionPane.showMessageDialog(AuthPage.this, "An error occured while authenticating");
             }
          }
       });
