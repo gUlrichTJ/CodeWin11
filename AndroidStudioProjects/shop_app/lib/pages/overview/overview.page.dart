@@ -91,7 +91,7 @@ class _OverviewState extends State<Overview> {
                             ),
                             Container(height: 10,),
                             const Text(
-                                "\$12,345",
+                                "1,234",
                               style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
