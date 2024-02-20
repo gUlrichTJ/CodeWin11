@@ -69,12 +69,16 @@ class _OverviewState extends State<Overview> {
                       ),
                       child: const Padding(
                         padding: EdgeInsets.all(18.0),
-                        child: Text(
-                            "Total orders",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        child: Column(
+                          children: [
+                            Text(
+                                "Total orders",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     )
