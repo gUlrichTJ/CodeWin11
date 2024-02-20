@@ -78,6 +78,13 @@ class _OverviewState extends State<Overview> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            Text(
+                                "\$12,345",
+                              style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ],
                         ),
                       ),
