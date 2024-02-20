@@ -78,7 +78,10 @@ class _OverviewState extends State<Overview> {
                 ),
               ),
               Container(height: 10,),
-              Text("data", textAlign: TextAlign.left,),
+              const Padding(
+                padding: EdgeInsets.all(17.0),
+                child: Text("data", textAlign: TextAlign.left,),
+              ),
             ],
           ),
         ),
@@ -90,6 +93,7 @@ class _OverviewState extends State<Overview> {
     return  Padding(
         padding: const EdgeInsets.all(18.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
                 // Before I finish my formation at CIC, I'm already
               // asked work
               children: [
