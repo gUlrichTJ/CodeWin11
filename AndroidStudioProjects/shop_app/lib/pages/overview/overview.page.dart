@@ -80,7 +80,10 @@ class _OverviewState extends State<Overview> {
               Container(height: 10,),
               const Padding(
                 padding: EdgeInsets.all(17.0),
-                child: Text("data", textAlign: TextAlign.left,),
+                child: Text(
+                    "Recent activity",
+                  
+                ),
               ),
             ],
           ),
@@ -97,8 +100,7 @@ class _OverviewState extends State<Overview> {
                 // Before I finish my formation at CIC, I'm already
               // asked work
               children: [
-                Center(
-                  child: Text(
+                Text(
                     string1,
                     textAlign: TextAlign.left,
                     style: const TextStyle(
@@ -106,10 +108,8 @@ class _OverviewState extends State<Overview> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
                 Container(height: 10,),
-                Center(
-                  child: Text(
+                  Text(
                     string2,
                     textAlign: TextAlign.left,
                     style: const TextStyle(
@@ -117,7 +117,6 @@ class _OverviewState extends State<Overview> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-          ),
         ],
       ),
     );
