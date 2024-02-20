@@ -44,8 +44,13 @@ class _OverviewState extends State<Overview> {
                     Container(
                       height: MediaQuery.of(context).size.width * 0.25,
                       width: MediaQuery.of(context).size.width * 0.4,
-                      child: Padding(
-                        padding: const EdgeInsets.all(18.0),
+
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade200,
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: const  Padding(
+                        padding: EdgeInsets.all(18.0),
                         child: Text(
                           "Total sales",
                           style: TextStyle(
@@ -54,10 +59,6 @@ class _OverviewState extends State<Overview> {
                           ),
                         ),
                       ),
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(10.0),
-                      )
                     ),
                     Container(
                       height: MediaQuery.of(context).size.width * 0.25,
@@ -66,9 +67,15 @@ class _OverviewState extends State<Overview> {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade200,
                       ),
-                      child: const Text(
-                          "Total orders",
-                        
+                      child: const Padding(
+                        padding: EdgeInsets.all(18.0),
+                        child: Text(
+                            "Total orders",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     )
                   ],
