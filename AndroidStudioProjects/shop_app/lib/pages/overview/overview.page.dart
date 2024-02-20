@@ -81,6 +81,8 @@ class _OverviewState extends State<Overview> {
                       child: Padding(
                         padding: const EdgeInsets.all(18.0),
                         child: Column(
+                          // Before I finish my formation at CIC, I'm already
+                          // asked work
                           children: [
                             const Text(
                                 "Total orders",
