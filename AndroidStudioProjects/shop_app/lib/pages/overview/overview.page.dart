@@ -83,13 +83,13 @@ class _OverviewState extends State<Overview> {
   Padding childPadding(String string1, String string2) {
     return  Padding(
         padding: const EdgeInsets.all(18.0),
-              child: Column(
+          child: Column(
                 // Before I finish my formation at CIC, I'm already
               // asked work
               children: [
                 Text(
                   string1,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -97,7 +97,7 @@ class _OverviewState extends State<Overview> {
                 Container(height: 10,),
                 Text(
                   string2,
-                  style: TextStyle(
+                  style: const TextStyle(
                 fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
