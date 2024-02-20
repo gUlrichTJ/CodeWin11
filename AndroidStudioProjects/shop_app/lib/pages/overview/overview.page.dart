@@ -27,6 +27,8 @@ class _OverviewState extends State<Overview> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               const Text(
                   "Overview",
