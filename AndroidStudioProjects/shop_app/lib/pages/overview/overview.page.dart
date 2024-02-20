@@ -44,11 +44,14 @@ class _OverviewState extends State<Overview> {
                     Container(
                       height: MediaQuery.of(context).size.width * 0.25,
                       width: MediaQuery.of(context).size.width * 0.4,
-                      child: const Text(
-                        "Total sales",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                      child: Padding(
+                        padding: const EdgeInsets.all(18.0),
+                        child: Text(
+                          "Total sales",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                       decoration: BoxDecoration(
@@ -60,6 +63,10 @@ class _OverviewState extends State<Overview> {
                       height: MediaQuery.of(context).size.width * 0.25,
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: const Text("Total orders"),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.shade200,
+                      ),
                     )
                   ],
                 ),
