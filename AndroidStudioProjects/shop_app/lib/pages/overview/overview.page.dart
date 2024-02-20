@@ -46,7 +46,7 @@ class _OverviewState extends State<Overview> {
                       width: MediaQuery.of(context).size.width * 0.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade300,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(18.0),
@@ -76,7 +76,7 @@ class _OverviewState extends State<Overview> {
                       width: MediaQuery.of(context).size.width * 0.38,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey.shade200,
+                        color: Colors.grey.shade300,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(18.0),
@@ -112,7 +112,7 @@ class _OverviewState extends State<Overview> {
                 width: MediaQuery.of(context).size.width * 0.92,
 
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
+                  color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(10.0),
 
                 ),
