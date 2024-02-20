@@ -11,6 +11,12 @@ public class AuthDB {
    ) throws SQLException {
       Connection connection = DBConnection.getConnection();
       PreparedStatement preparedStatement = connection.prepareStatement(
-            "select password from users when")
+            "select password from users where username=?");
+      preparedStatement.setString(1, username);
+      ResultSet resultSet = preparedStatement.executeQuery();
+
+      if (resultSet.next()) {
+         String storedPassword = resultSet.getString("password");
+      }
    }
 }
