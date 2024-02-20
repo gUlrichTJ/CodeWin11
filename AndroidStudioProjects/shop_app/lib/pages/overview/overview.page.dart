@@ -82,7 +82,10 @@ class _OverviewState extends State<Overview> {
                 padding: EdgeInsets.all(17.0),
                 child: Text(
                     "Recent activity",
-                  
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],
