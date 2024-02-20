@@ -44,19 +44,30 @@ class _OverviewState extends State<Overview> {
                     Container(
                       height: MediaQuery.of(context).size.width * 0.25,
                       width: MediaQuery.of(context).size.width * 0.4,
-
                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(10.0),
                       ),
-                      child: const  Padding(
-                        padding: EdgeInsets.all(18.0),
-                        child: Text(
-                          "Total sales",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(18.0),
+                        child: Column(
+                          children: [
+                            const Text(
+                              "Total sales",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Container(height: 10,),
+                            const Text(
+                              "\$12,345",
+                              style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -89,7 +100,7 @@ class _OverviewState extends State<Overview> {
                           ],
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
