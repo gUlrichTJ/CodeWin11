@@ -37,6 +37,7 @@ class _OverviewState extends State<Overview> {
               ),
               Container(height: 20,),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.width * 0.4,
@@ -44,6 +45,11 @@ class _OverviewState extends State<Overview> {
                     child: const Text(
                       "Total sales",
                     ),
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.width * 0.4,
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    child: const Text("Total orders"),
                   )
                 ],
               ),
