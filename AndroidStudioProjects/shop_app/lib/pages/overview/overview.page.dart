@@ -73,7 +73,7 @@ class _OverviewState extends State<Overview> {
                     ),
                     Container(
                       height: MediaQuery.of(context).size.width * 0.25,
-                      width: MediaQuery.of(context).size.width * 0.4,
+                      width: MediaQuery.of(context).size.width * 0.38,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade200,
@@ -108,7 +108,14 @@ class _OverviewState extends State<Overview> {
               ),
               Container(height: 20,),
               Container(
-                height: ,
+                height: MediaQuery.of(context).size.width * 0.25,
+                width: MediaQuery.of(context).size.width * 0.92,
+
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                  borderRadius: BorderRadius.circular(10.0),
+
+                ),
               ),
             ],
           ),
