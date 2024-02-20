@@ -39,8 +39,7 @@ class _OverviewState extends State<Overview> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       height: 101/*MediaQuery.of(context).size.width * 0.25*/,
@@ -74,6 +73,8 @@ class _OverviewState extends State<Overview> {
                 ),
                 child: childPadding("Total items", "123"),
               ),
+              Container(height: 10,),
+              Text("data"),
             ],
           ),
         ),
