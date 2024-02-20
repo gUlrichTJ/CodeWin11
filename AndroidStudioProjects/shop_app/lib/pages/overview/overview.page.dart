@@ -28,7 +28,7 @@ class _OverviewState extends State<Overview> {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
                   "Overview",
@@ -65,15 +65,17 @@ class _OverviewState extends State<Overview> {
                 ),
               ),
               Container(height: 20,),
-              Container(
-                height: 101,
-                width: MediaQuery.of(context).size.width * 0.92,
+              Center(
+                child: Container(
+                  height: 101,
+                  width: MediaQuery.of(context).size.width * 0.92,
 
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade300,
-                  borderRadius: BorderRadius.circular(10.0),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade300,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: childPadding("Total items", "123"),
                 ),
-                child: childPadding("Total items", "123"),
               ),
               Container(height: 10,),
               Text("data", textAlign: TextAlign.left,),
