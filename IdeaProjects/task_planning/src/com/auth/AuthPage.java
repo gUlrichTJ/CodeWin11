@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 
 public class AuthPage extends JFrame {
 
+   JTextField usernameField;
+   JPasswordField passwordField;
+
    // Constructor
    public AuthPage() {
       super("Pretty window");
@@ -94,14 +97,14 @@ public class AuthPage extends JFrame {
 
       // Géovanie phys
       // The username
-      JTextField usernameField = new JTextField();
+      usernameField = new JTextField();
       usernameField.setFont(new Font("Roboto", Font.BOLD, 30));
       usernameField.setBorder(new RoundedBorder(5));
       // The panel of the username
       JPanel panelUsername = new JPanel();
       panelUsername.add(usernameField);
 
-      JPasswordField passwordField = new JPasswordField();
+      passwordField = new JPasswordField();
       passwordField.setFont(new Font("Roboto", Font.PLAIN, 30));
       passwordField.setBorder(new RoundedBorder(5));
       // The panel of the password
@@ -159,7 +162,8 @@ public class AuthPage extends JFrame {
       loginButton.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-            
+            String username = usernameField.getText();
+            String password = new String(passwordField.getPassword());
          }
       });
 
