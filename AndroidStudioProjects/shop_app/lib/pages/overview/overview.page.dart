@@ -36,7 +36,17 @@ class _OverviewState extends State<Overview> {
                 ),
               ),
               Container(height: 20,),
-              
+              Row(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.width * 0.4,
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    child: const Text(
+                      ""
+                    ),
+                  )
+                ],
+              ),
             ],
           ),
         ),
