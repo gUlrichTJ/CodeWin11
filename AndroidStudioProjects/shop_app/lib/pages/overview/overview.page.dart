@@ -36,22 +36,28 @@ class _OverviewState extends State<Overview> {
                 ),
               ),
               Container(height: 20,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: MediaQuery.of(context).size.width * 0.4,
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: const Text(
-                      "Total sales",
+              Padding(
+                padding: const EdgeInsets.all(17.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.width * 0.4,
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      child: const Text(
+                        "Total sales",
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white10
+                      )
                     ),
-                  ),
-                  Container(
-                    height: MediaQuery.of(context).size.width * 0.4,
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: const Text("Total orders"),
-                  )
-                ],
+                    Container(
+                      height: MediaQuery.of(context).size.width * 0.4,
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      child: const Text("Total orders"),
+                    )
+                  ],
+                ),
               ),
             ],
           ),
