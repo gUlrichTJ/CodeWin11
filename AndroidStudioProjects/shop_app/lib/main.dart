@@ -77,6 +77,9 @@ class _OurHomePageState extends State<OurHomePage> {
                   height: 40,
                   width: MediaQuery.of(context).size.width * 0.9,
                   color: Colors.blueAccent,
+                  decoration: BoxDecoration(
+
+                    ),
                   child: TextButton(
                       onPressed: () {},
                     child: const Text(
