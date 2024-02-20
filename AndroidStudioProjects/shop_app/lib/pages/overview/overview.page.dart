@@ -24,6 +24,20 @@ class _OverviewState extends State<Overview> {
         ],
         backgroundColor: Colors.white,
       ),
+      body: const SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Text(
+                  "Overview",
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
