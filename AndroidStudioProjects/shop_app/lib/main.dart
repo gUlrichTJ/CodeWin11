@@ -73,7 +73,14 @@ class _OurHomePageState extends State<OurHomePage> {
                   ),
                 ),
                 Container(height: 20,),
-                
+                Container(
+                  height: 30,
+                  width: MainAxisAlignment.,
+                  child: TextButton(
+                      onPressed: () {},
+                    child: const Text("Log in"),
+                  ),
+                ),
               ],
             ),
           ),
