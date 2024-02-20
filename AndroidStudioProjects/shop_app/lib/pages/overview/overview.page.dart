@@ -101,7 +101,7 @@ class _OverviewState extends State<Overview> {
     );
   }
 
-  Padding childPadding() {
+  Padding childPadding(String string1, String string2) {
     return  Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Column(
@@ -109,7 +109,7 @@ class _OverviewState extends State<Overview> {
                   // asked work
                   children: [
                     const Text(
-                      "Total orders",
+                      string1,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
