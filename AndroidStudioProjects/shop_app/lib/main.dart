@@ -41,7 +41,7 @@ class _OurHomePageState extends State<OurHomePage> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(13.0),
+            padding: const EdgeInsets.all(15.0),
             child: Column(
               children: <Widget>[
                 Container(height: 20,),
@@ -93,7 +93,7 @@ class _OurHomePageState extends State<OurHomePage> {
                   child: Text(
                       "New user? Sign Up",
                     style: TextStyle(
-                      font
+                      decoration: TextDecoration.underline,
                     ),
                   ),
                 ),
