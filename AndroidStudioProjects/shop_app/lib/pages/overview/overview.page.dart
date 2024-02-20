@@ -74,7 +74,7 @@ class _OverviewState extends State<Overview> {
                 child: childPadding("Total items", "123"),
               ),
               Container(height: 10,),
-              Text("data"),
+              Text("data", textAlign: TextAlign.left,),
             ],
           ),
         ),
