@@ -78,30 +78,7 @@ class _OverviewState extends State<Overview> {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.grey.shade300,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(18.0),
-                        child: Column(
-                          // Before I finish my formation at CIC, I'm already
-                          // asked work
-                          children: [
-                            const Text(
-                                "Total orders",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Container(height: 10,),
-                            const Text(
-                                "1,234",
-                              style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      child: childPadding(),
                     ),
                   ],
                 ),
@@ -115,11 +92,39 @@ class _OverviewState extends State<Overview> {
                   color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(10.0),
                 ),
+                child: childPadding(),
               ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Padding childPadding() {
+    return  Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Column(
+                  // Before I finish my formation at CIC, I'm already
+                  // asked work
+                  children: [
+                    const Text(
+                      "Total orders",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Container(height: 10,),
+                    const Text(
+                      "1,234",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              );
   }
 }
