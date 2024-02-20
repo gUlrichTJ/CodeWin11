@@ -23,5 +23,9 @@ public class AuthDB {
             return true;
          }
       }
+      resultSet.close();
+      preparedStatement.close();
+      connection.close();
+      return false;
    }
 }
