@@ -114,7 +114,6 @@ class _OverviewState extends State<Overview> {
                 decoration: BoxDecoration(
                   color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(10.0),
-
                 ),
               ),
             ],
