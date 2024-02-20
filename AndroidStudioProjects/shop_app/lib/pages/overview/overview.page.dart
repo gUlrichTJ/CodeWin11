@@ -42,17 +42,17 @@ class _OverviewState extends State<Overview> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      height: MediaQuery.of(context).size.width * 0.4,
+                      height: MediaQuery.of(context).size.width * 0.25,
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: const Text(
                         "Total sales",
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.white10
+                        color: Colors.grey.shade200
                       )
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.width * 0.4,
+                      height: MediaQuery.of(context).size.width * 0.25,
                       width: MediaQuery.of(context).size.width * 0.4,
                       child: const Text("Total orders"),
                     )
