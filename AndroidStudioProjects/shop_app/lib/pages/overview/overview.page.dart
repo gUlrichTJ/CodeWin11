@@ -89,6 +89,7 @@ class _OverviewState extends State<Overview> {
               children: [
                 Text(
                   string1,
+                  textAlign: TextAlign.left,
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -97,6 +98,7 @@ class _OverviewState extends State<Overview> {
                 Container(height: 10,),
                 Text(
                   string2,
+                  textAlign: TextAlign.left,
                   style: const TextStyle(
                 fontSize: 25,
               fontWeight: FontWeight.bold,
