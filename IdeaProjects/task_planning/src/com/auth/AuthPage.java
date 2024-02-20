@@ -178,7 +178,7 @@ public class AuthPage extends JFrame {
                   JOptionPane.showMessageDialog(AuthPage.this, "invalid username or password");
                }
             } catch (SQLException ex) {
-               throw new RuntimeException(ex);
+               ex.printStackTrace();
                JOptionPane.showMessageDialog(AuthPage.this, "An error occured while authenticating");
             }
          }
