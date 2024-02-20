@@ -78,8 +78,7 @@ class _OurHomePageState extends State<OurHomePage> {
                   width: MediaQuery.of(context).size.width * 0.9,
                   color: Colors.blueAccent,
                   decoration: BoxDecoration(
-                    border: Border.all(
-                      color: 4.0,)
+                    borderRadius: BorderRadius.circular(5.0),
                   ),
                   child: TextButton(
                       onPressed: () {},
