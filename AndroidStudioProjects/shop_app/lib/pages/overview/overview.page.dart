@@ -37,7 +37,7 @@ class _OverviewState extends State<Overview> {
               ),
               Container(height: 20,),
               Padding(
-                padding: const EdgeInsets.all(17.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -51,7 +51,7 @@ class _OverviewState extends State<Overview> {
                       child: childPadding("Total sales", "\$12,345"),
                     ),
                     Container(
-                      height: MediaQuery.of(context).size.width * 0.25,
+                      height: 101,
                       width: MediaQuery.of(context).size.width * 0.38,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -64,7 +64,7 @@ class _OverviewState extends State<Overview> {
               ),
               Container(height: 20,),
               Container(
-                height: MediaQuery.of(context).size.width * 0.25,
+                height: 101,
                 width: MediaQuery.of(context).size.width * 0.92,
 
                 decoration: BoxDecoration(
