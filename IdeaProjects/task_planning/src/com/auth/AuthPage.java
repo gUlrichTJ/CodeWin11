@@ -164,6 +164,7 @@ public class AuthPage extends JFrame {
          public void actionPerformed(ActionEvent e) {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
+            
          }
       });
 
