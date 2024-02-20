@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="76d1b893-35b0-41fd-b944-043c7217ae79" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/auth/databases/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/auth/databases/DBConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
     "last_opened_file_path": "/home/gracianomathey/codes/CodeWin11/IdeaProjects/task_planning/lib/sqlite-jdbc-3.45.1.0.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "scala_project_settings_configurable.last_selected_tab_index": "0",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
