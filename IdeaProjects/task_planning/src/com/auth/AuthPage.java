@@ -181,7 +181,7 @@ public class AuthPage extends JFrame {
             } catch (SQLException ex) {
                ex.printStackTrace();
                JOptionPane.showMessageDialog(AuthPage.this,
-                     "<html><span style='font-size:1.9em;'>" +
+                     "<html><span style='font-size:1.7em;'>" +
                               "An error occurred while authenticating" +
                            "</span></html>");
             }
