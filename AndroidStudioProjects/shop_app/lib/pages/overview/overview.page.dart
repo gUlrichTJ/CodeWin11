@@ -30,14 +30,17 @@ class _OverviewState extends State<Overview> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const Text(
-                  "Overview",
-                style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
+              const Padding(
+                padding: EdgeInsets.all(14.0),
+                child: Text(
+                    "Overview",
+                  style: TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              Container(height: 20,),
+              Container(height: 10,),
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Row(
