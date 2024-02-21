@@ -6,6 +6,10 @@ public class FirstWindow extends JFrame {
 
    /** Constructor */
    public FirstWindow() {
-      System.out.println("Salut ADJOLLAH");
+      /**Le titre de la fenêtre*/
+      this.setTitle("Fenetre de Abel");
+
+
+      this.setVisible(true);
    }
 }
