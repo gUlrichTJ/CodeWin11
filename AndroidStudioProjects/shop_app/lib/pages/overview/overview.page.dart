@@ -91,6 +91,8 @@ class _OverviewState extends State<Overview> {
               const Padding(
                 padding: EdgeInsets.all(17.0),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.max,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
