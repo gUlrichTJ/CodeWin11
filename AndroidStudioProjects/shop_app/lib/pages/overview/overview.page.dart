@@ -178,15 +178,33 @@ class _OverviewState extends State<Overview> {
                     ),
                   ),
                 Container(height: 10,),
-                  Text(
+                Text(
                     string2,
                     textAlign: TextAlign.left,
                     style: const TextStyle(
-                  fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-        ],
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+               ),
+              DefaultTextStyle(
+                  style: TextStyle(
+                    fontSize: 16, // Taille de police par défaut
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Titre en gras',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Texte plus petit en dessous',
+                      ),
+                    ],
+                  ),
+                ),
+          ],
       ),
     );
   }
