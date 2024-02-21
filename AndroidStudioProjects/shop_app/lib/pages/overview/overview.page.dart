@@ -88,13 +88,13 @@ class _OverviewState extends State<Overview> {
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.all(17.0),
+              Padding(
+                padding: const EdgeInsets.all(17.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -111,7 +111,8 @@ class _OverviewState extends State<Overview> {
                         ),
                       ],
                     ),
-                    Row(
+                    Container(height: 20,),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -128,7 +129,8 @@ class _OverviewState extends State<Overview> {
                         ),
                       ],
                     ),
-                    Row(
+                    Container(height: 20,),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -145,6 +147,7 @@ class _OverviewState extends State<Overview> {
                         ),
                       ],
                     ),
+                    Container(height: 20,),
                   ],
                 ),
               ),
