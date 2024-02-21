@@ -16,8 +16,14 @@ public class FirstWindow extends JFrame {
 
       /**Les gestionnaires de placement.*/
       /**Les gestionnaires de placement les plus utilisés */
-      /**Flowlayout, le Borderlayout et le Gridlayout.*/
-      /**le Boxlayout, le Gridbadlayout...*/
+      /**Flowlayout, le Borderlayout et le Gridlayout. */
+      /**le Boxlayout, le Gridbadlayout... */
+
+      this.add(new JButton("Bouton 1"));
+      this.add(new JButton("Boutont 2"));
+      this.add(new JButton("Boutont 3"));
+      this.add(new JButton("Boutont 4"));
+      this.add(new JButton("Boutont 5"));
 
       this.setVisible(true);
    }
