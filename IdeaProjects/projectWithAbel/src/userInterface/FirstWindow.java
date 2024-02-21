@@ -1,6 +1,7 @@
 package userInterface;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class FirstWindow extends JFrame {
 
@@ -13,6 +14,7 @@ public class FirstWindow extends JFrame {
       this.setLocationRelativeTo(null);
       /**Faire en sorte que le programme s'arrêtre lorsqu'on clique le bouton fermer.*/
       this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+      this.setLayout(new FlowLayout(FlowLayout.LEFT));
 
       /**Les gestionnaires de placement.*/
       /**Les gestionnaires de placement les plus utilisés */
