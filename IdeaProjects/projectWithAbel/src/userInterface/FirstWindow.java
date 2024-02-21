@@ -6,6 +6,6 @@ public class FirstWindow extends JFrame {
 
    /** Constructor */
    public FirstWindow() {
-      System.out.println("Salut Abel");
+      System.out.println("Salut ADJOLLAH");
    }
 }
