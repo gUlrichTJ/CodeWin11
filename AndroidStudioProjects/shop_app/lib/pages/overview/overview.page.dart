@@ -151,27 +151,9 @@ class _OverviewState extends State<Overview> {
                       ],
                     ),
                     Container(height: 20,),
-                    DefaultTextStyle(
-                      style: TextStyle(
-                        fontSize: 16, // Taille de police par défaut
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            'Titre en gras',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            'Texte plus petit en dessous',
-                          ),
-                        ],
-                      ),
-                    ),
-
                   ],
                 ),
+                
               ),
             ],
           ),
