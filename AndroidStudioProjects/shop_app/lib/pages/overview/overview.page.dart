@@ -88,18 +88,21 @@ class _OverviewState extends State<Overview> {
                   ),
                 ),
               ),
-              /*ListView(
-                padding: const EdgeInsets.all(10),
-                children: const [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("New order"),
-                      Text("2:34 PM"),
-                    ],
-                  )
-                ],
-              )*/
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView(
+                  padding: const EdgeInsets.all(10),
+                  children: const [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("New order"),
+                        Text("2:34 PM"),
+                      ],
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
