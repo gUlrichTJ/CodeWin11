@@ -468,8 +468,10 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
             label: "Earbuds",
           ),
         ],
+        backgroundColor: Colors.black45,
         currentIndex: _selectedIndex,
-        
+        selectedItemColor: Colors.amber.shade800,
+        onTap: _onItemTaped,
       ),
     );
   }
