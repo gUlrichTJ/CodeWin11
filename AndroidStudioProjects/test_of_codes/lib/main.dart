@@ -446,9 +446,30 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
           child: _widgetOption.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: "School",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: "Business",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.hearing),
+            label: "Hearing",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.earbuds),
+            label: "Earbuds",
+          ),
         ],
+        currentIndex: _selectedIndex,
+        
       ),
     );
   }
