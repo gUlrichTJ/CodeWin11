@@ -426,11 +426,24 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
     Text("5"),
     Text("6"),
   ];
+  
+  void onItemTap(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-
+        child: widgetOption.elementAt(selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem()
+        ],
+        onTap: onItemTap,
+        currentIndex: selectedIndex,
       ),
     );
   }
