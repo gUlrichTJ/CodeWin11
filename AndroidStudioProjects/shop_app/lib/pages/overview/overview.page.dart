@@ -155,9 +155,13 @@ class _OverviewState extends State<Overview> {
                 
               ),
               // Another container
-              const Padding(
-                padding: EdgeInsets.all(18.0),
-                child: Text("data"),
+              Column(
+                children: [
+                  ListTile(
+                    title: Text("Inventory"),
+                    subtitle: Text("Manage your "),
+                  ),
+                ],
               ),
             ],
           ),
