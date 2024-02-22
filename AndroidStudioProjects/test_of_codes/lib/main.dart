@@ -445,7 +445,11 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
       body: Center(
           child: _widgetOption.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar,
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          
+        ],
+      ),
     );
   }
 }
