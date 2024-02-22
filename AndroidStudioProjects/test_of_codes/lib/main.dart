@@ -395,14 +395,14 @@ Container _container(Color color_, double width_, double height_) {
 }
 
  */
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: OurBottomNavBar(),
     );
   }
@@ -420,12 +420,12 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
   int selectedIndex = 0;
   static const TextStyle textStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   List<Widget> widgetOption = const <Widget> [
-    Text("1",),
-    Text("2"),
-    Text("3"),
-    Text("4"),
-    Text("5"),
-    Text("6"),
+    Text("1", style: textStyle,),
+    Text("2", style: textStyle,),
+    Text("3", style: textStyle,),
+    Text("4", style: textStyle,),
+    Text("5", style: textStyle,),
+    Text("6", style: textStyle,),
   ];
   
   void onItemTap(int index) {
