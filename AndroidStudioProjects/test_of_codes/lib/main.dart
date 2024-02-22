@@ -374,7 +374,7 @@ class BodyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    /* return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -438,7 +438,8 @@ class BodyWidget extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ); */
+    
   }
 }
 
