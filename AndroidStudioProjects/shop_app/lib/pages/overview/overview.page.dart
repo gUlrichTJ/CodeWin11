@@ -103,13 +103,13 @@ class _OverviewState extends State<Overview> {
                         Text(
                             "New order",
                           style: TextStyle(
-                            fontSize: 20,
+                            // fontSize: 20,
                           ),
                         ),
                         Text(
                             "2:34 PM",
                           style: TextStyle(
-                            fontSize: 20,
+                            // fontSize: 20,
                           ),
                         ),
                       ],
