@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/pages/safe/safe.page.dart';
 
 class Overview extends StatefulWidget {
   const Overview({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _OverviewState extends State<Overview> {
   int selectedIndex = 0;
 
   List<Widget> widgetOptions = <Widget>[
-    // firstPage(context),
+    SafeAr(),
     const Text("one"),
     const Text("two"),
     const Text("three"),
@@ -102,7 +103,7 @@ class _OverviewState extends State<Overview> {
     );
   }
 
-  SafeArea firstPage(context) {
+  /*SafeArea firstPage(context) {
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
@@ -277,7 +278,7 @@ class _OverviewState extends State<Overview> {
         ),
       ),
     );
-  }
+  } */
 
   Padding childPadding(String string1, String string2) {
     return  Padding(
