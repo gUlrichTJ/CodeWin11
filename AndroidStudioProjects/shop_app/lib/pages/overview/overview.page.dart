@@ -162,6 +162,7 @@ class _OverviewState extends State<Overview> {
                     style: TextStyle(
                       fontSize: 20,
                     ),
+                    textAlign: TextAlign.left,
                   ),
                   ListTile(
                     trailing: IconButton(
