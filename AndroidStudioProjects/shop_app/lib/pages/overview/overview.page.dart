@@ -158,12 +158,12 @@ class _OverviewState extends State<Overview> {
               Column(
                 children: [
                   ListTile(
-                    leading: IconButton(
+                    trailing: IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.arrow_right_alt),
+                      icon: const Icon(Icons.arrow_right_alt),
                     ),
-                    title: Text("Inventory"),
-                    subtitle: Text("Manage your inventory"),
+                    title: const Text("Inventory"),
+                    subtitle: const Text("Manage your inventory"),
                   ),
                 ],
               ),
