@@ -419,7 +419,8 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
 
   int _selectedIndex = 0;
   static const TextStyle optionStyle = TextStyle(
-    fontSize: 30, 
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
   );
   @override
   Widget build(BuildContext context) {
