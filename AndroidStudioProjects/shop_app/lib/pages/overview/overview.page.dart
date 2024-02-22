@@ -228,6 +228,13 @@ class _OverviewState extends State<Overview> {
             ),
             label: "Reports",
           ),
+          BottomNavigationBarItem(
+            icon: Icon(
+                Icons.more_horiz_outlined,
+              color: Colors.black54,
+            ),
+            label: "More",
+          ),
         ],
       ),
     );
