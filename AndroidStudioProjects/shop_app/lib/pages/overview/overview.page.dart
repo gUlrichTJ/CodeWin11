@@ -199,7 +199,7 @@ class _OverviewState extends State<Overview> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
                 Icons.home_filled,
