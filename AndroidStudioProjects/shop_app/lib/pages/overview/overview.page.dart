@@ -11,7 +11,13 @@ class _OverviewState extends State<Overview> {
 
   int selectedIndex = 0;
   List<Widget> widgetOptions = <Widget>[
-    firstPage(BuildContext context),
+    const Text("one"),
+    const Text("two"),
+    const Text("three"),
+    const Text("four"),
+    const Text("five"),
+    const Text("six"),
+    const Text("seven"),
   ];
 
   void onItemTap(int index) {
