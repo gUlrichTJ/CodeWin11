@@ -77,7 +77,7 @@ class _OverviewState extends State<Overview> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-                Icons.add_box_outlined,
+                Icons.insert_invitation,
               color: Colors.black54,
             ),
             label: "Items",
@@ -102,5 +102,4 @@ class _OverviewState extends State<Overview> {
       ),
     );
   }
-
 }
