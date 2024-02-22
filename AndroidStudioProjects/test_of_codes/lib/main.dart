@@ -418,7 +418,7 @@ class OurBottomNavBar extends StatefulWidget {
 class _OurBottomNavBarState extends State<OurBottomNavBar> {
 
   int selectedIndex = 0;
-  List<Widget> widgetOption = <Widget> [
+  List<Widget> widgetOption = const <Widget> [
     Text("1"),
     Text("2"),
     Text("3"),
@@ -439,7 +439,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
         child: widgetOption.elementAt(selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
@@ -459,6 +459,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
         ],
         onTap: onItemTap,
         currentIndex: selectedIndex,
+        selectedItemColor: Colors.amber,
       ),
     );
   }
