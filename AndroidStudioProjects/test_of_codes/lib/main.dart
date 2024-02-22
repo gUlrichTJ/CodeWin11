@@ -418,8 +418,9 @@ class OurBottomNavBar extends StatefulWidget {
 class _OurBottomNavBarState extends State<OurBottomNavBar> {
 
   int selectedIndex = 0;
+  static const TextStyle textStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   List<Widget> widgetOption = const <Widget> [
-    Text("1"),
+    Text("1",),
     Text("2"),
     Text("3"),
     Text("4"),
