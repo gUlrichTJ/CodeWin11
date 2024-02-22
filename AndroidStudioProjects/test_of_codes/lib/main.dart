@@ -379,73 +379,8 @@ class BodyWidget extends StatefulWidget {
 class _BodyWidgetState extends State<BodyWidget> {
   @override
   Widget build(BuildContext context) {
-    /* return SafeArea(
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: <Widget>[
-              Row(
-                children: <Widget>[
-                  _container(Colors.yellow.shade900, 40.0, 40.0),
-                  const Padding(padding: EdgeInsets.all(16.0)),
-                  Expanded(
-                    child: _container(Colors.yellow.shade700, 40.0, 40.0),
-                  ),
-                  const Padding(padding: EdgeInsets.all(16.0),),
-                  _container(Colors.brown, 40.0, 40.0),
-                  const Padding(padding: EdgeInsets.all(16.0)),
-                  _container(Colors.deepOrange, 40.0, 40.0),
-                ],
-              ),
-              /// We add a space before adding the next row
-              const Padding(padding: EdgeInsets.all(16.0)),
-              Row(
-                children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      _container(Colors.lime.shade200, 60.0, 60.0),
-                      const Padding(padding: EdgeInsets.all(16.0)),
-                      // We add another container
-                      _container(Colors.lime.shade900, 40.0, 40.0),
-                      const Padding(padding: EdgeInsets.all(16.0)),
-                      _container(Colors.amber.shade700, 30.0, 30.0),
-                      const Padding(padding: EdgeInsets.all(16.0)),
-                    ],
-                  ),
-                ],
-              ),
-              const Divider(
-                height: 4.0,
-                color: Colors.white,
-                thickness: 4.0,
-              ),
-              const Padding(padding: EdgeInsets.all(16.0)),
-              Row(
-                children: <Widget>[
-                  CircleAvatar(
-                    backgroundColor: Colors.blue.shade700,
-                    radius: 100.01,                    child: Stack(
-                      children: <Widget>[
-                        _container(Colors.cyan.shade50, 100.0, 100.1),
-                        _container(Colors.cyan.shade100, 80.0, 80.0),
-                        _container(Colors.cyan.shade300, 70.0, 70.0),
-                        _container(Colors.cyan.shade500, 60.0, 60.0),
-                        _container(Colors.cyan.shade700, 50.0, 50.0),
-                        _container(Colors.cyan.shade800, 40.0, 40.0),
-                        _container(Colors.cyan.shade900, 30.0, 30.0),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    ); */
     return Scaffold(
-      
+
     );
 
   }
