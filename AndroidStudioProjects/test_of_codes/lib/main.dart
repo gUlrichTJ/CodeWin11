@@ -446,7 +446,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
           child: _widgetOption.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
@@ -459,13 +459,14 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
             icon: Icon(Icons.business),
             label: "Business",
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.hearing),
             label: "Hearing",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.earbuds),
             label: "Earbuds",
+            backgroundColor: Colors.grey.shade200,
           ),
         ],
         backgroundColor: Colors.black45,
