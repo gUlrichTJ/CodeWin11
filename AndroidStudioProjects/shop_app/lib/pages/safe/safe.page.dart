@@ -186,5 +186,35 @@ class _SafeArState extends State<SafeAr> {
       ),
     );
   }
+
+  Padding childPadding(String string1, String string2) {
+    return  Padding(
+      padding: const EdgeInsets.all(18.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        // Before I finish my formation at CIC, I'm already
+        // asked work
+        children: [
+          Text(
+            string1,
+            textAlign: TextAlign.left,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Container(height: 10,),
+          Text(
+            string2,
+            textAlign: TextAlign.left,
+            style: const TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
