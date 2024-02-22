@@ -416,11 +416,21 @@ class OurBottomNavBar extends StatefulWidget {
 }
 
 class _OurBottomNavBarState extends State<OurBottomNavBar> {
+
+  int selectedIndex = 0;
+  List<Widget> widgetOption = <Widget> [
+    Text("1"),
+    Text("2"),
+    Text("3"),
+    Text("4"),
+    Text("5"),
+    Text("6"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        
+
       ),
     );
   }
