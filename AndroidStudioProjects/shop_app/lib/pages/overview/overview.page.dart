@@ -159,7 +159,9 @@ class _OverviewState extends State<Overview> {
                 children: [
                   const Text(
                       "Navigation",
-                    style: TextStyle(),
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
                   ListTile(
                     trailing: IconButton(
