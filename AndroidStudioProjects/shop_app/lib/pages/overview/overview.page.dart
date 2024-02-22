@@ -157,12 +157,15 @@ class _OverviewState extends State<Overview> {
               // Another container
               Column(
                 children: [
-                  const Text(
-                      "Navigation",
-                    style: TextStyle(
-                      fontSize: 20,
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                        "Navigation",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                      textAlign: TextAlign.left,
                     ),
-                    textAlign: TextAlign.left,
                   ),
                   ListTile(
                     trailing: IconButton(
