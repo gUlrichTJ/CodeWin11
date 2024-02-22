@@ -211,6 +211,10 @@ class _OverviewState extends State<Overview> {
             label: "Orders",
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.add_box_outlined),
+            label: "Orders",
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.book),
             label: "Orders",
           ),
