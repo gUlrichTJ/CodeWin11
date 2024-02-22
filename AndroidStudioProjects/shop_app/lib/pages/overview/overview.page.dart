@@ -8,6 +8,11 @@ class Overview extends StatefulWidget {
 }
 
 class _OverviewState extends State<Overview> {
+
+  int selectedIndex = 0;
+  List<Widget> widgetOptions = <Widget>[
+    firstPage(context),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
