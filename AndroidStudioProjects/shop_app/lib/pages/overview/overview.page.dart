@@ -157,7 +157,10 @@ class _OverviewState extends State<Overview> {
               // Another container
               Column(
                 children: [
-                  const Text(""),
+                  const Text(
+                      "Navigation",
+                    style: TextStyle(),
+                  ),
                   ListTile(
                     trailing: IconButton(
                       onPressed: () {},
