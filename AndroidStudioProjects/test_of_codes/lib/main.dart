@@ -440,7 +440,10 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem()
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          )
         ],
         onTap: onItemTap,
         currentIndex: selectedIndex,
