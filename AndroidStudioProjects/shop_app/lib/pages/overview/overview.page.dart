@@ -10,6 +10,7 @@ class Overview extends StatefulWidget {
 class _OverviewState extends State<Overview> {
 
   int selectedIndex = 0;
+
   List<Widget> widgetOptions = <Widget>[
     const Text("one"),
     const Text("two"),
@@ -42,7 +43,10 @@ class _OverviewState extends State<Overview> {
         ],
         backgroundColor: Colors.white,
       ),
-      body: firstPage(context),
+      // body: firstPage(context),
+      body: Center(
+        child: widgetOptions.elementAt(selectedIndex),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.blueAccent,
@@ -91,6 +95,8 @@ class _OverviewState extends State<Overview> {
             label: "More",
           ),
         ],
+        currentIndex: selectedIndex,
+        onTap: onItemTap,
       ),
     );
   }
