@@ -103,13 +103,13 @@ class _OverviewState extends State<Overview> {
                         Text(
                             "New order",
                           style: TextStyle(
-                            // fontSize: 20,
+                            fontSize: 16,
                           ),
                         ),
                         Text(
                             "2:34 PM",
                           style: TextStyle(
-                            // fontSize: 20,
+                            fontSize: 16.0,
                           ),
                         ),
                       ],
@@ -121,7 +121,7 @@ class _OverviewState extends State<Overview> {
                         Text(
                           "New sale",
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 16,
                           ),
                         ),
                         Text(
@@ -139,13 +139,13 @@ class _OverviewState extends State<Overview> {
                         Text(
                           "Inventory law",
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 16,
                           ),
                         ),
                         Text(
                           "2:34 PM",
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 16,
                           ),
                         ),
                       ],
