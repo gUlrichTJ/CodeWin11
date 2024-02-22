@@ -203,11 +203,15 @@ class _OverviewState extends State<Overview> {
           BottomNavigationBarItem(
             icon: Icon(
                 Icons.home_filled,
+              color: Colors.black,
             ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(
+                Icons.book,
+              color: Colors.black,
+            ),
             label: "Orders",
           ),
           BottomNavigationBarItem(
