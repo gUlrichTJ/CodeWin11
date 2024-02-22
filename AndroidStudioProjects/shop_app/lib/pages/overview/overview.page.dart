@@ -12,6 +12,7 @@ class _OverviewState extends State<Overview> {
   int selectedIndex = 0;
 
   List<Widget> widgetOptions = <Widget>[
+    // firstPage(context),
     const Text("one"),
     const Text("two"),
     const Text("three"),
@@ -28,7 +29,7 @@ class _OverviewState extends State<Overview> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -101,7 +102,7 @@ class _OverviewState extends State<Overview> {
     );
   }
 
-  SafeArea firstPage(BuildContext context) {
+  SafeArea firstPage(context) {
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
