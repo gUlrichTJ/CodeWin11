@@ -443,7 +443,19 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
-          )
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
         ],
         onTap: onItemTap,
         currentIndex: selectedIndex,
