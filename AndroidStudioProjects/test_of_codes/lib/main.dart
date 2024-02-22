@@ -425,8 +425,20 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
     fontWeight: FontWeight.bold,
   );
   static const List<Widget> _widgetOption = <Widget> [
-    
+    Text("One"),
+    Text("Two"),
+    Text("Three"),
+    Text("Four"),
+    Text("Five"),
+    Text("Six"),
   ];
+
+  void _onItemTaped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
