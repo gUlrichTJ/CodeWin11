@@ -150,14 +150,15 @@ class _OverviewState extends State<Overview> {
                         ),
                       ],
                     ),
-                    Container(height: 20,),
                   ],
                 ),
                 
               ),
               // Another container
-              Container(height: 10,),
-              const Text("data"),
+              const Padding(
+                padding: EdgeInsets.all(18.0),
+                child: Text("data"),
+              ),
             ],
           ),
         ),
