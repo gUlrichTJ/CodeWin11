@@ -442,7 +442,10 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      body: Center(
+          child: _widgetOption.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar,
     );
   }
 }
