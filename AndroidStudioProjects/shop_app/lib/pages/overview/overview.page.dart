@@ -173,26 +173,24 @@ class _OverviewState extends State<Overview> {
             crossAxisAlignment: CrossAxisAlignment.start,
                 // Before I finish my formation at CIC, I'm already
               // asked work
-              children: [
-                Text(
-                    string1,
-                    textAlign: TextAlign.left,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                Container(height: 10,),
-                Text(
-                    string2,
-                    textAlign: TextAlign.left,
-                    style: const TextStyle(
-                    fontSize: 25,
+            children: [
+              Text(
+                  string1,
+                  textAlign: TextAlign.left,
+                  style: const TextStyle(
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
-               ),
-
-
+                ),
+            Container(height: 10,),
+            Text(
+                string2,
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+           ),
         ],
       ),
     );
