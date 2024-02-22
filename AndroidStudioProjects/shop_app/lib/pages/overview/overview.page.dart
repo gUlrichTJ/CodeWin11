@@ -201,6 +201,12 @@ class _OverviewState extends State<Overview> {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.black45,
+        selectedLabelStyle: const TextStyle(
+          color: Colors.black,
+        ),
+        unselectedLabelStyle: const TextStyle(
+          color: Colors.black45,
+        ),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
