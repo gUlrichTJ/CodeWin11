@@ -158,8 +158,9 @@ class _OverviewState extends State<Overview> {
               Column(
                 children: [
                   ListTile(
+                    leading: IconButton(),
                     title: Text("Inventory"),
-                    subtitle: Text("Manage your "),
+                    subtitle: Text("Manage your inventory"),
                   ),
                 ],
               ),
