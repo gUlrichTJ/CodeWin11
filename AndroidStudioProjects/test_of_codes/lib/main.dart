@@ -395,4 +395,35 @@ Container _container(Color color_, double width_, double height_) {
 }
 
  */
-void main(runApp())
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: OurBottomNavBar(),
+    );
+  }
+}
+
+class OurBottomNavBar extends StatefulWidget {
+  const OurBottomNavBar({Key? key}) : super(key: key);
+
+  @override
+  State<OurBottomNavBar> createState() => _OurBottomNavBarState();
+}
+
+class _OurBottomNavBarState extends State<OurBottomNavBar> {
+
+  int _selectedIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+    );
+  }
+}
+
+
