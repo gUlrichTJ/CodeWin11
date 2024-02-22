@@ -417,11 +417,16 @@ class OurBottomNavBar extends StatefulWidget {
 
 class _OurBottomNavBarState extends State<OurBottomNavBar> {
 
+  // an integer for the selected index
   int _selectedIndex = 0;
+  // a var for the textstyle
   static const TextStyle optionStyle = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.bold,
   );
+  static const List<Widget> _widgetOption = <Widget> [
+    
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
