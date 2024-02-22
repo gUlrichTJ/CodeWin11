@@ -206,6 +206,7 @@ class _OverviewState extends State<Overview> {
               color: Colors.black38,
             ),
             label: "Home",
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
             icon: Icon(
