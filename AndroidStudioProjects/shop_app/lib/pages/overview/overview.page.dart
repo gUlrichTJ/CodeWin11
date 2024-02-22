@@ -208,7 +208,11 @@ class _OverviewState extends State<Overview> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
-            
+            label: "Orders",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: "Orders",
           ),
         ],
       ),
