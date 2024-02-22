@@ -200,7 +200,7 @@ class _OverviewState extends State<Overview> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.black45,
+        unselectedItemColor: Colors.blueAccent,
         selectedLabelStyle: const TextStyle(
           color: Colors.black,
         ),
@@ -222,6 +222,7 @@ class _OverviewState extends State<Overview> {
               color: Colors.black54,
             ),
             label: "Orders",
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
             icon: Icon(
