@@ -159,7 +159,8 @@ class _OverviewState extends State<Overview> {
                 children: [
                   ListTile(
                     leading: IconButton(
-                      onPressed: ,
+                      onPressed: () {},
+                      icon: Icon(Icons.arrow_right_alt),
                     ),
                     title: Text("Inventory"),
                     subtitle: Text("Manage your inventory"),
