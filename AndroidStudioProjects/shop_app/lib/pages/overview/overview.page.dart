@@ -158,7 +158,7 @@ class _OverviewState extends State<Overview> {
               Column(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(17.0),
                     child: Text(
                         "Navigation",
                       style: TextStyle(
