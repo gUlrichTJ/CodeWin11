@@ -198,6 +198,13 @@ class _OverviewState extends State<Overview> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_filled),
+          ),
+        ],
+      ),
     );
   }
 
