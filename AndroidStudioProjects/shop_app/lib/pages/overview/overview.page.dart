@@ -203,6 +203,7 @@ class _OverviewState extends State<Overview> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home_filled),
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.order)),
         ],
       ),
     );
