@@ -155,6 +155,17 @@ class _OverviewState extends State<Overview> {
                 
               ),
               // Another container
+              const Padding(
+                padding: EdgeInsets.all(17.0),
+                child: Text(
+                  "Navigation",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
               Column(
                 children: [
                   ListTile(
