@@ -172,6 +172,22 @@ class _OverviewState extends State<Overview> {
                     title: const Text("Inventory"),
                     subtitle: const Text("Manage your inventory"),
                   ),
+                  ListTile(
+                    trailing: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.arrow_right_alt),
+                    ),
+                    title: const Text("Inventory"),
+                    subtitle: const Text("Manage your inventory"),
+                  ),
+                  ListTile(
+                    trailing: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.arrow_right_alt),
+                    ),
+                    title: const Text("Inventory"),
+                    subtitle: const Text("Manage your inventory"),
+                  ),
                 ],
               ),
             ],
