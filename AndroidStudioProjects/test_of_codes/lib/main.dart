@@ -446,11 +446,11 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.radar),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.school),
             label: "Home",
           ),
           BottomNavigationBarItem(
