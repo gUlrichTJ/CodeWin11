@@ -454,7 +454,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.receipt_long),
             label: "Home",
           ),
         ],
