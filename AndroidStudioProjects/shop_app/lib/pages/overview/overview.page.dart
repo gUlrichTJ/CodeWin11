@@ -77,7 +77,7 @@ class _OverviewState extends State<Overview> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-                Icons.insert_invitation ,
+                Icons.keyboard_option_key ,
               color: Colors.black54,
             ),
             label: "Items",
