@@ -438,3 +438,6 @@ A sales management app could have several key functionalities to effectively man
 7. Task automation: May include automated functions such as follow-up reminders, pending order notifications, and inventory updates.
 
 These are just some of the common functionalities that a sales management app could offer. Depending on the specific needs of the business, other features can be customized to optimize sales management. If you need more details or have any specific questions, feel free to let me know!
+
+********************************************************************************
+Carmack souscrit à la philosophie selon laquelle de petites étapes progressives constituent le chemin le plus rapide vers une innovation significative et disruptive.[30] Il compare cette approche à la « magie de la descente de gradient » où de petites étapes utilisant des informations locales donnent les meilleurs résultats. Selon Carmack, ce principe est prouvé par sa propre expérience, et il l'a observé chez bon nombre des personnes les plus intelligentes du monde. Il déclare : « De petites étapes utilisant des informations locales finissent par conduire à toutes les meilleures réponses. »
