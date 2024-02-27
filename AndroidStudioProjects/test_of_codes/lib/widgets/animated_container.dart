@@ -12,7 +12,13 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
 
   void increaseWidth() {
     setState(() {
-      width = width >=320 ? 100 : width += 50;
+      width = height >=120 ? 100 : height += 50;
+    });
+  }
+
+  void increaseHeight() {
+    setState(() {
+      height = height >=500 ? 100 : height += 100;
     });
   }
   @override
