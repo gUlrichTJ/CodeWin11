@@ -18,7 +18,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
 
   void increaseHeight() {
     setState(() {
-      width = width >=320 ? 100 : width += 40;
+      width = width >=200 ? 100 : width += 40;
     });
   }
 
@@ -30,7 +30,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
           Column(
             children: <Widget>[
               AnimatedContainer(
-                duration: Duration(
+                duration: const Duration(
                   milliseconds: 500,
                 ),
                 curve: Curves.elasticOut,
@@ -48,19 +48,23 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
                     ),
                 ),
               ),
-              Padding(padding: EdgeInsets.all(8.0)),
-              AnimatedContainer(
-                duration: Duration(
-                  milliseconds: 500,
-                ),
-                curve: Curves.elasticOut,
-                color: Colors.cyan.shade500,
-                height: height,
-                width: width,
-                child: IconButton(
-                  onPressed: increaseHeight,
-                  icon: Icon(Icons.schedule),
-                ),
+              const Padding(padding: EdgeInsets.all(8.0)),
+              Row(
+                children: [
+                  AnimatedContainer(
+                    duration: const Duration(
+                      milliseconds: 500,
+                    ),
+                    curve: Curves.elasticOut,
+                    color: Colors.cyan.shade500,
+                    height: height,
+                    width: width,
+                    child: IconButton(
+                      onPressed: increaseHeight,
+                      icon: const Icon(Icons.schedule),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
