@@ -28,7 +28,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
                   milliseconds: 500,
                 ),
                 curve: Curves.elasticOut,
-                color: Colors.amber,
+                color: Colors.cyan.shade500,
                 height: height,
                 width: width,
                 child: TextButton(
