@@ -473,15 +473,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
       ),
     );
   }
-
-  AnimatedWidget costumAnimatedWidget() {
-    return AnimatedWidget(
-      listenable: Listenable(
-
-      ),
-
-    );
-  }
+  
 }
 
 
