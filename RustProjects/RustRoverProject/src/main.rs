@@ -16,7 +16,7 @@ fn main() {
 
     // We can also use this
     {
-        _y = &x[0];
+        // _y = &x[0];
     }
     x.push("foo");
 }
