@@ -317,7 +317,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
                 context,
-                "https://presidence.gouv.tg/wp-content/uploads/2022/06/Plateforme-Industrielle-dAdetikope-PIA-des-resultats-satisfaisants-un-an-apres-son-lancement.jpg",
+                "https://static.latribune.fr/full_width/1507481/plateforme-industrielle-d-adetikope-togo.jpg",
                 "Plateforme industrielle d'Adetikope au Togo. Grande industrie du Togo.",
                 "PIA-TOGO",
             ),
