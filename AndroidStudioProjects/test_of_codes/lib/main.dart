@@ -473,7 +473,11 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
       ),
     );
   }
-
+  Column customColumnAnimatedWidget() {
+    return Column(
+      children: <Widget>[],
+    );
+  }
 }
 
 
