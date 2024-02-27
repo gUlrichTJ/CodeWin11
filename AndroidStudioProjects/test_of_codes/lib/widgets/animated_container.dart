@@ -28,7 +28,8 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
           height: height,
           width: width,
           child: TextButton(
-            child: Text(""),
+            child: Text("Tap\nto grow\nwith\n$width"),
+            onPressed: increaseWidth,
           ),
         ),
       ],
