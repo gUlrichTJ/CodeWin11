@@ -8,10 +8,12 @@ class AnimatedContainerWidget extends StatefulWidget {
 }
 
 class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
-  int height = 0, width = 0;
+  double height = 100.0, width = 100.0;
 
   void increaseWidth() {
-
+    setState(() {
+      width = width >=320 ? 100 : width += 50;
+    });
   }
   @override
   Widget build(BuildContext context) {
