@@ -1,3 +1,22 @@
 import 'package:flutter/material.dart';
 
-stf
+class AnimatedCrossFadeWidget extends StatefulWidget {
+  const AnimatedCrossFadeWidget({Key? key}) : super(key: key);
+
+  @override
+  State<AnimatedCrossFadeWidget> createState() => _AnimatedCrossFadeWidgetState();
+}
+
+class _AnimatedCrossFadeWidgetState extends State<AnimatedCrossFadeWidget> {
+  bool crossFadeStateShowFirst = true;
+
+  void crossFade() {
+    setState(() {
+
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
