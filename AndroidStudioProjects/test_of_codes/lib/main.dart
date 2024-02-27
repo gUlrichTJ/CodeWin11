@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_of_codes/widgets/animated_container.dart';
 
 // import 'package:permission_handler/permission_handler.dart';
 /*
@@ -423,8 +424,9 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
 
   int selectedIndex = 0;
   static const TextStyle textStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
-  List<Widget> widgetOption = const <Widget> [
+  List<Widget> widgetOption = <Widget> [
     Text("1", style: textStyle,),
+    customColumnAnimatedWidget(),
     Text("2", style: textStyle,),
     Text("3", style: textStyle,),
     Text("4", style: textStyle,),
@@ -473,9 +475,14 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
       ),
     );
   }
-  Column customColumnAnimatedWidget() {
-    return Column(
-      children: <Widget>[],
+  SafeArea customColumnAnimatedWidget() {
+    return SafeArea(
+      child: Column(
+        children: <Widget>[
+          AnimatedContainerWidget(),
+        ],
+      ),
+
     );
   }
 }
