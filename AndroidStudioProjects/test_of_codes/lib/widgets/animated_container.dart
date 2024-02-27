@@ -13,12 +13,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
   void increaseWidth() {
     setState(() {
       width = width >=320 ? 100 : width += 50;
-    });
-  }
-
-  void increaseHeight() {
-    setState(() {
-      width = width >=200 ? 100 : width += 40;
+      height = height >=200 ? 100 : height +=50;
     });
   }
 
@@ -60,7 +55,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
                     height: height,
                     width: width,
                     child: IconButton(
-                      onPressed: increaseHeight,
+                      onPressed: increaseWidth,
                       icon: const Icon(Icons.schedule),
                     ),
                   ),
