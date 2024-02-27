@@ -12,13 +12,13 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
 
   void increaseWidth() {
     setState(() {
-      height = height >=320 ? 100 : height += 50;
+      width = width >=320 ? 100 : width += 50;
     });
   }
 
   void increaseHeight() {
     setState(() {
-      height = height >=320 ? 100 : height += 40;
+      width = width >=320 ? 100 : width += 40;
     });
   }
 
@@ -27,7 +27,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
     return SafeArea(
       child: Column(
         children: [
-          Row(
+          Column(
             children: <Widget>[
               AnimatedContainer(
                 duration: Duration(
