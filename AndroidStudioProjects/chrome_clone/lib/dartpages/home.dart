@@ -263,7 +263,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://yop.l-frii.com/wp-content/uploads/2023/03/Pasteur-Marcelo-Tunasi-met-en-garde-les-couples-maries-Vous-allez-tous-divorcer-si.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/4/49/Marcello_Tunasi.png",
               "Pastor Marcello TUNASI is a pastor COMPASSION churches. He's also the author of some christians books and he works in many domains",
               "Marcello Tunasi",
             ),
@@ -275,7 +275,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://media.wired.com/photos/5fd2c29c2a4ddaf3b6389694/16:9/w_2240%2Cc_limit/Gear-Books-Roundup-671406905.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/a/a6/Printing3_Walk_of_Ideas_Berlin.JPG",
               "Books reading is necessary for humans",
               "Library",
             ),
@@ -287,7 +287,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://physics.aps.org/assets/8e52db55-73fc-43b7-a90b-a45e6d01fff9/es111_medium_1.png",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Solar_System_true_color.jpg/1024px-Solar_System_true_color.jpg",
               "Solar system",
               "Solar system",
             ),
@@ -299,24 +299,26 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Photo_Faure_Gnassingbe_2023.jpg/440px-Photo_Faure_Gnassingbe_2023.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/a/aa/Fumio_Kishida_and_Faure_Gnassingb%C3%A9_before_the_funeral_of_Shinzo_Abe_%281%29_%28cropped%29.jpg",
               "The president of Togo has done more than 16 years on the head of the country.",
               "M. Faure Essossimna G.",
             ),
             retourneImageCliquable(
               context,
-              "https://media.licdn.com/dms/image/D5603AQEI4UU6lhir8w/profile-displayphoto-shrink_800_800/0/1668182393725?e=1704326400&v=beta&t=Uwbsf7eKruMC0BSYO5_KMkqQDzedG7JdM9tFZCH--rQ",
+              "https://media.licdn.com/dms/image/D5603AQEI4UU6lhir8w/profile-displayphoto-shrink_800_800/0/1668182398053?e=1714608000&v=beta&t=mVWgvwLVAhy5O5tIG0DmfuFB2CQY5Sc1Ar-GytIGomI",
               "The winner of the Ambassadrice de l'environnement constest. She is the best of all speakers and competitors.",
               "Alassani Karima",
             ),
             retourneImageCliquable(
               context,
-              "https://www.cut-the-knot.org/m/Algebra/InequalitiesWithDoubleAndTripleIntegrals.jpg", "Mathematics, especially triple integrals are very important.",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Spherical_Coordinates_%28Colatitude%2C_Longitude%29.svg/800px-Spherical_Coordinates_%28Colatitude%2C_Longitude%29.svg.png",
+              "Mathematics, especially triple integrals are very important.",
               "Triple integrals",
             ),
             retourneImageCliquable(
                 context,
-                "https://ambatogochine.com/wp-content/uploads/2020/08/PIA-Togo-1.jpg", "Plateforme industrielle d'Adetikope au Togo. Grande industrie du Togo.",
+                "https://presidence.gouv.tg/wp-content/uploads/2022/06/Plateforme-Industrielle-dAdetikope-PIA-des-resultats-satisfaisants-un-an-apres-son-lancement.jpg",
+                "Plateforme industrielle d'Adetikope au Togo. Grande industrie du Togo.",
                 "PIA-TOGO",
             ),
           ],
