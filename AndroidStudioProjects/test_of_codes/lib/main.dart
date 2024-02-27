@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_of_codes/widgets/animated_container.dart';
 
 // import 'package:permission_handler/permission_handler.dart';
 /*
@@ -402,7 +403,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.cyan,
+        canvasColor: Colors.cyan.shade400,
+      ),
       home: OurBottomNavBar(),
     );
   }
@@ -419,8 +424,9 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
 
   int selectedIndex = 0;
   static const TextStyle textStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
-  List<Widget> widgetOption = const <Widget> [
+  List<Widget> widgetOption = <Widget> [
     Text("1", style: textStyle,),
+    AnimatedContainerWidget(),
     Text("2", style: textStyle,),
     Text("3", style: textStyle,),
     Text("4", style: textStyle,),
@@ -436,6 +442,9 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 2,
+      ),
       body: Center(
         child: widgetOption.elementAt(selectedIndex),
       ),
@@ -459,9 +468,21 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
           ),
         ],
         onTap: onItemTap,
+        unselectedItemColor: Colors.blue,
         currentIndex: selectedIndex,
-        selectedItemColor: Colors.amber,
+        selectedItemColor: Colors.deepPurpleAccent,
+        backgroundColor: Colors.black12,
       ),
+    );
+  }
+  SafeArea customColumnAnimatedWidget() {
+    return SafeArea(
+      child: Column(
+        children: <Widget>[
+          AnimatedContainerWidget(),
+        ],
+      ),
+
     );
   }
 }
