@@ -17,22 +17,28 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
   }
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        AnimatedContainer(
-          duration: Duration(
-            milliseconds: 500,
+    return SafeArea(
+      child: Column(
+        children: [
+          Row(
+            children: <Widget>[
+              AnimatedContainer(
+                duration: Duration(
+                  milliseconds: 500,
+                ),
+                curve: Curves.elasticOut,
+                color: Colors.amber,
+                height: height,
+                width: width,
+                child: TextButton(
+                  child: Text("Tap\nto grow\nwith\n$width"),
+                  onPressed: increaseWidth,
+                ),
+              ),
+            ],
           ),
-          curve: Curves.elasticOut,
-          color: Colors.amber,
-          height: height,
-          width: width,
-          child: TextButton(
-            child: Text("Tap\nto grow\nwith\n$width"),
-            onPressed: increaseWidth,
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

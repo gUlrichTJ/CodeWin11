@@ -426,7 +426,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
   static const TextStyle textStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   List<Widget> widgetOption = <Widget> [
     Text("1", style: textStyle,),
-    customColumnAnimatedWidget(),
+    AnimatedContainerWidget(),
     Text("2", style: textStyle,),
     Text("3", style: textStyle,),
     Text("4", style: textStyle,),
