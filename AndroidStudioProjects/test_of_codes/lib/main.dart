@@ -403,6 +403,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors
+      ),
       home: OurBottomNavBar(),
     );
   }
@@ -461,6 +464,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
         onTap: onItemTap,
         currentIndex: selectedIndex,
         selectedItemColor: Colors.amber,
+        backgroundColor: Colors.black,
       ),
     );
   }
