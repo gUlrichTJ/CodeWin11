@@ -12,7 +12,7 @@ class _AnimatedCrossFadeWidgetState extends State<AnimatedCrossFadeWidget> {
 
   void crossFade() {
     setState(() {
-
+      crossFadeStateShowFirst = crossFadeStateShowFirst ? false : true;
     });
   }
   @override
