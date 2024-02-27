@@ -19,8 +19,17 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        AnimatedContainerWidget(
-          
+        AnimatedContainer(
+          duration: Duration(
+            milliseconds: 500,
+          ),
+          curve: Curves.elasticOut,
+          color: Colors.amber,
+          height: height,
+          width: width,
+          child: TextButton(
+            child: Text(""),
+          ),
         ),
       ],
     );
