@@ -16,6 +16,12 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
     });
   }
 
+  void increaseHeight() {
+    setState(() {
+      height = height >=320 ? 100 : height += 40;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -40,6 +46,26 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
                       ),
                       textAlign: TextAlign.center,
                     ),
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(8.0)),
+              AnimatedContainer(
+                duration: Duration(
+                  milliseconds: 500,
+                ),
+                curve: Curves.elasticOut,
+                color: Colors.cyan.shade500,
+                height: height,
+                width: width,
+                child: TextButton(
+                  onPressed: increaseWidth2,
+                  child: Text(
+                    "Tap\nto grow\nwith\n$height",
+                    style: const TextStyle(
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
             ],
