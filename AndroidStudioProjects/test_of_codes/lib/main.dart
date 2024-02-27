@@ -468,8 +468,8 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
         onTap: onItemTap,
         unselectedItemColor: Colors.blue,
         currentIndex: selectedIndex,
-        selectedItemColor: Colors.black,
-        backgroundColor: Colors.black,
+        selectedItemColor: Colors.deepPurpleAccent,
+        backgroundColor: Colors.black12,
       ),
     );
   }
