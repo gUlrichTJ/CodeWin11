@@ -402,9 +402,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors
+        primarySwatch: Colors.cyan,
+        canvasColor: Colors.cyan.shade400,
       ),
       home: OurBottomNavBar(),
     );
@@ -439,6 +440,9 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 2,
+      ),
       body: Center(
         child: widgetOption.elementAt(selectedIndex),
       ),
@@ -462,8 +466,9 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
           ),
         ],
         onTap: onItemTap,
+        unselectedItemColor: Colors.blue,
         currentIndex: selectedIndex,
-        selectedItemColor: Colors.amber,
+        selectedItemColor: Colors.black,
         backgroundColor: Colors.black,
       ),
     );
