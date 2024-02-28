@@ -778,14 +778,14 @@ int main() {
 
 
     /// Nous remplissons les vecteurs
-    puts("Remplissez le vecteur U : ");
+    puts("\nRemplissez le vecteur U : ");
 
     for (i = 0; i < N; i++) {
         printf("Element %i : ", i + 1);
         scanf("%i", &U[i]);
     }
 
-    puts("Remplissez le vecteur V : ");
+    puts("\nRemplissez le vecteur V : ");
 
     for (i = 0; i < N; i++) {
         printf("Element %i : ", i + 1);
@@ -796,7 +796,7 @@ int main() {
 
     /// Calcul du produit
     for (i = 0; i < N; i++) {
-        produit += U[i] * V[i];
+        produit = produit + U[i] * V[i];
     }
 
     /// Affichage du produit
