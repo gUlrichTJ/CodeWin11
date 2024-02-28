@@ -771,8 +771,11 @@ int main() {
     double produit = 0;
 
     /// Nous recevons la taille après avoir controlé
-    printf("Entrez la taille des vecteurs (<20) : ");
-    scanf("%i", &N);
+    do {
+        printf("Entrez la taille des vecteurs (<20) : ");
+        scanf("%i", &N);
+    } while (N < 2 || N > 20);
+
 
     /// Nous remplissons les vecteurs
     puts("Remplissez le vecteur U : ");
