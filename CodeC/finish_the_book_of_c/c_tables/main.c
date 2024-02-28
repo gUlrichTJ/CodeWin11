@@ -766,7 +766,7 @@ int main() {
     /// Programme permettant de multiplier deux vecteurs.
     /// Nous créons les vecteurs avec pour taille maximale 20
     double U[20], V[20];    /// Les vecteurs
-    int i;  /// Le compteur
+    int i = 0;  /// Le compteur
     int N = 0;   /// la taille des vecteurs
     double produit = 0;
 
@@ -787,10 +787,13 @@ int main() {
 
     puts("\nRemplissez le vecteur V : ");
 
-    /// Nous pouvons afficher les deux vecteurs si nous voulons
     for (i = 0; i < N; i++) {
-        printf("%lf ", U[i]);
+        printf("Element %i : ", i + 1);
+        scanf("%lf", &V[i]);
     }
+
+    /// Nous pouvons afficher les deux vecteurs si nous voulons
+
     /// Calcul du produit
     for (i = 0; i < N; i++) {
         produit += U[i] * V[i];
