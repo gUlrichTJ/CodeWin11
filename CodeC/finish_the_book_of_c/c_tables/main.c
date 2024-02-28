@@ -796,7 +796,7 @@ int main() {
 
     /// Calcul du produit
     for (i = 0; i < N; i++) {
-        produit = produit + U[i] * V[i];
+        produit += U[i] * V[i];
     }
 
     /// Affichage du produit
