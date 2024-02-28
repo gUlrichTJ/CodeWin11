@@ -801,4 +801,6 @@ int main() {
 
     /// Affichage du produit
     printf("\nLe produit des vecteurs U et V est %lf\n", produit);
+
+    return 0;
 }
