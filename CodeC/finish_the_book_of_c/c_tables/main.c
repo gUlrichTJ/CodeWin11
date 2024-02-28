@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
@@ -758,7 +758,7 @@ int main()
     // sort_by_propagation(tab);
     statistics(tab);
     return 0;
-}
+}*/
 
 #include <stdio.h>
 
@@ -792,4 +792,10 @@ int main() {
     /// Nous pouvons afficher les deux vecteurs si nous voulons
 
     /// Calcul du produit
+    for (i = 0; i < N; i++) {
+        produit += U[i] * V[i];
+    }
+
+    /// Affichage du produit
+    printf("\nLe produit des vecteurs U et V est %lf\n", produit);
 }
