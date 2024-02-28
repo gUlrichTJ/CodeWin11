@@ -48,7 +48,7 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
                 children: [
                   AnimatedContainer(
                     duration: const Duration(
-                      milliseconds: 500,
+                      milliseconds: 400,
                     ),
                     curve: Curves.elasticOut,
                     color: Colors.cyan.shade500,
