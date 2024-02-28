@@ -782,18 +782,15 @@ int main() {
 
     for (i = 0; i < N; i++) {
         printf("Element %i : ", i + 1);
-        scanf("%i", &U[i]);
+        scanf("%lf", &U[i]);
     }
 
     puts("\nRemplissez le vecteur V : ");
 
-    for (i = 0; i < N; i++) {
-        printf("Element %i : ", i + 1);
-        scanf("%i", &V[i]);
-    }
-
     /// Nous pouvons afficher les deux vecteurs si nous voulons
-
+    for (i = 0; i < N; i++) {
+        printf("%lf ", U[i]);
+    }
     /// Calcul du produit
     for (i = 0; i < N; i++) {
         produit += U[i] * V[i];
