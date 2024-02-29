@@ -12,10 +12,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // backgroundColor: Colors.pink.shade100,
         elevation: 8,
         title: const Text("Home Page"),
       ),
       drawer: const Drawer(),
+      // backgroundColor: Colors.pink.shade50,
       body: const SafeArea(
         child: Padding(
           padding: EdgeInsets.all(8.0),
