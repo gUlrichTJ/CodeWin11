@@ -426,13 +426,13 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
   int selectedIndex = 0;
   static const TextStyle textStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   List<Widget> widgetOption = <Widget> [
-    Text("1", style: textStyle,),
-    AnimatedContainerWidget(),
-    Text("2", style: textStyle,),
-    Text("3", style: textStyle,),
-    Text("4", style: textStyle,),
-    Text("5", style: textStyle,),
-    Text("6", style: textStyle,),
+    const Text("1", style: textStyle,),
+    const AnimatedContainerWidget(),
+    const Text("2", style: textStyle,),
+    const Text("3", style: textStyle,),
+    const Text("4", style: textStyle,),
+    const Text("5", style: textStyle,),
+    const Text("6", style: textStyle,),
   ];
   
   void onItemTap(int index) {
