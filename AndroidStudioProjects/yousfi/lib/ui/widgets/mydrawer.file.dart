@@ -61,7 +61,10 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             leading: Icon(Icons.cloud, color: Colors.green,),
             trailing: Icon(Icons.arrow_right, color: Colors.green,),
-            onTap: () => Navigator.of(context).pushNamed('meteo'),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).pushNamed('meteo');
+            }
           ),
           ListTile(
             title: Text(
@@ -70,7 +73,10 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             leading: Icon(Icons.browse_gallery, color: Colors.green,),
             trailing: Icon(Icons.arrow_right, color: Colors.green,),
-            onTap: () => Navigator.of(context).pushNamed('gallery'),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).pushNamed('gallery');
+            }
           ),
         ],
       ),
