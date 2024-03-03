@@ -426,7 +426,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
   int selectedIndex = 0;
   static const TextStyle textStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   List<Widget> widgetOption = <Widget> [
-    Text("1", style: textStyle,),
+    const Text("1", style: textStyle,),
     const AnimatedContainerWidget(),
     const Text("2", style: textStyle,),
     const Text("3", style: textStyle,),
