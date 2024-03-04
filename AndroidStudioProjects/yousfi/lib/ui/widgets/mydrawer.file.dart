@@ -27,7 +27,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 gradient: LinearGradient(
                     colors: [
                       Colors.white12,
-                      Colors.lightBlue,
+                      Colors.lightGreen,
                     ]
                 )
             ),
@@ -72,11 +72,18 @@ class _MyDrawerState extends State<MyDrawer> {
               style: TextStyle(fontSize: 22),
             ),
             leading: Icon(Icons.browse_gallery, color: Colors.green,),
-            trailing: Icon(Icons.arrow_right, color: Colors.green,),
+            trailing: const Icon(Icons.arrow_right, color: Colors.green,),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).pushNamed('gallery');
             }
+          ),
+          ListTile(
+            title: Text("Counter"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).pushNamed("counter");
+            },
           ),
         ],
       ),

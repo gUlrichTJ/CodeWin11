@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yousfi/ui/pages/homegal/counter.file.dart';
 import 'package:yousfi/ui/pages/homegal/gallery/gallery.file.dart';
 import 'package:yousfi/ui/pages/homegal/home/home.file.dart';
 import 'package:yousfi/ui/pages/homegal/meteo/meteo.file.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         "/home": (context) => HomePage(),
         "meteo": (context) => MeteoPage(),
         "gallery": (context) => GalleryPage(),
+        "counter": (context)=>CounterPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
