@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_of_codes/read_with_tts/flutter.tts.file.dart';
 import 'package:test_of_codes/widgets/animated_container.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
@@ -449,6 +450,16 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
       ),
       body: Center(
         child: widgetOption.elementAt(selectedIndex),
+      ),
+      floatingActionButton: Row(
+        children: [
+          FloatingActionButton(
+            onPressed: () async {
+              await TTSManager().flutterTts.speak("Bonjour");
+            },
+            child: Icon(Icons.volume_down),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
