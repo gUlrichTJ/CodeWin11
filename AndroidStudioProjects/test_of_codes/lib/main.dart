@@ -431,6 +431,7 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
     const Text("1", style: textStyle,),
     const AnimatedContainerWidget(),
     const Text("2", style: textStyle,),
+    const FlutterTTsU(),
     const Text("3", style: textStyle,),
     const Text("4", style: textStyle,),
     const Text("5", style: textStyle,),
@@ -448,18 +449,10 @@ class _OurBottomNavBarState extends State<OurBottomNavBar> {
       appBar: AppBar(
         elevation: 2,
       ),
-      body: Center(
-        child: widgetOption.elementAt(selectedIndex),
-      ),
-      floatingActionButton: Row(
+      body: Column(
         children: [
-          FloatingActionButton(
-            onPressed: () async {
-              await TTSManager().flutterTts.speak("Bonjour");
-            },
-            child: Icon(Icons.volume_down),
-          ),
-        ],
+          Center(child: widgetOption.elementAt(selectedIndex)),
+        ]
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

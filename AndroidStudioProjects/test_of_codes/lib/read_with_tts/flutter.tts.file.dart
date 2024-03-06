@@ -15,8 +15,12 @@ class _FlutterTTsUState extends State<FlutterTTsU> {
   String textToSpeak = "Ceci est l'exemple de texte à lire";
 
   @override
-  void initState() async {
+  void initState() {
     super.initState();
+    initTts();
+  }
+
+  Future<void> initTts() async {
     await flutterTts.setLanguage("fr-FR");
     await flutterTts.setSpeechRate(0.8);
     await flutterTts.setVolume(1.0);
@@ -39,18 +43,17 @@ class _FlutterTTsUState extends State<FlutterTTsU> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
-
-class TTSManager {
-  final FlutterTts flutterTts = FlutterTts();
-
-  Future<void> speak(String text) async {
-    await flutterTts.speak(text);
-  }
-
-  Future<void> stop() async {
-    await flutterTts.stop();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.lightGreen,
+      ),
+      drawer: const Drawer(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+        ],
+      ),
+      backgroundColor: Colors.lightGreen.shade500,
+    );
   }
 }
