@@ -94,6 +94,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   height: 60,
+                  /// Les images des personnes
                   child: CircleAvatar(
                     radius: 40,
                     backgroundImage: NetworkImage(personnageEleve[index].image),
@@ -104,15 +105,16 @@ class _PresenceWidgetState extends State<PresenceWidget> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    personnageEleve[index].nom +
-                        " " +
-                    personnageEleve[index].prenom,
+                    /// Le nom et le prénom de l'élève.
+                    "${personnageEleve[index].nom} ${personnageEleve[index].prenom}",
                   ),
                 ),
               ),
-              Spacer(),
+              /// Nous mettons un espace
+              const Spacer(),
               Padding(
                 padding: const EdgeInsets.all(8.0),
+                /// Lorsqu'on coche cette case, le container change.
                 child: Checkbox(
                   value: personnageEleve[index].estPresent,
                   onChanged: (value) {
@@ -136,11 +138,15 @@ class _PresenceWidgetState extends State<PresenceWidget> {
                   Colors.red,*/
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
+                    /// La couleur change en fonction de la présence ou de
+                    /// l'absence de l'élève.
                     color: personnageEleve[index].estPresent ?
                     Colors.green :
                     Colors.red,
                   ),
                   child: personnageEleve[index].estPresent ?
+                      /// Le texte change en fonction de la présence ou de
+                  /// l'absence de l'élève.
                       const Center(child: Text("Pésent")) :
                       const Center(child: Text("Absent")),
                 ),
@@ -148,6 +154,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
             ],
           );
         },
+        /// Nous mettons un espace ici pour la marge dans toute l'appli
         padding: const EdgeInsets.all(3.0),
       ),
     );
