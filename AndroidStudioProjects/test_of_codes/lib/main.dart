@@ -65,8 +65,9 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: const Text("Text to speech"),
         ),
-      body: const Column(
+      body: Column(
         children: [
+          Center(child: Text(texte)),
         ],
       ),
       /// Le floating action button
@@ -76,7 +77,7 @@ class _HomePageState extends State<HomePage> {
             flutterTts.speak(texte);
           });
         },
-        icon: Icon(Icons.volume_up),
+        icon: const Icon(Icons.volume_up),
       ),
     );
   }
