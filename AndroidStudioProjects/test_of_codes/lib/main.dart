@@ -1,84 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
+import 'package:test_of_codes/other/pages/dart/home/home.dart';
 
-void main() {
+void main () {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.lightGreen,
+        canvasColor: Colors.lightGreen.shade200,
+      ),
+      title: "Read your books quickly",
       debugShowCheckedModeBanner: false,
-      color: Colors.lightGreen,
-      title: "Text To Speech",
-      routes: {
-        "/":(context)=>HomePage(),
-      },
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-
-  FlutterTts flutterTts = FlutterTts();
-
-  String texte = "Nous allons lire ce texte "
-      "à haute voix";
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    initTts();
-  }
-
-  Future<void> initTts() async {
-    await flutterTts.setLanguage("fr-FR");
-    await flutterTts.setSpeechRate(0.8);
-    await flutterTts.setVolume(5.0);
-    await flutterTts.setPitch(1.0);
-  }
-
-  void speak(String text) async {
-    flutterTts.speak(text);
-  }
-
-  /// Pour arreter la lecture
-  void stop() async {
-    flutterTts.stop();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const Drawer(),
-        appBar: AppBar(
-          title: const Text("Text to speech"),
-        ),
-      body: Column(
-        children: [
-          Center(child: Text(texte)),
-        ],
-      ),
-      /// Le floating action button
-      floatingActionButton: IconButton(
-        onPressed: () {
-          setState(() {
-            flutterTts.speak(texte);
-          });
-        },
-        icon: const Icon(Icons.volume_up),
-      ),
+      home: const OurHomePage(),
     );
   }
 }
