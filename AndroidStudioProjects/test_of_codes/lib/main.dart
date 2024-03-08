@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
+import 'package:test_of_codes/tuto_tts/tuto1/pages/home.page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,73 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: Colors.lightGreen,
       title: "Text To Speech",
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
       routes: {
-        "/":(context)=>HomePage(),
+        "/":(context)=>HomePage2(),
       },
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-
-  FlutterTts flutterTts = FlutterTts();
-
-  String texte = "Nous allons lire ce texte "
-      "à haute voix";
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    initTts();
-  }
-
-  Future<void> initTts() async {
-    await flutterTts.setLanguage("fr-FR");
-    await flutterTts.setSpeechRate(0.8);
-    await flutterTts.setVolume(5.0);
-    await flutterTts.setPitch(1.0);
-  }
-
-  void speak(String text) async {
-    flutterTts.speak(text);
-  }
-
-  /// Pour arreter la lecture
-  void stop() async {
-    flutterTts.stop();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const Drawer(),
-        appBar: AppBar(
-          title: const Text("Text to speech"),
-        ),
-      body: Column(
-        children: [
-          Center(child: Text(texte)),
-        ],
-      ),
-      /// Le floating action button
-      floatingActionButton: IconButton(
-        onPressed: () {
-          setState(() {
-            flutterTts.speak(texte);
-          });
-        },
-        icon: const Icon(Icons.volume_up),
-      ),
     );
   }
 }
