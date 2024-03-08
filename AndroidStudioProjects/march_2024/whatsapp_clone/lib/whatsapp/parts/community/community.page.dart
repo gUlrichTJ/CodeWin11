@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class WhatsappCommunity extends StatelessWidget {
@@ -5,12 +6,27 @@ class WhatsappCommunity extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body:  Center(
-        child: Icon(
-          Icons.sentiment_satisfied,
-          size: 120.0,
-          color: Colors.lightGreen,
+        child: Center(
+          child: RichText(
+            selectionColor: Colors.deepPurpleAccent,
+            strutStyle: const StrutStyle(
+              fontWeight: FontWeight.w500,
+            ),
+            text: const TextSpan(
+              children: [
+                TextSpan(
+                  text: "Hello to you",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "Roboto"
+                  ),
+                )
+              ]
+            ),
+          ),
         ),
       ),
     );
