@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:o_talents_debug/presence/info_eleve/info_eleve.file.dart';
+import 'package:o_talents_debug/presence/lecture_audible/text_to_speech.file.dart';
 
 class PresenceWidget extends StatefulWidget {
   const PresenceWidget({super.key});
@@ -75,7 +76,9 @@ class _PresenceWidgetState extends State<PresenceWidget> {
         actions: [
           // TODO: Cet icon button doit servir d'appel a haute voix des eleves
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              TextToSpeechManager().sp
+            },
               icon: const Icon(Icons.volume_off,
               ),
           ),
