@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:o_talents_debug/home/containers/rediriger_vers_presence.file.dart';
+import 'package:o_talents_debug/presence/lecture_audible/text_to_speech.file.dart';
 import 'package:o_talents_debug/presence/presence.page.dart';
 
 void main() => runApp(const MyApp());
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context)=>HomePage(),
         "presence":(context)=>PresenceWidget(),
+        "test_lecture":(context)=>TextToSpeechManager(),
       },
       theme: ThemeData(
         primarySwatch: Colors.orange,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:o_talents_debug/presence/info_eleve/info_eleve.file.dart';
 import 'package:o_talents_debug/presence/lecture_audible/text_to_speech.file.dart';
 
@@ -10,6 +11,8 @@ class PresenceWidget extends StatefulWidget {
 }
 
 class _PresenceWidgetState extends State<PresenceWidget> {
+
+  TextToSpeechManager textToSpeechManager = TextToSpeechManager();
 
   /// Nous créons une liste de personnages
   List<PersonnageEleve> personnageEleve = [
@@ -76,8 +79,8 @@ class _PresenceWidgetState extends State<PresenceWidget> {
         actions: [
           // TODO: Cet icon button doit servir d'appel a haute voix des eleves
           IconButton(
-            onPressed: () {
-              TextToSpeechManager().sp
+            onPressed: () async {
+              Navigator.of(context).pushNamed("test_lecture");
             },
               icon: const Icon(Icons.volume_off,
               ),
@@ -163,3 +166,37 @@ class _PresenceWidgetState extends State<PresenceWidget> {
     );
   }
 }
+
+/* // La classe pour lire le texte.
+class TextToSpeechManager extends StatefulWidget {
+  const TextToSpeechManager({super.key});
+
+  @override
+  State<TextToSpeechManager> createState() => _TextToSpeechManagerState();
+}
+
+class _TextToSpeechManagerState extends State<TextToSpeechManager> {
+  FlutterTts flutterTts = FlutterTts();
+  TextEditingController textEditingController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    flutterTts.setLanguage("fr-FR");  /// On pourra changer la langue quand on veut
+  }
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+
+  /// Les méthodes pour pouvoir lire.
+  Future speak() async {
+    await flutterTts.setVolume(1.0);
+    await flutterTts.setSpeechRate(0.5);
+    await flutterTts.setPitch(1.0);
+
+    await flutterTts.speak(textEditingController.text);
+  }
+}
+
+ */
