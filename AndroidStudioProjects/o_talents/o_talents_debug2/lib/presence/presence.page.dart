@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
-import 'package:o_talents_debug/presence/info_eleve/info_eleve.file.dart';
-import 'package:o_talents_debug/presence/lecture_audible/text_to_speech.file.dart';
+import 'package:o_talents_debug2/presence/info_eleve/info_eleve.file.dart';
+import 'package:o_talents_debug2/presence/lecture_audible/text_to_speech.file.dart';
 
 class PresenceWidget extends StatefulWidget {
   const PresenceWidget({super.key});
@@ -12,7 +11,7 @@ class PresenceWidget extends StatefulWidget {
 
 class _PresenceWidgetState extends State<PresenceWidget> {
 
-  TextToSpeechManager textToSpeechManager = TextToSpeechManager();
+  TextToSpeechManager textToSpeechManager = const TextToSpeechManager();
 
   /// Nous créons une liste de personnages
   List<PersonnageEleve> personnageEleve = [
@@ -62,6 +61,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
   ];
   @override
   Widget build(BuildContext context) {
+    TextToSpeechManager textToSpeechManager = const TextToSpeechManager();
     return Scaffold(
       appBar: AppBar(
         elevation: 1.0,
@@ -80,7 +80,14 @@ class _PresenceWidgetState extends State<PresenceWidget> {
           // TODO: Cet icon button doit servir d'appel a haute voix des eleves
           IconButton(
             onPressed: () async {
-              Navigator.of(context).pushNamed("test_lecture");
+              for (var person in personnageEleve) {
+                /// TODO: Je dois ici appeler la fonction speak de la classe TextToSpeecManager
+                textToSpeechManager.speak(
+                    '${person.nom} ${person.prenom}'
+                );
+                await Future.delayed(const Duration(seconds: 2));
+              }
+              // Navigator.of(context).pushNamed("test_lecture");
             },
               icon: const Icon(Icons.volume_off,
               ),
