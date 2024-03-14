@@ -14,10 +14,14 @@ class _PresenceWidgetState extends State<PresenceWidget> {
   TextToSpeechManager textToSpeechManager = const TextToSpeechManager();
   // TODO: Mettre cette variable à 4  plus tard.
   static const int nombreDAppelsEleve = 1;
+
   int compteurDAppels = 0;
 
   /// Variable qui permet de connaître le bouton qui est sélectionné
   bool selection = true;
+
+  ///
+  int onIconButtonTaped = 0;
 
   /// Nous créons une liste de personnages
   List<PersonnageEleve> personnageEleve = [
@@ -84,40 +88,51 @@ class _PresenceWidgetState extends State<PresenceWidget> {
         ),
         actions: [
           // TODO: Cet icon button doit servir d'appel a haute voix des eleves
-          IconButton(
-            tooltip: "Lire les noms.",
-            onPressed: () async {
-              if (selection == true) {
-                for (var person in personnageEleve) {
-                  /// Maintenant, il me faut l'appeler 4 fois.
-                  for (int i = 0; i < nombreDAppelsEleve; i++) {
-                    /// TODO: Je dois ici appeler la fonction speak de la classe TextToSpeecManager
-                    textToSpeechManager.speak(
-                        '${person.nom} ${person.prenom}'
-                    );
-                    await Future.delayed(const Duration(seconds: 2));
-
-                    /// Nous incrémentons la varialble qui compte le nombre de fois que
-                    /// le nom de l'élève a été appelé.
-                    ++compteurDAppels;
-                  }
-                }
-              } else {
-                textToSpeechManager.stop();
-              }
-
-              /// Nous changeons d'état pour changer l'icône
+          GestureDetector(
+            onTap: () {
               setState(() {
-                selection = !selection;
+                ++onIconButtonTaped;
+                debugPrint("$onIconButtonTaped");
               });
-              // Navigator.of(context).pushNamed("test_lecture");
             },
-              icon: selection ?
-              const Icon(Icons.volume_up) :
-              const Icon(
-                Icons.volume_off,
-                color: Colors.grey,
-              ),
+            child: IconButton(
+              tooltip: "Lire les noms.",
+              onPressed: () async {
+                if (selection == true) {
+                   for (var person in personnageEleve) {
+                      /// Maintenant, il me faut l'appeler 4 fois.
+                     for (int i = 0; i < nombreDAppelsEleve; i++) {
+                       if (!selection) {
+                         break;
+                       }
+                         /// TODO: Je dois ici appeler la fonction speak de la classe TextToSpeecManager
+                         textToSpeechManager.speak(
+                             '${person.nom} ${person.prenom}'
+                         );
+                         await Future.delayed(const Duration(seconds: 2));
+
+                         /// Nous incrémentons la varialble qui compte le nombre de fois que
+                         /// le nom de l'élève a été appelé.
+                         ++compteurDAppels;
+                        }
+                      }
+                    } else {
+                    textToSpeechManager.stop();
+                 }
+
+                /// Nous changeons d'état pour changer l'icône
+                 setState(() {
+                    selection = !selection;
+                  });
+                  // Navigator.of(context).pushNamed("test_lecture");
+                },
+                icon: selection ?
+                const Icon(Icons.volume_up) :
+                const Icon(
+                  Icons.volume_off,
+                  color: Colors.grey,
+                ),
+            ),
           ),
         ],
       ),
@@ -195,5 +210,28 @@ class _PresenceWidgetState extends State<PresenceWidget> {
         padding: const EdgeInsets.all(3.0),
       ),
     );
+  }
+
+  bool isPlaying = false;
+
+  void startPlayback() async {
+    isPlaying = true;
+    // Lire le texte à voix haute depuis votre liste
+    for (var person in personnageEleve) {
+      if (!isPlaying) break; // Vérifier si la lecture doit être arrêtée
+      // Lire le texte à voix haute
+      textToSpeechManager.speak(
+          '${person.nom} ${person.prenom}'
+      );
+      await Future.delayed(const Duration(seconds: 2));
+
+    }
+    isPlaying = false;
+  }
+
+  void stopPlayback() {
+    isPlaying = false;
+    // Arrêter la lecture en cours
+    textToSpeechManager.stop();
   }
 }

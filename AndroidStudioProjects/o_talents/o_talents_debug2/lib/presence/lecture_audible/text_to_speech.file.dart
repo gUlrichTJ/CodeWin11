@@ -48,6 +48,7 @@ class TextToSpeechManager extends StatefulWidget {
   const TextToSpeechManager({super.key});
 
   /// Les méthodes pour pouvoir lire.
+
   Future<void> speak(String s) async {
     await flutterTts.setLanguage("fr-FR");
     await flutterTts.setVolume(1.0);
@@ -63,6 +64,16 @@ class TextToSpeechManager extends StatefulWidget {
   /// La méthode qui permet que le texte soit arrêté d'être lu
   Future stop() async {
     flutterTts.stop();
+  }
+
+  /// La méthode pour mettre le texte en pause
+  Future pause() async {
+    flutterTts.pause();
+  }
+
+  /// La méthode pour continuer la lecture
+  Future play(String text) async {
+    flutterTts.speak(text);
   }
 
   @override
@@ -86,5 +97,51 @@ class _TextToSpeechManagerState extends State<TextToSpeechManager> {
   Widget build(BuildContext context) {
     return const Scaffold();
   }
+
+  // TODO: Icone button de la classe presence
+  /*
+  *
+  *       IconButton(
+            tooltip: "Lire les noms.",
+            onPressed: () async {
+              if (selection == true) {
+                isPlaying = false;
+                for (var person in personnageEleve) {
+                  /// Maintenant, il me faut l'appeler 4 fois.
+                  for (int i = 0; i < nombreDAppelsEleve; i++) {
+                    if (isPlaying) {
+                      textToSpeechManager.stop();
+                    }
+                    /// TODO: Je dois ici appeler la fonction speak de la classe TextToSpeecManager
+                    textToSpeechManager.speak(
+                        '${person.nom} ${person.prenom}'
+                    );
+                    await Future.delayed(const Duration(seconds: 2));
+
+                    /// Nous incrémentons la varialble qui compte le nombre de fois que
+                    /// le nom de l'élève a été appelé.
+                    ++compteurDAppels;
+                  }
+                }
+              } else {
+                textToSpeechManager.stop();
+              }
+
+              /// Nous changeons d'état pour changer l'icône
+              setState(() {
+                selection = !selection;
+                isPlaying = !isPlaying;
+              });
+              // Navigator.of(context).pushNamed("test_lecture");
+            },
+              icon: selection ?
+              const Icon(Icons.volume_up) :
+              const Icon(
+                Icons.volume_off,
+                color: Colors.grey,
+              ),
+          )
+
+    */
 
 }
