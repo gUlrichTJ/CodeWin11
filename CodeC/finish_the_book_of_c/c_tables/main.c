@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
@@ -757,5 +757,50 @@ int main()
     // sorting_array_by_selecting_maximum(tab);
     // sort_by_propagation(tab);
     statistics(tab);
+    return 0;
+}*/
+
+#include <stdio.h>
+
+int main() {
+    /// Programme permettant de multiplier deux vecteurs.
+    /// Nous créons les vecteurs avec pour taille maximale 20
+    double U[20], V[20];    /// Les vecteurs
+    int i = 0;  /// Le compteur
+    int N = 0;   /// la taille des vecteurs
+    double produit = 0;
+
+    /// Nous recevons la taille après avoir controlé
+    do {
+        printf("Entrez la taille des vecteurs (<20) : ");
+        scanf("%i", &N);
+    } while (N < 2 || N > 20);
+
+
+    /// Nous remplissons les vecteurs
+    puts("\nRemplissez le vecteur U : ");
+
+    for (i = 0; i < N; i++) {
+        printf("Element %i : ", i + 1);
+        scanf("%lf", &U[i]);
+    }
+
+    puts("\nRemplissez le vecteur V : ");
+
+    for (i = 0; i < N; i++) {
+        printf("Element %i : ", i + 1);
+        scanf("%lf", &V[i]);
+    }
+
+    /// Nous pouvons afficher les deux vecteurs si nous voulons
+
+    /// Calcul du produit
+    for (i = 0; i < N; i++) {
+        produit += U[i] * V[i];
+    }
+
+    /// Affichage du produit
+    printf("\nLe produit des vecteurs U et V est %lf\n", produit);
+
     return 0;
 }

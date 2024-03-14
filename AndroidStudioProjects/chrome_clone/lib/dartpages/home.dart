@@ -221,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // TODO : Retourner l'image de R cliquable
             retourneImageCliquable(
                 context,
-                "https://microbenotes.com/wp-content/uploads/2023/04/Bioinformatics-Python-and-R-Programming-Language.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/800px-R_logo.svg.png",
                 "Learn the R Programming language for data science like the Python Language.",
                 "Description"
             ),
@@ -239,13 +239,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://southernstudies.olemiss.edu/media/new-encyclopedia-southern-culture-940x348.jpeg",
+              "https://upload.wikimedia.org/wikipedia/commons/f/f8/Encyclopaedia_Britannica_15_with_2002.jpg",
               "Read encyclopedia of southern culture of 1989",
               "Southern encyclopedia",
             ),
             retourneImageCliquable(
               context,
-              "https://i.pcmag.com/imagery/reviews/05cItXL96l4LE9n02WfDR0h-5.fit_scale.size_1028x578.v1582751026.png",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Netflix_%282000%29.svg/1920px-Netflix_%282000%29.svg.png",
               "When you're tired, watch films on netflix for fun and for free. Secured films.",
               "Netflix",
             ),
@@ -257,13 +257,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://media.licdn.com/dms/image/D4E03AQHLIIxLO3LnLA/profile-displayphoto-shrink_800_800/0/1679348450752?e=1704326400&v=beta&t=igRAI0P4SUyMh4s6EnWK34aNYd6c8XeG4g-qGn_rLKs",
+              "https://media.licdn.com/dms/image/D4E03AQGB92sGdrGA0A/profile-displayphoto-shrink_800_800/0/1704878089813?e=1714608000&v=beta&t=_eOfinCOnxOfqKRhDKr6z8jDZHJyMs-6DaL14dUgeXE",
               "KELE Bernadin, one of the best flutter developers in Togo has got his bachelor degree after three years of study at EPL",
               "KELE Bernadin",
             ),
             retourneImageCliquable(
               context,
-              "https://yop.l-frii.com/wp-content/uploads/2023/03/Pasteur-Marcelo-Tunasi-met-en-garde-les-couples-maries-Vous-allez-tous-divorcer-si.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/4/49/Marcello_Tunasi.png",
               "Pastor Marcello TUNASI is a pastor COMPASSION churches. He's also the author of some christians books and he works in many domains",
               "Marcello Tunasi",
             ),
@@ -275,7 +275,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://media.wired.com/photos/5fd2c29c2a4ddaf3b6389694/16:9/w_2240%2Cc_limit/Gear-Books-Roundup-671406905.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/a/a6/Printing3_Walk_of_Ideas_Berlin.JPG",
               "Books reading is necessary for humans",
               "Library",
             ),
@@ -287,7 +287,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://physics.aps.org/assets/8e52db55-73fc-43b7-a90b-a45e6d01fff9/es111_medium_1.png",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Solar_System_true_color.jpg/1024px-Solar_System_true_color.jpg",
               "Solar system",
               "Solar system",
             ),
@@ -299,24 +299,26 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             retourneImageCliquable(
               context,
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Photo_Faure_Gnassingbe_2023.jpg/440px-Photo_Faure_Gnassingbe_2023.jpg",
+              "https://upload.wikimedia.org/wikipedia/commons/a/aa/Fumio_Kishida_and_Faure_Gnassingb%C3%A9_before_the_funeral_of_Shinzo_Abe_%281%29_%28cropped%29.jpg",
               "The president of Togo has done more than 16 years on the head of the country.",
               "M. Faure Essossimna G.",
             ),
             retourneImageCliquable(
               context,
-              "https://media.licdn.com/dms/image/D5603AQEI4UU6lhir8w/profile-displayphoto-shrink_800_800/0/1668182393725?e=1704326400&v=beta&t=Uwbsf7eKruMC0BSYO5_KMkqQDzedG7JdM9tFZCH--rQ",
+              "https://media.licdn.com/dms/image/D5603AQEI4UU6lhir8w/profile-displayphoto-shrink_800_800/0/1668182398053?e=1714608000&v=beta&t=mVWgvwLVAhy5O5tIG0DmfuFB2CQY5Sc1Ar-GytIGomI",
               "The winner of the Ambassadrice de l'environnement constest. She is the best of all speakers and competitors.",
               "Alassani Karima",
             ),
             retourneImageCliquable(
               context,
-              "https://www.cut-the-knot.org/m/Algebra/InequalitiesWithDoubleAndTripleIntegrals.jpg", "Mathematics, especially triple integrals are very important.",
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Spherical_Coordinates_%28Colatitude%2C_Longitude%29.svg/800px-Spherical_Coordinates_%28Colatitude%2C_Longitude%29.svg.png",
+              "Mathematics, especially triple integrals are very important.",
               "Triple integrals",
             ),
             retourneImageCliquable(
                 context,
-                "https://ambatogochine.com/wp-content/uploads/2020/08/PIA-Togo-1.jpg", "Plateforme industrielle d'Adetikope au Togo. Grande industrie du Togo.",
+                "https://static.latribune.fr/full_width/1507481/plateforme-industrielle-d-adetikope-togo.jpg",
+                "Plateforme industrielle d'Adetikope au Togo. Grande industrie du Togo.",
                 "PIA-TOGO",
             ),
           ],
