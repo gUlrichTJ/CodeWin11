@@ -12,6 +12,12 @@ class PresenceWidget extends StatefulWidget {
 class _PresenceWidgetState extends State<PresenceWidget> {
 
   TextToSpeechManager textToSpeechManager = const TextToSpeechManager();
+  // TODO: Mettre cette variable à 4  plus tard.
+  static const int nombreDAppelsEleve = 1;
+  int compteurDAppels = 0;
+
+  /// Variable qui permet de connaître le bouton qui est sélectionné
+  bool selection = true;
 
   /// Nous créons une liste de personnages
   List<PersonnageEleve> personnageEleve = [
@@ -41,20 +47,20 @@ class _PresenceWidgetState extends State<PresenceWidget> {
       true,
     ),
     PersonnageEleve(
-      "Sophie",
+      "Kilyan",
       "Martin",
       "https://randomuser.me/api/portraits/women/5.jpg",
       true,
     ),
     PersonnageEleve(
-      "Sophie",
-      "Martin",
+      "Saboutey",
+      "Tétey",
       "https://randomuser.me/api/portraits/women/63.jpg",
       true,
     ),
     PersonnageEleve(
-      "Sophie",
-      "Martin",
+      "Loly",
+      "Martinez",
       "https://randomuser.me/api/portraits/women/77.jpg",
       true,
     ),
@@ -80,16 +86,36 @@ class _PresenceWidgetState extends State<PresenceWidget> {
           // TODO: Cet icon button doit servir d'appel a haute voix des eleves
           IconButton(
             onPressed: () async {
-              for (var person in personnageEleve) {
-                /// TODO: Je dois ici appeler la fonction speak de la classe TextToSpeecManager
-                textToSpeechManager.speak(
-                    '${person.nom} ${person.prenom}'
-                );
-                await Future.delayed(const Duration(seconds: 2));
+              if (selection == true) {
+                for (var person in personnageEleve) {
+                  /// Maintenant, il me faut l'appeler 4 fois.
+                  for (int i = 0; i < nombreDAppelsEleve; i++) {
+                    /// TODO: Je dois ici appeler la fonction speak de la classe TextToSpeecManager
+                    textToSpeechManager.speak(
+                        '${person.nom} ${person.prenom}'
+                    );
+                    await Future.delayed(const Duration(seconds: 2));
+
+                    /// Nous incrémentons la varialble qui compte le nombre de fois que
+                    /// le nom de l'élève a été appelé.
+                    ++compteurDAppels;
+                  }
+                }
+              } else {
+                textToSpeechManager.stop();
               }
+
+              /// Nous changeons d'état pour changer l'icône
+              setState(() {
+                selection = !selection;
+              });
               // Navigator.of(context).pushNamed("test_lecture");
             },
-              icon: const Icon(Icons.volume_off,
+              icon: selection ?
+              const Icon(Icons.volume_up) :
+              const Icon(
+                Icons.volume_off,
+                color: Colors.grey,
               ),
           ),
         ],
@@ -146,9 +172,6 @@ class _PresenceWidgetState extends State<PresenceWidget> {
                   duration: const Duration(milliseconds: 200),
                   width: 75,
                   height: 50,
-                  /*color: personnageEleve[index].estPresent ?
-                    Colors.green :
-                  Colors.red,*/
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     /// La couleur change en fonction de la présence ou de

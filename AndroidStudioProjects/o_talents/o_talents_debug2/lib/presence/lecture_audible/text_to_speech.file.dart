@@ -49,6 +49,7 @@ class TextToSpeechManager extends StatefulWidget {
 
   /// Les méthodes pour pouvoir lire.
   Future<void> speak(String s) async {
+    await flutterTts.setLanguage("fr-FR");
     await flutterTts.setVolume(1.0);
     /// Ici, c'est la vitesse de lecture.
     /// Après, nous allons changer les valeurs réelles et mettre une
@@ -57,6 +58,11 @@ class TextToSpeechManager extends StatefulWidget {
     await flutterTts.setPitch(1.0);
 
     await flutterTts.speak(s);
+  }
+
+  /// La méthode qui permet que le texte soit arrêté d'être lu
+  Future stop() async {
+    flutterTts.stop();
   }
 
   @override
@@ -78,46 +84,7 @@ class _TextToSpeechManagerState extends State<TextToSpeechManager> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: TextField(
-                      controller: textEditingController,
-                        decoration: const InputDecoration(
-                          labelText: 'Entrez le texte à lire'
-                        ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 10,),
-            ElevatedButton(
-              onPressed: () {
-                speak("Bonjour à toi.");
-              },
-              child: const Text("Lire le texte à haute voix."),
-            )
-          ],
-        ),
-      ),
-    );
+    return const Scaffold();
   }
 
-  /// Les méthodes pour pouvoir lire.
-  Future<void> speak(String s) async {
-    await flutterTts.setVolume(1.0);
-    /// Ici, c'est la vitesse de lecture.
-    /// Après, nous allons changer les valeurs réelles et mettre une
-    /// variable que l'utilisateur va modifier à sa guise.
-    await flutterTts.setSpeechRate(0.5);
-    await flutterTts.setPitch(1.0);
-
-    await flutterTts.speak(s);
-  }
 }
