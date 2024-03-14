@@ -100,20 +100,25 @@ class _PresenceWidgetState extends State<PresenceWidget> {
               onPressed: () async {
                 if (selection == true) {
                    for (var person in personnageEleve) {
-                      /// Maintenant, il me faut l'appeler 4 fois.
-                     for (int i = 0; i < nombreDAppelsEleve; i++) {
-                       if (!selection) {
-                         break;
-                       }
-                         /// TODO: Je dois ici appeler la fonction speak de la classe TextToSpeecManager
-                         textToSpeechManager.speak(
-                             '${person.nom} ${person.prenom}'
-                         );
-                         await Future.delayed(const Duration(seconds: 2));
+                     if (selection == true) {
+                         /// Maintenant, il me faut l'appeler 4 fois.
+                         for (int i = 0; i < nombreDAppelsEleve; i++) {
+                           if (selection == true) {
+                             /// TODO: Je dois ici appeler la fonction speak de la classe TextToSpeecManager
+                             textToSpeechManager.speak(
+                                 '${person.nom} ${person.prenom}'
+                             );
+                             await Future.delayed(const Duration(seconds: 2));
 
-                         /// Nous incrémentons la varialble qui compte le nombre de fois que
-                         /// le nom de l'élève a été appelé.
-                         ++compteurDAppels;
+                             /// Nous incrémentons la varialble qui compte le nombre de fois que
+                             /// le nom de l'élève a été appelé.
+                             ++compteurDAppels;
+                           } else {
+                             textToSpeechManager.stop();
+                           }
+                         }
+                        } else {
+                          textToSpeechManager.stop();
                         }
                       }
                     } else {
