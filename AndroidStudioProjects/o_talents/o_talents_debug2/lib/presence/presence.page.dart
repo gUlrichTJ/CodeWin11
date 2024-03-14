@@ -85,6 +85,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
         actions: [
           // TODO: Cet icon button doit servir d'appel a haute voix des eleves
           IconButton(
+            tooltip: "Lire les noms.",
             onPressed: () async {
               if (selection == true) {
                 for (var person in personnageEleve) {
