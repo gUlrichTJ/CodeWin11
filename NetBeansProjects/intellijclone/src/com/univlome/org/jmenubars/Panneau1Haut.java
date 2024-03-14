@@ -19,7 +19,8 @@ public class Panneau1Haut extends JMenuBar {
     
     private Fenetre fenetre;
     // We create the JMenus of the menu bar
-    JMenu file = new JMenu("File");
+    JMenu file = new JMenu("<html><span style='size:2em; color:blue; "
+            + "font-weight:bold; font-family: verdana'>File</span></html>");
     
     // Now we create the JMenuItems to put them in each JMenu
     JMenu nouveau = new JMenu("New");
