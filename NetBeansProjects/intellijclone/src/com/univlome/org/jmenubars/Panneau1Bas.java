@@ -13,8 +13,12 @@ public class Panneau1Bas extends JMenuBar {
     
     Fenetre fenetre;
     
-    JMenu versionControl = new JMenu("Version Control");
-    JMenu run = new JMenu("Run");
+    String style = "sytle='size:1.3em; color:blue;'";
+    
+    JMenu versionControl = new JMenu("<html><span style='size:2em; color:blue; "
+            + "font-weight:bold; font-family: verdana'>Version Control</span></html>");    
+    JMenu run = new JMenu("<html><span style='size:2em; color:blue; "
+            + "font-weight:bold; font-family: verdana'>Run</span></html>");
     JMenu debug = new JMenu("Debug");
     JMenu todo = new JMenu("TODO");
     JMenu profiler = new JMenu("Profiler");
