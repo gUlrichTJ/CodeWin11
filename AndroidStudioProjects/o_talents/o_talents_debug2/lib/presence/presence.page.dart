@@ -96,7 +96,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
               });
             },
             child: IconButton(
-              tooltip: "Lire les noms.",
+              tooltip: "Lire les noms. ",
               onPressed: () async {
                 if (selection == true) {
                    for (var person in personnageEleve) {
