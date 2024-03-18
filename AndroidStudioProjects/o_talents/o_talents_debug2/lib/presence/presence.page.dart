@@ -35,7 +35,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
     PersonnageEleve(
       "Maxime",
       "Dupont",
-      "https://randomuser.me/api/portraits/women/76.jpg",
+      "https://randomuser.me/api/portraits/men/76.jpg",
       true,
     ),
     PersonnageEleve(
@@ -47,13 +47,13 @@ class _PresenceWidgetState extends State<PresenceWidget> {
     PersonnageEleve(
       "James",
       "Martin",
-      "https://randomuser.me/api/portraits/women/85.jpg",
+      "https://randomuser.me/api/portraits/men/85.jpg",
       true,
     ),
     PersonnageEleve(
       "Kilyan",
       "Martin",
-      "https://randomuser.me/api/portraits/women/5.jpg",
+      "https://randomuser.me/api/portraits/men/5.jpg",
       true,
     ),
     PersonnageEleve(
@@ -66,6 +66,12 @@ class _PresenceWidgetState extends State<PresenceWidget> {
       "Loly",
       "Martinez",
       "https://randomuser.me/api/portraits/women/77.jpg",
+      true,
+    ),
+    PersonnageEleve(
+      "Jacques",
+      "Françoise",
+      "https://randomuser.me/api/portraits/women/37.jpg",
       true,
     ),
   ];
@@ -95,10 +101,11 @@ class _PresenceWidgetState extends State<PresenceWidget> {
                 debugPrint("$onIconButtonTaped");
               });
             },
+            /// Je vais essayer la fonctionalité stop.
             child: IconButton(
               tooltip: "Lire les noms.",
               onPressed: () async {
-                if (selection == true) {
+                /* if (selection == true) {
                    for (var person in personnageEleve) {
                      if (selection == true) {
                          /// Maintenant, il me faut l'appeler 4 fois.
@@ -123,7 +130,8 @@ class _PresenceWidgetState extends State<PresenceWidget> {
                       }
                     } else {
                     textToSpeechManager.stop();
-                 }
+                 } */
+                
 
                 /// Nous changeons d'état pour changer l'icône
                  setState(() {
