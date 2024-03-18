@@ -4,6 +4,7 @@
  */
 package code.taptouchclone.windows;
 
+import java.awt.*;
 import javax.swing.*;
 
 /**
@@ -13,12 +14,17 @@ import javax.swing.*;
 
 public class MainWindow extends JFrame {
     
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    
+    int width = (int) (screenSize.width * 0.9);
+    int height = (int) (screenSize.height * 0.9);
+    
     // TODO: the constructor (here, we're gonna do like everytime)
     public MainWindow() {
         /// The title
         super("Tap'Touche5");
         /// The size
-        this.setSize(this.WIDTH, this.HEIGHT);
+        this.setSize(width, height);
         /// The location
         this.setLocationRelativeTo(null);
         /// On close
