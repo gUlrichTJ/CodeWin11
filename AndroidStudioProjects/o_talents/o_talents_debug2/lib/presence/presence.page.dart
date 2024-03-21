@@ -119,7 +119,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
                       await textToSpeechManager.speak(
                           "${person.nom} ${person.prenom}"
                       );
-                      await Future.delayed(const Duration(seconds: 2)); 
+                      await Future.delayed(const Duration(seconds: 2));
                     } else {
                       textToSpeechManager.stop();
                       break;
