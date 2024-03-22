@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:o_talents_debug/presence/info_eleve/info_eleve.file.dart';
-import 'package:o_talents_debug/presence/lecture_audible/text_to_speech.file.dart';
+import 'package:o_talents_debug/presence/info_eleve/info_eleve_file.dart';
+import 'package:o_talents_debug/presence/lecture_audible/text_to_speech_file.dart';
 
 class PresenceWidget extends StatefulWidget {
   const PresenceWidget({super.key});
@@ -89,6 +89,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
       ),
 
       /// Le body de l'application
+      /// Le listviewbuilder est scrollable
       body: ListView.builder(
         itemCount: personnageEleve.length,
         itemBuilder: (context, index) {

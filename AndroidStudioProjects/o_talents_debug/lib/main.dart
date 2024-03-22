@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:o_talents_debug/home/containers/rediriger_vers_presence.file.dart';
-import 'package:o_talents_debug/presence/lecture_audible/text_to_speech.file.dart';
-import 'package:o_talents_debug/presence/presence.page.dart';
+import 'package:o_talents_debug/home/containers/rediriger_vers_presence_file.dart';
+import 'package:o_talents_debug/presence/lecture_audible/text_to_speech_file.dart';
+import 'package:o_talents_debug/presence/presence_page.dart';
 
 void main() => runApp(const MyApp());
 
