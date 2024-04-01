@@ -26,7 +26,7 @@ class _PresenceWidgetState extends State<PresenceWidget> {
   ///
   int onIconButtonTaped = 0;
 
-  /// light permet de cocher tout le monde.
+  /// light permet de cocher tout le monde
   bool light = false;
 
   /// Nous créons une liste de personnages
