@@ -26,6 +26,9 @@ class _PresenceWidgetState extends State<PresenceWidget> {
   ///
   int onIconButtonTaped = 0;
 
+  /// light permet de cocher tout le monde
+  bool light = false;
+
   /// Nous créons une liste de personnages
   List<PersonnageEleve> personnageEleve = [
     // TODO: Nous sommes en train de mettre la liste des eleves
@@ -33,37 +36,37 @@ class _PresenceWidgetState extends State<PresenceWidget> {
         "Adzo",
         "Martin",
         "https://randomuser.me/api/portraits/women/72.jpg",
-        true,
+        false,
     ),
     PersonnageEleve(
       "Maxime",
       "Kouma",
       "https://randomuser.me/api/portraits/men/76.jpg",
-      true,
+      false,
     ),
     PersonnageEleve(
       "Ablavi",
       "Martinez",
       "https://randomuser.me/api/portraits/women/75.jpg",
-      true,
+      false,
     ),
     PersonnageEleve(
       "James",
       "Agbavon",
       "https://randomuser.me/api/portraits/men/85.jpg",
-      true,
+      false,
     ),
     PersonnageEleve(
       "Kilyan",
       "Israéliotte",
       "https://randomuser.me/api/portraits/men/5.jpg",
-      true,
+      false,
     ),
     PersonnageEleve(
       "Saboutey",
       "Tétey",
       "https://randomuser.me/api/portraits/women/63.jpg",
-      true,
+      false,
     ),
     PersonnageEleve(
       "Loly",
@@ -143,6 +146,35 @@ class _PresenceWidgetState extends State<PresenceWidget> {
             ),
           ),
         ],
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(100.0),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: ListTile(
+                title: const Text("Tout le monde est présent"),
+                // TODO: Prendre la taille de la liste
+                subtitle: Text("Les élèves comptés : 0/${personnageEleve.length}"),
+                trailing: Switch(
+                  value: light,
+                  onChanged: (bool value) {
+                    setState(() {
+                      light = value;
+                      if (light) {
+                        for (var person in personnageEleve) {
+                          person.estPresent = true;
+                        }
+                      } else {
+                        for (var person in personnageEleve) {
+                          person.estPresent = false;
+                        }
+                      }
+                    //light = !value;
+                    });
+                  },
+              ),
+            ),
+          ),
+        ),
       ),
 
       /// Le body de l'application

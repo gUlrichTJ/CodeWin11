@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/pages/overview/overview.page.dart';
 
+/// le fichier contenant le main
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
