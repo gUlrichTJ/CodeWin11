@@ -25,7 +25,16 @@ class _UsersPageState extends State<UsersPage> {
   /// La méthode qui va permettre de faire la recherche
   void search(String query) {
     String url = "https://api.github.com/search/users?q=$query&per_page=20&page=0";
-    http.get(url)
+
+    debugPrint(url);
+
+    http.get(url as Uri)
+        .then((value)  {
+
+    })
+    .catchError((err) {
+      debugPrint(err);
+    });
   }
 
 
@@ -46,7 +55,8 @@ class _UsersPageState extends State<UsersPage> {
         backgroundColor: Colors.grey.shade500,
       ),
       /// The background of all the app
-      backgroundColor: Colors.grey.shade400,
+  
+  backgroundColor: Colors.grey.shade400,
       body: Center(
         child: Column(
           children: [
