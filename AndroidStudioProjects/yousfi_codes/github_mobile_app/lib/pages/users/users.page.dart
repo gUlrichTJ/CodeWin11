@@ -195,7 +195,7 @@ class _UsersPageState extends State<UsersPage> {
                           builder: (context) =>
                             GitRepositoriesPage(
                                 items[index]['login'],
-                              items[index]['login'],
+                              items[index]['avatar_url'],
                             ),
                         ),
                       );

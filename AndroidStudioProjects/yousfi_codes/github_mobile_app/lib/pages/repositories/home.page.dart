@@ -55,7 +55,7 @@ class _GitRepositoriesPageState extends State<GitRepositoriesPage> {
         /// Nous allons mettre l'image de l'user here
         actions: [
           CircleAvatar(
-            child: Image.network("${dataRepositories['avatar_url']}"),
+            backgroundImage: NetworkImage(widget.avatarUrl),
           )
         ],
         /// The background color of the appbar
