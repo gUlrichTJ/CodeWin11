@@ -26,11 +26,6 @@ class _WhatsappHomeState extends State<WhatsappHome> with SingleTickerProviderSt
   @override
   void dispose() {
     super.dispose();
-    @override
-    void dispose() {
-      tabController.dispose();
-      super.dispose();
-    }
     tabController.dispose();
   }
 
@@ -38,7 +33,7 @@ class _WhatsappHomeState extends State<WhatsappHome> with SingleTickerProviderSt
     /// Check if tab Controller index is changing, otherwise,
     /// we get the notice twice.
     if (tabController.indexIsChanging) {
-      print("tabChanged: ${tabController.index}");
+      debugPrint("tabChanged: ${tabController.index}");
     }
   }
   @override
@@ -103,7 +98,7 @@ class _WhatsappHomeState extends State<WhatsappHome> with SingleTickerProviderSt
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
             WhatsappChats(),
             WhatsappUpdates(),

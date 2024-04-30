@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/whatsapp/home/home_whatsapp.dart';
+import 'package:whatsapp_clone/whatsapp/home/home_whatsapp2.dart';
 
 void main () {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class _MyAppState extends State<MyApp> {
       ),
       title: "Read your books quickly",
       debugShowCheckedModeBanner: false,
-      home: const WhatsappHome(),
+      home: WhatsappHome2(),
     );
   }
 }
