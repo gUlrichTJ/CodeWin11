@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/whatsapp/lists/list_of_contacts.dart';
+import 'package:whatsapp_clone/whatsapp/parts/appbar/custom_app_bar.dart';
 
 class WhatsappChats extends StatelessWidget {
   WhatsappChats({super.key});
@@ -154,8 +155,11 @@ class WhatsappChats extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       home: Scaffold(
-        appBar: AppBar(
-
+        appBar: customAppBar(
+            "Whatsapp",
+            const Icon(Icons.camera_alt_outlined),
+            const Icon(Icons.search),
+            const Icon(Icons.more_vert),
         ),
         body: ListView.builder(
           itemCount: listOfContacts.length,

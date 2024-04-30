@@ -1,6 +1,6 @@
 # code_book_reading
 
-A new Flutter project.
+code we wrote while learning flutter.
 
 ## Getting Started
 
