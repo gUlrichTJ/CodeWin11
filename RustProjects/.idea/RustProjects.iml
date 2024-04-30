@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="EMPTY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/RustRoverProject/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/codes/guessing/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/codes/guessingGame/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/codes/hackus_people/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/codes/rust_rover_project/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/RustRoverProject/target" />
+      <excludeFolder url="file://$MODULE_DIR$/codes/guessing/target" />
+      <excludeFolder url="file://$MODULE_DIR$/codes/guessingGame/target" />
+      <excludeFolder url="file://$MODULE_DIR$/codes/hackus_people/target" />
+      <excludeFolder url="file://$MODULE_DIR$/codes/rust_rover_project/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

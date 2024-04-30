@@ -38,7 +38,7 @@ class _WhatsappTabBarState extends State<WhatsappTabBar> with SingleTickerProvid
     /// Check if tab Controller index is changing, otherwise,
     /// we get the notice twice.
     if (tabController.indexIsChanging) {
-      print("tabChanged: ${tabController.index}");
+      debugPrint("tabChanged: ${tabController.index}");
     }
   }
 

@@ -1,5 +1,7 @@
 fn main() {
     print!("\n\nHello, world!\n\n\n");
+
+    println!("Hello World");
     /*for i in 0..10 {
         println!("Nous verrons.\nRetiens ça ! Nous verrons\n\
         Quelque soit la façon dont tu parrais compliqué, je t'aurai.\n\

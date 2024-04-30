@@ -53,7 +53,7 @@ class _WhatsappHomeState extends State<WhatsappHome> with SingleTickerProviderSt
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 22,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w600,
                 fontFamily: "Comic Sans MS",
               ),
             ),
@@ -89,13 +89,13 @@ class _WhatsappHomeState extends State<WhatsappHome> with SingleTickerProviderSt
           bottom: const TabBar(
             tabs: [
               Tab(
-                icon: Icon(Icons.people_outline_rounded),
-              ),
-              Tab(
                 icon: Icon(Icons.chat),
               ),
               Tab(
                 icon: Icon(Icons.update),
+              ),
+              Tab(
+                icon: Icon(Icons.people_alt_outlined),
               ),
               Tab(
                 icon: Icon(Icons.call),
@@ -105,9 +105,9 @@ class _WhatsappHomeState extends State<WhatsappHome> with SingleTickerProviderSt
         ),
         body: const TabBarView(
           children: [
-            WhatsappCommunity(),
             WhatsappChats(),
             WhatsappUpdates(),
+            WhatsappCommunity(),
             WhatsappCalls(),
           ],
         )
