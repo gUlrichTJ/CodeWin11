@@ -633,6 +633,7 @@ void sort_by_propagation(int *tab) {
 }
 
 /// Exercice 7.16 Marks statistics
+/// A revoir
 void statistics(int *points) {
     double max_mark = 0, min_mark = 0, average = 0;
     int a, b, c, d, e, f, g;
