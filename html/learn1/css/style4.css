@@ -1,0 +1,46 @@
+.color-deep-pink {
+    background-color: rgb(252, 183, 109);
+}
+
+.color-yellow {
+    background-color: rgb(247, 247, 182);
+}
+
+.border-solid {
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgb(252, 170, 82);
+    border-collapse: collapse;
+    border-width: 2px;
+}
+
+.center-green {
+    background-color: rgb(81, 242, 81);
+    text-align: center;
+    height: 35px;
+}
+
+.border-solid-green {
+    border-style: groove;
+    box-shadow: 3px 4px rgba(22, 21, 21, 0.664), 5px 7px rgb(67, 70, 67);
+    border-color: green;
+    border-top-width: 1.4px;
+    border-left-width: 1.4px;
+    border-right-width: 2.2px;
+    border-bottom-width: 2.2px;
+    padding: 0px 4px 4px 4px;
+    margin-right: 10px;
+    background-color: rgb(239, 239, 139);
+}
+
+.a-active:visited {
+    color: rgb(193, 8, 193);
+}
+
+.a-active:link {
+    color: deeppink;
+    display: inline-block;
+}
