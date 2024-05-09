@@ -87,7 +87,14 @@ int number_of_columns(int tab[L][C]) {
 }
 
 /// Fill the array of two dimensions
-void fill_array_of_two_dim(int tab[L][C], int L, int C) {
+void fill_array_of_two_dim(int tab[L][C]) {
+
+    __new_line
+    int L = 0, C = 0;
+    L = number_of_lines(tab);
+
+    /// Number of columns
+    C = number_of_columns(tab);
 
     __new_line
 
@@ -100,6 +107,18 @@ void fill_array_of_two_dim(int tab[L][C], int L, int C) {
     }
 }
 
+/// Display the elements of two dimensions array
+void display_elements_of_two_dim(int tab[L][C], int L, int C) {
+    /// We display the elements of the array of two dimensions
+    puts("\nElements of the table :");
+    __new_line
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < C; j++)
+            printf("%7i", tab[i][j]);
+        __new_line
+    }
+    __new_line
+}
 /// 7.2 We shall remove all the zeros and tasser the rest of the elements
 void remove_zero_and_tasser(int *tab) {
     int N = 0, N_C = 0, zero_counter = 0;
@@ -696,6 +715,56 @@ void statistics(int *points) {
     }
 }
 
+/// Exercice 7.17 Put the diag to 0
+/// the function that will receive the table like argument
+void table_two_dim_diag0(int tab[][100]) {
+    /// L and C are the numbers of columns and the lines
+    int L = 0, C = 0;
+    /// We take the number of lines
+    L = number_of_lines(tab);
+
+    /// We receive the number of columns
+    C = number_of_columns(tab);
+
+    /// We fill the table of two dimensions
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < C; j++) {
+            printf("Enter element [%d][%d] : ", i, j);
+            scanf("%i", &tab[i][j]);
+        }
+    }
+
+    /// Display the table of two dim
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < C; j++)
+            printf("%7i", tab[i][j]);
+        __new_line
+    }
+    __new_line
+
+    /// We put the diagonal to 0
+    for (int i = 0; i < L; i++) {
+        for (int j = i; j < C; j++) {
+            if (i == j) {
+                tab[i][j] = 0;
+            }
+        }
+    }
+
+    /// Display the new tab
+    __new_line
+    puts("This is the table after putting 0 to the diagoanl");
+
+    __new_line
+
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < C; j++)
+            printf("%7i", tab[i][j]);
+        __new_line
+    }
+    __new_line
+}
+
 /// We will test if a number is a prime number or not
 // I'm going to count the number of following ones in the array
 int following_ones_counter(int *tab, int N) {
@@ -757,7 +826,8 @@ int main()
     // merge_of_two_sorted_arrays();
     // sorting_array_by_selecting_maximum(tab);
     // sort_by_propagation(tab);
-    statistics(tab);
+    // statistics(tab);
+    table_two_dim_diag0(tab2);
     return 0;
 }
 
