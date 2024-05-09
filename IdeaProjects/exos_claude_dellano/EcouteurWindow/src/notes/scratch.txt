@@ -1,0 +1,3 @@
+Comment on peut créer un programme qui permet de créer plusieurs fenêtres en même temps ?
+
+Que faut-il mettre dans le constructeur ?
