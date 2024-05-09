@@ -2,6 +2,8 @@ package exos.boutons.exo1;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
 
 public class NBoutons {
@@ -55,7 +57,18 @@ public class NBoutons {
 
             /// adding the buttons
             for (int i = 0; i < numberOfButtons; i++) {
-                getContentPane().add(new JButton("Bouton" + i));
+                JButton button = new JButton("Button" + i);
+                int finalI = i;
+                button.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        for (int j = -1; j < finalI; j++) {
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                    }
+                });
+                getContentPane().add(button);
             }
 
             /// The visibility of the window
