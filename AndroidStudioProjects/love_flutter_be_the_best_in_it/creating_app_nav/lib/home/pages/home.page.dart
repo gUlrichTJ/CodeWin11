@@ -1,3 +1,4 @@
+import 'package:creating_app_nav/other/pages/slack_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -129,24 +130,33 @@ class HomePage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 8.0),
-              child: Container(
-                height: 40,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(
-                    width: 1,
-                    color: Colors.blue.shade800,
-                  )
-                ),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 8.0),
-                    child: Text(
-                      "Get Dropbox Basic",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.blue.shade900,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const SlackPage(),
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
+                    border: Border.all(
+                      width: 1,
+                      color: Colors.blue.shade800,
+                    )
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 8.0),
+                      child: Text(
+                        "Get Dropbox Basic",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.blue.shade900,
+                        ),
                       ),
                     ),
                   ),
