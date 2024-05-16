@@ -2,8 +2,6 @@ package exos.boutons.exo1;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Scanner;
 
 public class NBoutons {
@@ -59,14 +57,11 @@ public class NBoutons {
             for (int i = 0; i < numberOfButtons; i++) {
                 JButton button = new JButton("Button" + i);
                 int finalI = i;
-                button.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        for (int j = -1; j < finalI; j++) {
-                            System.out.print("*");
-                        }
-                        System.out.println();
+                button.addActionListener(_ -> {
+                    for (int j = -1; j < finalI; j++) {
+                        System.out.print("*");
                     }
+                    System.out.println();
                 });
                 getContentPane().add(button);
             }
