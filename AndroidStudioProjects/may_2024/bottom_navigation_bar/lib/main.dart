@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  return runApp(const MyApp());
-}
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,65 +8,63 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: BottomNavBarExample(),
+      // The name of the home page
+      home: HomePage(),
     );
   }
 }
 
-class BottomNavBarExample extends StatefulWidget {
-  const BottomNavBarExample({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<BottomNavBarExample> createState() => _BottomNavBarExampleState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _BottomNavBarExampleState extends State<BottomNavBarExample> {
+class _HomePageState extends State<HomePage> {
 
-  int selectedIndex = 0;
-
-  // La liste des classe
-  static const List<Widget> widgetOption = [
-    Text("Page 1"),
-    Text("Page 2"),
-    Text("Page 3"),
-    Text("Page 4"),
-    Text("Page 5"),
+  /// The list that will conatain the things that will be displayed on the pages
+  List<Widget> listPages = [
+    /// The first tabbar
+    Text("Hello to you"),
+    Text("I'm the second page"),
+    Text("I'm the third page"),
+    Text("Me, I'm the fourth page"),
   ];
+
+  // The widget option
+  int selectedIndex = 0;
 
   void onItemTapped(int index) {
     setState(() {
       selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        /// Dans le appbar, il n'y a que le titre
-        title: const Text("Bottom NavigationBar"),
-      ),
 
       body: Center(
-        child: widgetOption.elementAt(selectedIndex),
+        child: listPages.elementAt(selectedIndex),
       ),
-
+      /// The bottomNavBar
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            label: "Home",
+            icon: Icon(Icons.home,),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ),
+            label: "Electric",
+            icon: Icon(Icons.electric_meter),
+            ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            label: "Engin",
+            icon: Icon(Icons.engineering),
           ),
         ],
         currentIndex: selectedIndex,
-        selectedItemColor: Colors.amber[800],
         onTap: onItemTapped,
       ),
     );
