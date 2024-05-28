@@ -1,4 +1,16 @@
 fn main() {
+
+    // We create a var and assign it a value
+    let foo = 8;
+
+    println!("The value of the var is {}", foo);
+    println!();
+    // We're going to add a number to another
+    let bar = 9;
+
+    let add_value = bar + foo;
+
+    println!("\nThe addition of {} and {} is {}", bar, foo, add_value);
     print!("\n\nHello, world!\n\n\n");
 
     println!("Hello World");

@@ -10,22 +10,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
-        leading: Expanded(
-          child: Row(
-            children: [
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(13),
-                  ),
-                  child: const Text("Get Dropbox Basic"),
-                ),
-              ),
-            ],
+        leadingWidth: 100,
+        leading: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(
+              width: 0.3,
+            ),
+            borderRadius: BorderRadius.circular(13),
+          ),
+          child: const Text("Get Dropbox Basic",
           ),
         ),
         title: const Center(
