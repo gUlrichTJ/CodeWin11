@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1717888287 source:/home/gracianomathey/codes/CodeWin11/CodeC/finish_the_book_of_c/premier_projet_ornella/main.c
+	<stdio.h>
+	<stdlib.h>
+
