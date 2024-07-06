@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let age = 20;
+
+        if (age >= 18) {
+            console.log("Votre age est superieur a 18 ");
+        }
+
+        age  = 20;
+        const pays = 'FR';
+
+        if (
+            (pays === 'FR' && age >= 18) ||
+            (pays === 'US' && age >= 16)
+        ) {
+            console.log("Vous avez le droit de conduire.")
+        }
+
+        const peutConduireFrance = pays === 'FR' && age >= 18;
+        const peutConduireUSA = pays === 'US' && age >=16;
+
+        if (peutConduireFrance || peutConduireUSA) {
+            console.log("Felicitations, vous pouvez conduire.");
+        } else {
+            console.log("Vous n'avez pas le droit de conduire.");
+        }
+
+        switch (pays) {
+            case 'FR':
+                console.log("Je suis en France");
+                break;
+            case 'US':
+                console.log("Je suis aux Etats-Unis");
+                break;
+            default:
+                console.log("Shuannn !");
+                break;
+        }
+
+        /// Exercice
+        currentYear = 2024;
+
+        birthYear = prompt("Quel est votre annee de naissance ? ");
+
+        // age = prompt("Quel est votre age ? ");
+
+        // We do a verification on he age of the person
+        if (birthYear >= 2024) {
+
+            console.log("Annee entree incorrecte");
+
+        } else {
+
+            age = currentYear - birthYear;
+
+            const films = ["dessin anime", "matrix", "evil dead"];
+
+            if (age <= 13) {
+                console.log(films[0]);
+            } 
+            else if (age < 18) {
+                console.log("Vous regarderez " + films[1]);
+            } else {
+                console.log(films[2]);
+            }
+        }
+
+        
+        // Exercise to know the sign of the multiplication of two values
+        firstNumber = prompt("Enter a number : ");
+
+        const secondNumber = prompt("Enter a second number : ");
+
+        const multiply = firstNumber * secondNumber;
+
+        const chain = firstNumber + " * " + secondNumber + " = " + multiply;
+
+        if (isNaN(multiply)) {
+            console.log("Operation impossible");
+        } 
+        else {
+            if (firstNumber == 0 || secondNumber == 0) {
+            console.log(chain + " and the value is null");
+            } 
+            else if (
+                (firstNumber < 0 && secondNumber < 0) || 
+                (firstNumber > 0 && secondNumber > 0)
+            ) {
+                console.log(chain + " and is a positive value");
+            } else {
+                console.log(chain + " and is a negative value")
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
