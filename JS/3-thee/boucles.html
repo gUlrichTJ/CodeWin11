@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+
+        <title>Boucles</title>
+
+        <script>
+            let i = 0;
+
+            while (i < 10) {
+                console.log("Bonjour " + i);
+                i++;
+            }
+
+            for (i = 0; i < 10; i++) {
+                console.log("Hello to you " + i);
+            }
+
+            const notes = [14, 24, 15, 16];
+
+            for (i = 0; i < notes.length; i++) {
+                console.log(notes[i]);
+            }
+
+            // another way to parcourir arrays
+            
+            for (i in notes) {
+                console.log(i);
+            }
+
+            const person = {
+                firstname: "John",
+                lastname: "Doe",
+            }
+
+            for (let note of notes) {
+                console.log(note)
+            }
+
+            const greetting = "Hello to you";
+
+            for (let letter = 0; letter < greetting.length; letter++) { 
+                console.log(greetting[letter]);
+            }
+
+            console.log(greetting);
+
+            // exercises
+
+            // Exo 1
+
+            const chiffre = prompt("Enter a number between 1 and 10 : ");
+
+            if (chiffre < 0 || chiffre > 10) {
+                console.log("The number is not between 1 and 10. Goodbye !")
+            } else {
+                for (let i = chiffre; i >= 0; i--) {
+                    console.log(i);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>
