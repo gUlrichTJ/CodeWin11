@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <meta charset="utf-8" />
+
+        <script>
+
+            function canDrive(age, pays) {
+                if ((age > 18 && pays === "FR") || (age > 16 && pays === "US")) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            // We call the function
+            console.log(canDrive(13, 'FR'));
+
+            function greetting(name) {
+                console.log(`Bonjour ${name}`)
+            }
+
+            console.log(greetting("grace"));
+
+            // We will create an object that will have some values
+            const a = {
+                firstname: "John",
+                lastname: "Doe",
+                fullname: function () {
+                    console.log(`${this.firstname} ${this.lastname}`.toUpperCase());
+                }
+            }
+
+            // We call the function
+            a.fullname();
+
+            // function flechee
+            const somme = (a, b) => a + b;
+
+            console.log(somme(2, 10));
+
+            // we can call a function in another function
+            const isPair = function (a, fn) {
+                if (a % 2 === 0) {
+                    fn()
+                }
+            }
+
+            function gn() {
+                console.log("The number is pair");
+            }
+
+            isPair(2, gn);
+
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>
