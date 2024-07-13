@@ -53,6 +53,74 @@
 
             isPair(2, gn);
 
+            // creer un nombre aleatoire entre 0 et 10
+            let number = Math.floor(Math.random() * 10);
+
+            // we display the number
+            console.log(number);
+
+            // La fonction pour savoir si l'user a entre le bon nombre
+            function isRight(n) {
+                return number === n * 1;
+            }
+
+            // function do guess the number
+            let guess = function () {
+                let i = 3;
+                let numberGuessed = 0;
+
+                while (i > 0) {
+                    // we ask the user to guess the number
+                    numberGuessed = prompt("Guess the number, you have " + i + " chance(s) ");
+
+                    // if the number is well entered
+                    if (isRight(numberGuessed)) {
+                        console.log("congratulations !");
+                        break;
+                    }
+
+                    --i;
+                }
+            }
+
+            guess();
+
+            // function to know if a number if prime or not
+            let isPrime = function(n) {
+                let i = 0;
+                if (n <= 1) {
+                    return false;
+                } else if (n === 2) {
+                    return true;
+                } else if (n % 2 === 0) {
+                    return false;
+                } else {
+                    for (i = 3; i <= Math.sqrt(n); i += 2) {
+                        if (n % i === 0) {
+                            // we go out of the loop, the number is not prime
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+
+                // the number is prime if it reached a certain number
+                /*if (i >= Math.floor(Math.sqrt(n))) {
+                    console.log("The number is prime");
+                }*/
+            }
+
+            // we test our function is prime
+            for (let i = 0; i < 10; i++) {
+                number = prompt("Enter a number to see whether it's prime or not : ") * 1;
+
+                if (isPrime(number)) {
+                    console.log("prime");
+                } else {
+                    console.log("not prime");
+                }
+            }
+
         </script>
     </head>
 
