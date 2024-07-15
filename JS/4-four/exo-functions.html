@@ -5,13 +5,117 @@
         <meta charset="utf-8" />
 
         <script>
+
+            // calculate the average of every student
+            // there is an object
+            const student = [
+                {
+                    name: 'John',
+                    notes: [1, 20, 18, 19, 12],
+                },
+                {
+                    name: 'Jane',
+                    notes: [17, 18, 20, 13, 15],
+                },
+                {
+                    name: 'Sophie',
+                    notes: [17, 12, 14, 15, 13],
+                },
+                {
+                    name: 'Marc',
+                    notes: [1, 20, 18, 19, 12],
+                },
+                {
+                    name: 'Manon',
+                    notes: [2, 3, 5, 8, 9],
+                },
+                {
+                    name: 'Kodjo',
+                    notes: [18, 17, 18, 19, 12],
+                },
+                
+            ];
+
+            // we will try to calculate the average of every student
+            // I'll put them in a table
+            function average(studentObject) {
+                let i = 0;
+
+                let objectSize = studentObject.length;
+
+                let tableSize = studentObject[i].notes.length;
+
+                let _average = 0;
+
+                let sum = 0;
+
+                let averageArray = [];
+
+                for (i = 0; i < objectSize; i++) {
+                    for (j = 0; j < tableSize; j++) {
+                        sum += studentObject[i].notes[j];
+                    }
+                    // we calculate the average of every student
+                    _average = sum / tableSize;
+
+                    averageArray[i] = _average;
+
+                    sum = _average = 0; 
+                }
+
+                return averageArray;
+            }
+
+            const average2 = (notes) => {
+                let sum = 0;
+
+                for (let note of notes) {
+                    sum += note;
+                }
+
+                return sum / notes.length;
+            }
+
+            // we add the averages to the object
+            for (let stud of student) {
+                stud.moyenne = average2(stud.notes);
+            }
+
+            // let's write the function that searches the maximum
+            let sortByGreater = (array) => {
+                let i = 0, j = 0;
+
+                let arraySize = array.length;
+
+                let help = 0;
+
+                for (i = 0; i < arraySize; i++) {
+
+                    for (j = i + 1; j < arraySize; j++) {
+
+                        if (array[i]  < array[j]) {
+
+                            help      =    array[i];
+                            array[i]  =    array[j];
+                            array[j]  =    help;
+                        }
+                    }
+                }
+            }
+
+            for (let stud of student) {
+                sortByGreater(stud.notes)
+            }
+
+            
+
+            console.log(student);
+
             // create the function palyndrome
             let isPalyndrome = function (_string) {
 
                 let i = 0, j = 0;
                 size = `${_string}`.length;
-
-                leftSize = Math.floor(size / 2);
 
                 for (i = 0, j = size - 1; i < j; i++, j--) {
 
