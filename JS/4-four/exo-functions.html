@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercises</title>
+        <meta charset="utf-8" />
+
+        <script>
+            // create the function palyndrome
+            let isPalyndrome = function (_string) {
+
+                let i = 0, j = 0;
+                size = `${_string}`.length;
+
+                leftSize = Math.floor(size / 2);
+
+                for (i = 0, j = size - 1; i < j; i++, j--) {
+
+                    if (!(_string[i] == _string[j])) {
+                        return false;
+                    }
+
+                    return true;
+                }
+            }
+
+            // let's test it
+            console.log(isPalyndrome(("kcayack")));
+            console.log(isPalyndrome(("engagelejeuquejelegagne")));
+            console.log(isPalyndrome(("comment")));
+
+        </script>
+
+    </head>
+
+    <body>
+        
+    </body>
+</html>
