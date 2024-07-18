@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandelbrot Set</title>
+</head>
+<body>
+<canvas id="mandelbrotCanvas" width="800" height="600"></canvas>
+<script>
+    const canvas = document.getElementById('mandelbrotCanvas');
+    const ctx = canvas.getContext('2d');
+    const maxIter = 1000;
+    const zoom = 150;
+    const width = canvas.width;
+    const height = canvas.height;
+
+    for (let x = 0; x < width; x++) {
+        for (let y = 0; y < height; y++) {
+            let zx = 0;
+            let zy = 0;
+            const cX = (x - 400) / zoom;
+            const cY = (y - 300) / zoom;
+            let iter = maxIter;
+            while (zx * zx + zy * zy < 4 && iter > 0) {
+                const tmp = zx * zx - zy * zy + cX;
+                zy = 2.0 * zx * zy + cY;
+                zx = tmp;
+                iter--;
+            }
+            ctx.fillStyle = iter > 0 ? 'black' : 'white';
+            ctx.fillRect(x, y, 1, 1);
+        }
+    }
+</script>
+</body>
+</html>
+
