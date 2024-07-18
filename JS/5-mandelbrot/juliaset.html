@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Set</title>
+</head>
+<body>
+<canvas id="juliaCanvas" width="800" height="800"></canvas>
+<script>
+    const canvas = document.getElementById('juliaCanvas');
+    const ctx = canvas.getContext('2d');
+    const maxIter = 300;
+    const zoom = 1;
+    const cX = -0.7;
+    const cY = 0.27015;
+
+    function drawJuliaSet() {
+        for (let y = 0; y < canvas.height; y++) {
+            for (let x = 0; x < canvas.width; x++) {
+                let zx = 1.5 * (x - canvas.width / 2) / (0.5 * zoom * canvas.width);
+                let zy = (y - canvas.height / 2) / (0.5 * zoom * canvas.height);
+                let i = maxIter;
+                while (zx * zx + zy * zy < 4 && i > 0) {
+                    const tmp = zx * zx - zy * zy + cX;
+                    zy = 2.0 * zx * zy + cY;
+                    zx = tmp;
+                    i--;
+                }
+                const c = `hsl(${(maxIter / i) % 1 * 360}, 100%, ${i > 0 ? 50 : 0}%)`;
+                ctx.fillStyle = c;
+                ctx.fillRect(x, y, 1, 1);
+            }
+        }
+    }
+
+    drawJuliaSet();
+</script>
+</body>
+</html>
+

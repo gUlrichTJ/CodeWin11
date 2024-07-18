@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koch Snowflake</title>
+</head>
+<body>
+<canvas id="kochCanvas" width="800" height="600"></canvas>
+<script>
+    const canvas = document.getElementById('kochCanvas');
+    const ctx = canvas.getContext('2d');
+    const maxIter = 4;
+
+    function drawKochSnowflake(x1, y1, x2, y2, iter) {
+        if (iter === 0) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.stroke();
+        } else {
+            const deltaX = x2 - x1;
+            const deltaY = y2 - y1;
+
+            const x3 = x1 + deltaX / 3;
+            const y3 = y1 + deltaY / 3;
+
+            const x5 = x1 + 2 * deltaX / 3;
+            const y5 = y1 + 2 * deltaY / 3;
+
+            const x4 = (x1 + x2) / 2 + Math.sqrt(3) * (y1 - y2) / 6;
+            const y4 = (y1 + y2) / 2 + Math.sqrt(3) * (x2 - x1) / 6;
+
+            drawKochSnowflake(x1, y1, x3, y3, iter - 1);
+            drawKochSnowflake(x3, y3, x4, y4, iter - 1);
+            drawKochSnowflake(x4, y4, x5, y5, iter - 1);
+            drawKochSnowflake(x5, y5, x2, y2, iter - 1);
+        }
+    }
+
+    drawKochSnowflake(200, 300, 600, 300, maxIter);
+    drawKochSnowflake(600, 300, 400, 100, maxIter);
+    drawKochSnowflake(400, 100, 200, 300, maxIter);
+</script>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnsley Fern</title>
+</head>
+<body>
+<canvas id="fernCanvas" width="800" height="800"></canvas>
+<script>
+    const canvas = document.getElementById('fernCanvas');
+    const ctx = canvas.getContext('2d');
+    const maxIter = 50000;
+    const width = canvas.width;
+    const height = canvas.height;
+    let x = 0, y = 0;
+
+    function drawBarnsleyFern() {
+        for (let i = 0; i < maxIter; i++) {
+            let nextX, nextY;
+            const r = Math.random() * 100;
+
+            if (r < 1) {
+                nextX = 0;
+                nextY = 0.16 * y;
+            } else if (r < 86) {
+                nextX = 0.85 * x + 0.04 * y;
+                nextY = -0.04 * x + 0.85 * y + 1.6;
+            } else if (r < 93) {
+                nextX = 0.2 * x - 0.26 * y;
+                nextY = 0.23 * x + 0.22 * y + 1.6;
+            } else {
+                nextX = -0.15 * x + 0.28 * y;
+                nextY = 0.26 * x + 0.24 * y + 0.44;
+            }
+
+            x = nextX;
+            y = nextY;
+
+            const plotX = width / 2 + x * width / 11;
+            const plotY = height - y * height / 11;
+
+            ctx.fillStyle = "green";
+            ctx.fillRect(plotX, plotY, 1, 1);
+        }
+    }
+
+    drawBarnsleyFern();
+</script>
+</body>
+</html>
+

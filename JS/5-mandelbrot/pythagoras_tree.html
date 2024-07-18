@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythagoras Tree</title>
+</head>
+<body>
+<canvas id="treeCanvas" width="800" height="800"></canvas>
+<script>
+    const canvas = document.getElementById('treeCanvas');
+    const ctx = canvas.getContext('2d');
+    const maxIter = 10;
+
+    function drawPythagorasTree(x1, y1, angle, length, iter) {
+        if (iter === 0) return;
+
+        const x2 = x1 + Math.cos(angle) * length;
+        const y2 = y1 + Math.sin(angle) * length;
+
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+
+        drawPythagorasTree(x2, y2, angle - Math.PI / 4, length * 0.7, iter - 1);
+        drawPythagorasTree(x2, y2, angle + Math.PI / 4, length * 0.7, iter - 1);
+    }
+
+    drawPythagorasTree(400, 600, -Math.PI / 2, 100, maxIter);
+</script>
+</body>
+</html>
+

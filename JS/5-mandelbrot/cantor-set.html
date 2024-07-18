@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantor Set</title>
+</head>
+<body>
+<canvas id="cantorCanvas" width="800" height="600"></canvas>
+<script>
+    const canvas = document.getElementById('cantorCanvas');
+    const ctx = canvas.getContext('2d');
+    const maxIter = 5;
+
+    function drawCantorSet(x, y, length, iter) {
+        if (iter === 0) {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x + length, y);
+            ctx.stroke();
+        } else {
+            drawCantorSet(x, y, length / 3, iter - 1);
+            drawCantorSet(x + 2 * length / 3, y, length / 3, iter - 1);
+        }
+    }
+
+    drawCantorSet(50, 100, 700, maxIter);
+</script>
+</body>
+</html>
+
