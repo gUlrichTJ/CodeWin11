@@ -3,6 +3,26 @@
 
 int main()
 {
+    // Variables :
+    double R1 = 0, R2 = 0, R3 = 0, Rser = 0, Rpar = 0;
+
+    // Let's enter the variables :
+    printf("Entrez les trois résistances : ");
+    scanf("%lf %lf %lf", &R1, &R2, &R3);
+
+    Rser = R1 + R2 + R3;
+
+    Rpar = 1 / (1/R1 + 1/R2 + 1/R3);
+
+    printf("\nLa résistance équivalente en série est : %lf", Rser);
+
+    printf("\n\nLa résistance équivalente en parallèle est %lf\n", Rpar);
+
+    return 0;
+}
+
+/* int main()
+{
     /// Variables
     /// type nom valeur point virgule
     int nombre_eleves = 30;     /// Nous avons déclaré une variable à qui nous avons donné la valeur 30
@@ -43,3 +63,4 @@ int main()
     /// \n permet de faire un retour à la ligne.
     return 0;
 }
+*/
