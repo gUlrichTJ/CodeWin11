@@ -22,13 +22,31 @@
 
             frequencies = {};
             // Test of the method split
-            let words = phrase.toLocaleLowerCase().split(' ');
+            let words = phrase.toLocaleLowerCase().replace(',', "").split(' ');
 
             console.log(words);
 
             for (let word of words) {
-                if ()
+                if (word !== '') {
+                    if (frequencies[word]) {
+                        frequencies[word]++;
+                    } else {
+                        frequencies[word] = 1;
+                    }
+                }  
             }
+
+            const frequenciesArray = [];
+            for (let k in frequencies) {
+                frequenciesArray.push({
+                    word: k,
+                    count: frequencies[k],
+                })
+            }
+
+            console.log(frequenciesArray);
+
+            console.log(frequencies);
 
             // calculate the average of every student
             // there is an object
